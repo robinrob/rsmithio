@@ -21,15 +21,17 @@
         font-weight: bold;
     }
 
-    .cv-title {
+    .cv-title > * {
         font-size: 35px;
         height: 50px;
         width: auto;
         font-weight: bold;
+        padding-top: 7px;
+        margin-bottom: 20px;
     }
 
     .cv-page-header {
-        margin-bottom: 10px;
+        margin-bottom: 0px;
     }
 
     .cv-section-name {
@@ -42,7 +44,7 @@
 
         .cv-values-row {
             font-size: 27px;
-            line-height: 22px;
+            line-height: 28px;
         }
 
             .cv-values-em {
