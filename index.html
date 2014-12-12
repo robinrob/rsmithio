@@ -6,17 +6,31 @@ layout: clean-blog
 
   <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
+    <div class="container">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <!-- Main Content -->
+      <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-preview">
+                  <a href="post.html">
+                      <h2 class="post-title">
+                          Man must explore, and this is exploration at its greatest
+                      </h2>
+                      <h3 class="post-subtitle">
+                          Problems look mighty small from 150 miles up
+                      </h3>
+                  </a>
+                  <p class="post-meta">Posted by {{ author }} on {{ post.date | date: "%b %-d, %Y" }}</p>
+                  <h2>
+                      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </h2>
+              </div>
+              <hr>
+          </div>
+      </div>
+    </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
     {% endfor %}
-  </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
