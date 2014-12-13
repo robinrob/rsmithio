@@ -6,7 +6,6 @@
 
 {% include cv.scss %}
 {% include bootstrap.min.scss %}
-{% include clean-blog.scss %}
 
 
 // Our variables
@@ -48,9 +47,9 @@ $left-margin:      0px;
 }
 
 
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "clean-blog",
         "base",
         "layout",
         "syntax-highlighting"
