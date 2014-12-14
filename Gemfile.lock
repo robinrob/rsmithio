@@ -19,6 +19,9 @@ GEM
     haml (4.0.6)
       tilt
     hitimes (1.2.2)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     jekyll (2.5.2)
       classifier-reborn (~> 2.0)
       colorator (~> 0.1)
@@ -42,6 +45,7 @@ GEM
       sass (~> 3.2)
     jekyll-watch (1.2.0)
       listen (~> 2.7)
+    json (1.8.1)
     kramdown (1.5.0)
     liquid (2.6.1)
     listen (2.8.3)
@@ -49,6 +53,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mercenary (0.3.5)
+    multi_xml (0.5.5)
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.9)
@@ -75,4 +80,5 @@ DEPENDENCIES
   colorize
   differ
   haml
+  httparty
   jekyll
