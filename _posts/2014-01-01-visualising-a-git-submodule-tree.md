@@ -1,8 +1,11 @@
 ---
 layout: post
-title:  "Visualising a Git submodule tree"
-date:   2014-12-11 08:53:22
+author: Robin Smith
+title: Visualising a Git submodule tree
+subtitle: A method for organising personal repositories
+date: 2014-12-11 08:53:22
 categories: jekyll update
+image: "/img/rake_each_sub.png"
 ---
 
 All of my source code lives in a tree of Git submodules, extending downwards from my 'master' source repository, which is simply named `robin`. This giant tree of code includes everything i have ever written - both practice code and project code.

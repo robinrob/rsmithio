@@ -48,9 +48,9 @@ $left-margin:      0px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "clean-blog",
         "cv",
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "clean-blog"
 ;
