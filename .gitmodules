@@ -1,3 +1,0 @@
-[submodule "rakelib"]
-	path = rakelib
-	url = https://github.com/robinrob/rakelib.git
