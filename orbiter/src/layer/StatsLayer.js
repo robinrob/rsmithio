@@ -9,8 +9,8 @@ var StatsLayer = rss.BaseLayer.extend({
     init: function() {
         this._super()
 
-        this.constructFuelLabel()
-        this.constructAngleLabel()
+        this.constructFuelMeter()
+        this.constructAngleMeter()
         this.constructMsg()
 
         return this
@@ -28,6 +28,16 @@ var StatsLayer = rss.BaseLayer.extend({
         this.addChild(this.fuel)
     },
 
+    constructFuelMeter: function() {
+        var width = 30
+        var height = 150
+        this.graphicFuel = FuelMeter.create({
+            pos: rss.add(rss.topRight(), cc.p(-width - 20, -height * 0.5 - 30)),
+            size: cc.size(width, height)
+        })
+        this.addChild(this.graphicFuel)
+    },
+
     constructAngleLabel: function() {
         var width = "Angle: 360".length * this.FONT_SIZE
         this.r.angle = cc.LabelTTF.create(
@@ -38,6 +48,15 @@ var StatsLayer = rss.BaseLayer.extend({
         )
         this.r.angle.setPosition(cc.p(rss.left().x + width / 2, rss.top().y - 2 * this.FONT_SIZE))
         this.addChild(this.r.angle)
+    },
+
+    constructAngleMeter: function() {
+        var radius = 40
+        this.graphicAngle = AngleMeter.create({
+            pos: rss.add(rss.topLeft(), cc.p(radius + 20, -radius - 30)),
+            radius: radius
+        })
+        this.addChild(this.graphicAngle)
     },
 
     constructMsg: function() {
@@ -53,16 +72,22 @@ var StatsLayer = rss.BaseLayer.extend({
         this.addChild(this.msg)
     },
 
-    updateFuelMeter: function(val) {
-        this.fuel.setString("Fuel: " + Math.round(val))
+    updateDistanceMeter: function(val) {
+        this.graphicAngle.setLevel(val)
     },
 
-    updateDistanceMeter: function(val) {
-        this.r.angle.setString("Angle: " + Math.round(val))
+    updateFuelMeter: function(val) {
+        this.graphicFuel.setLevel(val)
     },
 
     updateMsg: function(msg) {
         this.msg.setString(msg)
+    },
+
+    update: function() {
+        var gameLayer = this.getParent().getChildByTag(rss.tag.gameLayer)
+        this.updateFuelMeter(gameLayer.getPlayer().getFuel() / 100)
+        this.updateDistanceMeter(gameLayer.getLevel().getWorld().getAngle() / rss.twoPI)
     }
 })
 

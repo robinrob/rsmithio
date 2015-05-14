@@ -1,4 +1,4 @@
-rss._CompositeStaticBody = rss._StaticBody.extend({
+rss.CompositeStaticBody = rss.StaticBody.extend({
     ctor: function(args) {
         this._super(args)
 
@@ -7,7 +7,7 @@ rss._CompositeStaticBody = rss._StaticBody.extend({
     },
 
     init: function() {
-        cc.log("_CompositeStaticBody.init ...")
+        cc.log("CompositeStaticBody.init ...")
         this._super()
 
         this.r.comps = []

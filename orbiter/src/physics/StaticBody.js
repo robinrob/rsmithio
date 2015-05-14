@@ -1,4 +1,4 @@
-rss._StaticBody = cc.Node.extend({
+rss.StaticBody = cc.Node.extend({
     ctor: function(args) {
         this._super()
 
@@ -16,7 +16,7 @@ rss._StaticBody = cc.Node.extend({
     },
 
     init: function() {
-        rss.log("_StaticBody.init ...")
+        rss.log("StaticBody.init ...")
         this._super()
     },
 

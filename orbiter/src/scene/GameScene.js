@@ -90,7 +90,6 @@ var GameScene = rss.BaseScene.extend({
 
     collisionLandingPadBegin: function() {
         cc.log("collisionLandingPad.begin")
-        rss.player.state = rss.player.states.landed
         rss.world.state = rss.world.states.stopped
         // Absolutely required here - returning nothing gives same effect as returning false
         return true
@@ -136,7 +135,6 @@ var GameScene = rss.BaseScene.extend({
     },
 
     update: function(dt) {
-        cc.log("state: " + rss.game.stateNames[rss.game.state])
         this.r.objectsToRemove = []
 
         if (!rss.pauseInput()) {

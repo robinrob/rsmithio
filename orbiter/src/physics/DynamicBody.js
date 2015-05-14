@@ -1,4 +1,4 @@
-rss._DynamicBody = rss._StaticBody.extend({
+rss.DynamicBody = rss.StaticBody.extend({
     ctor: function(args) {
         this._super(args)
 

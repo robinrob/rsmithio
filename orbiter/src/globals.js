@@ -55,8 +55,7 @@ for (var i in rss.res) {
 }
 
 rss.spaceship = {
-    mass: 1,
-    acc: 1000
+    mass: 1
 }
 rss.spaceship.maxImp = rss.spaceship.mass * 50
 

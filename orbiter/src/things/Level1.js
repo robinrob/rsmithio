@@ -1,4 +1,4 @@
-var Level1 = _Level.extend({
+var Level1 = Level.extend({
     addItems: function() {
         this.end = rss.toRad(-1.0 * rss.landingPad.angle / 2)
         this.addStartFinishPad(0, rss.landingPad.angle)

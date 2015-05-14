@@ -21,7 +21,7 @@ rss.Spaceship = rss.RectPhysicsSprite.extend({
         cc.log("Spaceship.init ...")
         this._super()
 
-        this.fuel = 100
+        this.r.fuel = 100
 
         return this
     },
@@ -35,11 +35,11 @@ rss.Spaceship = rss.RectPhysicsSprite.extend({
     },
 
     incFuel: function() {
-        this.fuel = Math.min(100, this.fuel + 1)
+        this.r.fuel = Math.min(100, this.r.fuel + 1)
     },
 
     decFuel: function() {
-        this.fuel = Math.max(0, this.fuel - 0.5)
+        this.r.fuel = Math.max(0, this.r.fuel - 0.5)
     },
 
     getAngle: function() {
@@ -71,7 +71,7 @@ rss.Spaceship = rss.RectPhysicsSprite.extend({
     },
 
     getFuel: function() {
-        return this.fuel
+        return this.r.fuel
     },
 
     update: function(dt) {
@@ -82,29 +82,18 @@ rss.Spaceship = rss.RectPhysicsSprite.extend({
         var dix = 0.0, diy = 0.0
 
         if (rss.upInput()) {
-            if (this.fuel > 0) {
-                rss.keys.up += dt
-                this.applyImpulse(cp.v(0, Math.min(this.getMass() * rss.keys.up * rss.spaceship.acc, rss.spaceship.maxImp)))
-                //this.decFuel()
+            if (this.r.fuel > 0) {
+                rss.spaceship.acc += 100
+                this.applyImpulse(cp.v(0, Math.min(this.getMass() * rss.spaceship.acc * dt, rss.spaceship.maxImp)))
+                this.decFuel()
             }
         }
         else {
-            rss.keys.up = 0.0
-        }
-        if (rss.downInput()) {
-            this.applyImpulse(cp.v(0, -1 * this.getMass() * dt * rss.spaceship.acc))
-        }
-        if (rss.rightInput()) {
-            this.applyImpulse(cp.v(this.getMass() * dt * 1000, 0))
-        }
-        if (rss.leftInput()) {
-            this.applyImpulse(cp.v(-1 * this.getMass() * dt * 1000, 0))
+            rss.spaceship.acc = 1000
         }
 
-        //if (rss.player.state == rss.player.states.flying) {
-            this.setAngle(0)
-            this.setAngVel(0)
-        //}
+        this.setAngle(0)
+        this.setAngVel(0)
 
         if (rss.player.state == rss.player.states.refuelling) {
             this.incFuel()

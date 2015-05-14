@@ -1,4 +1,4 @@
-rss.ConeBody = rss._DynamicBody.extend({
+rss.ConeBody = rss.DynamicBody.extend({
     ctor: function(args) {
         args.size = cc.size(args.length, args.length)
         this._super(args)

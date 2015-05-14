@@ -1,4 +1,4 @@
-var _Level = rss._CompositeDynamicBody.extend({
+var Level = rss.CompositeDynamicBody.extend({
     START_ANGLE: Math.PI / 2,
 
     ctor: function(args) {

@@ -50,30 +50,11 @@ var GameLayer = rss.BaseLayer.extend({
 
     init: function () {
         this._super()
-        //this.item = CircFlyingObstacle.create({
-        //    pos: rss.center(),
-        //    size: cc.size(50, 50),
-        //    mass: 50,
-        //    radius: 200,
-        //    angle: 90,
-        //    rotation: 135,
-        //    omega: 100
-        //}).addToSpace(rss.game.space)
 
         this.initActors()
 
         rss.game.state = rss.game.states.ready
         cc.log("Ready!")
-
-        //var item = CircFlyingObstacle.create({
-        //    pos: this.r.worldPos,
-        //    size: cc.size(50, 50),
-        //    mass: 50,
-        //    radius: this.r.level.getWorld().getRadius() + 20,
-        //    angle: 5,
-        //    rotation: this.START_ANGLE - 0,
-        //    omega: 100
-        //}).addToSpace(rss.game.space)
 
         return this
     },
@@ -104,7 +85,6 @@ var GameLayer = rss.BaseLayer.extend({
         player.setGroup(rss.tag.player)
         player.setCollisionType(rss.tag.player)
         this.r.player = player
-        rss.player.state = rss.player.states.landed
 
         var top = rss.top().y
         var grooveHeight = top - worldTop.y + 10
@@ -140,8 +120,7 @@ var GameLayer = rss.BaseLayer.extend({
 
         this.getPlayer().update(dt)
         this.getLevel().update(dt)
-        this.getParent().getChildByTag(rss.tag.statsLayer).updateFuelMeter(this.getPlayer().getFuel())
-        this.getParent().getChildByTag(rss.tag.statsLayer).updateDistanceMeter(rss.toDeg(this.getLevel().getWorld().getAngle()))
+        this.getParent().getChildByTag(rss.tag.statsLayer).update()
 
         rss.game.space.gravity = rss.mult(rss.unitVecFromTo(this.getLevel().getWorld().getPos(), this.getPlayer().getPos()), rss.gravity)
     }

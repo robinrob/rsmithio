@@ -1,4 +1,4 @@
-rss.CircBody = rss._DynamicBody.extend({
+rss.CircBody = rss.DynamicBody.extend({
     ctor: function(args) {
         args.size = cc.size(args.radius * 2, args.radius * 2)
         this._super(args)

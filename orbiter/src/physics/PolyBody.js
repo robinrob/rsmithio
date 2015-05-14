@@ -1,4 +1,4 @@
-rss.PolyBody = rss._DynamicBody.extend({
+rss.PolyBody = rss.DynamicBody.extend({
     ctor: function(args) {
         args.size = cc.size(args.radius * 2, args.radius + args.coneLength)
         this._super(args)

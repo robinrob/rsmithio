@@ -1,4 +1,4 @@
-rss.CircSegmentBody = rss._DynamicBody.extend({
+rss.CircSegmentBody = rss.DynamicBody.extend({
     SCALE: 1.0,
 
     ctor: function(args) {

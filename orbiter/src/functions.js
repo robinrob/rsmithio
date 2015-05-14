@@ -257,36 +257,48 @@ rss.rotaryLimitJoint = function(obj1, obj2, angle1, angle2) {
     return [new cp.RotaryLimitJoint(obj1.getBody(), obj2.getBody(), angle1, angle2)]
 }
 
-rss.size = function() {
+rss.winSize = function() {
     return cc.director.getWinSize()
 }
 
+rss.size = function() {
+    return rss.winSize()
+}
+
 rss.width = function() {
-    return cc.director.getWinSize().width
+    return rss.winSize().width
 }
 
 rss.height = function() {
-    return cc.director.getWinSize().height
+    return rss.winSize().height
 }
 
 rss.top = function() {
-    return cc.p(cc.director.getWinSize().width / 2, cc.director.getWinSize().height)
+    return cc.p(rss.winSize().width / 2, rss.winSize().height)
 }
 
 rss.bottom = function() {
-    return cc.p(cc.director.getWinSize().width / 2, 0)
+    return cc.p(rss.winSize().width / 2, 0)
 }
 
 rss.left = function() {
-    return cc.p(0, cc.director.getWinSize().height / 2)
+    return cc.p(0, rss.winSize().height / 2)
 }
 
 rss.right = function() {
-    return cc.p(cc.director.getWinSize().width, cc.director.getWinSize().height / 2)
+    return cc.p(rss.winSize().width, rss.winSize().height / 2)
 }
 
 rss.center = function() {
-    return cc.p(cc.director.getWinSize().width / 2, cc.director.getWinSize().height / 2)
+    return cc.p(rss.winSize().width / 2, rss.winSize().height / 2)
+}
+
+rss.topLeft = function() {
+    return cc.p(0, rss.winSize().height)
+}
+
+rss.topRight = function() {
+    return cc.p(rss.winSize().width, rss.winSize().height)
 }
 
 /* Global game controls */
@@ -333,6 +345,25 @@ rss.xyInput = function() {
 
 rss.setAlpha = function(col, alpha) {
     return cc.color(col.r, col.g, col.b, alpha)
+}
+
+rss.circSegmentVerts = function(radius, angle, offset, segments) {
+    verts = []
+
+    verts.push(cc.p(0, 0))
+
+    verts.push(cc.p(radius * Math.cos(offset), radius * Math.sin(offset)))
+    var deltaTheta = angle / segments
+    for (var a = deltaTheta; a < angle; a += deltaTheta) {
+        p = cc.p(
+            radius * Math.cos(offset - a),
+            radius * Math.sin(offset - a)
+        )
+        verts.push(p)
+    }
+    verts.push(cc.p(radius * Math.cos(offset - angle), radius * Math.sin(offset - angle)))
+
+    return verts
 }
 
 rss.scaleVerts = function(verts, scale) {
