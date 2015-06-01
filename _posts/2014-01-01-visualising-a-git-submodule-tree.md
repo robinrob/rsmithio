@@ -25,7 +25,7 @@ Finally i more recently got to wondering 'just how many submodules do i have in 
 
 <screenshot showing code tree>
 <div class="thumbnail">
-  <a href="/img/rake_each_sub.png"><img src="/img/rake_each_sub.png" alt="Screenshot showing drawn code tree" /></a>
+  <a href="{{ site.baseurl }}/img/rake_each_sub.png"><img src="{{ site.baseurl }}/img/rake_each_sub.png" alt="Screenshot showing drawn code tree" /></a>
   <div class="caption">
     `rake each_sub['echo, quiet']`
   </div>

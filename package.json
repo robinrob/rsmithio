@@ -1,0 +1,11 @@
+{
+  "name": "robinrob.github.io-dev",
+  "description": "mrrobinsmith.com dev",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp": "",
+    "gulp-sass": "",
+    "gulp-autoprefixer": "",
+    "browser-sync": ""
+  }
+}
