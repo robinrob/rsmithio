@@ -6,6 +6,7 @@ p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
+    color: $text-color;
 }
 
 
@@ -22,7 +23,6 @@ body {
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
-
 
 
 /**
@@ -87,15 +87,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $a-color;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $a-color;
     }
 
     &:hover {
-        color: $text-color;
+        color: $a-hover-color;
         text-decoration: underline;
     }
 }
@@ -201,7 +201,15 @@ pre {
     }
 }
 
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
 
-body {
-    margin-left: -200px;
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1; /* for IE6 and IE7 */
 }

@@ -1,0 +1,20 @@
+-#%header.index.intro-header{:style => "background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')"}
+%header.index.intro-header
+  .container
+    .site-heading
+      .row
+        .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
+          %h1.live-input.bstooltip{:text => "Robin Smith", "data-html" => "true", :title => "Click me to edit!<br>Made using: <a href=\"https://github.com/robinrob/jquery-liveinput\" target=\"_blank\">liveinput</a>"}
+            -#== {% assign array = "R|o|b|i|n|&nbsp|S|m|i|t|h" | split: "|" %}
+            -#== {% for item in array %}<span class="fadein{{ forloop.index }}">{{ item }}</span>{% endfor %}
+      .row
+        .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
+          -#%a.photo.bstooltip{:href => "#", :title => "Made using: https://github.com/robinrob/jquery-liveinput", "data-placement" => "left"}
+          %a.photo.bstooltip{:href => "#"}
+
+      .row
+        .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
+          %hr.small
+          %h2.subheading.live-input{:text => "Freelance web & mobile developer."}
+          .email
+            %a{:href => "mailto:{{ site.email }}"} {{ site.email }}

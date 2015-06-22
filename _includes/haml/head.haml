@@ -1,0 +1,32 @@
+%head
+  %meta{:charset => "utf-8"}
+  %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+  %meta{:content => "width=device-width initial-scale=1", :name => "viewport"}
+  %title {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  %meta{:content => "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}", :name => "description"}
+
+  %meta{:content => "max-age=0", "http-equiv" => "cache-control"}
+  %meta{:content => "no-cache", "http-equiv" => "cache-control"}
+  %meta{:content => "0", "http-equiv" => "expires"}
+  %meta{:content => "Tue, 01 Jan 1990 12:00:00 GMT", "http-equiv" => "expires"}
+
+
+  / Bootstrap Core CSS
+  %link{:rel => "stylesheet", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"}
+  -#%link{:rel => "stylesheet", :href => "{{ site.baseurl }}/css/bootstrap.css"}
+  -#%link{:rel => "stylesheet", :href => "../css/bootstrap.min.css"}
+
+  / Custom Fonts
+  %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}
+  %link{:href => "//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}
+  %link{:href => "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}
+
+  -#%link{:href => "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}
+  -#%link{:href => "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet", :type => "text/css"}
+
+  -#%link{:href => "//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}
+  -#%link{:href => "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}
+  -#%link{:href => "http://fonts.googleapis.com/css?family=Cookie", :rel => "stylesheet", :type => "text/css"}
+
+  / Custom CSS
+  %link{:rel => "stylesheet", :href => "{{ site.baseurl }}/css/main.css?reload"}

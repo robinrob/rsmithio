@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 author: Robin Smith
 title: Visualising a Git submodule tree
 subtitle: A method for organising personal repositories

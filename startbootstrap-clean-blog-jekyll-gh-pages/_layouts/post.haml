@@ -1,0 +1,33 @@
+%body
+  %p
+    \---
+    layout: default
+    \---
+    / Post Header
+    %header.intro-header{:style => "background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')"}
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+            .post-heading
+              %h1 {{ page.title }}
+              {% if page.subtitle %}
+              %h2.subheading {{ page.subtitle }}
+              {% endif %}
+              %span.meta Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}
+    / Post Content
+    %article
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+            {{ content }}
+            %hr/
+            %ul.pager
+              {% if page.previous.url %}
+              %li.previous
+                %a{"data-placement" => "top", "data-toggle" => "tooltip", :href => "{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}", :title => "{{page.previous.title}}"} ← Previous Post
+              {% endif %}
+              {% if page.next.url %}
+              %li.next
+                %a{"data-placement" => "top", "data-toggle" => "tooltip", :href => "{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}", :title => "{{page.next.title}}"} Next Post →
+              {% endif %}
+  %hr/

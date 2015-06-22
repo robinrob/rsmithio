@@ -1,0 +1,13 @@
+!!!
+%html
+  %body
+    %p
+      {% include head.html %}
+    {% include post-header.html %}
+    
+    {% include nav.html %}
+    .container
+      .col-xs-1
+      .col-xs-10
+        {{ content }}
+    {% include footer.html %}

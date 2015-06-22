@@ -1,0 +1,152 @@
+//* {
+//    background: red;
+//}
+//
+//html, body, header, footer {
+//    background: blue;
+//}
+//.col-lg-10 {
+//    background: red !important;
+//}
+//
+//span.subheading {
+//    box-sizing: content-box !important;
+//    background: yellow;
+//}
+
+.live-input:focus {
+    outline: none;
+}
+
+h1.live-input:focus {
+    border: 1px solid $header-bg-col2;
+    box-shadow: 1px 1px 10px 0px $header-bg-col1,
+                -1px -1px 10px 0px $header-bg-col1;
+}
+
+h2.live-input:focus {
+    border: 1px solid $header-bg-col1;
+    box-shadow: 1px 1px 10px 0px $header-bg-col2,
+    -1px -1px 10px 0px $header-bg-col2;
+}
+
+.site-heading h1 {
+    color: $header-font-col;
+}
+
+.site-heading h2 {
+    color: $header-font-col;
+    margin: 0;
+    padding: 5px;
+}
+
+.email {
+    a {
+        color: $brand-five;
+    }
+    a:hover {
+        color: $brand-one;
+    }
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.photo {
+    display: inline-block;
+    text-align: center;
+    width: $image-height;
+    height: $image-height;
+    background-size: cover;
+    background-image: url("../img/me.png");
+    border-radius: $image-height / 2;
+    border: 2px groove $nav-color;
+    box-shadow: 1px 1px 5px 0px $photo-edge-color,
+                -1px -1px 5px 0px $photo-edge-color;
+    transition: border 0.3s ease-out,
+                box-shadow 0.3s ease-out;
+}
+
+.photo:hover {
+    box-shadow: 2px 2px 10px 0px $photo-edge-color,
+                -2px -2px 10px 0px $photo-edge-color;
+}
+
+.macbook {
+    width: 256px;
+    height: 200px;
+    background-image: url("../img/macbook.png");
+    background-size: cover;
+}
+
+.bstooltip + .tooltip.top,
+.bstooltip + .tooltip.left {
+    opacity: $tooltip-opacity;
+}
+
+.bstooltip + .tooltip.top > .tooltip-arrow {
+    border-top-color: $tooltip-arrow-color;
+}
+.bstooltip + .tooltip.left > .tooltip-arrow {
+    border-left-color: $tooltip-arrow-color;
+}
+
+.bstooltip + .tooltip > .tooltip-inner {
+    font-size: $tooltip-font-size;
+    color: $tooltip-color;
+    background-color: $tooltip-bg-color;
+}
+
+@for $i from 1 through 11  {
+    .fadein#{$i} {
+            -webkit-animation: fadein $title-fadein-base + $i * $title-fadein-step
+    }
+}
+
+@-webkit-keyframes fadein {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@-moz-keyframes fadein {
+
+    0% {
+        -moz-transform: translateX(-800%) rotate(0);
+    }
+
+    100% {
+        -moz-transform: translateX(0) rotate(-360deg);
+    }
+
+}
+
+@-o-keyframes fadein {
+
+    0% {
+        -o-transform: translateX(-800%) rotate(0);
+    }
+
+    100% {
+        -o-transform: translateX(0) rotate(-360deg);
+    }
+
+}
+
+@keyframes fadein {
+
+    from {
+        opacity: 1.0;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
