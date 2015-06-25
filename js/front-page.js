@@ -1,4 +1,8 @@
 $(function () {
+    $(".accordion").accordion({
+        paragraph: ".row"
+    })
+
     var $title = $("h1.live-input")
     var $subtitle = $(".subheading.live-input")
 

@@ -9,6 +9,7 @@
             writeDelay: 150,
             editable: true,
             cursorColor: "white",
+            cursorMargin: "0.05em",
             callback: function() {}
         }
         var params = $.extend({}, defaults, options)
@@ -39,8 +40,19 @@
                 html: char,
                 class: "char"
             });
-            $($char).insertBefore($cursorObj)
+            $char.insertBefore($cursorObj)
             keyPress()
+        }
+
+        function writeInvisibleCursor($cursorObj) {
+            var $char = $("<span />", {
+                html: "_"
+            });
+            $char.css({
+                "opacity": 0,
+                "margin-right": params.cursorMargin
+            })
+            $char.insertBefore($cursorObj)
         }
 
         function writeText(text, $cursorObj, callback) {
@@ -77,11 +89,15 @@
                 text: "_",
                 class: "cursor"
             });
-            $cursor.css("margin-left", "0.05em")
+            $cursor.css({
+                "z-index" : "1",
+                "margin-left": params.cursorMargin
+            })
 
             setTimeout(function () {
                 reset()
                 $this.append($cursor)
+                writeInvisibleCursor($cursor)
                 writeText(params.text, $cursor, function() {
                     fadeOutCursor()
                     params.callback()
@@ -92,10 +108,11 @@
             $this.off("focusin.liveinput focousout.liveinput keydown.liveinput keypress.liveinput keyup.liveinput keyinput.liveinput")
             $this.on("focusin.liveinput", function() {
                 keyPress()
-                showCursor(function() {setTimeout(toggleCursor, params.cursorFadeDuration)})
+                showCursor(toggleCursor)
             })
 
             $this.on("focusout.liveinput", function() {
+                console.log("FOCUS OUT")
                 $cursor.stop(true)
                 hideCursor()
             })
@@ -123,7 +140,8 @@
             })
 
             $this.on("keyInput.liveinput", function liveInputKeyInput(event) {
-                var char = String.fromCharCode(event.keyCode)
+                var code = event.charCode || event.keyCode;
+                var char = String.fromCharCode(code)
 
                 if (event.keyCode === 8) { //backspace
                     $cursor.siblings().last().remove()
@@ -178,7 +196,7 @@
             }
 
             function showCursor(callback) {
-                fadeInCursor(0, callback)
+                fadeInCursor(params.cursorFadeDuration / 2, callback)
             }
         })
     }
