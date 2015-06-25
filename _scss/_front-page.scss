@@ -167,7 +167,7 @@ header {
         }
 
         .section:nth-of-type(even) {
-            background: lighten($theme-2, 40%);
+            background: darken($theme-1, 2%);
         }
 
         .section:nth-of-type(odd) {
