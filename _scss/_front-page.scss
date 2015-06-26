@@ -253,56 +253,29 @@ header {
     background-image: url('../img/ben.jpg');
 }
 
-@for $i from 1 through 11  {
-    .fadein#{$i} {
-            -webkit-animation: fadein $title-fadein-base + $i * $title-fadein-step
-    }
-}
-
-@-webkit-keyframes fadein {
-
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
+@media only screen and (max-width: 1170px) {
+    .projects {
+        li {
+            &:before {
+                zoom: 0.75;
+            }
+        }
     }
 
 }
 
-@-moz-keyframes fadein {
-
-    0% {
-        -moz-transform: translateX(-800%) rotate(0);
-    }
-
-    100% {
-        -moz-transform: translateX(0) rotate(-360deg);
-    }
-
-}
-
-@-o-keyframes fadein {
-
-    0% {
-        -o-transform: translateX(-800%) rotate(0);
-    }
-
-    100% {
-        -o-transform: translateX(0) rotate(-360deg);
-    }
-
-}
-
-@keyframes fadein {
-
-    from {
-        opacity: 1.0;
-    }
-
-    to {
-        opacity: 0;
+@media only screen and (max-width: 768px) {
+    .projects {
+        li {
+            &:before {
+                float: left !important;
+                margin-left: 20%;
+                zoom: 0.75;
+            }
+            h3 {
+                clear: both;
+            }
+        }
     }
 
 }

@@ -130,9 +130,7 @@ pre {
     .wrapper {
       max-width: calc(800px - (0px));
       padding-right: 0px;
-      padding-left: 0px; }
-      .wrapper .main .section h2 {
-        text-align: left; } }
+      padding-left: 0px; } }
 
 /**
  * Clearfix
@@ -721,50 +719,17 @@ header .photo {
 .photo-ben {
   background-image: url("../img/ben.jpg"); }
 
-.fadein1 {
-  -webkit-animation: fadein 1s; }
+@media only screen and (max-width: 1170px) {
+  .projects li:before {
+    zoom: 0.75; } }
 
-.fadein2 {
-  -webkit-animation: fadein 1.5s; }
-
-.fadein3 {
-  -webkit-animation: fadein 2s; }
-
-.fadein4 {
-  -webkit-animation: fadein 2.5s; }
-
-.fadein5 {
-  -webkit-animation: fadein 3s; }
-
-.fadein6 {
-  -webkit-animation: fadein 3.5s; }
-
-.fadein7 {
-  -webkit-animation: fadein 4s; }
-
-.fadein8 {
-  -webkit-animation: fadein 4.5s; }
-
-.fadein9 {
-  -webkit-animation: fadein 5s; }
-
-.fadein10 {
-  -webkit-animation: fadein 5.5s; }
-
-.fadein11 {
-  -webkit-animation: fadein 6s; }
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-@keyframes fadein {
-  from {
-    opacity: 1.0; }
-  to {
-    opacity: 0; } }
+@media only screen and (max-width: 768px) {
+  .projects li:before {
+    float: left !important;
+    margin-left: 20%;
+    zoom: 0.75; }
+  .projects li h3 {
+    clear: both; } }
 
 /**
  * Syntax highlighting styles
