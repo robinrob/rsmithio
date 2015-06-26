@@ -201,6 +201,14 @@ header {
                         height: $project-photo-size / 2;
                     }
                 }
+
+                li.project-salesforce-s3 {
+                    &:before {
+                        background-image: url('../img/salesforce_s3.png');
+                        width: $project-photo-size;
+                        height: $project-photo-size;
+                    }
+                }
             }
         }
 
