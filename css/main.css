@@ -697,7 +697,7 @@ header .photo {
     .wrapper .main .projects ul li.project-alumina:before {
       background-image: url("../img/macbook_alumina_small.png"); }
     .wrapper .main .projects ul li.project-heroku-db:before {
-      background-image: url("../img/test.png");
+      background-image: url("../img/heroku_db.png");
       width: 157px;
       height: 110px;
       border-style: solid;
