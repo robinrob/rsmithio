@@ -684,14 +684,14 @@ header .photo {
       background-position: center; }
       @media only screen and (max-width: 1170px) {
         .wrapper .main .projects ul li:before {
-          zoom: 0.90; } }
+          zoom: 0.80; } }
       @media only screen and (max-width: 768px) {
         .wrapper .main .projects ul li:before {
           float: left !important;
           margin-left: 20%;
           margin-bottom: 2%;
           height: 300px !important;
-          zoom: 0.9; } }
+          zoom: 0.75; } }
     @media only screen and (max-width: 768px) {
       .wrapper .main .projects ul li h3 {
         clear: both; } }

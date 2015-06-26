@@ -187,7 +187,7 @@ header {
                         background-position: center;
 
                         @media only screen and (max-width: 1170px) {
-                            zoom: 0.90;
+                            zoom: 0.80;
                         }
 
                         @media only screen and (max-width: 768px) {
@@ -196,7 +196,7 @@ header {
                             margin-left: 20%;
                             margin-bottom: 2%;
                             height: $project-photo-size !important;
-                            zoom: 0.9;
+                            zoom: 0.75;
                         }
                     }
                     @media only screen and (max-width: 768px) {
