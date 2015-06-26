@@ -185,6 +185,23 @@ header {
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: center;
+
+                        @media only screen and (max-width: 1170px) {
+                            zoom: 0.90;
+                        }
+
+                        @media only screen and (max-width: 768px) {
+                            float: left !important;
+                            //border-top: 8px solid $theme-4;
+                            margin-left: 20%;
+                            margin-bottom: 2%;
+                            zoom: 0.75;
+                        }
+                    }
+                    @media only screen and (max-width: 768px) {
+                        h3 {
+                            clear: both;
+                        }
                     }
                 }
 
@@ -196,9 +213,18 @@ header {
 
                 li.project-heroku-db {
                     &:before {
-                        background-image: url('../img/heroku_db.jpg');
-                        width: $project-photo-size / 2;
-                        height: $project-photo-size / 2;
+                        background-image: url('../img/heroku_db.png');
+                        width: 157px;
+                        height: 110px;
+                        border-style: solid;
+                        border-color: $theme-4;
+                        border-left: 2px;
+                        border-top: 2px;
+                        border-bottom: 2px;
+                        border-right: 2px;
+                        box-shadow: 1px 1px 1px 1px $theme-4,
+                                    -1px -1px 1px 1px $theme-4;
+                        border-radius: 10%;
                     }
                 }
 
@@ -251,31 +277,4 @@ header {
 
 .photo-ben {
     background-image: url('../img/ben.jpg');
-}
-
-@media only screen and (max-width: 1170px) {
-    .projects {
-        li {
-            &:before {
-                zoom: 0.75;
-            }
-        }
-    }
-
-}
-
-@media only screen and (max-width: 768px) {
-    .projects {
-        li {
-            &:before {
-                float: left !important;
-                margin-left: 20%;
-                zoom: 0.75;
-            }
-            h3 {
-                clear: both;
-            }
-        }
-    }
-
 }
