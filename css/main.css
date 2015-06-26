@@ -679,17 +679,17 @@ header .photo {
     .wrapper .main .projects ul li:before {
       display: inline-block;
       float: right;
-      width: 100px;
-      height: 100px; }
-    .wrapper .main .projects ul li.project:before {
-      width: 100px;
-      height: 100px;
-      background-size: cover;
-      background-position: center;
-      border-radius: 50px;
-      border: 2px groove #404040; }
-    .wrapper .main .projects ul li.project-google-sf:before {
-      background-image: url("../img/sean.jpg"); }
+      width: 300px;
+      height: 300px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .wrapper .main .projects ul li.project-alumina:before {
+      background-image: url("../img/macbook_alumina_small.png"); }
+    .wrapper .main .projects ul li.project-heroku-db:before {
+      background-image: url("../img/heroku_db.jpg");
+      width: 150px;
+      height: 150px; }
     .wrapper .main .endorsement {
       text-align: center;
       margin-bottom: 8%; }
@@ -710,23 +710,6 @@ header .photo {
         font-style: normal; }
         .wrapper .main .endorsement .caption a {
           color: #0085a1; }
-
-.project-image {
-  width: 100px;
-  height: 100px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 50px;
-  border: 2px groove #404040; }
-
-.google-sf {
-  background-image: url("../img/sean.jpg"); }
-
-.right {
-  float: right; }
-
-.left {
-  float: left; }
 
 .photo-sean {
   background-image: url("../img/sean.jpg"); }

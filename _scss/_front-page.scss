@@ -176,29 +176,29 @@ header {
 
         .projects {
             ul {
-                //overflow: hidden;
                 li {
                     &:before {
                         display: inline-block;
                         float: right;
-                        width: 100px;
-                        height: 100px;
-
-                    }
-                }
-                li.project {
-                    &:before {
-                        width: $endorser-photo-size;
-                        height: $endorser-photo-size;
-                        background-size: cover;
+                        width: $project-photo-size;
+                        height: $project-photo-size;
+                        background-size: contain;
+                        background-repeat: no-repeat;
                         background-position: center;
-                        border-radius: $endorser-photo-size / 2;
-                        border: 2px groove $theme-4;
                     }
                 }
-                li.project-google-sf {
+
+                li.project-alumina {
                     &:before {
-                        background-image: url('../img/sean.jpg');
+                        background-image: url('../img/macbook_alumina_small.png');
+                    }
+                }
+
+                li.project-heroku-db {
+                    &:before {
+                        background-image: url('../img/heroku_db.jpg');
+                        width: $project-photo-size / 2;
+                        height: $project-photo-size / 2;
                     }
                 }
             }
@@ -235,28 +235,6 @@ header {
             }
         }
     }
-}
-
-.project-image {
-    //display: block;
-    width: $endorser-photo-size;
-    height: $endorser-photo-size;
-    background-size: cover;
-    background-position: center;
-    border-radius: $endorser-photo-size / 2;
-    border: 2px groove $theme-4;
-}
-
-.google-sf {
-    background-image: url('../img/sean.jpg');
-}
-
-.right {
-    float: right;
-}
-
-.left {
-    float: left;
 }
 
 .photo-sean {
