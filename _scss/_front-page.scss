@@ -195,6 +195,7 @@ header {
                             //border-top: 8px solid $theme-4;
                             margin-left: 20%;
                             margin-bottom: 2%;
+                            height: $project-photo-size !important;
                             zoom: 0.9;
                         }
                     }
@@ -211,28 +212,17 @@ header {
                     }
                 }
 
-                li.project-heroku-db {
+                .project-heroku-db {
                     &:before {
                         background-image: url('../img/heroku_db.png');
-                        width: 157px;
-                        height: 110px;
-                        border-style: solid;
-                        border-color: $theme-4;
-                        border-left: 2px;
-                        border-top: 2px;
-                        border-bottom: 2px;
-                        border-right: 2px;
-                        box-shadow: 1px 1px 1px 1px $theme-4,
-                                    -1px -1px 1px 1px $theme-4;
-                        border-radius: 10%;
+                        width: $project-photo-size * 0.8;
+                        height: $project-photo-size * 0.6;
                     }
                 }
 
                 li.project-salesforce-s3 {
                     &:before {
                         background-image: url('../img/salesforce_s3.png');
-                        width: $project-photo-size;
-                        height: $project-photo-size;
                     }
                 }
             }
