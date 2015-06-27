@@ -98,7 +98,6 @@ gulp.task('haml-watch', function () {
             pipe(haml()).
             pipe(gulp.dest(dest)).
             pipe(gcallback(function() {
-                console.log("HAML DONE")
                 runsequence('build')
             }))
     })
@@ -157,8 +156,12 @@ gulp.task('js', function() {
         .pipe(gulp.dest(config.paths.js.dest));
 });
 
-gulp.task('build', function(done) {
+gulp.task('fast-build', function(done) {
     runsequence('jekyll', 'sass', ['css', 'js'], 'reload', done);
+})
+
+gulp.task('build', function(done) {
+    runsequence('haml-build', 'jekyll', 'sass', ['css', 'js'], 'reload', done);
 })
 
 gulp.task('upload', function() {
@@ -181,7 +184,7 @@ gulp.task('save', function(done) {
 });
 
 gulp.task('deploy', ['save'], function() {
-    return runsequence('build', ['haml-build', 'html', 'css'], 'upload', 'purge-online-cache');
+    return runsequence('build', ['html', 'css'], 'upload', 'purge-online-cache');
 });
 
 /**
@@ -189,5 +192,5 @@ gulp.task('deploy', ['save'], function() {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['haml-watch', 'build', 'browser-sync'], function() {
-    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['build']);
+    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-build']);
 })
