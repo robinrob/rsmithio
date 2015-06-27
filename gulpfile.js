@@ -5,16 +5,23 @@ var config = {
         img: ["./img/**/*"],
         js: ["./js/**/*.js"],
         sass: {
-            main: '_scss/main.scss',
-            src: '_scss/*.scss'
+            main: '_scss/_main.scss',
+            src: '_scss/*.scss',
+            dest: '_css/'
         },
         css: {
+            main: 'styles.css',
+            src: '_css/*.css',
             dest: '_site/css'
         },
         haml: {
             src: [root, '_includes', '_layouts', 'cv']
         },
-    },
+        html: {
+            src: ["./_site/**/*.html"],
+            dest: "./"
+        }
+    }
 };
 
 
@@ -25,6 +32,8 @@ var cp = require('child_process');
 var gcallback = require('gulp-callback')
 var gulp = require('gulp');
 var haml = require('gulp-ruby-haml');
+var minifyCSS = require('gulp-minify-css');
+var minifyHTML = require("gulp-minify-html");
 var ngmin = require('gulp-ngmin')
 var path = require('path')
 var plumber = require('gulp-plumber')
@@ -58,7 +67,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     reload()
 });
 
-gulp.task('reload', function() {
+gulp.task('reload', function () {
     reload()
 })
 /**
@@ -82,8 +91,17 @@ gulp.task('sass', function () {
             includePaths: [config.paths.sass.src],
             onError: onError
         }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest(config.paths.css.dest))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
+        .pipe(gulp.dest(config.paths.sass.dest))
+});
+
+gulp.task("css", function () {
+    return gulp.src(config.paths.css.src, {
+        base: './'
+    })
+        .pipe(minifyCSS())
+        .pipe(concat(config.paths.css.main))
+        .pipe(gulp.dest(config.paths.css.dest));
 });
 
 gulp.task('haml-watch', function () {
@@ -99,25 +117,38 @@ gulp.task('haml-watch', function () {
             pipe(watch(src)).
             pipe(changed(dest, {extension: '.html'})).
             pipe(haml()).
-            pipe(gulp.dest(dest)).
-            pipe(gcallback(function () {
-                console.log("HAML DONE")
-                runsequence('jekyll-rebuild')
-            }))
+            pipe(gulp.dest(dest))
     })
 })
+
+gulp.task("html", function() {
+    // Overwrite original files
+    return gulp.src(config.paths.html.src, {
+        base: './'
+    })
+        .pipe(minifyHTML())
+        .pipe(gulp.dest('./'));
+});
 
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch(config.paths.sass.src, ['sass', 'reload']);
+    gulp.watch(config.paths.sass.src, function() {
+        runsequence('sass', 'css', 'reload')
+    });
     gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.js, 'orbiter/**/*'], ['jekyll-rebuild']);
 });
 
+
+gulp.task('build', function() {
+    runsequence('sass', 'css')
+    runsequence('html')
+    reload()
+})
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'haml-watch', 'sass', 'watch']);
+gulp.task('default', runsequence('build', 'haml-watch', 'watch', 'browser-sync'));

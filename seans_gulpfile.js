@@ -6,7 +6,6 @@ var config = {
     css: ["./css/**/*.css"],
     html: {
       src: ["./_site/**/*.html"],
-      dest: "./build"
     },
   },
 };
