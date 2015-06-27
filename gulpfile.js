@@ -176,11 +176,12 @@ gulp.task('purge-online-cache', function() {
     cloudflare(config.cloudflare)
 });
 
-gulp.task('submit-sitemap', function(cb) {
+gulp.task('submit-sitemap', function(done) {
     require('submit-sitemap').submitSitemap(config.sitemapUrl, function(err) {
-        if (err)
+        if (err) {
             console.warn(err);
-        cb();
+        }
+        done()
     });
 });
 
