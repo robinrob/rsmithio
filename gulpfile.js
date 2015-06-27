@@ -161,7 +161,7 @@ gulp.task('purge-online-cache', function() {
 });
 
 gulp.task('save', function(done) {
-    return require('child_process', done).exec('rake base:save && git push origin develop', {
+    return require('child_process', done).exec('rake base:save', {
         stdio: 'inherit'
     }, done);
 });
