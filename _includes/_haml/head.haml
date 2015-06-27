@@ -1,9 +1,11 @@
 %head
   %meta{:charset => "utf-8"}
   %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
-  %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+  %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+
+  %meta{:name => "description", :content => "{{ site.description }}"}
+  %meta{:name => "keywords", :content => "Freelance developer, Edinburgh, mobile, web, AngularJS, PhoneGap, SEO, Heroku, AWS, Google Apps, JavaScript, Force.com, Salesforce"}
   %title {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
-  %meta{:content => "{{ site.description }}", :name => "description"}
 
   / CSS
   %link{:rel => "stylesheet", :href => "css/styles.css"}
