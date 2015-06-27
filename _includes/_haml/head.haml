@@ -5,13 +5,5 @@
   %title {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
   %meta{:content => "{{ site.description }}", :name => "description"}
 
-  %meta{:content => "max-age=0", "http-equiv" => "cache-control"}
-  %meta{:content => "no-cache", "http-equiv" => "cache-control"}
-  %meta{:content => "0", "http-equiv" => "expires"}
-  %meta{:content => "Tue, 01 Jan 1990 12:00:00 GMT", "http-equiv" => "expires"}
-
-
   / CSS
   %link{:rel => "stylesheet", :href => "css/styles.css"}
-  / Dev version
-  -#%link{:rel => "stylesheet", :href => "css/styles.css?reload"}
