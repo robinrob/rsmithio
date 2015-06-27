@@ -29,7 +29,7 @@ var config = {
 };
 config = require('./_secret-config.js')(config)
 
-var argv = require('yargs')
+var argv = require('yargs').argv
 var browserSync = require('browser-sync')
 var changed = require('gulp-changed')
 var cloudflare = require('gulp-cloudflare')
