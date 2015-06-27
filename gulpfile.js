@@ -29,6 +29,7 @@ var config = {
 };
 config = require('./_secret-config.js')(config)
 
+var argv = require('yargs')
 var browserSync = require('browser-sync')
 var changed = require('gulp-changed')
 var cloudflare = require('gulp-cloudflare')
@@ -158,7 +159,7 @@ gulp.task('purge-online-cache', function() {
 });
 
 gulp.task('save', function(done) {
-    return require('child_process', done).exec('rake base:save', {
+    return require('child_process', done).exec('rake base:save[' + argv.msg + ']' , {
         stdio: 'inherit'
     }, done);
 });
