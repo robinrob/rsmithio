@@ -165,7 +165,7 @@ gulp.task('deploy', function() {
 });
 
 gulp.task('save', function(done) {
-    return require('child_process', done).exec('git add . && git commit -m "..." && git push && gulp deploy', {
+    return require('child_process', done).exec('rake base:save && gulp deploy', {
         stdio: 'inherit'
     }, done);
 });
