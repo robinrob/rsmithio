@@ -581,6 +581,9 @@ body {
 html, body {
   overflow-x: hidden; }
 
+p {
+  text-align: justify; }
+
 h1.live-input,
 h2.live-input {
   border: 1px solid transparent;
@@ -679,8 +682,6 @@ header .photo {
     max-width: 900px;
     margin: 40px 0 0px 0;
     color: black; }
-    .main .blurb p {
-      text-align: justify; }
     .main .blurb hr.large {
       max-width: 90%;
       border-color: gray; }
@@ -700,6 +701,7 @@ header .photo {
     float: right;
     width: 200px;
     height: 200px;
+    margin-left: 3%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
