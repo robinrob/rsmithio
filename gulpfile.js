@@ -159,7 +159,8 @@ gulp.task('purge-online-cache', function() {
 });
 
 gulp.task('save', function(done) {
-    return require('child_process', done).exec('rake base:save[' + argv.msg + ']' , {
+    var msg = argv.msg || ""
+    return require('child_process', done).exec('rake base:save[' + msg + ']' , {
         stdio: 'inherit'
     }, done);
 });
