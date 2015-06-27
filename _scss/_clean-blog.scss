@@ -191,13 +191,11 @@ hr.large {
 // Header
 
 .intro-header {
-    //background: $header-bg;
     background: $header-bg-image;
-    //background-color: $header-bg-col1;
     background-attachment: scroll;
     max-height: 475px;
     @include background-cover();
-    // NOTE: Background images are set within the HTML using inline CSS!
+
     .site-heading,
     .post-heading,
     .page-heading {
@@ -213,6 +211,7 @@ hr.large {
             margin-top: 0;
             margin-bottom: 0.25em;
             font-size: 50px;
+            white-space: nowrap;
         }
         .subheading {
             font-size: 24px;
@@ -224,6 +223,7 @@ hr.large {
         }
         @media only screen and (min-width: 768px) {
             h1 {
+                line-height: 88px;
                 font-size: 80px;
             }
         }

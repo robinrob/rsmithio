@@ -4,14 +4,52 @@
 /*****************************************************************/
 /* Colors (themed) */
 /*****************************************************************/
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 /**
  * Basic styling
@@ -25,9 +63,7 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 /**
- * Set `margin-bottom` to
-
- tain vertical rhythm
+ * Set `margin-bottom` to maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -66,6 +102,9 @@ li > ol {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300; }
+
+strong {
+  font-weight: 600; }
 
 /**
  * Links
@@ -119,27 +158,8 @@ pre {
     padding-left: 0; }
 
 /**
- * Wrapper
- */
-.wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0px;
-  padding-left: 0px; }
-  @media screen and (max-width: 800px) {
-    .wrapper {
-      max-width: calc(800px - (0px));
-      padding-right: 0px;
-      padding-left: 0px; } }
-
-/**
  * Clearfix
  */
-.wrapper:after {
-  content: "";
-  display: table;
-  clear: both; }
-
 /**
  * Icons
  */
@@ -316,7 +336,8 @@ hr.large {
     .intro-header .page-heading h1 {
       margin-top: 0;
       margin-bottom: 0.25em;
-      font-size: 50px; }
+      font-size: 50px;
+      white-space: nowrap; }
     .intro-header .site-heading .subheading,
     .intro-header .page-heading .subheading {
       font-size: 24px;
@@ -328,6 +349,7 @@ hr.large {
     @media only screen and (min-width: 768px) {
       .intro-header .site-heading h1,
       .intro-header .page-heading h1 {
+        line-height: 88px;
         font-size: 80px; } }
   .intro-header .post-heading h1 {
     font-size: 35px; }
@@ -555,6 +577,9 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: rgba(0, 133, 161, 0.2); }
 
+html {
+  background: red; }
+
 h2 {
   font-size: 35px;
   color: #0085a1;
@@ -599,14 +624,13 @@ h2.live-input:hover {
   outline: none; }
 
 .site-heading h1 {
-  white-space: nowrap;
   color: #eeeeee; }
 
 .site-heading h2 {
-  color: #eeeeee;
-  margin: 0; }
+  color: #eeeeee; }
 
 header .email {
+  display: block;
   margin-top: 20px;
   font-size: 20px;
   text-align: center; }
@@ -631,102 +655,100 @@ header .photo {
   header .photo:hover {
     box-shadow: 2px 2px 10px 0px gray, -2px -2px 10px 0px gray; }
 
-.wrapper {
-  text-align: center; }
-  .wrapper .main {
+.main {
+  display: inline-block;
+  width: 100%;
+  text-align: left; }
+  .main .container {
+    max-width: 900px; }
+  .main ul {
+    list-style-type: none; }
+  .main ul, .main li {
+    margin-left: 0;
+    padding: 0; }
+  .main p {
+    font-size: 18px;
+    margin: 5px 0 50px 0;
+    padding: 0; }
+  .main h2 {
+    text-align: center;
+    margin-bottom: 5%; }
+  .main hr.large {
+    border-color: gray; }
+  .main .blurb {
     display: inline-block;
-    width: 100%;
-    text-align: left; }
-    .wrapper .main .container {
-      max-width: 900px; }
-    .wrapper .main ul {
-      list-style-type: none; }
-    .wrapper .main ul, .wrapper .main li {
-      margin-left: 0;
-      padding: 0; }
-    .wrapper .main p {
-      font-size: 18px;
-      margin: 5px 0 50px 0;
-      padding: 0; }
-    .wrapper .main h2 {
-      text-align: center;
-      margin-bottom: 5%; }
-    .wrapper .main hr.large {
+    max-width: 900px;
+    margin: 40px 0 0px 0;
+    color: black; }
+    .main .blurb p {
+      text-align: justify; }
+    .main .blurb hr.large {
+      max-width: 90%;
       border-color: gray; }
-    .wrapper .main .blurb {
-      display: inline-block;
-      max-width: 900px;
-      margin: 40px 0 0px 0;
-      color: black; }
-      .wrapper .main .blurb p {
-        text-align: justify; }
-      .wrapper .main .blurb hr.large {
-        max-width: 90%;
-        border-color: gray; }
-    .wrapper .main .section {
-      padding-top: 3%;
-      padding-bottom: 3%; }
-      .wrapper .main .section p.section-intro {
-        color: #404040;
-        text-align: center;
-        font-size: 19px; }
-    .wrapper .main .section:nth-of-type(even) {
-      background: #e8e8e8; }
-    .wrapper .main .section:nth-of-type(odd) {
-      color: black; }
-    .wrapper .main .projects ul li:before {
-      display: inline-block;
-      float: right;
-      width: 200px;
-      height: 200px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center; }
-      @media only screen and (max-width: 1170px) {
-        .wrapper .main .projects ul li:before {
-          zoom: 0.90; } }
-      @media only screen and (max-width: 768px) {
-        .wrapper .main .projects ul li:before {
-          float: left !important;
-          margin-left: 20%;
-          margin-top: 0%;
-          margin-bottom: 2%;
-          height: 200px !important; } }
-    @media only screen and (max-width: 768px) {
-      .wrapper .main .projects ul li {
-        border-bottom: 4px solid gray; }
-        .wrapper .main .projects ul li h3 {
-          clear: both; }
-        .wrapper .main .projects ul li p {
-          margin-bottom: 10%; } }
-    .wrapper .main .projects ul li.project-alumina:before {
-      background-image: url("../img/macbook_alumina_small.png"); }
-    .wrapper .main .projects ul .project-heroku-db:before {
-      background-image: url("../img/heroku_db.png");
-      width: 160px;
-      height: 120px; }
-    .wrapper .main .projects ul li.project-salesforce-s3:before {
-      background-image: url("../img/salesforce_s3.png"); }
-    .wrapper .main .endorsement {
+  .main .section {
+    padding-top: 3%;
+    padding-bottom: 3%; }
+    .main .section p.section-intro {
+      color: #404040;
       text-align: center;
-      margin-bottom: 8%; }
-      .wrapper .main .endorsement .endorsement-photo {
-        display: inline-block;
-        text-align: center;
-        width: 100px;
-        height: 100px;
-        margin-bottom: 10px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 50px;
-        border: 1px groove #404040;
-        box-shadow: 1px 1px 1px 0px gray, -1px -1px 1px 0px gray; }
-      .wrapper .main .endorsement blockquote {
-        color: black; }
-      .wrapper .main .endorsement .caption {
-        font-style: normal; }
-        .wrapper .main .endorsement .caption a {
-          color: #0085a1; }
+      font-size: 19px; }
+  .main .section:nth-of-type(even) {
+    background: #e8e8e8; }
+  .main .section:nth-of-type(odd) {
+    color: black; }
+  .main .projects ul li:before {
+    display: inline-block;
+    float: right;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+    @media only screen and (max-width: 1170px) {
+      .main .projects ul li:before {
+        zoom: 0.90; } }
+    @media only screen and (max-width: 768px) {
+      .main .projects ul li:before {
+        float: left !important;
+        margin-left: 20%;
+        margin-top: 0%;
+        margin-bottom: 2%;
+        height: 200px !important; } }
+  @media only screen and (max-width: 768px) {
+    .main .projects ul li {
+      border-bottom: 4px solid gray; }
+      .main .projects ul li h3 {
+        clear: both; }
+      .main .projects ul li p {
+        margin-bottom: 10%; } }
+  .main .projects ul li.project-alumina:before {
+    background-image: url("../img/macbook_alumina_small.png"); }
+  .main .projects ul .project-heroku-db:before {
+    background-image: url("../img/heroku_db.png");
+    width: 160px;
+    height: 120px; }
+  .main .projects ul li.project-salesforce-s3:before {
+    background-image: url("../img/salesforce_s3.png"); }
+  .main .endorsement {
+    text-align: center;
+    margin-bottom: 8%; }
+    .main .endorsement .endorsement-photo {
+      display: inline-block;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50px;
+      border: 1px groove #404040;
+      box-shadow: 1px 1px 1px 0px gray, -1px -1px 1px 0px gray; }
+    .main .endorsement blockquote {
+      color: black; }
+    .main .endorsement .caption {
+      font-style: normal; }
+      .main .endorsement .caption a {
+        color: #0085a1; }
 
 .photo-sean {
   background-image: url("../img/sean.jpg"); }
