@@ -7,7 +7,7 @@ var config = {
         sass: {
             main: '_scss/_main.scss',
             src: '_scss/*.scss',
-            dest: '_css/'
+            dest: '_css'
         },
         css: {
             main: 'styles.css',
@@ -43,6 +43,7 @@ var reload = browserSync.reload
 var runsequence = require('run-sequence')
 var shell = require('shelljs/global')
 var sass = require('gulp-sass');
+var uglify = require('gulp-uglifyjs');
 var watch = require('gulp-watch')
 
 
@@ -55,17 +56,10 @@ function onError(err) {
     shell.exec("say wanker")
 }
 
-gulp.task('jekyll-build', function (done) {
+gulp.task('jekyll', function (done) {
     browserSync.notify(messages.jekyllBuild)
     return cp.spawn('jekyll', ['build'], {stdio: 'inherit'}).on('close', done);
 })
-
-/**
- * Rebuild Jekyll & do page reload
- */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-    reload()
-});
 
 gulp.task('reload', function () {
     reload()
@@ -73,35 +67,13 @@ gulp.task('reload', function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['jekyll-build'], function () {
+gulp.task('browser-sync', function () {
     browserSync({
         server: {
             baseDir: '_site'
         },
         browser: "safari"
     });
-});
-
-/**
- * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
- */
-gulp.task('sass', function () {
-    return gulp.src(config.paths.sass.main)
-        .pipe(sass({
-            includePaths: [config.paths.sass.src],
-            onError: onError
-        }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
-        .pipe(gulp.dest(config.paths.sass.dest))
-});
-
-gulp.task("css", function () {
-    return gulp.src(config.paths.css.src, {
-        base: './'
-    })
-        .pipe(minifyCSS())
-        .pipe(concat(config.paths.css.main))
-        .pipe(gulp.dest(config.paths.css.dest));
 });
 
 gulp.task('haml-watch', function () {
@@ -131,24 +103,45 @@ gulp.task("html", function() {
 });
 
 /**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
+ * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
-gulp.task('watch', function () {
-    gulp.watch(config.paths.sass.src, function() {
-        runsequence('sass', 'css', 'reload')
-    });
-    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.js, 'orbiter/**/*'], ['jekyll-rebuild']);
+gulp.task('sass', function () {
+    return gulp.src(config.paths.sass.main)
+        .pipe(sass({
+            includePaths: [config.paths.sass.src],
+            onError: onError
+        }))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
+        .pipe(gulp.dest(config.paths.sass.dest))
 });
 
+gulp.task("css", function () {
+    return gulp.src(config.paths.css.src, {
+        base: './'
+    })
+        .pipe(minifyCSS())
+        .pipe(concat(config.paths.css.main))
+        .pipe(gulp.dest(config.paths.css.dest));
+});
 
-gulp.task('build', function() {
-    runsequence('sass', 'css')
-    runsequence('html')
-    reload()
+gulp.task('js', function() {
+    return gulp.src('js/*.js')
+        .pipe(uglify())
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest('_site/js/'));
+});
+
+gulp.task('deploy', function() {
+    return runsequence(['html', 'css']);
+});
+
+gulp.task('build', function(done) {
+    runsequence('jekyll', 'sass', ['css', 'js', 'html'], 'reload', done);
 })
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', runsequence('build', 'haml-watch', 'watch', 'browser-sync'));
+gulp.task('default', ['build', 'browser-sync'], function() {
+    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.js, 'orbiter/**/*'], ['build']);
+})
