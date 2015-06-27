@@ -584,58 +584,58 @@ html, body {
 p {
   text-align: justify; }
 
-h1.live-input,
-h2.live-input {
+header .site-heading h1 {
+  color: #eeeeee; }
+
+header .site-heading h2 {
+  color: #eeeeee; }
+
+header .site-heading h1.live-input,
+header .site-heading h2.live-input {
   border: 1px solid transparent;
   -webkit-transition: border 0.2s ease-out, box-shadow 0.2s ease-out;
           transition: border 0.2s ease-out, box-shadow 0.2s ease-out; }
 
-h1.live-input:focus,
-h1.live-input:hover {
+header .site-heading h1.live-input:focus,
+header .site-heading h1.live-input:hover {
   border: 1px solid black;
   box-shadow: 1px 1px 10px 0px #5a5a5a, -1px -1px 10px 0px #5a5a5a; }
 
-h2.live-input:focus,
-h2.live-input:hover {
+header .site-heading h2.live-input:focus,
+header .site-heading h2.live-input:hover {
   border: 1px solid #5a5a5a;
   box-shadow: 1px 1px 10px 0px black, -1px -1px 10px 0px black; }
 
-.bstooltip + .tooltip.top,
-.bstooltip + .tooltip.left {
+header .site-heading .bstooltip + .tooltip.top,
+header .site-heading .bstooltip + .tooltip.left {
   opacity: 0.95; }
 
-.bstooltip + .tooltip.top > .tooltip-arrow {
+header .site-heading .bstooltip + .tooltip.top > .tooltip-arrow {
   border-top-color: #a6a6a6; }
 
-.bstooltip + .tooltip.left > .tooltip-arrow {
+header .site-heading .bstooltip + .tooltip.left > .tooltip-arrow {
   border-left-color: #a6a6a6; }
 
-.bstooltip + .tooltip > .tooltip-inner {
+header .site-heading .bstooltip + .tooltip > .tooltip-inner {
   font-size: 1.2em;
   color: black;
   background-color: #a6a6a6; }
 
-.live-input:focus {
+header .site-heading .live-input:focus {
   outline: none; }
 
-.site-heading h1 {
-  color: #eeeeee; }
-
-.site-heading h2 {
-  color: #eeeeee; }
-
-header .email {
+header .site-heading .email {
   display: block;
   margin-top: 20px;
   font-weight: 600;
   font-size: 18px;
   text-align: center; }
-  header .email a {
+  header .site-heading .email a {
     color: #eeeeee; }
-    header .email a:hover {
+    header .site-heading .email a:hover {
       color: #bbbbbb; }
 
-header .photo {
+header .site-heading .photo {
   display: inline-block;
   text-align: center;
   width: 120px;
@@ -648,7 +648,7 @@ header .photo {
   box-shadow: 1px 1px 5px 0px gray, -1px -1px 5px 0px gray;
   -webkit-transition: border 0.2s ease-out, box-shadow 0.2s ease-out;
           transition: border 0.2s ease-out, box-shadow 0.2s ease-out; }
-  header .photo:hover {
+  header .site-heading .photo:hover {
     box-shadow: 2px 2px 10px 0px gray, -2px -2px 10px 0px gray; }
 
 .main {
@@ -726,14 +726,6 @@ header .photo {
         clear: both; }
       .main .projects ul li p {
         margin-bottom: 10%; } }
-  .main .projects ul li.project-alumina:before {
-    background-image: url("../img/macbook_alumina_small.png"); }
-  .main .projects ul .project-heroku-db:before {
-    background-image: url("../img/heroku_db.png");
-    width: 160px;
-    height: 120px; }
-  .main .projects ul li.project-salesforce-s3:before {
-    background-image: url("../img/salesforce_s3.png"); }
   .main .endorsement {
     text-align: center;
     margin-bottom: 8%; }
@@ -760,6 +752,17 @@ header .photo {
 
 .photo-ben {
   background-image: url("../img/ben.jpg"); }
+
+.project-alumina:before {
+  background-image: url("../img/macbook_alumina_small.png"); }
+
+.project-heroku-db:before {
+  background-image: url("../img/heroku_db.png");
+  width: 160px;
+  height: 120px; }
+
+.project-salesforce-s3:before {
+  background-image: url("../img/salesforce_s3.png"); }
 
 /**
  * Syntax highlighting styles

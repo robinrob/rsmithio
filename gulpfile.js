@@ -1,19 +1,40 @@
-var gulp = require('gulp');
+var root = require('path').resolve('./')
+var config = {
+    paths: {
+        build: "./_site/**",
+        img: ["./img/**/*"],
+        js: ["./js/**/*.js"],
+        sass: {
+            main: '_scss/main.scss',
+            src: '_scss/*.scss'
+        },
+        css: {
+            dest: '_site/css'
+        },
+        haml: {
+            src: [root, '_includes', '_layouts', 'cv']
+        },
+    },
+};
+
+
 var browserSync = require('browser-sync');
-var reload = browserSync.reload
-var sass = require('gulp-sass');
-var haml = require('gulp-ruby-haml');
-var prefix = require('gulp-autoprefixer');
+var changed = require('gulp-changed')
+var concat = require('gulp-concat');
 var cp = require('child_process');
 var gcallback = require('gulp-callback')
-var plumber = require('gulp-plumber')
-var watch = require('gulp-watch')
-var changed = require('gulp-changed')
+var gulp = require('gulp');
+var haml = require('gulp-ruby-haml');
 var ngmin = require('gulp-ngmin')
+var path = require('path')
+var plumber = require('gulp-plumber')
+var prefix = require('gulp-autoprefixer');
 var task = require('gulp-task')
+var reload = browserSync.reload
 var runsequence = require('run-sequence')
 var shell = require('shelljs/global')
-var path = require('path')
+var sass = require('gulp-sass');
+var watch = require('gulp-watch')
 
 
 var messages = {
@@ -56,20 +77,18 @@ gulp.task('browser-sync', ['jekyll-build'], function () {
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
-    return gulp.src('_scss/main.scss')
+    return gulp.src(config.paths.sass.main)
         .pipe(sass({
-            includePaths: ['scss'],
+            includePaths: [config.paths.sass.src],
             onError: onError
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest('_site/css'))
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest(config.paths.css.dest))
 });
 
 gulp.task('haml-watch', function () {
     // destination of '.' in gulp.dest() means relative to src!
-    var here = path.resolve('./')
-    var locations = [here, '_includes', '_layouts', 'cv']
+    var locations = config.paths.haml.src
     locations.forEach(function (location) {
         var src = location + '/_haml/*.haml'
         var dest = location
@@ -93,8 +112,8 @@ gulp.task('haml-watch', function () {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('_scss/*.scss', ['sass', 'reload']);
-    gulp.watch(['_config.yml', '_posts/*', 'img/*', 'js/*', 'orbiter/**/*'], ['jekyll-rebuild']);
+    gulp.watch(config.paths.sass.src, ['sass', 'reload']);
+    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.js, 'orbiter/**/*'], ['jekyll-rebuild']);
 });
 
 /**
