@@ -176,6 +176,14 @@ gulp.task('purge-online-cache', function() {
     cloudflare(config.cloudflare)
 });
 
+gulp.task('submit-sitemap', function(cb) {
+    require('submit-sitemap').submitSitemap(config.sitemapUrl, function(err) {
+        if (err)
+            console.warn(err);
+        cb();
+    });
+});
+
 gulp.task('save', function(done) {
     var msg = argv.msg || ""
     return require('child_process', done).exec('rake base:save[' + msg + ']' , {
@@ -184,7 +192,7 @@ gulp.task('save', function(done) {
 });
 
 gulp.task('deploy', ['save'], function() {
-    return runsequence('build', ['html', 'css'], 'upload', 'purge-online-cache');
+    return runsequence('build', ['html', 'css'], 'upload', 'purge-online-cache', 'submit-sitemap');
 });
 
 /**

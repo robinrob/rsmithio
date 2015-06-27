@@ -30,6 +30,7 @@
     "merge": "~1.2.0",
     "cloudflare": "0.0.8",
     "gulp-cloudflare": "~0.1.3",
-    "yargs": "~3.13.0"
+    "yargs": "~3.13.0",
+    "submit-sitemap": "~0.1.3"
   }
 }
