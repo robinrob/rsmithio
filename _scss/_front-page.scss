@@ -187,21 +187,25 @@ header {
                         background-position: center;
 
                         @media only screen and (max-width: 1170px) {
-                            zoom: 0.80;
+                            zoom: 0.90;
                         }
 
                         @media only screen and (max-width: 768px) {
                             float: left !important;
                             //border-top: 8px solid $theme-4;
                             margin-left: 20%;
+                            margin-top: 0%;
                             margin-bottom: 2%;
                             height: $project-photo-size !important;
-                            zoom: 0.75;
+                            //zoom: 0.75;
                         }
                     }
                     @media only screen and (max-width: 768px) {
                         h3 {
                             clear: both;
+                        }
+                        p {
+                            margin: 0;
                         }
                     }
                 }
