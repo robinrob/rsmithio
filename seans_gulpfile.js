@@ -131,4 +131,4 @@ gulp.task('default', ['build', 'browser-sync'], function() {
   gulp.watch(["./js/*.js", "./**/*.html", "./css/*.css", "./**/*.markdown", "./**/*.yml", "img/**/*", "!./build/**/*", "!./_site/**/*"], ['build']);
   //gulp.watch("./build/**/*", ['bs-reload']);
   //gulp.watch(["./js/*.js", "./**/*.html", "!./build/**/*", "!./_site/**/*"], ['jekyll-build', 'bs-reload']);
-}); 
+});

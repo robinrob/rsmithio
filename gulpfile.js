@@ -2,13 +2,14 @@ var root = require('path').resolve('./')
 var config = {
     paths: {
         build: "./_site/**",
+        buildDir: '_site',
         img: ["./img/**/*"],
         haml: {
             src: [root, '_includes', '_layouts', 'cv']
         },
         html: {
             src: ["./_site/**/*.html"],
-            dest: "./"
+            dest: "./",
         },
         sass: {
             main: '_scss/main.scss',
@@ -48,8 +49,9 @@ var prefix = require('gulp-autoprefixer');
 var task = require('gulp-task')
 var reload = browserSync.reload
 var runsequence = require('run-sequence')
-var shell = require('shelljs/global')
 var sass = require('gulp-sass');
+var shell = require('shelljs/global')
+var sitemap = require('gulp-sitemap');
 var uglify = require('gulp-uglifyjs');
 var watch = require('gulp-watch')
 
@@ -194,6 +196,14 @@ gulp.task('save', function(done) {
 
 gulp.task('deploy', ['save'], function() {
     return runsequence('build', ['html', 'css'], 'upload', 'purge-online-cache', 'submit-sitemap');
+});
+
+gulp.task('sitemap', function() {
+    gulp.src(config.paths.html.src)
+        .pipe(sitemap({
+            siteUrl: config.siteUrl
+        })) // Returns sitemap.xml
+        .pipe(gulp.dest(config.paths.buildDir))
 });
 
 /**

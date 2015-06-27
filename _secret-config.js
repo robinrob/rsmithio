@@ -5,7 +5,7 @@ exports = module.exports = function(config) {
             email  : 'rs@rsmith.io',
             domain : 'rsmith.io'
         },
-        siteDomain: "rsmith.io",
+        siteUrl: "rsmith.io",
         sitemapUrl: "https://rsmith.io/sitemap.xml"
     })
 }
