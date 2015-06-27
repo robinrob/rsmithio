@@ -4,3 +4,4 @@ _site
 node_modules
 .sass-cache
 en
+__MACOSX
