@@ -3,23 +3,27 @@ var config = {
     paths: {
         build: "./_site/**",
         img: ["./img/**/*"],
-        js: ["./js/**/*.js"],
-        sass: {
-            main: '_scss/_main.scss',
-            src: '_scss/*.scss',
-            dest: '_css'
-        },
-        css: {
-            main: 'styles.css',
-            src: '_css/*.css',
-            dest: '_site/css'
-        },
         haml: {
             src: [root, '_includes', '_layouts', 'cv']
         },
         html: {
             src: ["./_site/**/*.html"],
             dest: "./"
+        },
+        sass: {
+            main: '_scss/main.scss',
+            src: '_scss/*.scss',
+            dest: '_css/'
+        },
+        css: {
+            main: 'styles.css',
+            src: '_css/*.css',
+            dest: '_site/css/'
+        },
+        js: {
+            main: 'scripts.js',
+            src: ["./_js/*.js"],
+            dest: '_site/js/'
         }
     }
 };
@@ -116,8 +120,17 @@ gulp.task('sass', function () {
             onError: onError
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
-        .pipe(gulp.dest(config.paths.sass.dest);
+        .pipe(gulp.dest(config.paths.sass.dest))
 });
+
+//return gulp.src('_scss/main.scss')
+//    .pipe(sass({
+//        includePaths: ['scss'],
+//        onError: onError
+//    }))
+//    .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+//    .pipe(gulp.dest('_site/css'))
+//    .pipe(gulp.dest('css'));
 
 gulp.task("css", function () {
     return gulp.src(config.paths.css.src, {
@@ -129,10 +142,10 @@ gulp.task("css", function () {
 });
 
 gulp.task('js', function() {
-    return gulp.src('js/*.js')
+    return gulp.src(config.paths.js.src)
         .pipe(uglify())
-        .pipe(concat('scripts.js'))
-        .pipe(gulp.dest('_site/js/'));
+        .pipe(concat(config.paths.js.main))
+        .pipe(gulp.dest(config.paths.js.dest));
 });
 
 gulp.task('deploy', function() {
@@ -140,12 +153,12 @@ gulp.task('deploy', function() {
 });
 
 gulp.task('build', function(done) {
-    runsequence('jekyll', 'sass', ['css', 'js', 'html'], 'reload', done);
+    runsequence('jekyll', 'sass', ['css', 'js'], 'reload', done);
 })
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['haml-watch', 'build', 'browser-sync'], function() {
-    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js, 'orbiter/**/*'], ['build']);
+    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['build']);
 })
