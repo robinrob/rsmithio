@@ -183,7 +183,7 @@ gulp.task('sitemap', function() {
         .pipe(sitemap({
             siteUrl: config.siteUrl
         })) // Returns sitemap.xml
-        .pipe(gulp.dest(config.paths.buildDir))
+        .pipe(gulp.dest(root))
 });
 
 gulp.task('submit-sitemap', function(done) {
@@ -203,7 +203,7 @@ gulp.task('save', function(done) {
 });
 
 gulp.task('deploy', ['save'], function() {
-    return runsequence('build', ['html', 'css'], 'sitemap', 'upload', 'purge-online-cache');
+    return runsequence('build', ['html', 'css'], 'upload', 'purge-online-cache');
 });
 
 /**
