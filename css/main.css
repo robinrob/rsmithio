@@ -577,17 +577,9 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: rgba(0, 133, 161, 0.2); }
 
-html {
-  background: red; }
-
-h2 {
-  font-size: 35px;
-  color: #0085a1;
-  margin-bottom: 30px; }
-
-h3 {
-  color: #404040;
-  margin-bottom: 10px; }
+/* Slight overflow occurs on small screens because i told the header h1 not to wrap on whitespace. */
+html, body {
+  overflow-x: hidden; }
 
 h1.live-input,
 h2.live-input {
@@ -659,6 +651,13 @@ header .photo {
   display: inline-block;
   width: 100%;
   text-align: left; }
+  .main h2 {
+    font-size: 35px;
+    color: #0085a1;
+    margin-bottom: 30px; }
+  .main h3 {
+    color: #404040;
+    margin-bottom: 10px; }
   .main .container {
     max-width: 900px; }
   .main ul {

@@ -1,16 +1,6 @@
-html {
-    background: red;
-}
-
-h2 {
-    font-size: 35px;
-    color: $h2-color;
-    margin-bottom: 30px;
-}
-
-h3 {
-    color: $h3-color;
-    margin-bottom: 10px;
+/* Slight overflow occurs on small screens because i told the header h1 not to wrap on whitespace. */
+html, body {
+    overflow-x: hidden;
 }
 
 h1.live-input,
@@ -107,6 +97,18 @@ header {
     //max-width: 800px;
     width: 100%;
     text-align: left;
+
+    h2 {
+        font-size: 35px;
+        color: $h2-color;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        color: $h3-color;
+        margin-bottom: 10px;
+    }
+
     .container {
         max-width: 900px;
     }
