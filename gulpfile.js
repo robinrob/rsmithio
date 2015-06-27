@@ -28,12 +28,12 @@ var config = {
     }
 };
 
-
 var browserSync = require('browser-sync');
 var changed = require('gulp-changed')
 var concat = require('gulp-concat');
 var cp = require('child_process');
 var gcallback = require('gulp-callback')
+var ghPages = require('gulp-gh-pages');
 var gulp = require('gulp');
 var haml = require('gulp-ruby-haml');
 var minifyCSS = require('gulp-minify-css');
@@ -148,8 +148,26 @@ gulp.task('js', function() {
         .pipe(gulp.dest(config.paths.js.dest));
 });
 
+gulp.task('upload', function() {
+    return gulp.src(config.paths.build)
+        .pipe(ghPages({
+            branch: "master"
+        }));
+});
+
+// Purges website cache so updates are shown
+gulp.task('purge-online-cache', function() {
+    cloudflare.clearCache(config.siteDomain, 1, function() {});
+});
+
 gulp.task('deploy', function() {
-    return runsequence(['html', 'css']);
+    return runsequence(['html', 'css'], 'upload');
+});
+
+gulp.task('save', function(done) {
+    return require('child_process', done).exec('git add . && git commit -m "..." && git push && gulp deploy', {
+        stdio: 'inherit'
+    }, done);
 });
 
 gulp.task('build', function(done) {

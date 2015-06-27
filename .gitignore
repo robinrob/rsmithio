@@ -1,5 +1,6 @@
 .idea
 _site
+.publish
 node_modules
 .sass-cache
 en
