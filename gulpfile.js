@@ -123,15 +123,6 @@ gulp.task('sass', function () {
         .pipe(gulp.dest(config.paths.sass.dest))
 });
 
-//return gulp.src('_scss/main.scss')
-//    .pipe(sass({
-//        includePaths: ['scss'],
-//        onError: onError
-//    }))
-//    .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-//    .pipe(gulp.dest('_site/css'))
-//    .pipe(gulp.dest('css'));
-
 gulp.task("css", function () {
     return gulp.src(config.paths.css.src, {
         base: './'
