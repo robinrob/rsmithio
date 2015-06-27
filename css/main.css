@@ -693,10 +693,12 @@ header .photo {
           margin-bottom: 2%;
           height: 200px !important; } }
     @media only screen and (max-width: 768px) {
-      .wrapper .main .projects ul li h3 {
-        clear: both; }
-      .wrapper .main .projects ul li p {
-        margin: 0; } }
+      .wrapper .main .projects ul li {
+        border-bottom: 4px solid gray; }
+        .wrapper .main .projects ul li h3 {
+          clear: both; }
+        .wrapper .main .projects ul li p {
+          margin-bottom: 10%; } }
     .wrapper .main .projects ul li.project-alumina:before {
       background-image: url("../img/macbook_alumina_small.png"); }
     .wrapper .main .projects ul .project-heroku-db:before {
