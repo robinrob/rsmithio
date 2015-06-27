@@ -164,7 +164,7 @@ gulp.task('save', function(done) {
 });
 
 gulp.task('deploy', ['save'], function() {
-    return runsequence(['html', 'css'], 'upload', 'purge-online-cache');
+    return runsequence('build', ['html', 'css'], 'upload', 'purge-online-cache');
 });
 
 /**
