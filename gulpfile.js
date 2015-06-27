@@ -27,7 +27,7 @@ var config = {
         }
     }
 };
-config = require('./secret-config.js')(config)
+config = require('./_secret-config.js')(config)
 
 var browserSync = require('browser-sync')
 var changed = require('gulp-changed')
