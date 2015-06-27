@@ -89,7 +89,11 @@ gulp.task('haml-watch', function () {
             pipe(watch(src)).
             pipe(changed(dest, {extension: '.html'})).
             pipe(haml()).
-            pipe(gulp.dest(dest))
+            pipe(gulp.dest(dest)).
+            pipe(gcallback(function() {
+                console.log("HAML DONE")
+                runsequence('build')
+            }))
     })
 })
 
@@ -112,7 +116,7 @@ gulp.task('sass', function () {
             onError: onError
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
-        .pipe(gulp.dest(config.paths.sass.dest))
+        .pipe(gulp.dest(config.paths.sass.dest);
 });
 
 gulp.task("css", function () {
@@ -142,6 +146,6 @@ gulp.task('build', function(done) {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['build', 'browser-sync'], function() {
-    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.js, 'orbiter/**/*'], ['build']);
+gulp.task('default', ['haml-watch', 'build', 'browser-sync'], function() {
+    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js, 'orbiter/**/*'], ['build']);
 })
