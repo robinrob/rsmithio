@@ -27,14 +27,16 @@ var config = {
         }
     }
 };
+config = require('./secret-config')(config)
 
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync')
 var changed = require('gulp-changed')
-var concat = require('gulp-concat');
-var cp = require('child_process');
+var cloudflare = require('cloudflare').createClient(config.cloudflare)
+var concat = require('gulp-concat')
+var cp = require('child_process')
 var gcallback = require('gulp-callback')
-var ghPages = require('gulp-gh-pages');
-var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages')
+var gulp = require('gulp')
 var haml = require('gulp-ruby-haml');
 var minifyCSS = require('gulp-minify-css');
 var minifyHTML = require("gulp-minify-html");
@@ -139,6 +141,10 @@ gulp.task('js', function() {
         .pipe(gulp.dest(config.paths.js.dest));
 });
 
+gulp.task('build', function(done) {
+    runsequence('jekyll', 'sass', ['css', 'js'], 'reload', done);
+})
+
 gulp.task('upload', function() {
     return gulp.src(config.paths.build)
         .pipe(ghPages({
@@ -158,12 +164,9 @@ gulp.task('save', function(done) {
 });
 
 gulp.task('deploy', ['save'], function() {
-    return runsequence(['html', 'css'], 'upload');
+    return runsequence(['html', 'css'], 'upload', 'purge-online-cache');
 });
 
-gulp.task('build', function(done) {
-    runsequence('jekyll', 'sass', ['css', 'js'], 'reload', done);
-})
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.

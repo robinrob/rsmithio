@@ -3,5 +3,6 @@ _site
 .publish
 node_modules
 .sass-cache
+secret-config.js
 en
 __MACOSX
