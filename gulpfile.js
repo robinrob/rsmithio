@@ -27,11 +27,11 @@ var config = {
         }
     }
 };
-config = require('./secret-config')(config)
+config = require('./secret-config.js')(config)
 
 var browserSync = require('browser-sync')
 var changed = require('gulp-changed')
-var cloudflare = require('cloudflare').createClient(config.cloudflare)
+var cloudflare = require('gulp-cloudflare')
 var concat = require('gulp-concat')
 var cp = require('child_process')
 var gcallback = require('gulp-callback')
@@ -154,7 +154,7 @@ gulp.task('upload', function() {
 
 // Purges website cache so updates are shown
 gulp.task('purge-online-cache', function() {
-    cloudflare.clearCache(config.siteDomain, 1, function() {});
+    cloudflare(config.cloudflare)
 });
 
 gulp.task('save', function(done) {
