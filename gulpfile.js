@@ -160,14 +160,14 @@ gulp.task('purge-online-cache', function() {
     cloudflare.clearCache(config.siteDomain, 1, function() {});
 });
 
-gulp.task('deploy', function() {
-    return runsequence(['html', 'css'], 'upload');
-});
-
 gulp.task('save', function(done) {
-    return require('child_process', done).exec('rake base:save && gulp deploy', {
+    return require('child_process', done).exec('git add . && git commit -m Auto-update && git push origin develop', {
         stdio: 'inherit'
     }, done);
+});
+
+gulp.task('deploy', ['save'], function() {
+    return runsequence(['html', 'css'], 'upload');
 });
 
 gulp.task('build', function(done) {

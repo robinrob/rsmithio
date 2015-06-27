@@ -44,7 +44,8 @@ gulp.task('upload', function() {
   return gulp.src(config.paths.build)
     .pipe(ghPages(config.ghPages));
 });
-gulp.task('deploy', function() {
+gulp.task(
+    ', function() {
   return runSequence(['html', 'css'], 'upload', 'purge-online-cache', 'submit-sitemap');
 });
 gulp.task('submit-sitemap', function(cb) {
