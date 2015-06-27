@@ -104,6 +104,21 @@ gulp.task('haml-watch', function () {
     })
 })
 
+gulp.task('haml-build', function () {
+    // destination of '.' in gulp.dest() means relative to src!
+    var locations = config.paths.haml.src
+    locations.forEach(function (location) {
+        var src = location + '/_haml/*.haml'
+        var dest = location
+        gulp.src(src).
+            pipe(plumber({
+                onError: onError
+            })).
+            pipe(haml()).
+            pipe(gulp.dest(dest))
+    })
+})
+
 gulp.task("html", function() {
     // Overwrite original files
     return gulp.src(config.paths.html.src, {
@@ -166,7 +181,7 @@ gulp.task('save', function(done) {
 });
 
 gulp.task('deploy', ['save'], function() {
-    return runsequence('build', ['html', 'css'], 'upload', 'purge-online-cache');
+    return runsequence('build', ['haml-build', 'html', 'css'], 'upload', 'purge-online-cache');
 });
 
 /**
