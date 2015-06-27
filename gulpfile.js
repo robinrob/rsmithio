@@ -178,6 +178,14 @@ gulp.task('purge-online-cache', function() {
     cloudflare(config.cloudflare)
 });
 
+gulp.task('sitemap', function() {
+    gulp.src(config.paths.html.src)
+        .pipe(sitemap({
+            siteUrl: config.siteUrl
+        })) // Returns sitemap.xml
+        .pipe(gulp.dest(config.paths.buildDir))
+});
+
 gulp.task('submit-sitemap', function(done) {
     require('submit-sitemap').submitSitemap(config.sitemapUrl, function(err) {
         if (err) {
@@ -195,15 +203,7 @@ gulp.task('save', function(done) {
 });
 
 gulp.task('deploy', ['save'], function() {
-    return runsequence('build', ['html', 'css'], 'upload', 'purge-online-cache', 'submit-sitemap');
-});
-
-gulp.task('sitemap', function() {
-    gulp.src(config.paths.html.src)
-        .pipe(sitemap({
-            siteUrl: config.siteUrl
-        })) // Returns sitemap.xml
-        .pipe(gulp.dest(config.paths.buildDir))
+    return runsequence('build', ['html', 'css'], 'sitemap', 'upload', 'purge-online-cache');
 });
 
 /**
