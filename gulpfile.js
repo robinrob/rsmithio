@@ -5,7 +5,7 @@ var config = {
         buildDir: '_site',
         img: ["./img/**/*"],
         haml: {
-            src: [root + '/haml/*.haml', '_includes/haml/*.haml', '_layouts/haml/*.haml', 'blog/haml/*.haml']
+            src: ['**/*.haml']
         },
         html: {
             src: ["./_site/**/*.html"],
@@ -48,7 +48,6 @@ var plumber = require('gulp-plumber')
 var prefix = require('gulp-autoprefixer');
 var task = require('gulp-task')
 var reload = browserSync.reload
-var rename = require('gulp-rename')
 var runsequence = require('run-sequence')
 var sass = require('gulp-sass');
 var shell = require('shelljs/global')
@@ -111,17 +110,7 @@ gulp.task('haml-build', function () {
             onError: onError
         })).
         pipe(haml()).
-        pipe(rename({
-            dirname: "../"
-        })).
         pipe(gulp.dest('./'))
-
-    //var locations = config.paths.haml.src
-    //locations.forEach(function (location) {
-    //    var src = location + '/_haml/*.haml'
-    //    var dest = location
-    //
-    //})
 })
 
 gulp.task("html", function() {
