@@ -86,22 +86,17 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('haml-watch', function () {
-    var locations = config.paths.haml.src
-    locations.forEach(function (location) {
-        var src = location + '/_haml/*.haml'
-        var dest = location
-        gulp.src(src).
-            pipe(plumber({
-                onError: onError
-            })).
-            pipe(watch(src)).
-            pipe(changed(dest, {extension: '.html'})).
-            pipe(haml()).
-            pipe(gulp.dest(dest)).
-            pipe(gcallback(function() {
-                runsequence('build')
-            }))
-    })
+    return gulp.src(config.paths.haml.src).
+        pipe(plumber({
+            onError: onError
+        })).
+        pipe(watch(src)).
+        pipe(changed(dest, {extension: '.html'})).
+        pipe(haml()).
+        pipe(gulp.dest(dest)).
+        pipe(gcallback(function () {
+            runsequence('build')
+        }))
 })
 
 gulp.task('haml-build', function () {
@@ -113,7 +108,7 @@ gulp.task('haml-build', function () {
         pipe(gulp.dest('./'))
 })
 
-gulp.task("html", function() {
+gulp.task("html", function () {
     // Overwrite original files
     return gulp.src(config.paths.html.src, {
         base: './'
@@ -152,36 +147,36 @@ gulp.task("css-concat", function () {
         .pipe(gulp.dest(config.paths.css.dest));
 });
 
-gulp.task('js', function() {
+gulp.task('js', function () {
     return gulp.src(config.paths.js.src)
         .pipe(uglify())
         .pipe(concat(config.paths.js.main))
         .pipe(gulp.dest(config.paths.js.dest));
 });
 
-gulp.task('js-concat', function() {
+gulp.task('js-concat', function () {
     return gulp.src(config.paths.js.src)
         .pipe(concat(config.paths.js.main))
         .pipe(gulp.dest(config.paths.js.dest));
 });
 
-gulp.task('build', function(done) {
+gulp.task('build', function (done) {
     runsequence('haml-build', 'html', 'jekyll', 'sass', ['css', 'js'], 'reload', done);
 })
 
-gulp.task('fast-build', function(done) {
+gulp.task('fast-build', function (done) {
     runsequence('html', 'jekyll', 'sass', ['css', 'js'], 'reload', done);
 })
 
-gulp.task('dev-build', function(done) {
+gulp.task('dev-build', function (done) {
     runsequence('haml-build', 'jekyll', 'sass', ['css-concat', 'js-conca'], 'reload', done);
 })
 
-gulp.task('fast-dev-build', function(done) {
+gulp.task('fast-dev-build', function (done) {
     runsequence('jekyll', 'sass', ['css-concat', 'js-concat'], 'reload', done);
 })
 
-gulp.task('upload', function() {
+gulp.task('upload', function () {
     return gulp.src(config.paths.build)
         .pipe(ghPages({
             branch: "master"
@@ -189,11 +184,11 @@ gulp.task('upload', function() {
 });
 
 // Purges website cache so updates are shown
-gulp.task('purge-online-cache', function() {
+gulp.task('purge-online-cache', function () {
     cloudflare(config.cloudflare)
 });
 
-gulp.task('sitemap', function() {
+gulp.task('sitemap', function () {
     gulp.src(config.paths.html.src)
         .pipe(sitemap({
             siteUrl: config.siteUrl
@@ -201,8 +196,8 @@ gulp.task('sitemap', function() {
         .pipe(gulp.dest(root))
 });
 
-gulp.task('submit-sitemap', function(done) {
-    require('submit-sitemap').submitSitemap(config.sitemapUrl, function(err) {
+gulp.task('submit-sitemap', function (done) {
+    require('submit-sitemap').submitSitemap(config.sitemapUrl, function (err) {
         if (err) {
             console.warn(err);
         }
@@ -210,18 +205,18 @@ gulp.task('submit-sitemap', function(done) {
     });
 });
 
-gulp.task('save', function(done) {
+gulp.task('save', function (done) {
     var msg = argv.msg || ""
-    return require('child_process', done).exec('rake base:save[' + msg + ']' , {
+    return require('child_process', done).exec('rake base:save[' + msg + ']', {
         stdio: 'inherit'
     }, done);
 });
 
-gulp.task('deploy', ['save'], function() {
+gulp.task('deploy', ['save'], function () {
     return runsequence('build', 'upload', 'purge-online-cache');
 });
 
-gulp.task('full', ['haml-watch', 'build', 'browser-sync'], function() {
+gulp.task('full', ['haml-watch', 'build', 'browser-sync'], function () {
     gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-build']);
 })
 
@@ -229,6 +224,6 @@ gulp.task('full', ['haml-watch', 'build', 'browser-sync'], function() {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['haml-watch', 'dev-build', 'browser-sync'], function() {
+gulp.task('default', ['haml-watch', 'dev-build', 'browser-sync'], function () {
     gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-dev-build']);
 })
