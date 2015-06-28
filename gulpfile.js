@@ -149,6 +149,14 @@ gulp.task("css", function () {
         .pipe(gulp.dest(config.paths.css.dest));
 });
 
+gulp.task("css-concat", function () {
+    return gulp.src(config.paths.css.src, {
+        base: './'
+    })
+        .pipe(concat(config.paths.css.main))
+        .pipe(gulp.dest(config.paths.css.dest));
+});
+
 gulp.task('js', function() {
     return gulp.src(config.paths.js.src)
         .pipe(uglify())
@@ -156,12 +164,26 @@ gulp.task('js', function() {
         .pipe(gulp.dest(config.paths.js.dest));
 });
 
-gulp.task('fast-build', function(done) {
-    runsequence('jekyll', 'sass', ['css', 'js'], 'reload', done);
-})
+gulp.task('js-concat', function() {
+    return gulp.src(config.paths.js.src)
+        .pipe(concat(config.paths.js.main))
+        .pipe(gulp.dest(config.paths.js.dest));
+});
 
 gulp.task('build', function(done) {
-    runsequence('haml-build', 'jekyll', 'sass', ['css', 'js'], 'reload', done);
+    runsequence('haml-build', 'html', 'jekyll', 'sass', ['css', 'js'], 'reload', done);
+})
+
+gulp.task('fast-build', function(done) {
+    runsequence('html', 'jekyll', 'sass', ['css', 'js'], 'reload', done);
+})
+
+gulp.task('dev-build', function(done) {
+    runsequence('haml-build', 'jekyll', 'sass', ['css-concat', 'js-concat'], 'reload', done);
+})
+
+gulp.task('fast-dev-build', function(done) {
+    runsequence('jekyll', 'sass', ['css-concat', 'js-concat'], 'reload', done);
 })
 
 gulp.task('upload', function() {
@@ -201,13 +223,17 @@ gulp.task('save', function(done) {
 });
 
 gulp.task('deploy', ['save'], function() {
-    return runsequence('build', ['html', 'css'], 'upload', 'purge-online-cache');
+    return runsequence('build', 'upload', 'purge-online-cache');
 });
+
+gulp.task('full', ['haml-watch', 'build', 'browser-sync'], function() {
+    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-build']);
+})
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['haml-watch', 'build', 'browser-sync'], function() {
-    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-build']);
+gulp.task('default', ['haml-watch', 'dev-build', 'browser-sync'], function() {
+    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-dev-build']);
 })

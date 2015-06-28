@@ -60,40 +60,39 @@ hr.large {
 }
 
 ///* Center the nav list in collapsed navbar */
-//.navbar-collapse {
-//    text-align: center;
-//    .navbar-nav {
-//        float: none;
-//        li {
-//            display: inline !important;
-//        }
-//    }
-//}
-//
-///* Center the nav links within nav list */
-//.navbar-nav {
-//    text-align: center;
-//    li {
-//        float: none;
-//    }
-//}
-//
-///* Change the color and background of the small horizontal lines on collapsed navbar icon */
-//.navbar-toggle[data-target="#bs-example-navbar-collapse-1"] {
-//    .icon-bar {
-//        color: $nav-color;
-//        border-color: $nav-color;
-//        background-color: $nav-color;
-//    }
-//
-//    &:hover {
-//        .icon-bar {
-//            color: $nav-hover-color;
-//            border-color: $nav-hover-color;
-//            background-color: $nav-hover-color;
-//        }
-//    }
-//}
+.navbar-collapse {
+    text-align: center;
+    .navbar-nav {
+        li {
+            float: none;
+        }
+    }
+}
+
+/* Center the nav links within nav list */
+.navbar-nav {
+    text-align: center;
+    li {
+        float: none;
+    }
+}
+
+/* Change the color and background of the small horizontal lines on collapsed navbar icon */
+.navbar-toggle[data-target="#bs-example-navbar-collapse-1"] {
+    .icon-bar {
+        color: $nav-color;
+        border-color: $nav-color;
+        background-color: $nav-color;
+    }
+
+    &:hover {
+        .icon-bar {
+            color: $nav-hover-color;
+            border-color: $nav-hover-color;
+            background-color: $nav-hover-color;
+        }
+    }
+}
 
 // Navigation
 .navbar-custom {
@@ -105,18 +104,17 @@ hr.large {
     z-index: 3;
     @include sans-serif();
     .navbar-brand {
+        color: $nav-color;
         font-weight: 800;
     }
     .nav {
         li {
-            //display: block;
             a {
                 color: $nav-color;
                 text-transform: uppercase;
                 font-size: 12px;
                 font-weight: 800;
                 letter-spacing: 1px;
-                //display: inline-block;
             }
         }
     }
@@ -136,6 +134,7 @@ hr.large {
                 a {
                     color: $nav-color;
                     padding: 20px;
+                    display: inline-block;
                     &:hover,
                     &:focus {
                         color: $nav-hover-color;

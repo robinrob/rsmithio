@@ -227,6 +227,28 @@ hr.large {
   margin: 50px auto;
   border-width: 6px; }
 
+.navbar-collapse {
+  text-align: center; }
+  .navbar-collapse .navbar-nav li {
+    float: none; }
+
+/* Center the nav links within nav list */
+.navbar-nav {
+  text-align: center; }
+  .navbar-nav li {
+    float: none; }
+
+/* Change the color and background of the small horizontal lines on collapsed navbar icon */
+.navbar-toggle[data-target="#bs-example-navbar-collapse-1"] .icon-bar {
+  color: #eeeeee;
+  border-color: #eeeeee;
+  background-color: #eeeeee; }
+
+.navbar-toggle[data-target="#bs-example-navbar-collapse-1"]:hover .icon-bar {
+  color: gray;
+  border-color: gray;
+  background-color: gray; }
+
 .navbar-custom {
   background: #1a1a1a;
   position: absolute;
@@ -236,6 +258,7 @@ hr.large {
   z-index: 3;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .navbar-custom .navbar-brand {
+    color: #eeeeee;
     font-weight: 800; }
   .navbar-custom .nav li a {
     color: #eeeeee;
@@ -255,7 +278,8 @@ hr.large {
           color: gray; }
       .navbar-custom .nav li a {
         color: #eeeeee;
-        padding: 20px; }
+        padding: 20px;
+        display: inline-block; }
         .navbar-custom .nav li a:hover,
         .navbar-custom .nav li a:focus {
           color: gray; } }

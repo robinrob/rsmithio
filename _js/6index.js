@@ -1,7 +1,7 @@
 $(function () {
-    $(".accordion").accordion({
-        paragraph: ".row"
-    })
+    //$(".accordion").3rdion({
+    //    paragraph: ".row"
+    //})
 
     var $document = $('html')
     var $title = $("h1.live-input")
