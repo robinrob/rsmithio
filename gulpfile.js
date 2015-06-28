@@ -48,6 +48,7 @@ var plumber = require('gulp-plumber')
 var prefix = require('gulp-autoprefixer');
 var task = require('gulp-task')
 var reload = browserSync.reload
+var rename = require('gulp-rename')
 var runsequence = require('run-sequence')
 var sass = require('gulp-sass');
 var shell = require('shelljs/global')
@@ -105,17 +106,22 @@ gulp.task('haml-watch', function () {
 })
 
 gulp.task('haml-build', function () {
-    var locations = config.paths.haml.src
-    locations.forEach(function (location) {
-        var src = location + '/_haml/*.haml'
-        var dest = location
-        gulp.src(src).
-            pipe(plumber({
-                onError: onError
-            })).
-            pipe(haml()).
-            pipe(gulp.dest(dest))
-    })
+    return gulp.src(config.paths.haml.src).
+        pipe(plumber({
+            onError: onError
+        })).
+        pipe(haml()).
+        pipe(rename({
+            dirname: "../"
+        })).
+        pipe(gulp.dest('./'))
+
+    //var locations = config.paths.haml.src
+    //locations.forEach(function (location) {
+    //    var src = location + '/_haml/*.haml'
+    //    var dest = location
+    //
+    //})
 })
 
 gulp.task("html", function() {
@@ -179,7 +185,7 @@ gulp.task('fast-build', function(done) {
 })
 
 gulp.task('dev-build', function(done) {
-    runsequence('haml-build', 'jekyll', 'sass', ['css-concat', 'js-concat'], 'reload', done);
+    runsequence('haml-build', 'jekyll', 'sass', ['css-concat', 'js-conca'], 'reload', done);
 })
 
 gulp.task('fast-dev-build', function(done) {
