@@ -5,7 +5,7 @@ var config = {
         buildDir: '_site',
         img: ["./img/**/*"],
         haml: {
-            src: ['**/*.haml']
+            src: ['*.haml', '*/*.haml']
         },
         html: {
             src: ["./_site/**/*.html"],
