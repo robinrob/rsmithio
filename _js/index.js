@@ -32,10 +32,6 @@ $(function () {
         })
     })
 
-    //$title.on("click", function(event) {
-    //    $title.siblings(".tooltip").hide()
-    //})
-
     function playTitles() {
         $title.liveInput({
             writeDelay: 120,
@@ -64,13 +60,4 @@ $(function () {
 
         playTitles()
     })
-
-    //$el = $(".photo")
-    //$el.attr({
-    //    "data-placement": "left",
-    //    "data-toggle": "tooltip",
-    //    title: "Contact me",
-    //    animation: true
-    //})
-    //$el.tooltip()
 })
