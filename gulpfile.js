@@ -5,7 +5,7 @@ var config = {
         buildDir: '_site',
         img: ["./img/**/*"],
         haml: {
-            src: [root, '_includes', '_layouts', 'cv']
+            src: [root, '_includes', '_layouts', 'blog']
         },
         html: {
             src: ["./_site/**/*.html"],
@@ -86,7 +86,6 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('haml-watch', function () {
-    // destination of '.' in gulp.dest() means relative to src!
     var locations = config.paths.haml.src
     locations.forEach(function (location) {
         var src = location + '/_haml/*.haml'
@@ -106,7 +105,6 @@ gulp.task('haml-watch', function () {
 })
 
 gulp.task('haml-build', function () {
-    // destination of '.' in gulp.dest() means relative to src!
     var locations = config.paths.haml.src
     locations.forEach(function (location) {
         var src = location + '/_haml/*.haml'

@@ -8,11 +8,12 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      -#%a.navbar-brand{:href => "/index.html"} {{ site.brand }}
+      %a.navbar-brand{:href => "/index.html"} {{ site.brand }}
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      %ul.nav.navbar-nav
+      %ul.nav.navbar-nav.navbar-right
         %li
           -# How to do inline stuff
-          -#%span!= "<span class=\"bracket\">{</span><a href=\"{{ site.baseurl }}/index.html\">Home</a><span class=\"bracket\">}</span>"
-          %a{:href => "{{ site.baseurl }}/"} Home
+          -#%a{:href => "{{ site.baseurl }}/"} Home
+          %a{:href => "{{ site.baseurl }}/blog"} Blog
+          %a{:href => "{{ site.baseurl }}/blog"} Blog

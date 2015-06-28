@@ -227,27 +227,6 @@ hr.large {
   margin: 50px auto;
   border-width: 6px; }
 
-.navbar-collapse {
-  text-align: center; }
-  .navbar-collapse > .navbar-nav {
-    float: none; }
-
-.navbar-nav {
-  text-align: center; }
-  .navbar-nav > li {
-    float: none;
-    display: inline-block; }
-
-.navbar-toggle[data-target="#bs-example-navbar-collapse-1"] .icon-bar {
-  color: #eeeeee;
-  border-color: #eeeeee;
-  background-color: #eeeeee; }
-
-.navbar-toggle[data-target="#bs-example-navbar-collapse-1"]:hover .icon-bar {
-  color: gray;
-  border-color: gray;
-  background-color: gray; }
-
 .navbar-custom {
   background: #1a1a1a;
   position: absolute;
