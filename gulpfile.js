@@ -91,9 +91,9 @@ gulp.task('haml-watch', function () {
             onError: onError
         })).
         pipe(watch(src)).
-        pipe(changed(dest, {extension: '.html'})).
+        pipe(changed('./', {extension: '.html'})).
         pipe(haml()).
-        pipe(gulp.dest(dest)).
+        pipe(gulp.dest('./')).
         pipe(gcallback(function () {
             runsequence('build')
         }))
