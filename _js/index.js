@@ -3,6 +3,7 @@ $(function () {
         paragraph: ".row"
     })
 
+    var $document = $('html')
     var $title = $("h1.live-input")
     var $subtitle = $(".subheading.live-input")
 
@@ -10,9 +11,25 @@ $(function () {
         var $el = $(element)
         $el.attr({
             "data-toggle": "tooltip",
+            "data-trigger": "manual",
             animation: true
         })
         $el.tooltip()
+
+        $el.on("mouseover.rsmith focusin.rsmith", function() {
+            console.log("over")
+            $el.tooltip('show')
+        })
+
+        $document.on("click.rsmith", function(event) {
+            if (event.target != $el) {
+                $el.tooltip('hide')
+            }
+        })
+
+        $el.on("click.rsmith", function(event) {
+            event.stopPropagation()
+        })
     })
 
     //$title.on("click", function(event) {
