@@ -236,7 +236,8 @@ hr.large {
 .navbar-nav {
   text-align: center; }
   .navbar-nav li {
-    float: none; }
+    float: none;
+    display: inline !important; }
 
 /* Change the color and background of the small horizontal lines on collapsed navbar icon */
 .navbar-toggle[data-target="#bs-example-navbar-collapse-1"] .icon-bar {
