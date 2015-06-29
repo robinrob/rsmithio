@@ -1,14 +1,14 @@
 var root = require('path').resolve('./')
 
 var config = {paths: {}}
-config.paths.build = "./_site/**"
 config.paths.buildDir = '_site'
-config.paths.img = ["./img/**/*"]
+config.paths.build = config.paths.buildDir + '/**'
+config.paths.img = ['./img/**/*']
 config.paths.haml = {
     src: ['**/_haml/*.haml']
 }
 config.paths.html = {
-    watchSrc: ["**/*.html"],
+    watchSrc: ['**/*.html'],
     src: [config.paths.buildDir + '/**/*.html']
 }
 config.paths.sass = {
@@ -23,7 +23,7 @@ config.paths.css = {
 }
 config.paths.js = {
     main: 'scripts.js',
-    src: ["./_js/*.js"],
+    src: ['./_js/*.js'],
     dest: '_site/js/'
 }
 config.paths.watch = ['_config.yml', '_posts/*', config.paths.img, config.paths.html.watchSrc, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*']
@@ -38,7 +38,7 @@ var ghPages = require('gulp-gh-pages')
 var gulp = require('gulp')
 var haml = require('gulp-ruby-haml');
 var minifyCSS = require('gulp-minify-css');
-var minifyHTML = require("gulp-minify-html");
+var minifyHTML = require('gulp-minify-html');
 var ngmin = require('gulp-ngmin')
 var path = require('path')
 var plumber = require('gulp-plumber')
@@ -53,11 +53,11 @@ var uglify = require('gulp-uglifyjs');
 var watch = require('gulp-watch')
 
 var messages = {
-    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+    jekyllBuild: '<span style='color: grey'>Running:</span> $ jekyll build'
 }
 
 function onError(err) {
-    shell.exec("say wanker")
+    shell.exec('say wanker')
 }
 
 gulp.task('jekyll', function (done) {
@@ -74,7 +74,7 @@ gulp.task('browser-sync', function () {
         server: {
             baseDir: '_site'
         },
-        browser: "safari"
+        browser: 'safari'
     });
 });
 
@@ -86,7 +86,7 @@ gulp.task('haml-watch', function () {
         pipe(watch(config.paths.haml.src)).
         pipe(haml()).
         pipe(rename(function (path) {
-            path.dirname += "/../"
+            path.dirname += '/../'
         })).
         pipe(gulp.dest('./'))
 });
@@ -98,12 +98,12 @@ gulp.task('haml-build', function () {
         })).
         pipe(haml()).
         pipe(rename(function (path) {
-            path.dirname += "/../"
+            path.dirname += '/../'
         })).
         pipe(gulp.dest('./'))
 })
 
-gulp.task("html", function () {
+gulp.task('html', function () {
     // Overwrite original files
     return gulp.src(config.paths.html.src, {
         base: './'
@@ -125,7 +125,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest(config.paths.sass.dest))
 });
 
-gulp.task("css", function () {
+gulp.task('css', function () {
     return gulp.src(config.paths.css.src, {
         base: './'
     })
@@ -134,7 +134,7 @@ gulp.task("css", function () {
         .pipe(gulp.dest(config.paths.css.dest));
 });
 
-gulp.task("css-dev", function () {
+gulp.task('css-dev', function () {
     return gulp.src(config.paths.css.src, {
         base: './'
     })
@@ -174,7 +174,7 @@ gulp.task('fast-dev-build', function (done) {
 gulp.task('upload', function () {
     return gulp.src(config.paths.build)
         .pipe(ghPages({
-            branch: "master"
+            branch: 'master'
         }));
 });
 
@@ -201,7 +201,7 @@ gulp.task('submit-sitemap', function (done) {
 });
 
 gulp.task('save', function (done) {
-    var msg = argv.msg || ""
+    var msg = argv.msg || ''
     return require('child_process', done).exec('rake base:save[' + msg + ']', {
         stdio: 'inherit'
     }, done);
