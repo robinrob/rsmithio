@@ -1,35 +1,32 @@
 var root = require('path').resolve('./')
-var config = {
-    paths: {
-        watch: ['_config.yml', '_posts/*', config.paths.img, config.paths.html.projSrc, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'],
-        build: "./_site/**",
-        buildDir: '_site',
-        img: ["./img/**/*"],
-        haml: {
-            src: ['**/_haml/*.haml']
-        },
-        html: {
-            projSrc: ["**/*.html"],
-            src: ["./_site/**/*.html"],
-            dest: "./",
-        },
-        sass: {
-            main: '_scss/main.scss',
-            src: '_scss/*.scss',
-            dest: '_css/'
-        },
-        css: {
-            main: 'styles.css',
-            src: '_css/*.css',
-            dest: '_site/css/'
-        },
-        js: {
-            main: 'scripts.js',
-            src: ["./_js/*.js"],
-            dest: '_site/js/'
-        }
-    }
-};
+
+var config = {paths: {}}
+config.paths.build = "./_site/**"
+config.paths.buildDir = '_site'
+config.paths.img = ["./img/**/*"]
+config.paths.haml = {
+    src: ['**/_haml/*.haml']
+}
+config.paths.html = {
+    watchSrc: ["**/*.html"],
+    src: [config.paths.buildDir + '**/*.html']
+}
+config.paths.sass = {
+    main: '_scss/main.scss',
+    src: '_scss/*.scss',
+    dest: '_css/'
+}
+config.paths.css = {
+    main: 'styles.css',
+    src: '_css/*.css',
+    dest: config.paths.buildDir + '/css/'
+}
+config.paths.js = {
+    main: 'scripts.js',
+    src: ["./_js/*.js"],
+    dest: '_site/js/'
+}
+config.paths.watch = ['_config.yml', '_posts/*', config.paths.img, config.paths.html.watchSrc, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*']
 config = require('./_secret-config.js')(config)
 
 var argv = require('yargs').argv
@@ -38,7 +35,6 @@ var reload = browserSync.reload
 var cloudflare = require('gulp-cloudflare')
 var concat = require('gulp-concat')
 var cp = require('child_process')
-var gcallback = require('gulp-callback')
 var ghPages = require('gulp-gh-pages')
 var gulp = require('gulp')
 var haml = require('gulp-ruby-haml');
@@ -83,14 +79,14 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('haml-watch', function() {
+gulp.task('haml-watch', function () {
     gulp.src(config.paths.haml.src, {read: false}).
         pipe(plumber({
             onError: onError
         })).
         pipe(watch(config.paths.haml.src)).
         pipe(haml()).
-        pipe(rename(function(path) {
+        pipe(rename(function (path) {
             path.dirname += "/../"
         })).
         pipe(gulp.dest('./'))
@@ -102,7 +98,7 @@ gulp.task('haml-build', function () {
             onError: onError
         })).
         pipe(haml()).
-        pipe(rename(function(path) {
+        pipe(rename(function (path) {
             path.dirname += "/../"
         })).
         pipe(gulp.dest('./'))
@@ -216,18 +212,18 @@ gulp.task('deploy', ['save'], function () {
     return runSequence('build', 'upload', 'purge-online-cache');
 });
 
-gulp.task('watch', ['haml-watch'], function() {
+gulp.task('watch', ['haml-watch'], function () {
     gulp.watch(config.paths.watch, ['fast-build'])
 })
 
-gulp.task('dev-watch', ['haml-watch'], function() {
+gulp.task('dev-watch', ['haml-watch'], function () {
     gulp.watch(config.paths.watch, ['fast-dev-build'])
 })
 
-gulp.task('full', function() {
+gulp.task('full', function () {
     runSequence('build', 'watch', 'browser-sync')
 })
 
-gulp.task('default', function() {
+gulp.task('default', function () {
     runSequence('dev-build', 'dev-watch', 'browser-sync')
 })
