@@ -1,5 +1,5 @@
-
 # Site settings
+author: Robin Smith
 title: Robin Smith - Freelance Developer
 subtitle: Freelance web and mobile developer - UK
 brand: Robin Smith IO
@@ -8,20 +8,18 @@ description: > # this means to ignore newlines until "baseurl:"
   Experienced freelance software developer designing and building custom web applications and integrations using modern
   cloud technologies and frameworks.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://rsmith.io" # the base hostname & protocol for your site
+url: https://rsmith.io   # with the https protocol
+enforce_ssl: rsmith.io   # without any protocol
 github: robinrob
 twitter: rsmith_io
 linkedin: rsmithio
 
 # Build settings
 markdown: kramdown
-author: Robin Smith
-
+highlighter: pygments
 # Allow /index route in place of /index.html etc
 permalink: pretty
-
+paginate_path: "/blog/page:num"
+paginate: 5
 # Excludes these files/folders from being included into Jekyll _site folder.
 exclude: [node_modules, gulpfile.js, README.md, package.json, Gemfile, Gemfile.lock]
-
-url: https://rsmith.io   # with the https protocol
-enforce_ssl: rsmith.io   # without any protocol
