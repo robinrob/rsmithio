@@ -5,7 +5,10 @@ var config = {
         buildDir: '_site',
         img: ["./img/**/*"],
         haml: {
-            src: ['**/_haml/*.haml']
+            //src: ['**/_haml/*.haml'],
+            //srcDir: ['**/_haml/*.haml', '']
+            src: ['./_haml/*.haml'],
+            srcDir: ['./_haml/*.haml', './*.html']
         },
         html: {
             src: ["./_site/**/*.html"],
@@ -56,6 +59,8 @@ var sitemap = require('gulp-sitemap');
 var uglify = require('gulp-uglifyjs');
 var watch = require('gulp-watch')
 
+var newer = require('gulp-newer')
+
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 }
@@ -87,15 +92,17 @@ gulp.task('haml-watch', function () {
         pipe(plumber({
             onError: onError
         })).
-        pipe(watch()).
-        pipe(changed('./', {extension: '.html'})).
+        pipe(watch(config.paths.haml.src)).
+        //pipe(newer({
+        //    dest: './../*/html'
+        //})).
         pipe(haml()).
-        pipe(rename(function(path) {
-            console.log("dirname: " + path.dirname)
-            console.log("basename: " + path.basename)
-            path.dirname += "/../"
-            return path
-        })).
+        //pipe(rename(function(path) {
+        //    console.log("dirname: " + path.dirname)
+        //    console.log("basename: " + path.basename)
+        //    path.dirname += "/../"
+        //    return path
+        //})).
         pipe(gulp.dest('./'))
 })
 
