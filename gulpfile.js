@@ -87,10 +87,12 @@ gulp.task('haml-watch', function () {
         pipe(plumber({
             onError: onError
         })).
-        pipe(watch(config.paths.haml.src)).
+        pipe(watch()).
         pipe(changed('./', {extension: '.html'})).
         pipe(haml()).
         pipe(rename(function(path) {
+            console.log("dirname: " + path.dirname)
+            console.log("basename: " + path.basename)
             path.dirname += "/../"
             return path
         })).
@@ -104,6 +106,8 @@ gulp.task('haml-build', function () {
         })).
         pipe(haml()).
         pipe(rename(function(path) {
+            console.log("dirname: " + path.dirname)
+            console.log("basename: " + path.basename)
             path.dirname += "/../"
             return path
         })).
@@ -231,5 +235,6 @@ gulp.task('full', function() {
 })
 
 gulp.task('default', function() {
-    runSequence('dev-build', 'dev-watch', 'browser-sync')
+    runSequence('dev-watch', 'browser-sync')
+    //runSequence('dev-build', 'dev-watch', 'browser-sync')
 })
