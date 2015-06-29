@@ -5,7 +5,7 @@ var config = {
         buildDir: '_site',
         img: ["./img/**/*"],
         haml: {
-            src: ['*.haml', '*/*.haml']
+            src: ['**/_haml/*.haml']
         },
         html: {
             src: ["./_site/**/*.html"],
@@ -55,13 +55,14 @@ var sitemap = require('gulp-sitemap');
 var uglify = require('gulp-uglifyjs');
 var watch = require('gulp-watch')
 
+var rename = require('gulp-rename')
+
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 }
 
 function onError(err) {
-    console.log(err)
     shell.exec("say wanker")
 }
 
@@ -105,6 +106,11 @@ gulp.task('haml-build', function () {
             onError: onError
         })).
         pipe(haml()).
+        pipe(rename(function(path) {
+            console.log("dirname: " + path.dirname)
+            path.dirname += "/../"
+            return path
+        })).
         pipe(gulp.dest('./'))
 })
 
