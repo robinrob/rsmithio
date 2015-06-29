@@ -21,7 +21,7 @@ author: Robin Smith
 permalink: pretty
 
 # Excludes these files/folders from being included into Jekyll _site folder.
-exclude: [node_modules, gulpfile.js]
+exclude: [node_modules, gulpfile.js, README.md, package.json, CNAME]
 
 url: https://rsmith.io   # with the https protocol
 enforce_ssl: rsmith.io   # without any protocol
