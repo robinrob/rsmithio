@@ -7,7 +7,7 @@ email: rs@rsmith.io
 description: > # this means to ignore newlines until "baseurl:"
   Experienced freelance software developer designing and building custom web applications and integrations using modern
   cloud technologies and frameworks.
-#baseurl: "/robinrob.github.io-dev" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://rsmith.io" # the base hostname & protocol for your site
 github: robinrob
 twitter: rsmith_io

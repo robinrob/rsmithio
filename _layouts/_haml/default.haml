@@ -1,13 +1,11 @@
 !!!
-%html{:lang => "en"}
+%html{:lang => "en" }
+  {% include head.html %}
+
   %body
-    %p
-      {% include head.html %}
-    {% include post-header.html %}
-    
     {% include nav.html %}
-    .container
-      .col-xs-1
-      .col-xs-10
-        {{ content }}
+
+    / Content
+    {{ content }}
+
     {% include footer.html %}
