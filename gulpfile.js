@@ -9,7 +9,7 @@ config.paths.haml = {
 }
 config.paths.html = {
     watchSrc: ["**/*.html"],
-    src: [config.paths.buildDir + '**/*.html']
+    src: [config.paths.buildDir + '/**/*.html']
 }
 config.paths.sass = {
     main: '_scss/main.scss',
@@ -31,7 +31,6 @@ config = require('./_secret-config.js')(config)
 
 var argv = require('yargs').argv
 var browserSync = require('browser-sync')
-var reload = browserSync.reload
 var cloudflare = require('gulp-cloudflare')
 var concat = require('gulp-concat')
 var cp = require('child_process')
@@ -67,7 +66,7 @@ gulp.task('jekyll', function (done) {
 })
 
 gulp.task('reload', function () {
-    reload()
+    browserSync.reload()
 })
 
 gulp.task('browser-sync', function () {
@@ -135,7 +134,7 @@ gulp.task("css", function () {
         .pipe(gulp.dest(config.paths.css.dest));
 });
 
-gulp.task("css-concat", function () {
+gulp.task("css-dev", function () {
     return gulp.src(config.paths.css.src, {
         base: './'
     })
@@ -150,7 +149,7 @@ gulp.task('js', function () {
         .pipe(gulp.dest(config.paths.js.dest));
 });
 
-gulp.task('js-concat', function () {
+gulp.task('js-dev', function () {
     return gulp.src(config.paths.js.src)
         .pipe(concat(config.paths.js.main))
         .pipe(gulp.dest(config.paths.js.dest));
@@ -161,15 +160,15 @@ gulp.task('build', function (done) {
 })
 
 gulp.task('fast-build', function (done) {
-    runSequence('html', 'jekyll', 'sass', ['css', 'js'], 'reload', done);
+    runSequence('jekyll', 'html', 'sass', ['css', 'js'], 'reload', done);
 })
 
 gulp.task('dev-build', function (done) {
-    runSequence('haml-build', 'jekyll', 'sass', ['css-concat', 'js-concat'], 'reload', done);
+    runSequence('haml-build', 'jekyll', 'sass', ['css-dev', 'js-dev'], 'reload', done);
 })
 
 gulp.task('fast-dev-build', function (done) {
-    runSequence('jekyll', 'sass', ['css-concat', 'js-concat'], 'reload', done);
+    runSequence('jekyll', 'sass', ['css-dev', 'js-dev'], 'reload', done);
 })
 
 gulp.task('upload', function () {
@@ -208,8 +207,8 @@ gulp.task('save', function (done) {
     }, done);
 });
 
-gulp.task('deploy', ['save'], function () {
-    return runSequence('build', 'upload', 'purge-online-cache');
+gulp.task('deploy', ['save'], function (done) {
+    return runSequence('build', 'upload', 'purge-online-cache', done);
 });
 
 gulp.task('watch', ['haml-watch'], function () {
@@ -220,10 +219,10 @@ gulp.task('dev-watch', ['haml-watch'], function () {
     gulp.watch(config.paths.watch, ['fast-dev-build'])
 })
 
-gulp.task('full', function () {
-    runSequence('build', 'watch', 'browser-sync')
+gulp.task('full', function (done) {
+    runSequence('build', 'watch', 'browser-sync', done)
 })
 
-gulp.task('default', function () {
-    runSequence('dev-build', 'dev-watch', 'browser-sync')
+gulp.task('default', function (done) {
+    runSequence('dev-build', 'dev-watch', 'browser-sync', done)
 })
