@@ -61,11 +61,8 @@ hr.large {
 
 ///* Center the nav list in collapsed navbar */
 .navbar-collapse {
-    text-align: center;
     .navbar-nav {
-        li {
-            float: none;
-        }
+        float: none;
     }
 }
 
@@ -74,7 +71,7 @@ hr.large {
     text-align: center;
     li {
         float: none;
-        display: inline !important;
+        display: inline-block;
     }
 }
 

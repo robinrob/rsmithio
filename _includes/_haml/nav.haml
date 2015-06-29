@@ -10,8 +10,8 @@
         %span.icon-bar
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      %ul.nav.navbar-nav.navbar-right
+      %ul.nav.navbar-nav
         %li
           -# How to do inline stuff
           %a{:href => "{{ site.baseurl }}/"} Home
-          -#%a{:href => "{{ site.baseurl }}/blog"} Blog
+          %a{:href => "{{ site.baseurl }}/blog"} Blog

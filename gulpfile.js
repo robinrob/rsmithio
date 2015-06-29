@@ -224,5 +224,5 @@ gulp.task('full', function (done) {
 })
 
 gulp.task('default', function (done) {
-    runSequence('dev-watch', 'browser-sync', done)
+    runSequence('fast-dev-build', 'dev-watch', 'browser-sync', done)
 })

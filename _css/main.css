@@ -227,17 +227,15 @@ hr.large {
   margin: 50px auto;
   border-width: 6px; }
 
-.navbar-collapse {
-  text-align: center; }
-  .navbar-collapse .navbar-nav li {
-    float: none; }
+.navbar-collapse .navbar-nav {
+  float: none; }
 
 /* Center the nav links within nav list */
 .navbar-nav {
   text-align: center; }
   .navbar-nav li {
     float: none;
-    display: inline !important; }
+    display: inline-block; }
 
 /* Change the color and background of the small horizontal lines on collapsed navbar icon */
 .navbar-toggle[data-target="#bs-example-navbar-collapse-1"] .icon-bar {
