@@ -5,12 +5,10 @@ var config = {
         buildDir: '_site',
         img: ["./img/**/*"],
         haml: {
-            //src: ['**/_haml/*.haml'],
-            //srcDir: ['**/_haml/*.haml', '']
-            src: ['./_haml/*.haml'],
-            srcDir: ['./_haml/*.haml', './*.html']
+            src: ['**/_haml/*.haml']
         },
         html: {
+            projSrc: ["**/*.html"],
             src: ["./_site/**/*.html"],
             dest: "./",
         },
@@ -36,7 +34,6 @@ config = require('./_secret-config.js')(config)
 var argv = require('yargs').argv
 var browserSync = require('browser-sync')
 var reload = browserSync.reload
-var changed = require('gulp-changed')
 var cloudflare = require('gulp-cloudflare')
 var concat = require('gulp-concat')
 var cp = require('child_process')
@@ -58,8 +55,6 @@ var shell = require('shelljs/global')
 var sitemap = require('gulp-sitemap');
 var uglify = require('gulp-uglifyjs');
 var watch = require('gulp-watch')
-
-var newer = require('gulp-newer')
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -87,24 +82,18 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('haml-watch', function () {
-    gulp.src(config.paths.haml.src).
+gulp.task('haml-watch', function() {
+    gulp.src(config.paths.haml.src, {read: false}).
         pipe(plumber({
             onError: onError
         })).
         pipe(watch(config.paths.haml.src)).
-        //pipe(newer({
-        //    dest: './../*/html'
-        //})).
         pipe(haml()).
-        //pipe(rename(function(path) {
-        //    console.log("dirname: " + path.dirname)
-        //    console.log("basename: " + path.basename)
-        //    path.dirname += "/../"
-        //    return path
-        //})).
+        pipe(rename(function(path) {
+            path.dirname += "/../"
+        })).
         pipe(gulp.dest('./'))
-})
+});
 
 gulp.task('haml-build', function () {
     return gulp.src(config.paths.haml.src).
@@ -113,10 +102,7 @@ gulp.task('haml-build', function () {
         })).
         pipe(haml()).
         pipe(rename(function(path) {
-            console.log("dirname: " + path.dirname)
-            console.log("basename: " + path.basename)
             path.dirname += "/../"
-            return path
         })).
         pipe(gulp.dest('./'))
 })
@@ -230,11 +216,11 @@ gulp.task('deploy', ['save'], function () {
 });
 
 gulp.task('watch', ['haml-watch'], function() {
-    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-build']);
+    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.html.projSrc, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-build'])
 })
 
 gulp.task('dev-watch', ['haml-watch'], function() {
-    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-dev-build'])
+    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.html.projSrc, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-dev-build'])
 })
 
 gulp.task('full', function() {
@@ -242,6 +228,5 @@ gulp.task('full', function() {
 })
 
 gulp.task('default', function() {
-    runSequence('dev-watch', 'browser-sync')
-    //runSequence('dev-build', 'dev-watch', 'browser-sync')
+    runSequence('dev-build', 'dev-watch', 'browser-sync')
 })
