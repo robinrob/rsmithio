@@ -32,6 +32,7 @@ config = require('./_secret-config.js')(config)
 
 var argv = require('yargs').argv
 var browserSync = require('browser-sync')
+var reload = browserSync.reload
 var changed = require('gulp-changed')
 var cloudflare = require('gulp-cloudflare')
 var concat = require('gulp-concat')
@@ -47,16 +48,13 @@ var path = require('path')
 var plumber = require('gulp-plumber')
 var prefix = require('gulp-autoprefixer');
 var task = require('gulp-task')
-var reload = browserSync.reload
-var runsequence = require('run-sequence')
+var rename = require('gulp-rename')
+var runSequence = require('run-sequence')
 var sass = require('gulp-sass');
 var shell = require('shelljs/global')
 var sitemap = require('gulp-sitemap');
 var uglify = require('gulp-uglifyjs');
 var watch = require('gulp-watch')
-
-var rename = require('gulp-rename')
-
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -74,9 +72,7 @@ gulp.task('jekyll', function (done) {
 gulp.task('reload', function () {
     reload()
 })
-/**
- * Wait for jekyll-build, then launch the Server
- */
+
 gulp.task('browser-sync', function () {
     browserSync({
         server: {
@@ -87,17 +83,18 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('haml-watch', function () {
-    return gulp.src(config.paths.haml.src).
+    gulp.src(config.paths.haml.src).
         pipe(plumber({
             onError: onError
         })).
-        pipe(watch(src)).
+        pipe(watch(config.paths.haml.src)).
         pipe(changed('./', {extension: '.html'})).
         pipe(haml()).
-        pipe(gulp.dest('./')).
-        pipe(gcallback(function () {
-            runsequence('build')
-        }))
+        pipe(rename(function(path) {
+            path.dirname += "/../"
+            return path
+        })).
+        pipe(gulp.dest('./'))
 })
 
 gulp.task('haml-build', function () {
@@ -107,7 +104,6 @@ gulp.task('haml-build', function () {
         })).
         pipe(haml()).
         pipe(rename(function(path) {
-            console.log("dirname: " + path.dirname)
             path.dirname += "/../"
             return path
         })).
@@ -167,19 +163,19 @@ gulp.task('js-concat', function () {
 });
 
 gulp.task('build', function (done) {
-    runsequence('haml-build', 'html', 'jekyll', 'sass', ['css', 'js'], 'reload', done);
+    runSequence('haml-build', 'html', 'jekyll', 'sass', ['css', 'js'], 'reload', done);
 })
 
 gulp.task('fast-build', function (done) {
-    runsequence('html', 'jekyll', 'sass', ['css', 'js'], 'reload', done);
+    runSequence('html', 'jekyll', 'sass', ['css', 'js'], 'reload', done);
 })
 
 gulp.task('dev-build', function (done) {
-    runsequence('haml-build', 'jekyll', 'sass', ['css-concat', 'js-conca'], 'reload', done);
+    runSequence('haml-build', 'jekyll', 'sass', ['css-concat', 'js-concat'], 'reload', done);
 })
 
 gulp.task('fast-dev-build', function (done) {
-    runsequence('jekyll', 'sass', ['css-concat', 'js-concat'], 'reload', done);
+    runSequence('jekyll', 'sass', ['css-concat', 'js-concat'], 'reload', done);
 })
 
 gulp.task('upload', function () {
@@ -219,17 +215,21 @@ gulp.task('save', function (done) {
 });
 
 gulp.task('deploy', ['save'], function () {
-    return runsequence('build', 'upload', 'purge-online-cache');
+    return runSequence('build', 'upload', 'purge-online-cache');
 });
 
-gulp.task('full', ['haml-watch', 'build', 'browser-sync'], function () {
+gulp.task('watch', ['haml-watch'], function() {
     gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-build']);
 })
 
-/**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
- */
-gulp.task('default', ['haml-watch', 'dev-build', 'browser-sync'], function () {
-    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-dev-build']);
+gulp.task('dev-watch', ['haml-watch'], function() {
+    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-dev-build'])
+})
+
+gulp.task('full', function() {
+    runSequence('build', 'watch', 'browser-sync')
+})
+
+gulp.task('default', function() {
+    runSequence('dev-build', 'dev-watch', 'browser-sync')
 })
