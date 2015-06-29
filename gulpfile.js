@@ -1,6 +1,7 @@
 var root = require('path').resolve('./')
 var config = {
     paths: {
+        watch: ['_config.yml', '_posts/*', config.paths.img, config.paths.html.projSrc, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'],
         build: "./_site/**",
         buildDir: '_site',
         img: ["./img/**/*"],
@@ -216,11 +217,11 @@ gulp.task('deploy', ['save'], function () {
 });
 
 gulp.task('watch', ['haml-watch'], function() {
-    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.html.projSrc, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-build'])
+    gulp.watch(config.paths.watch, ['fast-build'])
 })
 
 gulp.task('dev-watch', ['haml-watch'], function() {
-    gulp.watch(['_config.yml', '_posts/*', config.paths.img, config.paths.html.projSrc, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*'], ['fast-dev-build'])
+    gulp.watch(config.paths.watch, ['fast-dev-build'])
 })
 
 gulp.task('full', function() {
