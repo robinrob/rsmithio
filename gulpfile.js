@@ -167,7 +167,7 @@ gulp.task('js-dev', function(done) {
     runSequence('js-concat', done)
 })
 
-gulp.task('js', function() {
+gulp.task('js', function(done) {
     runSequence('js-concat', 'js-minify', done)
 })
 
