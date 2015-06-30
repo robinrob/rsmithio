@@ -37,6 +37,9 @@ hr.large {
 }
 /* Center the nav list in collapsed navbar */
 .navbar-collapse {
+    li {
+        display: block;
+    }
     .navbar-nav {
         float: none;
     }
@@ -59,24 +62,11 @@ hr.large {
     }
 
     @media only screen and (min-width: 768px) {
-        // Uncomment this when running nav links down side
-        //margin-top: 70px;
-
-        //ul {
-            //border-right: 1px solid white;
-        //}
-        //.navbar-brand {
-        //    padding: 20px;
-        //}
         .nav {
             li {
-                //margin-bottom: 50px;
-                //padding-right: 10px;
-                //display: block;
+                display: inline-block;
                 a {
                     padding: 20px;
-                    // Uncomment this to run nav links across top
-                    display: inline-block
                 }
             }
         }
@@ -121,7 +111,6 @@ hr.large {
     background-attachment: scroll;
     @include background-cover();
 
-
     .site-heading,
     .page-heading {
         text-align: center;
@@ -156,7 +145,7 @@ hr.large {
     }
 
     .site-heading {
-        height: 450px;
+        height: 425px;
         display: block;
         font-size: 18px;
         padding-top: 100px;
@@ -166,14 +155,14 @@ hr.large {
         }
 
         h2 {
-            padding-top: 5px !important;
-            padding-bottom: 5px !important;
+            padding-top: 8px !important;
+            padding-bottom: 8px !important;
             margin-bottom: 20px;
         }
 
         .photo {
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 25px;
+            margin-bottom: 10px;
             display: inline-block;
             text-align: center;
             width: $image-height;
@@ -181,7 +170,7 @@ hr.large {
         }
 
         @media only screen and (min-width: 768px) {
-            height: 475px;
+            height: 450px;
         }
     }
 
@@ -190,8 +179,8 @@ hr.large {
         padding-top: 80px;
 
         @media only screen and (min-width: 768px) {
-            height: 450px;
             padding-top: 150px;
+            height: 450px;
         }
     }
 
@@ -219,7 +208,7 @@ hr.large {
             font-size: 20px;
         }
         @media only screen and (min-width: 768px) {
-            height: 475px;
+            height: 450px;
             padding-top: 150px;
             h1 {
                 font-size: 55px;

@@ -212,6 +212,9 @@ hr.large {
     display: inline-block; }
 
 /* Center the nav list in collapsed navbar */
+.navbar-collapse li {
+  display: block; }
+
 .navbar-collapse .navbar-nav {
   float: none; }
 
@@ -225,9 +228,10 @@ hr.large {
     font-size: 12px;
     letter-spacing: 1px; }
   @media only screen and (min-width: 768px) {
-    .navbar-custom .nav li a {
-      padding: 20px;
-      display: inline-block; } }
+    .navbar-custom .nav li {
+      display: inline-block; }
+      .navbar-custom .nav li a {
+        padding: 20px; } }
   @media only screen and (min-width: 1170px) {
     .navbar-custom {
       /* Force Hardware Acceleration in WebKit */
@@ -279,33 +283,33 @@ hr.large {
       margin-top: 30px;
       margin-bottom: 30px; }
   .intro-header .site-heading {
-    height: 450px;
+    height: 425px;
     display: block;
     font-size: 18px;
     padding-top: 100px; }
     .intro-header .site-heading h1 {
       white-space: nowrap; }
     .intro-header .site-heading h2 {
-      padding-top: 5px !important;
-      padding-bottom: 5px !important;
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
       margin-bottom: 20px; }
     .intro-header .site-heading .photo {
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: 25px;
+      margin-bottom: 10px;
       display: inline-block;
       text-align: center;
       width: 120px;
       height: 120px; }
     @media only screen and (min-width: 768px) {
       .intro-header .site-heading {
-        height: 475px; } }
+        height: 450px; } }
   .intro-header .page-heading {
     height: 300px;
     padding-top: 80px; }
     @media only screen and (min-width: 768px) {
       .intro-header .page-heading {
-        height: 450px;
-        padding-top: 150px; } }
+        padding-top: 150px;
+        height: 450px; } }
   .intro-header .post-heading {
     padding-bottom: 50px;
     text-align: left;
@@ -323,7 +327,7 @@ hr.large {
       font-size: 20px; }
     @media only screen and (min-width: 768px) {
       .intro-header .post-heading {
-        height: 475px;
+        height: 450px;
         padding-top: 150px; }
         .intro-header .post-heading h1 {
           font-size: 55px; }
