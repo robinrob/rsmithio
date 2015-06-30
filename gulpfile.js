@@ -106,6 +106,15 @@ gulp.task('haml-build', function (src) {
         pipe(gulp.dest('./'))
 })
 
+function hamlBuild(inputStream) {
+    return inputStream.
+        pipe(haml()).
+        pipe(rename(function (path) {
+            path.dirname += '/../'
+        })).
+        pipe(gulp.dest('./'))
+}
+
 gulp.task('html', function () {
     // Overwrite original files
     return gulp.src(config.paths.html.src, {
@@ -129,22 +138,18 @@ gulp.task('sass', function () {
 });
 
 gulp.task('css-concat', function () {
-    return gulp.src(config.paths.css.src, {
-        base: './'
-    })
+    return gulp.src(config.paths.css.src)
         .pipe(concat(config.paths.css.main))
         .pipe(gulp.dest(config.paths.css.dest));
 });
 
 gulp.task('css-minify', function () {
-    return gulp.src(config.paths.css.dest + '/*.css', {
-        base: './'
-    })
+    return gulp.src(config.paths.css.dest + '/*.css')
         .pipe(minifyCSS())
         .pipe(gulp.dest(config.paths.css.dest));
 });
 
-gulp.task('css-dev', function(done) {
+gulp.task('css-dev', function() {
     runSequence('css-concat')
 })
 
@@ -240,6 +245,6 @@ gulp.task('full', function (done) {
     runSequence('build', 'watch', 'browser-sync', done)
 })
 
-gulp.task('default', function (done) {
-    runSequence('fast-dev-build', 'dev-watch', 'browser-sync', done)
+gulp.task('default', function () {
+    runSequence('fast-dev-build', 'dev-watch', 'browser-sync')
 })
