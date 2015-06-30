@@ -172,7 +172,7 @@ gulp.task('js', function() {
 })
 
 gulp.task('build', function (done) {
-    runSequence('haml-build', 'jekyll', 'html', 'sass', ['css', 'js'], 'reload', done)
+    runSequence('haml-build', 'jekyll', 'sass', ['css', 'js'], 'reload', done)
 })
 
 gulp.task('fast-build', function (done) {
