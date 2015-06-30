@@ -10,7 +10,7 @@ var config = {
         },
         html: {
             watchSrc: ['**/*.html'],
-            src: [buildDir + '/**/*.html']
+            dest: [buildDir + '/**/*.html']
         },
         sass: {
             main: '_scss/main.scss',
@@ -112,7 +112,7 @@ gulp.task('haml-build', function () {
 
 gulp.task('html', function () {
     // Overwrite original files
-    return gulp.src(config.paths.html.src)
+    return gulp.src(config.paths.html.dest)
         .pipe(minifyHTML())
         .pipe(gulp.dest('./'))
 })
