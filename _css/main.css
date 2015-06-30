@@ -321,7 +321,7 @@ hr.large {
   background-attachment: scroll;
   background-size: cover;
   -o-background-size: cover;
-  height: 450px; }
+  height: 425px; }
   @media only screen and (min-width: 768px) {
     .intro-header {
       height: 475px; } }
@@ -340,7 +340,6 @@ hr.large {
     .intro-header .site-heading h1,
     .intro-header .page-heading h1 {
       margin-top: 0;
-      margin-bottom: 0.25em;
       font-size: 50px;
       white-space: nowrap; }
     .intro-header .site-heading .subheading,
@@ -642,6 +641,8 @@ header .site-heading .email {
       color: #bbbbbb; }
 
 header .site-heading .photo {
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: inline-block;
   text-align: center;
   width: 120px;
@@ -656,6 +657,10 @@ header .site-heading .photo {
           transition: border 0.2s ease-out, box-shadow 0.2s ease-out; }
   header .site-heading .photo:hover {
     box-shadow: 2px 2px 10px 0px gray, -2px -2px 10px 0px gray; }
+  @media only screen and (max-width: 768px) {
+    header .site-heading .photo {
+      margin-top: 0px;
+      margin-bottom: 0px; } }
 
 .index {
   text-align: center; }
