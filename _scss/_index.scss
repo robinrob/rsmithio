@@ -97,6 +97,16 @@ header {
     }
 }
 
+.index {
+    text-align: center;
+    h2 {
+        color: $theme-3;
+    }
+    h3 {
+        color: $theme-4;
+    }
+}
+
 .main {
     display: inline-block;
     //max-width: 800px;
@@ -105,12 +115,10 @@ header {
 
     h2 {
         font-size: 35px;
-        color: $h2-color;
         margin-bottom: 30px;
     }
 
     h3 {
-        color: $h3-color;
         margin-bottom: 10px;
     }
 
@@ -134,7 +142,6 @@ header {
     }
 
     h2 {
-        text-align: center;
         margin-bottom: 5%;
     }
 
