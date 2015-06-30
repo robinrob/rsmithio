@@ -1,0 +1,9 @@
+---
+layout:     post
+title:      "Wankers are extinct today"
+subtitle:   "because they are wankers."
+date:       2014-06-10 12:00:00
+author:     "Start Bootstrap"
+---
+
+<p>Wankers!!!</p>

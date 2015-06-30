@@ -1,146 +1,156 @@
 ---
-layout: index
+layout: default
 ---
-<div class='index'>
-  <div class='container blurb'>
+<!-- Header -->
+<header class='intro-header'>
+  <div class='container site-heading'>
     <div class='row'>
-      <div class='col-xs-12'>
-        <p>
-          I am an Edinburgh-based software developer with several years' experience in the modern cloud landscape.
-          I have experience with modern web and mobile applications; custom business applications and integrations
-          running on enterprise cloud platforms including Amazon Web Services, Google, Salesforce.com and Heroku; HTML5
-          game development using Cocos2D-Js. I hold architect and developer certifications for Amazon Web Services and
-          Force.com and have a strong mathematical and analytical background. Please check out my
-          <a href='http://www.linkedin.com/in/{{ site.linkedin }}' target='_blank'>LinkedIn</a>
-          profile for more details.
-        </p>
+      <div class='col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1'>
+        <h1 class='live-input' data-html='true' text='{{ site.author }}' title='Click me to edit!&lt;br&gt;Made using: &lt;a href="https://github.com/robinrob/jquery-liveinput" target="_blank"&gt;liveinput&lt;/a&gt;'>&nbsp;</h1>
       </div>
     </div>
-  </div>
-  <div class='section'>
-    <div class='container'>
-      <h2 id='services'>Services</h2>
-      <div class='intro'>
-        <p>
-          I can design and build solutions in the below areas. In all projects undertaken a suitable level of automated testing is implemented alongside good design to ensure an increased level of reliability.
-        </p>
+    <div class='row'>
+      <div class='col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1'>
+        <div class='photo' id='photo'></div>
       </div>
-      <div class='row services'>
-        <div class='col-xs-12'>
-          <ul>
-            <li>
-              <h3>
-                Web Development
-              </h3>
-              <p>
-                I can build responsive websites that are mobile- and desktop-ready using HTML5, CSS, Javascript, jQuery,
-                Python, Ruby and modern frameworks such as Ruby on Rails and AnjularJS. I can migrate existing websites from legacy to modern frameworks.
-              </p>
-            </li>
-            <li>
-              <h3>
-                Force.com App Development
-              </h3>
-              <p>
-                With my wide knowledge of the Force.com platform I can design, build and deploy diverse solutions such as web-service
-                integrations, custom backup and archive solutions, to full-fledged Force.com apps with complex and technical functionality. Using
-                test-driven-development, I ensure that the code is robust and easily exceeds the Force.com platform basic requirement of 75% code coverage.
-              </p>
-            </li>
-            <li>
-              <h3>
-                Cloud Integrations and Solutions
-              </h3>
-              <p>
-                I can design, create and deploy custom integrations between your app and other Cloud platforms such as Google and Salesforce.com
-                platforms, or bespoke applications running on Amazon Web Services, Force.com or Heroku. I hold Force.com Developer
-                and AWS Solutions Architect certifications.
-              </p>
-            </li>
-            <li>
-              <h3>
-                Custom Google Apps Automation
-              </h3>
-              <p>
-                I can implement powerful workflow automation solutions for Google Apps users using Google Apps Script, such as
-                complex Spreadsheet, Document and email functionality and integrations with external services.
-              </p>
-            </li>
-          </ul>
+    </div>
+    <div class='row'>
+      <div class='col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1'>
+        <h2 class='subheading live-input' text='{{ site.subtitle }}'>&nbsp;</h2>
+        <div class='email'>
+          <a href='mailto:{{ site.email }}'>{{ site.email }}</a>
         </div>
       </div>
     </div>
   </div>
-  <div class='section'>
-    <div class='container'>
-      <h2 id='projects'>Previous Projects</h2>
-      <p class='section-intro'>
-        <strong>Some previous projects I have worked on.</strong>
+</header>
+<!-- Content -->
+<div class='main'>
+  <div class='index'>
+    <div class='container blurb'>
+      <p>
+        I am an Edinburgh-based software developer with several years' experience in the modern cloud landscape.
+        I have experience with modern web and mobile applications; custom business applications and integrations
+        running on enterprise cloud platforms including Amazon Web Services, Google, Salesforce.com and Heroku; HTML5
+        game development using Cocos2D-Js. I hold architect and developer certifications for Amazon Web Services and
+        Force.com and have a strong mathematical and analytical background. Please check out my
+        <a href='http://www.linkedin.com/in/{{ site.linkedin }}' target='_blank'>LinkedIn</a>
+        profile for more details.
       </p>
-      <div class='row projects'>
-        <div class='col-xs-12'>
-          <ul>
-            <li class='cf project-alumina'>
-              <h3>Commerial Salesforce <=> Google synchronisation application</h3>
-              <p>
-                I was a core developer on a native Force.com application to synchronise Email, Calendar and
-                Contact information between Google Apps and Salesforce.com platforms. The app made use of
-                advanced Force.com techniques such as scheduled and batch Apex, webservices, triggers and visualforce.
-                I built a second stand-alone Force.com application acting as a licensing server to perform product verification
-                and registration, offering trial and paid functionality for the business' Force.com products. The app
-                included an intuitive visual interface to allow administration.
-              </p>
-            </li>
-            <li class='cf project-salesforce-s3'>
-              <h3>Salesforce-AWS Email Backup and Archiving System</h3>
-              <p>
-                I designed and implemented a robust archiving and retrieval system for Salesforce Email Messages, using
-                Python and running on Amazon EC2. Business-critical Salesforce data was stored and synced on Amazon Web Services S3, drastically reducing storage costs.
-                The system was successfully deployed for two separate customers. A high level of automated testing ensured the
-                reliability of the system.
-              </p>
-            </li>
-            <li class='cf project-heroku-db'>
-              <h3>Heroku Database Management Tool</h3>
-              <p>
-                I designed and implemented a system to perform backups of critical Heroku application databases, using Ruby
-                and running on Amazon EC2. Database backups were rotated to ensure data integrity and keep storage
-                costs under control.
-              </p>
-            </li>
-          </ul>
+    </div>
+    <div class='section'>
+      <div class='container services'>
+        <h2 id='services'>Services</h2>
+        <div class='intro'>
+          <p>
+            I can design and build solutions in the below areas. In all projects undertaken a suitable level of automated testing is implemented alongside good design to ensure an increased level of reliability.
+          </p>
         </div>
+        <ul>
+          <li>
+            <h3>
+              Web Development
+            </h3>
+            <p>
+              I can build responsive websites that are mobile- and desktop-ready using HTML5, CSS, Javascript, jQuery,
+              Python, Ruby and modern frameworks such as Ruby on Rails and AnjularJS. I can migrate existing websites from legacy to modern frameworks.
+            </p>
+          </li>
+          <li>
+            <h3>
+              Force.com App Development
+            </h3>
+            <p>
+              With my wide knowledge of the Force.com platform I can design, build and deploy diverse solutions such as web-service
+              integrations, custom backup and archive solutions, to full-fledged Force.com apps with complex and technical functionality. Using
+              test-driven-development, I ensure that the code is robust and easily exceeds the Force.com platform basic requirement of 75% code coverage.
+            </p>
+          </li>
+          <li>
+            <h3>
+              Cloud Integrations and Solutions
+            </h3>
+            <p>
+              I can design, create and deploy custom integrations between your app and other Cloud platforms such as Google and Salesforce.com
+              platforms, or bespoke applications running on Amazon Web Services, Force.com or Heroku. I hold Force.com Developer
+              and AWS Solutions Architect certifications.
+            </p>
+          </li>
+          <li>
+            <h3>
+              Custom Google Apps Automation
+            </h3>
+            <p>
+              I can implement powerful workflow automation solutions for Google Apps users using Google Apps Script, such as
+              complex Spreadsheet, Document and email functionality and integrations with external services.
+            </p>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-  <div class='section'>
-    <div class='container'>
-      <h2 id='endorsements'>Endorsements</h2>
-      <div class='row endorsements'>
-        <div class='col-xs-12'>
-          <ul>
-            <li class='endorsement'>
-              <a href='http://seanw.org' target='_blank'>
-                <div class='endorsement-photo photo-sean'></div>
-              </a>
-              <blockquote>"Robin is a passionate software developer and a keen and fast learner. Combined with excellent communication skills and professionalism he is great to work with."</blockquote>
-              <div class='caption'>
-                <a href='http://seanw.org' target='_blank'>Sean Wilson</a>
-                , Freelance Developer
-              </div>
-            </li>
-            <li class='endorsement'>
-              <a href='https://uk.linkedin.com/pub/ben-johnson/29/105/552' target='_blank'>
-                <div class='endorsement-photo photo-ben'></div>
-              </a>
-              <blockquote>"Robin has an unbreakable comittment to quality. What you see is what you get - a reliable and intelligent business partner."</blockquote>
-              <div class='caption'>
-                <a href='https://uk.linkedin.com/pub/ben-johnson/29/105/552' target='_blank'>Ben Johnson</a>
-                , Principal Consultant at Ryze Limited
-              </div>
-            </li>
-          </ul>
-        </div>
+    <div class='section'>
+      <div class='container projects'>
+        <h2 id='projects'>Previous Projects</h2>
+        <p class='section-intro'>
+          <strong>Some previous projects I have worked on.</strong>
+        </p>
+        <ul>
+          <li class='cf project-alumina'>
+            <h3>Commerial Salesforce <=> Google synchronisation application</h3>
+            <p>
+              I was a core developer on a native Force.com application to synchronise Email, Calendar and
+              Contact information between Google Apps and Salesforce.com platforms. The app made use of
+              advanced Force.com techniques such as scheduled and batch Apex, webservices, triggers and visualforce.
+              I built a second stand-alone Force.com application acting as a licensing server to perform product verification
+              and registration, offering trial and paid functionality for the business' Force.com products. The app
+              included an intuitive visual interface to allow administration.
+            </p>
+          </li>
+          <li class='cf project-salesforce-s3'>
+            <h3>Salesforce-AWS Email Backup and Archiving System</h3>
+            <p>
+              I designed and implemented a robust archiving and retrieval system for Salesforce Email Messages, using
+              Python and running on Amazon EC2. Business-critical Salesforce data was stored and synced on Amazon Web Services S3, drastically reducing storage costs.
+              The system was successfully deployed for two separate customers. A high level of automated testing ensured the
+              reliability of the system.
+            </p>
+          </li>
+          <li class='cf project-heroku-db'>
+            <h3>Heroku Database Management Tool</h3>
+            <p>
+              I designed and implemented a system to perform backups of critical Heroku application databases, using Ruby
+              and running on Amazon EC2. Database backups were rotated to ensure data integrity and keep storage
+              costs under control.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class='section'>
+      <div class='container endorsements'>
+        <h2 id='endorsements'>Endorsements</h2>
+        <ul>
+          <li class='endorsement'>
+            <a href='http://seanw.org' target='_blank'>
+              <div class='endorsement-photo photo-sean'></div>
+            </a>
+            <blockquote>"Robin is a passionate software developer and a keen and fast learner. Combined with excellent communication skills and professionalism he is great to work with."</blockquote>
+            <div class='caption'>
+              <a href='http://seanw.org' target='_blank'>Sean Wilson</a>
+              , Freelance Developer
+            </div>
+          </li>
+          <li class='endorsement'>
+            <a href='https://uk.linkedin.com/pub/ben-johnson/29/105/552' target='_blank'>
+              <div class='endorsement-photo photo-ben'></div>
+            </a>
+            <blockquote>"Robin has an unbreakable comittment to quality. What you see is what you get - a reliable and intelligent business partner."</blockquote>
+            <div class='caption'>
+              <a href='https://uk.linkedin.com/pub/ben-johnson/29/105/552' target='_blank'>Ben Johnson</a>
+              , Principal Consultant at Ryze Limited
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

@@ -18,7 +18,7 @@ $a-color: $theme-3;
 $a-visited: $a-color;
 $a-hover-color: $theme-3;
 
-$nav-color: $theme-1;
+$nav-color: darken($theme-1, 10%);
 $nav-hover-color: $theme-2;
 
 $text-color: $theme-5;

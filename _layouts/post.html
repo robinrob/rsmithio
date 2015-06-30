@@ -2,44 +2,41 @@
 layout: default
 ---
 <!-- Post header -->
-<body>
-  <header class='intro-header' style="background-image: url('{{ post.image }}')">
-    <div class='container post-heading'>
-      <div class='row'>
-        <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
-          <div class='site-heading'>
-            <h1>{{ page.title }}</h1>
-            <hr class='small'>
-            <span class='subheading'>{{ page.subtitle }}</span>
-          </div>
-        </div>
+<header class='intro-header'>
+  <div class='container post-heading'>
+    <div class='row'>
+      <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <h2 class='subheading'>{{ page.subtitle }}</h2>
+        {% endif %}
+        <span class='meta'>Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
       </div>
     </div>
-  </header>
-  <!-- Content -->
-  <div class='main'>
-    <article>
-      <div class='container'>
-        <div class='row'>
-          <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
-            {{ content }}
-            <hr>
-            <ul class='pager'>
-              {% if page.previous.url %}
-              <li class='previous'>
-                <a data-placement='top' data-toggle='tooltip' href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" title='{{page.previous.title}}'>← Previous Post</a>
-              </li>
-              {% endif %}
-              {% if page.next.url %}
-              <li class='next'>
-                <a data-placement='top' data-toggle='tooltip' href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" title='{{page.next.title}}'>Next Post →</a>
-              </li>
-              {% endif %}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </article>
   </div>
-  <hr>
-</body>
+</header>
+<!-- Content -->
+<div class='main'>
+  <div class='container blog'>
+    <div class='row'>
+      <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+        <article>
+          {{ content }}
+        </article>
+        <hr>
+        <ul class='pager'>
+          {% if page.previous.url %}
+          <li class='previous'>
+            <a data-placement='top' data-toggle='tooltip' href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" title='{{page.previous.title}}'>&larr; Previous Post</a>
+          </li>
+          {% endif %}
+          {% if page.next.url %}
+          <li class='next'>
+            <a data-placement='top' data-toggle='tooltip' href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" title='{{page.next.title}}'>Next Post &rarr;</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

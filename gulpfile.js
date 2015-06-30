@@ -5,6 +5,7 @@ var config = {
     paths: {
         build: buildDir + '/**',
         img: ['./img/**/*'],
+        markdown: ['_posts/*.md'],
         haml: {
             src: ['**/_haml/*.haml']
         },
@@ -30,7 +31,16 @@ var config = {
         }
     }
 }
-config.paths.watch = ['_config.yml', '_posts/*', config.paths.img, config.paths.html.src, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*']
+config.paths.watch = [
+    '_config.yml',
+    '_posts/*',
+    config.paths.img,
+    config.paths.markdown,
+    config.paths.html.src,
+    config.paths.sass.src,
+    config.paths.js.src,
+    'orbiter/**/*'
+]
 config = require('./_secret-config.js')(config)
 
 var argv = require('yargs').argv
@@ -143,11 +153,11 @@ gulp.task('css-minify', function () {
         .pipe(gulp.dest(config.paths.css.dest))
 })
 
-gulp.task('css-dev', function(done) {
+gulp.task('css-dev', function (done) {
     runSequence('css-concat', done)
 })
 
-gulp.task('css', function(done) {
+gulp.task('css', function (done) {
     runSequence('css-concat', 'css-minify', done)
 })
 
@@ -163,11 +173,11 @@ gulp.task('js-minify', function () {
         .pipe(gulp.dest(config.paths.js.dest))
 })
 
-gulp.task('js-dev', function(done) {
+gulp.task('js-dev', function (done) {
     runSequence('js-concat', done)
 })
 
-gulp.task('js', function(done) {
+gulp.task('js', function (done) {
     runSequence('js-concat', 'js-minify', done)
 })
 
