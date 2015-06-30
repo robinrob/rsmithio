@@ -9,7 +9,7 @@ var config = {
             src: ['**/_haml/*.haml']
         },
         html: {
-            watchSrc: ['**/*.html'],
+            src: ['**/*.html'],
             dest: [buildDir + '/**/*.html']
         },
         sass: {
@@ -29,7 +29,7 @@ var config = {
         }
     }
 }
-config.paths.watch = ['_config.yml', '_posts/*', config.paths.img, config.paths.html.watchSrc, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*']
+config.paths.watch = ['_config.yml', '_posts/*', config.paths.img, config.paths.html.src, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*']
 config = require('./_secret-config.js')(config)
 
 var argv = require('yargs').argv
