@@ -31,11 +31,10 @@ hr.large {
     text-align: center;
     li {
         float: none;
-        display: inline-block;
+        display: inline-block
     }
 }
-
-///* Center the nav list in collapsed navbar */
+/* Center the nav list in collapsed navbar */
 .navbar-collapse {
     .navbar-nav {
         float: none;
@@ -59,14 +58,24 @@ hr.large {
     }
 
     @media only screen and (min-width: 768px) {
-        .navbar-brand {
-            padding: 20px;
-        }
+        // Uncomment this when running nav links down side
+        //margin-top: 70px;
+
+        //ul {
+            //border-right: 1px solid white;
+        //}
+        //.navbar-brand {
+        //    padding: 20px;
+        //}
         .nav {
             li {
+                //margin-bottom: 50px;
+                //padding-right: 10px;
+                //display: block;
                 a {
                     padding: 20px;
-                    display: inline-block;
+                    // Uncomment this to run nav links across top
+                    display: inline-block
                 }
             }
         }
@@ -95,6 +104,14 @@ hr.large {
             -ms-transform: translate3d(0, 100%, 0);
             -o-transform: translate3d(0, 100%, 0);
             transform: translate3d(0, 100%, 0);
+        }
+
+        .nav {
+            li {
+                a {
+                    font-size: 16px;
+                }
+            }
         }
     }
 }
@@ -144,6 +161,7 @@ hr.large {
         text-align: center;
 
         h2 {
+
             margin-bottom: 20px;
         }
 

@@ -5,7 +5,7 @@ $(function () {
 
     var $document = $('html')
     var $title = $("h1.live-input")
-    var $subtitle = $(".subheading.live-input")
+    var $subtitle = $("h2.live-input")
 
     $(".bstooltip").each(function(index, element) {
         var $el = $(element)
@@ -46,9 +46,9 @@ $(function () {
 
     playTitles()
 
-    var $photo = $(".photo")
+    var $photo = $(".side-heading .photo")
     $photo.on("click", function() {
-        // Although this happens in the query qode - it only
+        // Although this happens in the jquery code - it only
         // happens when the plugin runs for each element.
         // We want all elements cleared before start.
         $title.children(".char").remove()

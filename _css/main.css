@@ -210,6 +210,7 @@ hr.large {
     float: none;
     display: inline-block; }
 
+/* Center the nav list in collapsed navbar */
 .navbar-collapse .navbar-nav {
   float: none; }
 
@@ -223,8 +224,6 @@ hr.large {
     font-size: 12px;
     letter-spacing: 1px; }
   @media only screen and (min-width: 768px) {
-    .navbar-custom .navbar-brand {
-      padding: 20px; }
     .navbar-custom .nav li a {
       padding: 20px;
       display: inline-block; } }
@@ -246,7 +245,9 @@ hr.large {
         /* if the user changes the scrolling direction, we show the header */
         -webkit-transform: translate3d(0, 100%, 0);
         -ms-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100%, 0); } }
+        transform: translate3d(0, 100%, 0); }
+      .navbar-custom .nav li a {
+        font-size: 16px; } }
 
 .intro-header {
   background-attachment: scroll;
