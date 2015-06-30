@@ -55,6 +55,9 @@ var sitemap = require('gulp-sitemap');
 var uglify = require('gulp-uglifyjs');
 var watch = require('gulp-watch')
 
+var lazypipe = require('lazypipe')
+var combiner = require('stream-combiner2')
+
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 }
@@ -81,39 +84,33 @@ gulp.task('browser-sync', function () {
     });
 });
 
+function hamlBuild() {
+    return combiner(
+        haml(),
+        rename(function (path) {
+            path.dirname += '/../'
+        })
+    )
+}
+
 gulp.task('haml-watch', function () {
     gulp.src(config.paths.haml.src, {read: false}).
         pipe(plumber({
             onError: onError
         })).
         pipe(watch(config.paths.haml.src)).
-        pipe(haml()).
-        pipe(rename(function (path) {
-            path.dirname += '/../'
-        })).
+        pipe(hamlBuild()).
         pipe(gulp.dest('./'))
 });
 
-gulp.task('haml-build', function (src) {
+gulp.task('haml-build', function () {
     return gulp.src(config.paths.haml.src).
         pipe(plumber({
             onError: onError
         })).
-        pipe(haml()).
-        pipe(rename(function (path) {
-            path.dirname += '/../'
-        })).
+        pipe(hamlBuild()).
         pipe(gulp.dest('./'))
 })
-
-function hamlBuild(inputStream) {
-    return inputStream.
-        pipe(haml()).
-        pipe(rename(function (path) {
-            path.dirname += '/../'
-        })).
-        pipe(gulp.dest('./'))
-}
 
 gulp.task('html', function () {
     // Overwrite original files
@@ -149,12 +146,12 @@ gulp.task('css-minify', function () {
         .pipe(gulp.dest(config.paths.css.dest));
 });
 
-gulp.task('css-dev', function() {
-    runSequence('css-concat')
+gulp.task('css-dev', function(done) {
+    runSequence('css-concat', done)
 })
 
 gulp.task('css', function(done) {
-    runSequence('css-concat', 'css-minify')
+    runSequence('css-concat', 'css-minify', done)
 })
 
 gulp.task('js-concat', function () {
@@ -170,11 +167,11 @@ gulp.task('js-minify', function () {
 });
 
 gulp.task('js-dev', function(done) {
-    runSequence('js-concat')
+    runSequence('js-concat', done)
 })
 
-gulp.task('js', function(done) {
-    runSequence('js-concat', 'js-minify')
+gulp.task('js', function() {
+    runSequence('js-concat', 'js-minify', done)
 })
 
 gulp.task('build', function (done) {
@@ -245,6 +242,6 @@ gulp.task('full', function (done) {
     runSequence('build', 'watch', 'browser-sync', done)
 })
 
-gulp.task('default', function () {
-    runSequence('fast-dev-build', 'dev-watch', 'browser-sync')
+gulp.task('default', function (done) {
+    runSequence('fast-dev-build', 'dev-watch', 'browser-sync', done)
 })
