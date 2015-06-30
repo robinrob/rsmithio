@@ -286,7 +286,9 @@ hr.large {
     .intro-header .site-heading h1 {
       white-space: nowrap; }
     .intro-header .site-heading h2 {
-      margin-bottom: 20px !important; }
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+      margin-bottom: 20px; }
     .intro-header .site-heading .photo {
       margin-top: 20px;
       margin-bottom: 20px;
