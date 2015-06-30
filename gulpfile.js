@@ -35,6 +35,7 @@ config = require('./_secret-config.js')(config)
 var argv = require('yargs').argv
 var browserSync = require('browser-sync')
 var cloudflare = require('gulp-cloudflare')
+var combiner = require('stream-combiner2')
 var concat = require('gulp-concat')
 var cp = require('child_process')
 var ghPages = require('gulp-gh-pages')
@@ -54,9 +55,6 @@ var shell = require('shelljs/global')
 var sitemap = require('gulp-sitemap');
 var uglify = require('gulp-uglifyjs');
 var watch = require('gulp-watch')
-
-var lazypipe = require('lazypipe')
-var combiner = require('stream-combiner2')
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
