@@ -451,38 +451,40 @@ hr.large {
       padding: 10px;
       margin: 0;
       display: block; }
-  .main .contact .floating-label-form-group {
-    font-size: 14px;
-    position: relative;
-    margin-bottom: 0;
-    padding-bottom: 0.5em; }
-    .main .contact .floating-label-form-group input,
-    .main .contact .floating-label-form-group textarea {
-      z-index: 1;
+  .main .contact {
+    max-width: 600px; }
+    .main .contact .floating-label-form-group {
+      font-size: 14px;
       position: relative;
-      padding-right: 0;
-      padding-left: 0;
-      border: none;
-      font-size: 1.5em;
-      resize: none; }
-    .main .contact .floating-label-form-group label {
-      display: block;
-      z-index: 0;
-      position: relative;
-      top: 2em;
-      margin: 0;
-      font-size: 0.85em;
-      line-height: 1.764705882em;
-      vertical-align: middle;
-      vertical-align: baseline;
-      opacity: 0;
-      -webkit-transition: top 0.3s ease, opacity 0.3s ease;
-      transition: top 0.3s ease, opacity 0.3s ease; }
-    .main .contact .floating-label-form-group:not(:first-child) {
-      padding-left: 14px; }
-  .main .contact .floating-label-form-group-with-value label {
-    top: 0;
-    opacity: 1; }
+      margin-bottom: 0;
+      padding-bottom: 0.5em; }
+      .main .contact .floating-label-form-group input,
+      .main .contact .floating-label-form-group textarea {
+        z-index: 1;
+        position: relative;
+        padding-right: 0;
+        padding-left: 0;
+        border: none;
+        font-size: 1.5em;
+        resize: none; }
+      .main .contact .floating-label-form-group label {
+        display: block;
+        z-index: 0;
+        position: relative;
+        top: 2em;
+        margin: 0;
+        font-size: 0.85em;
+        line-height: 1.764705882em;
+        vertical-align: middle;
+        vertical-align: baseline;
+        opacity: 0;
+        -webkit-transition: top 0.3s ease, opacity 0.3s ease;
+        transition: top 0.3s ease, opacity 0.3s ease; }
+      .main .contact .floating-label-form-group:not(:first-child) {
+        padding-left: 14px; }
+    .main .contact .floating-label-form-group-with-value label {
+      top: 0;
+      opacity: 1; }
 
 footer {
   font-size: 20px;
