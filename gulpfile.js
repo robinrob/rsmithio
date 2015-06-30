@@ -1,30 +1,33 @@
 var root = require('path').resolve('./')
 
-var config = {paths: {}}
-config.paths.buildDir = '_site'
-config.paths.build = config.paths.buildDir + '/**'
-config.paths.img = ['./img/**/*']
-config.paths.haml = {
-    src: ['**/_haml/*.haml']
-}
-config.paths.html = {
-    watchSrc: ['**/*.html'],
-    src: [config.paths.buildDir + '/**/*.html']
-}
-config.paths.sass = {
-    main: '_scss/main.scss',
-    src: '_scss/*.scss',
-    dest: '_css/'
-}
-config.paths.css = {
-    main: 'styles.css',
-    src: '_css/*.css',
-    dest: config.paths.buildDir + '/css/'
-}
-config.paths.js = {
-    main: 'scripts.js',
-    src: ['./_js/*.js'],
-    dest: '_site/js/'
+var buildDir = '_site'
+var config = {
+    paths: {
+        build: buildDir + '/**',
+        img: ['./img/**/*'],
+        haml: {
+            src: ['**/_haml/*.haml']
+        },
+        html: {
+            watchSrc: ['**/*.html'],
+            src: [buildDir + '/**/*.html']
+        },
+        sass: {
+            main: '_scss/main.scss',
+            src: '_scss/*.scss',
+            dest: '_css/'
+        },
+        css: {
+            main: 'styles.css',
+            src: '_css/*.css',
+            dest: buildDir + '/css/'
+        },
+        js: {
+            main: 'scripts.js',
+            src: ['./_js/*.js'],
+            dest: '_site/js/'
+        }
+    }
 }
 config.paths.watch = ['_config.yml', '_posts/*', config.paths.img, config.paths.html.watchSrc, config.paths.sass.src, config.paths.js.src, 'orbiter/**/*']
 config = require('./_secret-config.js')(config)
@@ -53,7 +56,7 @@ var uglify = require('gulp-uglifyjs');
 var watch = require('gulp-watch')
 
 var messages = {
-    jekyllBuild: '<span style='color: grey'>Running:</span> $ jekyll build'
+    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 }
 
 function onError(err) {
@@ -91,7 +94,7 @@ gulp.task('haml-watch', function () {
         pipe(gulp.dest('./'))
 });
 
-gulp.task('haml-build', function () {
+gulp.task('haml-build', function (src) {
     return gulp.src(config.paths.haml.src).
         pipe(plumber({
             onError: onError
@@ -125,35 +128,49 @@ gulp.task('sass', function () {
         .pipe(gulp.dest(config.paths.sass.dest))
 });
 
-gulp.task('css', function () {
+gulp.task('css-concat', function () {
     return gulp.src(config.paths.css.src, {
+        base: './'
+    })
+        .pipe(concat(config.paths.css.main))
+        .pipe(gulp.dest(config.paths.css.dest));
+});
+
+gulp.task('css-minify', function () {
+    return gulp.src(config.paths.css.dest + '/*.css', {
         base: './'
     })
         .pipe(minifyCSS())
-        .pipe(concat(config.paths.css.main))
         .pipe(gulp.dest(config.paths.css.dest));
 });
 
-gulp.task('css-dev', function () {
-    return gulp.src(config.paths.css.src, {
-        base: './'
-    })
-        .pipe(concat(config.paths.css.main))
-        .pipe(gulp.dest(config.paths.css.dest));
-});
+gulp.task('css-dev', function(done) {
+    runSequence('css-concat')
+})
 
-gulp.task('js', function () {
+gulp.task('css', function(done) {
+    runSequence('css-concat', 'css-minify')
+})
+
+gulp.task('js-concat', function () {
     return gulp.src(config.paths.js.src)
+        .pipe(concat(config.paths.js.main))
+        .pipe(gulp.dest(config.paths.js.dest));
+});
+
+gulp.task('js-minify', function () {
+    return gulp.src(config.paths.js.dest + '/*.js')
         .pipe(uglify())
-        .pipe(concat(config.paths.js.main))
         .pipe(gulp.dest(config.paths.js.dest));
 });
 
-gulp.task('js-dev', function () {
-    return gulp.src(config.paths.js.src)
-        .pipe(concat(config.paths.js.main))
-        .pipe(gulp.dest(config.paths.js.dest));
-});
+gulp.task('js-dev', function(done) {
+    runSequence('js-concat')
+})
+
+gulp.task('js', function(done) {
+    runSequence('js-concat', 'js-minify')
+})
 
 gulp.task('build', function (done) {
     runSequence('haml-build', 'jekyll', 'html', 'sass', ['css', 'js'], 'reload', done);
