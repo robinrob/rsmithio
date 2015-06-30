@@ -115,7 +115,7 @@ gulp.task('html', function () {
     // Overwrite original files
     return gulp.src(config.paths.html.build)
         .pipe(minifyHTML())
-        .pipe(config.paths.html.dest)
+        .pipe(gulp.dest(config.paths.html.dest))
 })
 
 /**
