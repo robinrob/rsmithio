@@ -233,7 +233,7 @@ gulp.task('purge-online-cache', function () {
 })
 
 gulp.task('sitemap', function () {
-    gulp.src(config.paths.html.src)
+    gulp.src(config.paths.html.dest)
         .pipe(sitemap({
             siteUrl: config.siteUrl
         })) // Returns sitemap.xml
