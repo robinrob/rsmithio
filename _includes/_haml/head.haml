@@ -24,3 +24,4 @@
   %link{:rel => "stylesheet", :href => "/css/styles.css"}
   %link{:rel => "icon", :href => "/img/favicon.gif", :type => "image/gif"}
   %link{:rel => "canonical", :href => " { { site.url } }{ { page.url } }"}
+  %link{:rel => "canonical", :href => "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"}
