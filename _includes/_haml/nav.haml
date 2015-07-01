@@ -12,7 +12,7 @@
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li
-          %a{:href => "/"} Home
+          %a{:href => "{{ site.url }}"} Home
         %li
           %a{:href => "#services"} Services
         %li
@@ -20,6 +20,6 @@
         %li
           %a{:href => "#endorsements"} Endorsements
         %li
-          %a{:href => "/contact/"} Contact
+          %a{:href => "{{ site.url }}/contact"} Contact
         -#%li
         -#  %a{:href => "/blog/"} Blog
