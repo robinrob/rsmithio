@@ -439,6 +439,8 @@ hr.large {
       display: block; }
   .main .contact {
     max-width: 600px; }
+    .main .contact p {
+      font-size: 18px; }
     .main .contact .floating-label-form-group {
       font-size: 14px;
       position: relative;
