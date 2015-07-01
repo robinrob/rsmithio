@@ -29,7 +29,9 @@ var config = {
             src: ['./_js/*.js'],
             dest: '_site/js/'
         }
-    }
+    },
+    siteUrl: "https://rsmith.io",
+    sitemapUrl: "https://rsmith.io/sitemap.xml"
 }
 config.paths.watch = [
     '_config.yml',
