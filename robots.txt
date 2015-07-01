@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /admin/*
-Sitemap: https://www.seanw.org/sitemap.xml
+Sitemap: https://rsmith.io/sitemap.xml
