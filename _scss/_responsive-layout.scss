@@ -137,6 +137,15 @@ hr.large {
         }
     }
 
+    .padded-heading {
+        padding-top: 130px !important;
+
+        @media only screen and (min-width: 768px) {
+            padding-top: 190px !important;
+            height: 450px;
+        }
+    }
+
     .site-heading {
         height: 425px;
         display: block;

@@ -263,6 +263,12 @@ hr.large {
     .intro-header .post-heading hr.small {
       margin-top: 30px;
       margin-bottom: 30px; }
+  .intro-header .padded-heading {
+    padding-top: 130px !important; }
+    @media only screen and (min-width: 768px) {
+      .intro-header .padded-heading {
+        padding-top: 190px !important;
+        height: 450px; } }
   .intro-header .site-heading {
     height: 425px;
     display: block;
