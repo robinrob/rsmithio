@@ -9,7 +9,7 @@ description: > # this means to ignore newlines until "baseurl:"
   cloud technologies and frameworks.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://rsmith.io   # with the https protocol
-#enforce_ssl: rsmith.io   # without any protocol
+enforce_ssl: rsmith.io   # without any protocol
 github: robinrob
 twitter: rsmith_io
 linkedin: rsmithio
