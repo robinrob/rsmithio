@@ -5,15 +5,6 @@ html, body {
     overflow-x: hidden;
 }
 
-p {
-    text-align: justify;
-}
-
-p {
-    line-height: 1.5;
-    margin: 30px 0;
-}
-
 hr.small {
     max-width: 100px;
     margin: 15px auto;
@@ -78,24 +69,24 @@ hr.large {
         -ms-transform: translate3d(0, 0, 0);
         -o-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
-        &.is-fixed {
-            /* when the user scrolls down, we hide the header right above the viewport */
-            position: fixed;
-            top: -61px;
-            background-color: opacify(white, 0.9);
-            border-bottom: 1px solid darken(white, 5%);
-            -webkit-transition: -webkit-transform 0.3s;
-            -moz-transition: -moz-transform 0.3s;
-            transition: transform 0.3s;
-        }
-        &.is-visible {
-            /* if the user changes the scrolling direction, we show the header */
-            -webkit-transform: translate3d(0, 100%, 0);
-            -moz-transform: translate3d(0, 100%, 0);
-            -ms-transform: translate3d(0, 100%, 0);
-            -o-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-        }
+        //&.is-fixed {
+        //    /* when the user scrolls down, we hide the header right above the viewport */
+        //    position: fixed;
+        //    top: -61px;
+        //    background-color: opacify(white, 0.9);
+        //    border-bottom: 1px solid darken(white, 5%);
+        //    -webkit-transition: -webkit-transform 0.3s;
+        //    -moz-transition: -moz-transform 0.3s;
+        //    transition: transform 0.3s;
+        //}
+        //&.is-visible {
+        //    /* if the user changes the scrolling direction, we show the header */
+        //    -webkit-transform: translate3d(0, 100%, 0);
+        //    -moz-transform: translate3d(0, 100%, 0);
+        //    -ms-transform: translate3d(0, 100%, 0);
+        //    -o-transform: translate3d(0, 100%, 0);
+        //    transform: translate3d(0, 100%, 0);
+        //}
 
         .nav {
             li {
@@ -110,6 +101,8 @@ hr.large {
 .intro-header {
     background-attachment: scroll;
     @include background-cover();
+
+    margin-bottom: 40px;
 
     .site-heading,
     .page-heading {
@@ -243,25 +236,30 @@ hr.large {
 
     p {
         font-size: 18px;
+        text-align: justify;
         margin: 5px 0 50px 0;
         padding: 0;
     }
 
-    article {
-        margin-top: 50px;
+    // Button Styles
+    .btn {
+        font-size: 14px;
+        letter-spacing: 1px;
+        padding: 15px 25px;
+    }
+
+    .btn-lg {
+        font-size: 16px;
+        padding: 25px 35px;
+    }
+
+    .btn-submit {
+        text-align: left;
     }
 
     .blog {
-        // Button Styles
-        .btn {
-            font-size: 14px;
-            letter-spacing: 1px;
-            padding: 15px 25px;
-        }
-
-        .btn-lg {
-            font-size: 16px;
-            padding: 25px 35px;
+        h2 {
+            margin-top: 0 !important;
         }
 
         // Pager Styling
@@ -291,7 +289,7 @@ hr.large {
                 font-size: 18px;
                 display: inline-block;
                 max-width: 900px;
-                margin: 40px 0 40px 0;
+                margin-bottom: 40px;
             }
 
             hr.large {
@@ -303,8 +301,9 @@ hr.large {
             > .container {
                 max-width: 900px;
             }
+            padding: 0;
             padding-top: 3%;
-            padding-bottom: 3%;
+            //padding-bottom: 3%;
 
             .intro {
                 > p {
@@ -352,6 +351,10 @@ hr.large {
         .endorsement {
             text-align: center;
             margin-bottom: 8%;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
 
             > a {
                 > .endorsement-photo {
@@ -422,7 +425,6 @@ hr.large {
     .contact {
         max-width: 600px;
 
-        // Contact Form Styles
         .floating-label-form-group {
             font-size: 14px;
             position: relative;
@@ -434,7 +436,6 @@ hr.large {
                 position: relative;
                 padding-right: 0;
                 padding-left: 0;
-                border: none;
                 font-size: 1.5em;
                 resize: none;
             }
@@ -448,25 +449,25 @@ hr.large {
                 line-height: 1.764705882em;
                 vertical-align: middle;
                 vertical-align: baseline;
-                opacity: 0;
-                -webkit-transition: top 0.3s ease, opacity 0.3s ease;
-                -moz-transition: top 0.3s ease, opacity 0.3s ease;
-                -ms-transition: top 0.3s ease, opacity 0.3s ease;
-                transition: top 0.3s ease, opacity 0.3s ease;
             }
-            &:not(:first-child) {
+            &::not(:first-child) {
                 padding-left: 14px;
+            }
+            .help-block {
+                padding: 0;
+                margin: 0;
             }
         }
 
         .floating-label-form-group-with-value {
             label {
                 top: 0;
-                opacity: 1;
             }
         }
 
-        .floating-label-form-group-with-focus {
+        .control-group {
+            text-align: left;
+            margin-bottom: 5px;
         }
     }
 }
@@ -481,6 +482,7 @@ footer {
     .copyright {
         font-size: 14px;
         text-align: center;
+        margin-top: 30px;
         margin-bottom: 0;
     }
 }

@@ -5,28 +5,26 @@ subtitle: Robin's Blog
 \---
 
 / Posts list
-.container.blog
-  .row
-    .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-      {% for post in paginator.posts %}
-      .post-preview
-        %a{:href => "{{ post.url | prepend: site.baseurl }}"}
-          %h2.post-title {{ post.title }}
-          {% if post.subtitle %}
-          %h3.post-subtitle {{ post.subtitle }}
-          {% endif %}
-        %p.post-meta Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-      {% endfor %}
-
-      / Pager
-      {% if paginator.total_pages > 1 %}
-      %ul.pager
-        {% if paginator.previous_page %}
-        %li.previous
-          %a{:href => "{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"} &larr; Newer Posts
-        {% endif %}
-        {% if paginator.next_page %}
-        %li.next
-          %a{:href => "{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"} Older Posts &rarr;
-        {% endif %}
+.blog
+  {% for post in paginator.posts %}
+  .post-preview
+    %a{:href => "{{ post.url | prepend: site.baseurl }}"}
+      %h2.post-title {{ post.title }}
+      {% if post.subtitle %}
+      %h3.post-subtitle {{ post.subtitle }}
       {% endif %}
+    %p.post-meta Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+  {% endfor %}
+
+  / Pager
+  {% if paginator.total_pages > 1 %}
+  %ul.pager
+    {% if paginator.previous_page %}
+    %li.previous
+      %a{:href => "{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"} &larr; Newer Posts
+    {% endif %}
+    {% if paginator.next_page %}
+    %li.next
+      %a{:href => "{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"} Older Posts &rarr;
+    {% endif %}
+  {% endif %}

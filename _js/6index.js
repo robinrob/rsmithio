@@ -46,7 +46,7 @@ $(function () {
 
     playTitles()
 
-    var $photo = $(".side-heading .photo")
+    var $photo = $(".site-heading .photo")
     $photo.on("click", function() {
         // Although this happens in the jquery code - it only
         // happens when the plugin runs for each element.

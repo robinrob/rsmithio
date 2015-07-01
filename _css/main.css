@@ -186,13 +186,6 @@ pre {
 html, body {
   overflow-x: hidden; }
 
-p {
-  text-align: justify; }
-
-p {
-  line-height: 1.5;
-  margin: 30px 0; }
-
 hr.small {
   max-width: 100px;
   margin: 15px auto;
@@ -238,26 +231,14 @@ hr.large {
       -webkit-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
-      .navbar-custom.is-fixed {
-        /* when the user scrolls down, we hide the header right above the viewport */
-        position: fixed;
-        top: -61px;
-        background-color: white;
-        border-bottom: 1px solid #f2f2f2;
-        -webkit-transition: -webkit-transform 0.3s;
-        transition: transform 0.3s; }
-      .navbar-custom.is-visible {
-        /* if the user changes the scrolling direction, we show the header */
-        -webkit-transform: translate3d(0, 100%, 0);
-        -ms-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100%, 0); }
       .navbar-custom .nav li a {
         font-size: 16px; } }
 
 .intro-header {
   background-attachment: scroll;
   background-size: cover;
-  -o-background-size: cover; }
+  -o-background-size: cover;
+  margin-bottom: 40px; }
   .intro-header .site-heading,
   .intro-header .page-heading {
     text-align: center; }
@@ -350,17 +331,20 @@ hr.large {
     padding: 0; }
   .main p {
     font-size: 18px;
+    text-align: justify;
     margin: 5px 0 50px 0;
     padding: 0; }
-  .main article {
-    margin-top: 50px; }
-  .main .blog .btn {
+  .main .btn {
     font-size: 14px;
     letter-spacing: 1px;
     padding: 15px 25px; }
-  .main .blog .btn-lg {
+  .main .btn-lg {
     font-size: 16px;
     padding: 25px 35px; }
+  .main .btn-submit {
+    text-align: left; }
+  .main .blog h2 {
+    margin-top: 0 !important; }
   .main .blog .pager {
     margin: 20px 0 0; }
     .main .blog .pager li > a,
@@ -379,12 +363,12 @@ hr.large {
       font-size: 18px;
       display: inline-block;
       max-width: 900px;
-      margin: 40px 0 40px 0; }
+      margin-bottom: 40px; }
     .main .index .blurb hr.large {
       max-width: 90%; }
     .main .index .section {
-      padding-top: 3%;
-      padding-bottom: 3%; }
+      padding: 0;
+      padding-top: 3%; }
       .main .index .section > .container {
         max-width: 900px; }
       .main .index .section .intro > p {
@@ -415,6 +399,8 @@ hr.large {
     .main .index .endorsement {
       text-align: center;
       margin-bottom: 8%; }
+      .main .index .endorsement:last-of-type {
+        margin-bottom: 0; }
       .main .index .endorsement > a > .endorsement-photo {
         display: inline-block;
         text-align: center;
@@ -464,7 +450,6 @@ hr.large {
         position: relative;
         padding-right: 0;
         padding-left: 0;
-        border: none;
         font-size: 1.5em;
         resize: none; }
       .main .contact .floating-label-form-group label {
@@ -476,15 +461,17 @@ hr.large {
         font-size: 0.85em;
         line-height: 1.764705882em;
         vertical-align: middle;
-        vertical-align: baseline;
-        opacity: 0;
-        -webkit-transition: top 0.3s ease, opacity 0.3s ease;
-        transition: top 0.3s ease, opacity 0.3s ease; }
-      .main .contact .floating-label-form-group:not(:first-child) {
+        vertical-align: baseline; }
+      .main .contact .floating-label-form-group::not(:first-child) {
         padding-left: 14px; }
+      .main .contact .floating-label-form-group .help-block {
+        padding: 0;
+        margin: 0; }
     .main .contact .floating-label-form-group-with-value label {
-      top: 0;
-      opacity: 1; }
+      top: 0; }
+    .main .contact .control-group {
+      text-align: left;
+      margin-bottom: 5px; }
 
 footer {
   font-size: 20px;
@@ -495,6 +482,7 @@ footer {
   footer .copyright {
     font-size: 14px;
     text-align: center;
+    margin-top: 30px;
     margin-bottom: 0; }
 
 body {
@@ -670,6 +658,21 @@ hr.small {
 .main ul {
   list-style-type: none; }
 
+.main .btn {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-radius: 0;
+  background-color: #eeeeee;
+  color: #404040;
+  border-radius: 0; }
+
+.main .btn-default:hover,
+.main .btn-default:focus {
+  color: #eeeeee;
+  background-color: #0085a1;
+  border: 1px solid #0085a1; }
+
 .main .index h2 {
   color: #0085a1; }
 
@@ -771,45 +774,12 @@ hr.small {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px; }
 
-.main .blog .floating-label-form-group {
-  border-bottom: 1px solid #eee; }
-  .main .blog .floating-label-form-group input,
-  .main .blog .floating-label-form-group textarea {
-    border-radius: 0;
-    background: none;
-    box-shadow: none !important; }
-  .main .blog .floating-label-form-group:not(:first-child) {
-    padding-left: 14px;
-    border-left: 1px solid #eee; }
-
-.main .blog .floating-label-form-group-with-value label {
-  top: 0;
-  opacity: 1; }
-
-.main .blog .floating-label-form-group-with-focus label {
-  color: #eeeeee; }
-
-.main .blog form .row:first-child .floating-label-form-group {
-  border-top: 1px solid #eee; }
-
-.main .blog .btn {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 800;
-  border-radius: 0; }
-
-.main .blog .btn-default:hover,
-.main .blog .btn-default:focus {
-  background-color: #eeeeee;
-  border: 1px solid #eeeeee;
-  color: white; }
-
 .main .blog .pager li > a,
 .main .blog .pager li > span {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 800;
-  background-color: white;
+  background-color: #eeeeee;
   color: #404040;
   border-radius: 0; }
 
@@ -826,6 +796,30 @@ hr.small {
   color: white;
   background-color: black;
   cursor: not-allowed; }
+
+.main .contact {
+  font-family: 'Lora', 'Times New Roman', serif; }
+  .main .contact .floating-label-form-group {
+    border-bottom: 1px solid #eeeeee; }
+    .main .contact .floating-label-form-group input,
+    .main .contact .floating-label-form-group textarea {
+      border: none;
+      border-bottom: 1px solid gray;
+      border-radius: 0;
+      background: none;
+      box-shadow: none !important; }
+    .main .contact .floating-label-form-group label {
+      opacity: 0;
+      -webkit-transition: top 0.3s ease, opacity 0.3s ease;
+      transition: top 0.3s ease, opacity 0.3s ease; }
+    .main .contact .floating-label-form-group::not(:first-child) {
+      border-left: 1px solid #eeeeee; }
+  .main .contact .floating-label-form-group-with-value label {
+    opacity: 1; }
+  .main .contact .floating-label-form-group-with-focus label {
+    color: #0085a1; }
+  .main .contact form .row:first-child .floating-label-form-group {
+    border-top: 1px solid #eeeeee; }
 
 footer {
   font-family: 'Lora', 'Times New Roman', serif; }

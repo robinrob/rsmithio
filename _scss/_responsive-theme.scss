@@ -254,6 +254,26 @@ hr.small {
         list-style-type: none;
     }
 
+    // Button Styles
+    .btn {
+        @include sans-serif();
+        text-transform: uppercase;
+        font-weight: 800;
+        border-radius: 0;
+        background-color: $theme-1;
+        color: $theme-4;
+        border-radius: 0;
+    }
+
+    .btn-default {
+        &:hover,
+        &:focus {
+            color: $theme-1;
+            background-color: $theme-3;
+            border: 1px solid $theme-3;
+        }
+    }
+
     .index {
         h2 {
             color: $theme-3;
@@ -401,56 +421,6 @@ hr.small {
             border-bottom-left-radius: 5px;
         }
 
-        // Contact Form Styles
-        .floating-label-form-group {
-            border-bottom: 1px solid $gray-light;
-            input,
-            textarea {
-                border-radius: 0;
-                background: none;
-                box-shadow: none !important;
-            }
-            &:not(:first-child) {
-                padding-left: 14px;
-                border-left: 1px solid $gray-light;
-            }
-        }
-
-        .floating-label-form-group-with-value {
-            label {
-                top: 0;
-                opacity: 1;
-            }
-        }
-
-        .floating-label-form-group-with-focus {
-            label {
-                color: $theme-1;
-            }
-        }
-
-        form .row:first-child .floating-label-form-group {
-            border-top: 1px solid $gray-light;
-        }
-
-        // Button Styles
-
-        .btn {
-            @include sans-serif();
-            text-transform: uppercase;
-            font-weight: 800;
-            border-radius: 0;
-        }
-
-        .btn-default {
-            &:hover,
-            &:focus {
-                background-color: $theme-1;
-                border: 1px solid $theme-1;
-                color: white;
-            }
-        }
-
         // Pager Styling
         .pager {
             li {
@@ -459,7 +429,7 @@ hr.small {
                     @include sans-serif();
                     text-transform: uppercase;
                     font-weight: 800;
-                    background-color: white;
+                    background-color: $theme-1;
                     color: $theme-4;
                     border-radius: 0;
                 }
@@ -482,6 +452,47 @@ hr.small {
                     cursor: not-allowed;
                 }
             }
+        }
+    }
+
+    .contact {
+        @include serif();
+        .floating-label-form-group {
+            border-bottom: 1px solid $theme-1;
+            input,
+            textarea {
+                border: none;
+                border-bottom: 1px solid $theme-2;
+                border-radius: 0;
+                background: none;
+                box-shadow: none !important;
+            }
+            label {
+                opacity: 0;
+                -webkit-transition: top 0.3s ease,opacity 0.3s ease;
+                -moz-transition: top 0.3s ease,opacity 0.3s ease;
+                -ms-transition: top 0.3s ease,opacity 0.3s ease;
+                transition: top 0.3s ease,opacity 0.3s ease;
+            }
+            &::not(:first-child) {
+                border-left: 1px solid $theme-1;
+            }
+        }
+
+        .floating-label-form-group-with-value {
+            label {
+                opacity: 1;
+            }
+        }
+
+        .floating-label-form-group-with-focus {
+            label {
+                color: $theme-3;
+            }
+        }
+
+        form .row:first-child .floating-label-form-group {
+            border-top: 1px solid $theme-1;
         }
     }
 }
