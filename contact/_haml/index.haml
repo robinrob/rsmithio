@@ -13,17 +13,17 @@ description: "Please contact me using this form"
     .row.control-group
       .form-group.col-xs-12.floating-label-form-group.controls
         %label Name
-        %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :placeholder => "Name", :required => "", :type => "text"}/
+        %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :placeholder => "Name", :required => "", :type => "text"}
         %p.help-block.text-danger
     .row.control-group
       .form-group.col-xs-12.floating-label-form-group.controls
         %label Email Address
-        %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :placeholder => "Email Address", :required => "", :type => "email"}/
+        %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :placeholder => "Email Address", :required => "", :type => "email", :name => "_replyto"}
         %p.help-block.text-danger
     .row.control-group
       .form-group.col-xs-12.floating-label-form-group.controls
         %label Phone Number
-        %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :placeholder => "Phone Number", :required => "", :type => "tel"}/
+        %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :placeholder => "Phone Number", :required => "", :type => "tel"}
         %p.help-block.text-danger
     .row.control-group
       .form-group.col-xs-12.floating-label-form-group.controls
