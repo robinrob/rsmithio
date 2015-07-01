@@ -257,7 +257,7 @@ gulp.task('save', function (done) {
 })
 
 gulp.task('deploy', ['save'], function (done) {
-    return runSequence('build', 'upload', 'purge-online-cache', done)
+    return runSequence('build', 'sitemap', 'submit-sitemap', 'upload', 'purge-online-cache', done)
 })
 
 gulp.task('watch', ['haml-watch'], function () {
