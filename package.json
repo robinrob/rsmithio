@@ -36,6 +36,7 @@
     "gulp-rename": "~1.2.2",
     "gulp-newer": "~0.5.1",
     "lazypipe": "~0.2.4",
-    "stream-combiner2": "~1.0.2"
+    "stream-combiner2": "~1.0.2",
+    "gulp-imagemin": "~2.3.0"
   }
 }

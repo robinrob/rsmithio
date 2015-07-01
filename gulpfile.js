@@ -52,6 +52,7 @@ var cp = require('child_process')
 var ghPages = require('gulp-gh-pages')
 var gulp = require('gulp')
 var haml = require('gulp-ruby-haml')
+var imagemin = require('gulp-imagemin');
 var minifyCSS = require('gulp-minify-css')
 var minifyHTML = require('gulp-minify-html')
 var ngmin = require('gulp-ngmin')
@@ -60,10 +61,12 @@ var plumber = require('gulp-plumber')
 var prefix = require('gulp-autoprefixer')
 var task = require('gulp-task')
 var rename = require('gulp-rename')
+//var rimraf = require('gulp-rimraf');
 var runSequence = require('run-sequence')
 var sass = require('gulp-sass')
 var shell = require('shelljs/global')
 var sitemap = require('gulp-sitemap')
+var submitSitemap = require('submit-sitemap')
 var uglify = require('gulp-uglifyjs')
 var watch = require('gulp-watch')
 
@@ -74,6 +77,23 @@ var messages = {
 function onError(err) {
     shell.exec('say wanker')
 }
+
+//gulp.task('clean', function(cb) {
+//    // rimraf(config.paths.build, cb);
+//    return gulp.src(config.paths.build, {
+//        read: false
+//    }) // much faster
+//        .pipe(rimraf());
+//});
+gulp.task('imagemin', function() {
+    return gulp.src(config.paths.img, {
+        base: './'
+    })
+        .pipe(imagemin({
+            progressive: true
+        }))
+        .pipe(gulp.dest('./'));
+});
 
 gulp.task('jekyll', function (done) {
     browserSync.notify(messages.jekyllBuild)
@@ -123,7 +143,9 @@ gulp.task('haml-build', function () {
 
 gulp.task('html', function () {
     // Overwrite original files
-    return gulp.src(config.paths.html.build)
+    return gulp.src(config.paths.html.build, {
+        base: './'
+    })
         .pipe(minifyHTML())
         .pipe(gulp.dest(config.paths.html.dest))
 })
@@ -218,7 +240,7 @@ gulp.task('sitemap', function () {
 })
 
 gulp.task('submit-sitemap', function (done) {
-    require('submit-sitemap').submitSitemap(config.sitemapUrl, function (err) {
+    submitSitemap.submitSitemap(config.sitemapUrl, function (err) {
         if (err) {
             console.warn(err)
         }
