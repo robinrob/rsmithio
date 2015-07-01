@@ -575,7 +575,8 @@ hr.small {
             color: #0085a1; } }
 
 .intro-header {
-  background: url("../img/bg.png"); }
+  background: url("../img/bg.png");
+  background-color: #0d0d0d; }
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
     color: #eeeeee; }

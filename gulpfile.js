@@ -85,6 +85,7 @@ function onError(err) {
 //    }) // much faster
 //        .pipe(rimraf());
 //});
+
 gulp.task('imagemin', function() {
     return gulp.src(config.paths.img, {
         base: './'

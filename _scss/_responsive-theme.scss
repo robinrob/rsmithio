@@ -135,6 +135,7 @@ hr.small {
 // Header
 .intro-header {
     background: $header-bg-image;
+    background-color: darken($theme-4, 20%);
     .site-heading,
     .page-heading {
         h1 {
