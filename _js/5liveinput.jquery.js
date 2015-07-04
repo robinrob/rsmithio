@@ -45,9 +45,8 @@
         }
 
         function writeInvisibleCursor($cursorObj) {
-            var $char = $("<span />", {
-                html: "_"
-            });
+            var $char = createCursor()
+            $char.addClass("leadingCursor")
             $char.css({
                 "opacity": 0,
                 "margin-right": params.cursorMargin
@@ -78,6 +77,13 @@
             return event.keyCode === 8 || isValidChar(String.fromCharCode(keyCode))
         }
 
+        function createCursor() {
+            return $("<span />", {
+                text: "_",
+                class: "cursor"
+            })
+        }
+
         return this.each(function () {
             var $this = $(this)
             params.text = options.text || $this.attr('text') || defaults.text
@@ -85,10 +91,7 @@
 
             $this.attr("tabindex", params.tabindex)
 
-            var $cursor = $("<span />", {
-                text: "_",
-                class: "cursor"
-            });
+            var $cursor = createCursor()
             $cursor.css({
                 "z-index" : "1",
                 "margin-left": params.cursorMargin

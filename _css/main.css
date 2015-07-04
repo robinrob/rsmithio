@@ -276,6 +276,9 @@ hr.large {
     padding-top: 100px; }
     .intro-header .site-heading h1 {
       white-space: nowrap; }
+      @media only screen and (max-width: 390px) {
+        .intro-header .site-heading h1 > .leadingCursor {
+          float: right; } }
     .intro-header .site-heading h2 {
       padding-top: 8px !important;
       padding-bottom: 8px !important;
@@ -417,7 +420,7 @@ hr.large {
         font-size: 16px;
         margin-bottom: 10px; }
       .main .index .endorsement > .caption {
-        font-size: 8px; }
+        font-size: 14px; }
   .main .blog {
     display: inline-block;
     text-align: left; }

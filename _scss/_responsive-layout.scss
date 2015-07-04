@@ -154,6 +154,12 @@ hr.large {
 
         h1 {
             white-space: nowrap;
+
+            @media only screen and (max-width: 390px) {
+                > .leadingCursor {
+                    float: right;
+                }
+            }
         }
 
         h2 {
@@ -381,7 +387,7 @@ hr.large {
             }
 
             > .caption {
-                font-size: 8px;
+                font-size: 14px;
             }
         }
     }
