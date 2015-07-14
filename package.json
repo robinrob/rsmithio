@@ -3,12 +3,11 @@
   "description": "mrrobinsmith.com dev",
   "version": "1.0.0",
   "dependencies": {
-    "gulp": "",
-    "gulp-sass": "",
-    "gulp-autoprefixer": "",
-    "browser-sync": ""
   },
   "devDependencies": {
+    "gulp": "",
+    "gulp-sass": "",
+    "browser-sync": "",
     "gulp-haml": "~0.1.5",
     "gulp-ruby-haml": "0.0.4",
     "gulp-callback": "0.0.3",

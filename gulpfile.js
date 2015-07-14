@@ -63,7 +63,6 @@ var plumber = require('gulp-plumber')
 var prefix = require('gulp-autoprefixer')
 var task = require('gulp-task')
 var rename = require('gulp-rename')
-//var rimraf = require('gulp-rimraf');
 var runSequence = require('run-sequence')
 var sass = require('gulp-sass')
 var shell = require('shelljs/global')
