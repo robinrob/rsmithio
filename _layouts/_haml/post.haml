@@ -11,7 +11,6 @@ layout: default
         {% if page.subtitle %}
         %h2.subheading {{ page.subtitle }}
         {% endif %}
-        %span.meta Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}
 
 / Content
 .main
@@ -20,6 +19,8 @@ layout: default
       .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
         %article
           {{ content }}
+          %hr
+          %span.post-meta Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}
         %hr
         %ul.pager
           {% if page.previous.url %}

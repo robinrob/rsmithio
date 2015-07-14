@@ -4,7 +4,7 @@ var buildDir = '_site'
 var config = {
     paths: {
         build: buildDir + '/**',
-        img: ['./img/**/*'],
+        img: ['img/**/*'],
         markdown: ['_posts/*.md'],
         haml: {
             src: ['**/_haml/*.haml']
@@ -21,12 +21,12 @@ var config = {
         },
         css: {
             main: 'styles.css',
-            src: '_css/*.css',
+            src: 'css/*.css',
             dest: buildDir + '/css/'
         },
         js: {
             main: 'scripts.js',
-            src: ['./_js/*.js'],
+            src: ['js/*.js'],
             dest: '_site/js/'
         }
     },

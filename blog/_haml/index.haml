@@ -13,7 +13,7 @@ subtitle: Robin's Blog
       {% if post.subtitle %}
       %h3.post-subtitle {{ post.subtitle }}
       {% endif %}
-    %p.post-meta Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    %p.post-meta Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
   {% endfor %}
 
   / Pager

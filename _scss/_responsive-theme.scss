@@ -395,18 +395,19 @@ hr.small {
                     font-weight: 300;
                 }
             }
-            .post-meta {
-                @include serif();
-                color: $theme-2;
-                font-style: italic;
-                > a {
-                    text-decoration: none;
-                    color: $a-color;
-                    &:hover,
-                    &:focus {
-                        color: $a-hover-color;
-                        text-decoration: underline;
-                    }
+        }
+
+        .post-meta {
+            @include serif();
+            color: $theme-2;
+            font-style: italic;
+            > a {
+                text-decoration: none;
+                color: $a-color;
+                &:hover,
+                &:focus {
+                    color: $a-hover-color;
+                    text-decoration: underline;
                 }
             }
         }

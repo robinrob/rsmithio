@@ -5,6 +5,11 @@ html, body {
     overflow-x: hidden;
 }
 
+pre {
+    margin: 0;
+    padding: 0;
+}
+
 hr.small {
     max-width: 100px;
     margin: 15px auto;
@@ -198,7 +203,8 @@ hr.large {
         padding-top: 70px;
 
         h1 {
-            font-size: 35px !important;
+            font-size: 45px !important;
+            margin-bottom: 1em;
         }
 
         .subheading,
