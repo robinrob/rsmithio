@@ -3,13 +3,6 @@ body {
     @include sans-serif();
 }
 
-pre, code {
-    padding: 0 !important;
-    margin: 0 !important;
-    background: inherit;
-    border: none;
-}
-
 // -- Typography
 
 h1,
@@ -497,6 +490,11 @@ footer {
 }
 
 // -- Highlight Color Customization
+::selection {
+    color: $select-color;
+    text-shadow: none;
+    background: $select-bg-color;
+}
 
 header ::selection,
 nav ::selection {
@@ -518,12 +516,6 @@ nav ::-moz-selection {
     background: $select-bg-color;
 }
 
-::selection {
-    color: $select-color;
-    text-shadow: none;
-    background: $select-bg-color;
-}
-
 img::selection {
     color: white;
     background: transparent;
@@ -536,4 +528,9 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: $select-bg-color;
+}
+
+pre ::selection, code ::selection{
+    color: darken(white, 5%);
+    background: lighten($select-bg-color, 20%);
 }

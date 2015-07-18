@@ -12,7 +12,7 @@ Since I was using Gulp to manage the build process, I needed a Gulp task to hand
 I noticed few other kind developers sharing their particular flavours of Jekyll setup, but didn't come across any complete template sites using HAML. Here is my own <a href="https://github.com/robinrob/jekyll-gulp-haml-sass-browsersync.git">jekyll-gulp-haml-sass-browsersync</a> template.
 
 <h2 class="section-heading">HAML Processing</h2>
-<p>HAML is organised in the project template like this:</p>
+HAML files reside inside a _haml folder which sits at the location of the resultant HTML files. For example:
 <pre><code class="bash">
     project-root
         index
@@ -21,8 +21,15 @@ I noticed few other kind developers sharing their particular flavours of Jekyll 
             index.html
 </code></pre>
 
+A separate `haml-watch` task was required for the HAML in additional to a `build` task, :
+
 <pre><code class="javascript">
-    /* hamlBuild() contains the logic used by haml-watch and haml-build */
+    var haml = require('gulp-ruby-haml')
+    var combiner = require('stream-combiner2')
+
+    ...
+
+    /* hamlBuild() contains the shared build logic used by haml-watch and haml-build */
     function hamlBuild() {
         return combiner(
             haml(),

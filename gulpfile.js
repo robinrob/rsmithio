@@ -40,8 +40,8 @@ config.paths.watch = [
     config.paths.markdown,
     config.paths.html.src,
     config.paths.sass.src,
-    config.paths.css.src,
     config.paths.js.src,
+
     'orbiter/**/*'
 ]
 config = require('./_secret-config.js')(config)
@@ -76,17 +76,11 @@ var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 }
 
+/* This alerts us audibly when a Gulp task errors out and Gulp stops, otherwise we may not notice and continue editing
+files and expecting to see changes. */
 function onError(err) {
-    shell.exec('say wanker')
+    shell.exec('say gulp has stopped')
 }
-
-//gulp.task('clean', function(cb) {
-//    // rimraf(config.paths.build, cb);
-//    return gulp.src(config.paths.build, {
-//        read: false
-//    }) // much faster
-//        .pipe(rimraf());
-//});
 
 gulp.task('imagemin', function() {
     return gulp.src(config.paths.img, {
@@ -116,6 +110,7 @@ gulp.task('browser-sync', function () {
     })
 })
 
+/* hamlBuild() contains the shared build logic used by haml-watch and haml-build */
 function hamlBuild() {
     return combiner(
         haml(),
