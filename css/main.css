@@ -68,7 +68,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
-  margin-bottom: 0px; }
+  margin-bottom: 20px; }
 
 /**
  * Images
@@ -90,7 +90,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: 0px; }
+  margin-left: 40px; }
 
 li > ul,
 li > ol {
@@ -117,7 +117,7 @@ a {
  */
 blockquote {
   color: black;
-  padding-left: 0px;
+  padding-left: 20px;
   font-size: 18px;
   letter-spacing: -1px;
   font-style: italic; }
@@ -138,11 +138,15 @@ code {
   padding: 1px 5px; }
 
 pre {
-  padding: 8px 12px; }
+  padding: 8px 12px;
+  margin-bottom: 40px !important; }
   pre > code {
     border: 0;
     padding-right: 0;
     padding-left: 0; }
+
+pre > code {
+  padding-left: 20px !important; }
 
 /**
  * Clearfix
@@ -333,7 +337,7 @@ hr.large {
   .main p {
     font-size: 18px;
     text-align: justify;
-    margin: 5px 0 50px 0;
+    margin: 5px 0 40px 0;
     padding: 0; }
   .main .btn {
     font-size: 14px;
@@ -765,7 +769,7 @@ hr.small {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 800;
-  background-color: #eeeeee;
+  background-color: white;
   color: #404040;
   border-radius: 0; }
 

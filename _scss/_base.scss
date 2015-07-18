@@ -127,6 +127,14 @@ pre {
         padding-right: 0;
         padding-left: 0;
     }
+
+    margin-bottom: $spacing-unit !important;
+}
+
+pre {
+    > code {
+        padding-left: 20px !important;
+    }
 }
 
 /**
