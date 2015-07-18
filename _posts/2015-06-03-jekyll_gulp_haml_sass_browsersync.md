@@ -21,7 +21,6 @@ I noticed few other kind developers sharing their particular flavours of Jekyll 
             index.html
 </code></pre>
 
-
 <pre><code class="javascript">
     /* hamlBuild() contains the logic used by haml-watch and haml-build */
     function hamlBuild() {
