@@ -116,8 +116,7 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: #828282;
-  border-left: 4px solid #e8e8e8;
+  color: black;
   padding-left: 0px;
   font-size: 18px;
   letter-spacing: -1px;
@@ -513,10 +512,6 @@ a img:focus {
   cursor: -webkit-zoom-in;
   cursor: zoom-in; }
 
-blockquote {
-  color: white;
-  font-style: italic; }
-
 hr.small {
   border-color: #eeeeee; }
 
@@ -732,9 +727,6 @@ hr.small {
   border-radius: 50px;
   border: 1px groove #404040;
   box-shadow: 1px 1px 1px 0px gray, -1px -1px 1px 0px gray; }
-
-.main .index .endorsement blockquote {
-  color: black; }
 
 .main .index .endorsement .caption {
   font-style: normal; }

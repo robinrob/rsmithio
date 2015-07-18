@@ -29,11 +29,6 @@ a img {
     }
 }
 
-blockquote {
-    color: $white;
-    font-style: italic;
-}
-
 hr.small {
     border-color: $header-hr-color;
 }
@@ -348,10 +343,6 @@ hr.small {
                 border: 1px groove $theme-4;
                 box-shadow: 1px 1px 1px 0px $theme-2,
                 -1px -1px 1px 0px $theme-2
-            }
-
-            blockquote {
-                color: $theme-5;
             }
 
             .caption {
