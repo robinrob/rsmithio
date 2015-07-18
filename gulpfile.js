@@ -35,11 +35,12 @@ var config = {
 }
 config.paths.watch = [
     '_config.yml',
-    '_posts/*',
+    '_posts/*.md',
     config.paths.img,
     config.paths.markdown,
     config.paths.html.src,
     config.paths.sass.src,
+    config.paths.css.src,
     config.paths.js.src,
     'orbiter/**/*'
 ]

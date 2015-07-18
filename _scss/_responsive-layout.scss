@@ -5,7 +5,7 @@ html, body {
     overflow-x: hidden;
 }
 
-pre {
+pre, code{
     margin: 0;
     padding: 0;
 }
@@ -278,30 +278,6 @@ hr.large {
         text-align: left;
     }
 
-    .blog {
-        h2 {
-            margin-top: 0 !important;
-        }
-
-        // Pager Styling
-        .pager {
-            margin: 20px 0 0;
-
-            li {
-                > a,
-                > span {
-                    font-size: 14px;
-                    letter-spacing: 1px;
-                    padding: 10px 5px;
-                    @media only screen and (min-width: 768px) {
-                        font-size: 14px;
-                        padding: 15px 25px;
-                    }
-                }
-            }
-        }
-    }
-
     .index {
         text-align: center;
 
@@ -398,10 +374,13 @@ hr.large {
         }
     }
 
-    // Post Preview Pages
     .blog {
         display: inline-block;
         text-align: left;
+
+        h2 {
+            margin-top: 0 !important;
+        }
 
         .post-preview {
             a {
@@ -440,6 +419,24 @@ hr.large {
             padding: 10px;
             margin: 0;
             display: block;
+        }
+
+        // Pager Styling
+        .pager {
+            margin: 20px 0 0;
+
+            li {
+                > a,
+                > span {
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    padding: 10px 5px;
+                    @media only screen and (min-width: 768px) {
+                        font-size: 14px;
+                        padding: 15px 25px;
+                    }
+                }
+            }
         }
     }
 

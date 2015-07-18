@@ -3,13 +3,14 @@ body {
     @include sans-serif();
 }
 
-// -- Typography
-
-p {
-    a {
-        text-decoration: underline;
-    }
+pre, code {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: inherit;
+    border: none;
 }
+
+// -- Typography
 
 h1,
 h2,
@@ -19,14 +20,6 @@ h5,
 h6 {
     @include sans-serif();
     font-weight: 800;
-}
-
-a {
-    color: $theme-5;
-    &:hover,
-    &:focus, {
-        color: $a-hover-color;
-    }
 }
 
 a img {
@@ -251,6 +244,7 @@ hr.small {
 
 
 .main {
+    background-color: $background-color !important;
     ul {
         list-style-type: none;
     }
@@ -328,7 +322,7 @@ hr.small {
             }
 
             &:nth-of-type(even) {
-                background: rgb(232, 232, 232);
+                background: red;
             }
 
             &:nth-of-type(odd) {
@@ -374,15 +368,18 @@ hr.small {
             }
         }
     }
-
-    // Post Preview Pages
-    .blog {
-        article {
-            @include serif();
-            p {
-                font-size: 20px;
-            }
+    .blog{
+        // Sections
+        .section-heading {
+            font-weight: 700;
         }
+
+        .caption {
+            font-style: italic;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
         .post-preview {
             a {
                 color: $theme-4;
@@ -412,15 +409,11 @@ hr.small {
             }
         }
 
-        // Sections
-        .section-heading {
-            font-weight: 700;
-        }
-
-        .caption {
-            font-style: italic;
-            border-bottom-right-radius: 5px;
-            border-bottom-left-radius: 5px;
+        article {
+            @include serif();
+            p {
+                font-size: 20px;
+            }
         }
 
         // Pager Styling
@@ -458,11 +451,13 @@ hr.small {
     }
 
     .contact {
+        background-color: $background-color !important;
         @include serif();
         .floating-label-form-group {
             border-bottom: 1px solid $theme-1;
             input,
             textarea {
+                background-color: $background-color !important;
                 border: none;
                 border-bottom: 1px solid $theme-2;
                 border-radius: 0;
@@ -500,6 +495,7 @@ hr.small {
 }
 
 footer {
+    background-color: $background-color !important;
     @include serif();
     a,
     a:active,

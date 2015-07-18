@@ -81,20 +81,6 @@ strong {
 a {
     color: $a-color;
     text-decoration: none;
-
-    &:active,
-    &:focus,
-    &:visited,
-    &:visited:active,
-    &:visited:focus {
-        color: $a-color;
-    }
-
-    &:hover,
-    &:visited:hover {
-        color: $a-hover-color;
-        text-decoration: underline;
-    }
 }
 
 
