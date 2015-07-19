@@ -156,6 +156,7 @@ hr.large {
         display: block;
         font-size: 18px;
         padding-top: 100px;
+        margin-bottom: 0;
 
         h1 {
             white-space: nowrap;
@@ -164,6 +165,10 @@ hr.large {
                 > .leadingCursor {
                     float: right;
                 }
+            }
+
+            @media only screen and (min-width: 768px) {
+                margin-bottom: 30px;
             }
         }
 
@@ -174,12 +179,14 @@ hr.large {
         }
 
         .photo {
-            margin-top: 25px;
-            margin-bottom: 10px;
+            margin-bottom: 0px;
             display: inline-block;
             text-align: center;
             width: $image-height;
             height: $image-height;
+            @media only screen and (min-width: 768px) {
+                margin-bottom: 10px;
+            }
         }
 
         @media only screen and (min-width: 768px) {

@@ -269,23 +269,29 @@ hr.large {
     height: 425px;
     display: block;
     font-size: 18px;
-    padding-top: 100px; }
+    padding-top: 100px;
+    margin-bottom: 0; }
     .intro-header .site-heading h1 {
       white-space: nowrap; }
       @media only screen and (max-width: 390px) {
         .intro-header .site-heading h1 > .leadingCursor {
           float: right; } }
+      @media only screen and (min-width: 768px) {
+        .intro-header .site-heading h1 {
+          margin-bottom: 30px; } }
     .intro-header .site-heading h2 {
       padding-top: 8px !important;
       padding-bottom: 8px !important;
       margin-bottom: 20px; }
     .intro-header .site-heading .photo {
-      margin-top: 25px;
-      margin-bottom: 10px;
+      margin-bottom: 0px;
       display: inline-block;
       text-align: center;
       width: 120px;
       height: 120px; }
+      @media only screen and (min-width: 768px) {
+        .intro-header .site-heading .photo {
+          margin-bottom: 10px; } }
     @media only screen and (min-width: 768px) {
       .intro-header .site-heading {
         height: 450px; } }
