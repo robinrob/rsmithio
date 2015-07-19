@@ -8,13 +8,13 @@ permalink: /
   .container.site-heading
     .row
       .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
-        %h1.live-input{:text => "{{ site.author }}", "data-html" => "true", :title => "Click me to edit!<br>Made using: <a href=\"https://github.com/robinrob/jquery-liveinput\" target=\"_blank\">liveinput</a>"};
+        %h1{'li-text' => "{{ site.author }}", "data-html" => "true", :title => "Click me to edit!<br>Made using: <a href=\"https://github.com/robinrob/jquery-liveinput\" target=\"_blank\">liveinput</a>"}
     .row
       .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
         .photo#photo
     .row
       .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
-        %h2.subheading.live-input{:text => "{{ site.subtitle }}"} &nbsp;
+        %h2.subheading{'li-text' => "{{ site.subtitle }}"} &nbsp;
 
 / Content
 .main

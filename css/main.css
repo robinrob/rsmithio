@@ -582,25 +582,6 @@ hr.small {
   .intro-header .site-heading h2,
   .intro-header .page-heading h2 {
     color: #b3b3b3; }
-  .intro-header .site-heading h1.live-input,
-  .intro-header .site-heading h2.live-input,
-  .intro-header .page-heading h1.live-input,
-  .intro-header .page-heading h2.live-input {
-    border: 1px solid transparent;
-    -webkit-transition: border 0.2s ease-out, box-shadow 0.2s ease-out;
-            transition: border 0.2s ease-out, box-shadow 0.2s ease-out; }
-  .intro-header .site-heading h1.live-input:focus,
-  .intro-header .site-heading h1.live-input:hover,
-  .intro-header .page-heading h1.live-input:focus,
-  .intro-header .page-heading h1.live-input:hover {
-    border: 1px solid black;
-    box-shadow: 1px 1px 10px 0px #5a5a5a, -1px -1px 10px 0px #5a5a5a; }
-  .intro-header .site-heading h2.live-input:focus,
-  .intro-header .site-heading h2.live-input:hover,
-  .intro-header .page-heading h2.live-input:focus,
-  .intro-header .page-heading h2.live-input:hover {
-    border: 1px solid #5a5a5a;
-    box-shadow: 1px 1px 10px 0px black, -1px -1px 10px 0px black; }
   .intro-header .site-heading .bstooltip + .tooltip.top,
   .intro-header .site-heading .bstooltip + .tooltip.left,
   .intro-header .page-heading .bstooltip + .tooltip.top,
@@ -624,6 +605,19 @@ hr.small {
   .intro-header .page-heading .subheading {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 500; }
+  .intro-header .site-heading h1.live-input,
+  .intro-header .site-heading h2.live-input {
+    border: 1px solid transparent;
+    -webkit-transition: border 0.2s ease-out, box-shadow 0.2s ease-out;
+            transition: border 0.2s ease-out, box-shadow 0.2s ease-out; }
+  .intro-header .site-heading h1.live-input:focus,
+  .intro-header .site-heading h1.live-input:hover {
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px 0px #5a5a5a, -1px -1px 10px 0px #5a5a5a; }
+  .intro-header .site-heading h2.live-input:focus,
+  .intro-header .site-heading h2.live-input:hover {
+    border: 1px solid #5a5a5a;
+    box-shadow: 1px 1px 10px 0px black, -1px -1px 10px 0px black; }
   .intro-header .site-heading .email {
     font-weight: 600; }
     .intro-header .site-heading .email a {

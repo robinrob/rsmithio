@@ -127,27 +127,6 @@ hr.small {
             color: lighten($theme-2, 20%);
         }
 
-        h1.live-input,
-        h2.live-input {
-            border: 1px solid rgba(0, 0, 0 ,0);
-            transition: border 0.2s ease-out,
-            box-shadow 0.2s ease-out;
-        }
-
-        h1.live-input:focus,
-        h1.live-input:hover {
-            border: 1px solid $header-bg-col2;
-            box-shadow: 1px 1px 10px 0px $header-bg-col1,
-            -1px -1px 10px 0px $header-bg-col1;
-        }
-
-        h2.live-input:focus,
-        h2.live-input:hover {
-            border: 1px solid $header-bg-col1;
-            box-shadow: 1px 1px 10px 0px $header-bg-col2,
-            -1px -1px 10px 0px $header-bg-col2;
-        }
-
         .bstooltip + .tooltip.top,
         .bstooltip + .tooltip.left {
             opacity: $tooltip-opacity;
@@ -177,6 +156,27 @@ hr.small {
     }
 
     .site-heading {
+        h1.live-input,
+        h2.live-input {
+            border: 1px solid rgba(0, 0, 0 ,0);
+            transition: border 0.2s ease-out,
+            box-shadow 0.2s ease-out;
+        }
+
+        h1.live-input:focus,
+        h1.live-input:hover {
+            border: 1px solid $header-bg-col2;
+            box-shadow: 1px 1px 10px 0px $header-bg-col1,
+            -1px -1px 10px 0px $header-bg-col1;
+        }
+
+        h2.live-input:focus,
+        h2.live-input:hover {
+            border: 1px solid $header-bg-col1;
+            box-shadow: 1px 1px 10px 0px $header-bg-col2,
+            -1px -1px 10px 0px $header-bg-col2;
+        }
+
         .email {
             a {
                 color: $header-font-col;

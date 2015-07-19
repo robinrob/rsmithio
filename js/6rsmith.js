@@ -1,7 +1,7 @@
 $(function () {
     var $document = $('html')
-    var $title = $("h1.live-input")
-    var $subtitle = $("h2.live-input")
+    var $siteTitle = $(".site-heading h1")
+    var $siteSubtitle = $(".site-heading h2")
 
     $(".bstooltip").each(function(index, element) {
         var $el = $(element)
@@ -29,12 +29,12 @@ $(function () {
     })
 
     function playTitles() {
-        $title.liveInput({
+        $siteTitle.liveInput({
             writeDelay: 120,
             callback: function() {
-                $subtitle.liveInput({
-                    initialDelay: 500,
-                    writeDelay: 110,
+                $siteSubtitle.liveInput({
+                    initialDelay: 200,
+                    writeDelay: 90,
                 })
             }
         })
@@ -44,11 +44,10 @@ $(function () {
 
     var $photo = $(".site-heading .photo")
     $photo.on("click", function() {
-        // Although this happens in the jquery code - it only
-        // happens when the plugin runs for each element.
+        // Although this happens in the jquery code - it only happens when the plugin runs for each element.
         // We want all elements cleared before start.
-        $title.children(".char").remove()
-        $subtitle.children(".char").remove()
+        $siteTitle.children(".char").remove()
+        $siteSubtitle.children(".char").remove()
         var highestTimeoutId = setTimeout(";");
         for (var i = 0 ; i < highestTimeoutId ; i++) {
             clearTimeout(i);
