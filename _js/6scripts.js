@@ -36,7 +36,7 @@ $(function () {
                 $siteSubtitle.consoleWriter({
                     animation: true,
                     initialDelay: 200,
-                    writeDelay: 90
+                    writeDelay: 70
                 })
             }
         })
@@ -50,7 +50,7 @@ $(function () {
         })
     }
 
-    showTitles()
+    playTitles()
 
     var $photo = $(".site-heading .photo")
     $photo.on("click", function() {
