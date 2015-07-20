@@ -29,10 +29,10 @@ $(function () {
     })
 
     function playTitles() {
-        $siteTitle.liveInput({
+        $siteTitle.consoleWriter({
             writeDelay: 120,
             callback: function() {
-                $siteSubtitle.liveInput({
+                $siteSubtitle.consoleWriter({
                     initialDelay: 200,
                     writeDelay: 90,
                 })
@@ -46,8 +46,8 @@ $(function () {
     $photo.on("click", function() {
         // Although this happens in the jquery code - it only happens when the plugin runs for each element.
         // We want all elements cleared before start.
-        $siteTitle.children(".li-char").remove()
-        $siteSubtitle.children(".li-char").remove()
+        $siteTitle.children(".cw-char").remove()
+        $siteSubtitle.children(".cw-char").remove()
         var highestTimeoutId = setTimeout(";");
         for (var i = 0 ; i < highestTimeoutId ; i++) {
             clearTimeout(i);

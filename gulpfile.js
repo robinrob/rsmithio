@@ -26,7 +26,7 @@ var config = {
         },
         js: {
             main: 'scripts.js',
-            src: ['js/*.js'],
+            src: ['_js/*.js'],
             dest: '_site/js/'
         }
     },
