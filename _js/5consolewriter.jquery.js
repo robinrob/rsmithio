@@ -158,11 +158,12 @@
             var me = this
             var $me = $(me)
 
-            // Save the complete original element text, in case the animation is re-run whilst already running.
-            // Save the text to use again if we call consoleWriter() again from javascript.
-            $me.attr('cw-saved-text', $me.text())
+            // On first run, save the text to use again if we call consoleWriter() again from javascript.
+            if (!$me.attr('cw-saved-text')) {
+                $me.attr('cw-saved-text', $me.text())
+            }
 
-            /* These are element-specific parameters & attributes that we need to set once on first run and store */
+            /* These are element-specific parameters & attributes. */
             me.params = {}
             me.params.text = options.text || $me.attr('cw-text') || $me.attr('cw-saved-text') || defaults.text
             me.params.cursorColor = options.cursorColor || $me.attr('cw-color') || defaults.color
