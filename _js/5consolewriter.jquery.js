@@ -241,8 +241,8 @@
                     if (char == ' ') {
                         char = '&nbsp'
                     }
-                    writeChar(char, me.$cursor)
                     keyPressIfSoundEnabled()
+                    writeChar(char, me.$cursor)
                 }
             });
 
