@@ -2,7 +2,6 @@
     $.fn.consoleWriter = function (options) {
         var defaults = {
             text: "",
-            tabindex: -1,
             audioDir: "/sounds",
             animation: false,
             animationSound: false,
@@ -10,8 +9,6 @@
             cursorFadeDuration: 500,
             initialDelay: 150,
             writeDelay: 150,
-            editable: true,
-            css: {},
             cursorCSS: { 'margin-right': '0.05em', opacity: 0 },
             leadingCursor: false,
             leadingCursorCSS: { opacity: 0, 'margin-left': '0.05em' },
@@ -179,8 +176,7 @@
 
             me.$cursor = createCursor(params.cursorCSS)
 
-            $me.attr("tabindex", params.tabindex)
-            $me.css(params.css)
+            $me.attr("tabindex", -1)
 
             reset()
             $me.append(me.$cursor)
