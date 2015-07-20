@@ -21,11 +21,9 @@ deleting existing characters and typing whatever they wanted into the element, c
 of the line as in a terminal. I also added keyboard typing sounds to heighten the effect. Try it now by clicking any of
 the headings within this blog article.</p>
 
-<h2 class="console-writer" cw-typing-sound="true">ConsoleWriter</h2>
-I packaged the code up into a jQuery plugin:
-<a href="https://github.com/robinrob/consolewriter.jquery.js">Inline-Editor</a>, designed with a focus on user-friendliness
-and configurability using options. The heading "ConsoleWriter" above this paragraph shows the idea, using the default
-method of usage which requires just adding the `console-writer` class to the element. Reload the page
-again to see the typewriter effect. You can modify the heading's contents by focusing the heading and typing.
-Other demos can be viewed in the demo HTML file included with the project.
-
+<a href="https://github.com/robinrob/consolewriter.jquery.js"><h2 class="console-writer" cw-typing-sound="true">ConsoleWriter</h2></a>
+I packaged the project up as a jQuery plugin: <a href="https://github.com/robinrob/consolewriter.jquery.js">ConsoleWriter</a>,
+designed with a focus on user-friendliness and configurability using options. The heading above this paragraph displays the default method of usage which requires
+just adding the `console-writer` class to the element. Reload the page again to see the typewriter effect. The `readme`
+file included in the repo describes the options and how to set them. There is also a `demo.html` file which shows
+example usages.
