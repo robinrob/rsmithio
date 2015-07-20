@@ -30,19 +30,29 @@ $(function () {
 
     function playTitles() {
         $siteTitle.consoleWriter({
-            //animation: true,
+            sound: true,
+            animation: true,
             writeDelay: 120,
             callback: function() {
                 $siteSubtitle.consoleWriter({
-                    //animation: true,
+                    sound: true,
+                    animation: true,
                     initialDelay: 200,
-                    writeDelay: 90,
+                    writeDelay: 90
                 })
             }
         })
     }
 
-    playTitles()
+    function showTitles() {
+        $siteTitle.consoleWriter({
+            callback: function() {
+                $siteSubtitle.consoleWriter()
+            }
+        })
+    }
+
+    showTitles()
 
     var $photo = $(".site-heading .photo")
     $photo.on("click", function() {
@@ -50,7 +60,7 @@ $(function () {
         // We want all elements cleared before start.
         $siteTitle.children(".cw-char").remove()
         $siteSubtitle.children(".cw-char").remove()
-        var highestTimeoutId = setTimeout(";");
+        var highestTimeoutId = setTimeout(';');
         for (var i = 0 ; i < highestTimeoutId ; i++) {
             clearTimeout(i);
         }

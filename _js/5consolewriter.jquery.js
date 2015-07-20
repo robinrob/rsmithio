@@ -159,30 +159,27 @@
             var $me = $(me)
 
             // Save the complete original element text, in case the animation is re-run whilst already running.
-            if (!$me.attr('cw-saved-text')) {
-                // Save the text to use again if we call consoleWriter() again from javascript.
-                $me.attr('cw-saved-text', $me.text())
+            // Save the text to use again if we call consoleWriter() again from javascript.
+            $me.attr('cw-saved-text', $me.text())
 
-                /* These are element-specific parameters & attributes that we need to set once on first run and store */
-                me.params = {}
-                me.params.text = options.text || $me.attr('cw-text') || $me.attr('cw-saved-text') || defaults.text
-                me.params.cursorColor = options.cursorColor || $me.attr('cw-color') || defaults.color
+            /* These are element-specific parameters & attributes that we need to set once on first run and store */
+            me.params = {}
+            me.params.text = options.text || $me.attr('cw-text') || $me.attr('cw-saved-text') || defaults.text
+            me.params.cursorColor = options.cursorColor || $me.attr('cw-color') || defaults.color
 
-                /* These parameters are all given either as javascript booleans or as html attribute strings */
-                me.params.animation = decideParam([options.animation, $me.attr('cw-animation'), defaults.animation])
-                me.params.sound = decideParam([options.sound, $me.attr('cw-sound'), defaults.sound])
-                // If not specified, check the 'sound' parameter then fallback to default
-                me.params.animationSound = decideParam([me.params.sound, options.animationSound, $me.attr('cw-animation-sound'), me.params.sound, defaults.animationSound])
-                // If not specified, check the 'sound' parameter then fallback to default
-                me.params.typingSound = decideParam([options.typingSound, $me.attr('cw-typing-sound'), me.params.sound, defaults.typingSound])
-                me.params.leadingCursor = decideParam([options.leadingCursor, $me.attr('cw-leading-cursor'), defaults.leadingCursor])
+            /* These parameters are all given either as javascript booleans or as html attribute strings */
+            me.params.animation = decideParam([options.animation, $me.attr('cw-animation'), defaults.animation])
+            me.params.sound = decideParam([options.sound, $me.attr('cw-sound'), defaults.sound])
+            // If not specified, check the 'sound' parameter then fallback to default
+            me.params.animationSound = decideParam([me.params.sound, options.animationSound, $me.attr('cw-animation-sound'), me.params.sound, defaults.animationSound])
+            // If not specified, check the 'sound' parameter then fallback to default
+            me.params.typingSound = decideParam([options.typingSound, $me.attr('cw-typing-sound'), me.params.sound, defaults.typingSound])
+            me.params.leadingCursor = decideParam([options.leadingCursor, $me.attr('cw-leading-cursor'), defaults.leadingCursor])
 
-                /* Only need to do these once */
-                me.$cursor = createCursor(params.cursorCSS)
+            me.$cursor = createCursor(params.cursorCSS)
 
-                $me.attr("tabindex", params.tabindex)
-                //$me.css(params.css)
-            }
+            $me.attr("tabindex", params.tabindex)
+            $me.css(params.css)
 
             reset()
             $me.append(me.$cursor)
