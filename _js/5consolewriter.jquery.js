@@ -3,14 +3,16 @@
         var defaults = {
             text: "",
             tabindex: -1,
-            audioDir: "sounds",
-            sound: false,
+            audioDir: "/sounds",
+            animation: false,
+            animationSound: false,
+            typingSound: false,
             cursorFadeDuration: 500,
             initialDelay: 150,
             writeDelay: 150,
             editable: true,
             css: {},
-            cursorCSS: { color: 'black', 'margin-right': '0.05em' },
+            cursorCSS: { 'margin-right': '0.05em', opacity: 0 },
             leadingCursor: false,
             leadingCursorCSS: { opacity: 0, 'margin-left': '0.05em' },
             callback: function() {}
@@ -35,11 +37,32 @@
         }
 
         function toBoolean(boolOrStr) {
-            return boolOrStr === true || boolOrStr === "true"
+            if (boolOrStr === true || boolOrStr === "true") {
+                return true
+            }
+            else {
+                return false
+            }
         }
 
-        function toStr(bool) {
-            return bool ? "true" : "false"
+        function toBoolString(bool) {
+            if (bool === true || bool === "true") {
+                return "true"
+            }
+            else if (bool === false || bool === "false") {
+                return "false"
+            }
+        }
+
+        function decideParam(options) {
+            for (var index = 0; index < options.length; ++index) {
+                if (index === (options.length - 1)) {
+                    return toBoolean(options[index])
+                }
+                else if (toBoolString(options[index])) {
+                    return toBoolean(options[index])
+                }
+            }
         }
 
         // Get random key press sound filename
@@ -57,38 +80,54 @@
             $audio.trigger('play')
         }
 
-        // Write char into the element containing $cursorObj and immediately preceding $cursorObj
+        // Type char into the element containing $cursorObj and immediately preceding $cursorObj
         function writeChar(char, $cursorObj, isSoundEnabled, callback) {
-            var $char = $('<span />', {
-                html: char,
-                class: 'cw-char'
-            });
-            $char.insertBefore($cursorObj)
+            insertChar(char, $cursorObj)
             if (isSoundEnabled) {
                 keyPress()
             }
         }
 
-        // Write an invisible cursor character into the element containing $cursorObj and immediately preceding $cursorObj
-        function writeInvisibleCursor($cursorObj) {
-            var $char = createCursor()
-            $char.addClass('leadingCursor')
-            $char.css(params.leadingCursorCSS)
+        // Insert char into the element containing $cursorObj and immediately preceding $cursorObj
+        function insertChar(char, $cursorObj) {
+            var $char = $('<span />', {
+                html: char,
+                class: 'cw-char'
+            });
             $char.insertBefore($cursorObj)
         }
 
-        // Write char into the element containing $cursorObj and immediately preceding $cursorObj
+        // Write an invisible cursor character into the element containing $cursorObj and immediately preceding $cursorObj
+        function insertInvisibleCursor($cursorObj) {
+            var $char = createCursor(params.leadingCursorCSS)
+            $char.insertBefore($cursorObj)
+        }
+
+        // Delay-type text into the element containing $cursorObj and immediately preceding $cursorObj
         function writeText(text, $cursorObj, isSoundEnabled, callback) {
             var char = text.substr(0, 1)
             text = text.slice(1)
             writeChar(char, $cursorObj, isSoundEnabled)
-            if (text.length == 0 && callback) {
+            if (text.length === 0 && callback) {
                 callback()
             }
             else if (text.length > 0) {
                 setTimeout(function() {
                     writeText(text, $cursorObj, isSoundEnabled, callback)
                 }, params.writeDelay + Math.random() * params.writeDelay)
+            }
+        }
+
+        // Insert text into the element containing $cursorObj and immediately preceding $cursorObj
+        function insertText(text, $cursorObj, callback) {
+            var char = text.substr(0, 1)
+            text = text.slice(1)
+            insertChar(char, $cursorObj)
+            if (text.length === 0 && callback) {
+                callback()
+            }
+            else if (text.length > 0) {
+                insertText(text, $cursorObj, callback)
             }
         }
 
@@ -104,51 +143,65 @@
         }
 
         // Create a cursor object
-        function createCursor() {
-            return $('<span />', {
+        function createCursor(css) {
+            var $cursor = $('<span />', {
                 text: '_',
                 class: 'cw-cursor'
             })
+            if (css) {
+                $cursor.css(css)
+            }
+            return $cursor
         }
 
         return this.each(function () {
             var me = this
             var $me = $(me)
 
-            console.log("this: " + this)
-            console.log("$me.text(): " + $me.text())
-            console.log("cw-saved-text: " + $me.attr('cw-saved-text'))
             // Save the complete original element text, in case the animation is re-run whilst already running.
             if (!$me.attr('cw-saved-text')) {
+                // Save the text to use again if we call consoleWriter() again from javascript.
                 $me.attr('cw-saved-text', $me.text())
 
-                // These are element-specific attributes that we need to set once on first run and store
+                /* These are element-specific parameters & attributes that we need to set once on first run and store */
                 me.params = {}
                 me.params.text = options.text || $me.attr('cw-text') || $me.attr('cw-saved-text') || defaults.text
                 me.params.cursorColor = options.cursorColor || $me.attr('cw-color') || defaults.color
-                me.params.sound = toBoolean(toStr(options.sound) || $me.attr('cw-sound') || toStr(defaults.sound))
-                console.log("me.params.sound: " + me.params.sound)
-                me.params.leadingCursor = toBoolean(toStr(options.leadingCursor) || $me.attr('cw-leading-cursor') || toStr(defaults.leadingCursor))
 
-                me.$cursor = createCursor()
-                // Only need to do these once
-                me.$cursor.css(params.cursorCSS)
+                /* These parameters are all given either as javascript booleans or as html attribute strings */
+                me.params.animation = decideParam([options.animation, $me.attr('cw-animation'), defaults.animation])
+                me.params.sound = decideParam([options.sound, $me.attr('cw-sound'), defaults.sound])
+                // If not specified, check the 'sound' parameter then fallback to default
+                me.params.animationSound = decideParam([me.params.sound, options.animationSound, $me.attr('cw-animation-sound'), me.params.sound, defaults.animationSound])
+                // If not specified, check the 'sound' parameter then fallback to default
+                me.params.typingSound = decideParam([options.typingSound, $me.attr('cw-typing-sound'), me.params.sound, defaults.typingSound])
+                me.params.leadingCursor = decideParam([options.leadingCursor, $me.attr('cw-leading-cursor'), defaults.leadingCursor])
+
+                /* Only need to do these once */
+                me.$cursor = createCursor(params.cursorCSS)
+
                 $me.attr("tabindex", params.tabindex)
-                $me.css(params.css)
+                //$me.css(params.css)
             }
-            
-            setTimeout(function () {
-                reset()
-                $me.append(me.$cursor)
-                if (me.params.leadingCursor) {
-                    writeInvisibleCursor(me.$cursor)
-                }
-                writeText(me.params.text, me.$cursor, me.params.sound, function() {
-                    fadeOutCursor()
-                    params.callback()
-                })
-            }, params.initialDelay)
 
+            reset()
+            $me.append(me.$cursor)
+            if (me.params.leadingCursor) {
+                insertInvisibleCursor(me.$cursor)
+            }
+            /* Typewriter animation */
+            if (me.params.animation) {
+                showCursor()
+                setTimeout(function () {
+                    writeText(me.params.text, me.$cursor, me.params.animationSound, function() {
+                        fadeOutCursor()
+                        params.callback()
+                    })
+                }, params.initialDelay)
+            }
+            else {
+                insertText(me.params.text, me.$cursor, params.callback())
+            }
 
             $me.off('focusin.consolewriter focousout.consolewriter keydown.consolewriter keypress.consolewriter keyup.consolewriter keyinput.consolewriter')
             $me.on('focusin', function() {
@@ -206,15 +259,14 @@
             }
 
             function keyPressIfSoundEnabled() {
-                if (me.params.sound) {
+                if (me.params.typingSound) {
                     keyPress()
                 }
             }
 
             function toggleCursor() {
                 var opacity = me.$cursor.css('opacity')
-                var callback
-                if (opacity == 0) {
+                if (opacity === '0') {
                     fadeInCursor(params.cursorFadeDuration, toggleCursor)
                 }
                 else {

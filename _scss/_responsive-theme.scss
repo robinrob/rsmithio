@@ -119,11 +119,11 @@ hr.small {
     background-color: darken($theme-4, 20%);
     .site-heading,
     .page-heading {
-        h1 {
+        h1, .cw-cursor {
             color: $theme-1;
         }
 
-        h2 {
+        h2, .cw-cursor {
             color: lighten($theme-2, 20%);
         }
 
@@ -145,10 +145,6 @@ hr.small {
             background-color: $tooltip-bg-color;
         }
 
-        .live-input:focus {
-            outline: none;
-        }
-
         .subheading {
             @include sans-serif();
             font-weight: 500;
@@ -156,22 +152,23 @@ hr.small {
     }
 
     .site-heading {
-        h1.live-input,
-        h2.live-input {
+        h1,
+        h2 {
+            outline: none;
             border: 1px solid rgba(0, 0, 0 ,0);
             transition: border 0.2s ease-out,
             box-shadow 0.2s ease-out;
         }
 
-        h1.live-input:focus,
-        h1.live-input:hover {
+        h1:focus,
+        h1:hover {
             border: 1px solid $header-bg-col2;
             box-shadow: 1px 1px 10px 0px $header-bg-col1,
             -1px -1px 10px 0px $header-bg-col1;
         }
 
-        h2.live-input:focus,
-        h2.live-input:hover {
+        h2:focus,
+        h2:hover {
             border: 1px solid $header-bg-col1;
             box-shadow: 1px 1px 10px 0px $header-bg-col2,
             -1px -1px 10px 0px $header-bg-col2;

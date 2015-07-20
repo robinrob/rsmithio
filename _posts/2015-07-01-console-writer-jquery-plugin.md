@@ -5,7 +5,7 @@ subtitle:   "Console-style inline element editing using JQuery"
 date:       2015-07-01
 ---
 
-<h2 class="console-writer" cw-sound="true">Edit Me!</h2>
+<h2 class="console-writer" cw-sound="true" cw-animation="true">Edit Me!</h2>
 I wanted to create a console-like typing effect on a heading element, with the heading firstly 
 appearing character by character as if being typed in at a developer's console. This sort of thing has already been done
 as in <a href="http://www.mattboldt.com/demos/typed-js/">Typed.js</a>,
@@ -21,7 +21,7 @@ deleting existing characters and typing whatever they wanted into the element, c
 of the line as in a terminal. I also added keyboard typing sounds to heighten the effect. Try it now by clicking any of
 the headings within this blog article.</p>
 
-<h2 class="console-writer" cw-sound="true">ConsoleWriter</h2>
+<h2 class="console-writer" cw-typing-sound="true">ConsoleWriter</h2>
 I packaged the code up into a JQuery plugin:
 <a href="https://github.com/robinrob/consolewriter.jquery.js">Inline-Editor</a>, designed with a focus on user-friendliness
 and configurability using options. The heading "ConsoleWriter" above this paragraph shows the idea, using the default

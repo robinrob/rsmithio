@@ -30,9 +30,11 @@ $(function () {
 
     function playTitles() {
         $siteTitle.consoleWriter({
+            //animation: true,
             writeDelay: 120,
             callback: function() {
                 $siteSubtitle.consoleWriter({
+                    //animation: true,
                     initialDelay: 200,
                     writeDelay: 90,
                 })
