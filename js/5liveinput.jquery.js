@@ -1,17 +1,18 @@
 (function ($) {
     $.fn.liveInput = function (options) {
         var defaults = {
-            text: '',
-            audioDir: 'sounds',
+            text: "",
+            tabindex: -1,
+            audioDir: "sounds",
             sound: false,
             cursorFadeDuration: 500,
             initialDelay: 150,
             writeDelay: 150,
             editable: true,
-            css: { 'padding-left': '1em' },
+            css: {},
+            cursorCSS: { color: 'black', 'margin-right': '0.05em' },
             leadingCursor: false,
             leadingCursorCSS: { opacity: 0, 'margin-left': '0.05em' },
-            cursorCSS: { color: 'white', 'margin-right': '0.05em' },
             callback: function() {}
         }
         var params = $.extend({}, defaults, options)
@@ -76,7 +77,7 @@
             var char = text.substr(0, 1)
             text = text.slice(1)
             writeChar(char, $cursorObj, isSoundEnabled)
-            if (text.length == 0) {
+            if (text.length == 0 && callback) {
                 callback()
             }
             else if (text.length > 0) {
@@ -117,7 +118,9 @@
             params.text = options.text || $this.attr('li-text') || $this.attr('li-saved-text') || defaults.text
             params.cursorColor = options.cursorColor || $this.attr('li-color') || defaults.color
             params.sound = toBoolean(options.sound || $this.attr('li-sound') || defaults.sound)
+            params.leadingCursor = toBoolean(options.leadingCursor || $this.attr('li-leading-cursor') || defaults.leadingCursor)
 
+            $this.attr("tabindex", params.tabindex)
             $this.css(params.css)
 
             var $cursor = createCursor()
@@ -137,8 +140,7 @@
 
 
             $this.off('focusin.liveinput focousout.liveinput keydown.liveinput keypress.liveinput keyup.liveinput keyinput.liveinput')
-            $this.on('focusin.liveinput', function() {
-                console.log("WANKER")
+            $this.on('focusin', function() {
                 keyPressIfSoundEnabled()
                 showCursor(toggleCursor)
             })

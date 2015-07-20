@@ -46,8 +46,8 @@ $(function () {
     $photo.on("click", function() {
         // Although this happens in the jquery code - it only happens when the plugin runs for each element.
         // We want all elements cleared before start.
-        $siteTitle.children(".char").remove()
-        $siteSubtitle.children(".char").remove()
+        $siteTitle.children(".li-char").remove()
+        $siteSubtitle.children(".li-char").remove()
         var highestTimeoutId = setTimeout(";");
         for (var i = 0 ; i < highestTimeoutId ; i++) {
             clearTimeout(i);
