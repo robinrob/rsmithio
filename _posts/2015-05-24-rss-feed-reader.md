@@ -2,7 +2,7 @@
 layout:     post
 title:      "RSS Reader Script"
 subtitle:   "Short Script to open RSS links with terminal interface"
-date:       2015-07-10
+date:       2015-05-24
 ---
 
 I wanted a quick, lightweight way to browse and open articles from RSS feeds from within the terminal. I wrote a short
@@ -11,3 +11,5 @@ I wanted a quick, lightweight way to browse and open articles from RSS feeds fro
 ## Screenshot
 
 <img src="/img/rss-opener.png"/>
+
+Further details on its usage are given in the README file in the project.
