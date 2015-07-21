@@ -1,0 +1,13 @@
+---
+layout:     post
+title:      "RSS Reader Script"
+subtitle:   "Short Script to open RSS links with terminal interface"
+date:       2015-07-10
+---
+
+I wanted a quick, lightweight way to browse and open articles from RSS feeds from within the terminal. I wrote a short
+[Ruby script](git@github.com:robinrob/rss-opener.git) for quickly opening RSS feed articles in a web browser.
+
+## Screenshot
+
+<img src="/img/rss-opener.png"/>
