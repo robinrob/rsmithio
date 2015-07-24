@@ -7,7 +7,7 @@
   <meta content='width=device-width, initial-scale=1' name='viewport'>
   <meta content='{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}' name='description'>
   <meta content='Freelance developer, Edinburgh, mobile, web, AngularJS, PhoneGap, SEO, Heroku, AWS, Google Apps, JavaScript, Force.com, Salesforce' name='keywords'>
-  <title>{{ site.author }} - {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <!-- Fonts -->
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
