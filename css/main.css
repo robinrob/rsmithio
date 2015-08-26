@@ -764,9 +764,9 @@ hr.small {
   .main .blog article ol li, .main .blog article ul li {
     font-size: 18px; }
   .main .blog article ul {
-    list-style-type: circle; }
+    list-style-type: circle !important; }
   .main .blog article ol {
-    list-style-type: decimal; }
+    list-style-type: decimal !important; }
 
 .main .blog .pager li > a,
 .main .blog .pager li > span {
