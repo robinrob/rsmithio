@@ -2,7 +2,7 @@
 layout:     post
 title:      "Fast Javascript Variable Debugging"
 subtitle:   "Useful code snippet to help with fast debugging"
-date:       2015-05-24
+date:       2015-08-25
 ---
 
 Note: when debugging Javascript in the browser, it's usually best to just use the Chrome dev tools for this!
