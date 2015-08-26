@@ -400,6 +400,13 @@ hr.small {
             ol {
                 list-style-type: decimal !important;
             }
+
+            pre {
+                code {
+                    font-size: 16px;
+                    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+                }
+            }
         }
 
         // Pager Styling
