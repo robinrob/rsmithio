@@ -44,7 +44,7 @@ config.paths.watch = [
 
     'orbiter/**/*'
 ]
-config = require('./_secret-config.js')(config)
+//config = require('./_secret-config.js')(config)
 
 var argv = require('yargs').argv
 var browserSync = require('browser-sync')
@@ -73,7 +73,7 @@ var uglify = require('gulp-uglifyjs')
 var watch = require('gulp-watch')
 
 var messages = {
-    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build',
 }
 
 /* This alerts us audibly when a Gulp task errors out and Gulp stops, otherwise we may not notice and continue editing

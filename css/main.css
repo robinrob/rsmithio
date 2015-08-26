@@ -651,9 +651,6 @@ hr.small {
     .intro-header .post-heading .meta a {
       color: #0085a1; }
 
-.main ul {
-  list-style-type: none; }
-
 .main .btn {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -764,6 +761,12 @@ hr.small {
   font-family: 'Lora', 'Times New Roman', serif; }
   .main .blog article p {
     font-size: 20px; }
+  .main .blog article ol li, .main .blog article ul li {
+    font-size: 18px; }
+  .main .blog article ul {
+    list-style-type: circle; }
+  .main .blog article ol {
+    list-style-type: decimal; }
 
 .main .blog .pager li > a,
 .main .blog .pager li > span {

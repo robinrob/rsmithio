@@ -229,10 +229,6 @@ hr.small {
 
 
 .main {
-    ul {
-        list-style-type: none;
-    }
-
     // Button Styles
     .btn {
         @include sans-serif();
@@ -389,6 +385,20 @@ hr.small {
             @include serif();
             p {
                 font-size: 20px;
+            }
+
+            ol, ul {
+                li {
+                    font-size: 18px;
+                }
+            }
+
+            ul {
+                list-style-type: circle;
+            }
+
+            ol {
+                list-style-type: decimal;
             }
         }
 
