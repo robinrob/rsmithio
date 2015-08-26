@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "RSS Reader Script"
-subtitle:   "Short Script to open RSS links with terminal interface"
+subtitle:   "Short Ruby script to open RSS links using terminal interface"
 date:       2015-05-24
 ---
 
