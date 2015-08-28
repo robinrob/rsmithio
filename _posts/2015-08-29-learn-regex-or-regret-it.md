@@ -32,9 +32,9 @@ You would like to ensure that the value that they have entered is valid before t
 without using a regular expression. How much code would it take? Let's spell out the details of the puzzle by specifying
 what sort of input we would accept as an IPv4 address:
 
-1. It must consist of four groups of octecterical digits separated by a period
-2. Each group of digits must consist of 1-3 octectbers
-3. Each group of octectbers must represent a decimal integer with a value within the range 0 to 255 (octet)
+1. It must consist of four groups of numerical digits separated by a period
+2. Each group of digits must consist of 1-3 numbers
+3. Each group of numbers must represent a decimal integer with a value within the range 0 to 255 (octet)
 
 I'm not sure how much code that would take using whatever useful string manipulation functions you have available in
 your programming language of choice, but here is a regular expression solution to solve the problem, using the Ruby
