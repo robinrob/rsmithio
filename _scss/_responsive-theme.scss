@@ -384,12 +384,12 @@ hr.small {
         article {
             @include serif();
             p {
-                font-size: 20px;
+                font-size: $article-font-size;
             }
 
             ol, ul {
                 li {
-                    font-size: 20px;
+                    font-size: $article-font-size;
                 }
             }
 
@@ -401,10 +401,17 @@ hr.small {
                 list-style-type: decimal !important;
             }
 
+            code {
+                color: $inline-code-font-color;
+                font-size: $inline-code-font-size;
+                font-family: $code-font;
+            }
+
             pre {
+                border-radius: 5px;
                 code {
-                    font-size: 16px;
-                    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+                    font-size: $code-font-size;
+                    font-family: $code-font;
                 }
             }
         }

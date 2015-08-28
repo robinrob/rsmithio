@@ -767,9 +767,15 @@ hr.small {
     list-style-type: circle !important; }
   .main .blog article ol {
     list-style-type: decimal !important; }
-  .main .blog article pre code {
-    font-size: 16px;
-    font-family: Consolas, Monaco, 'Andale Mono', monospace; }
+  .main .blog article code {
+    color: #007088;
+    font-size: 18px;
+    font-family: Consolas, Monaco, "Andale Mono", monospace; }
+  .main .blog article pre {
+    border-radius: 5px; }
+    .main .blog article pre code {
+      font-size: 16px;
+      font-family: Consolas, Monaco, "Andale Mono", monospace; }
 
 .main .blog .pager li > a,
 .main .blog .pager li > span {

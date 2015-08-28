@@ -51,6 +51,12 @@ $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
+$article-font-size: 20px;
+$code-font: Consolas, Monaco, 'Andale Mono', monospace;
+$code-font-size: 16px;
+$inline-code-font-size: 18px;
+$inline-code-font-color: darken($theme-3, 5%);
+
 $spacing-unit:     40px;
 // Width of the content area
 $content-width:    800px;
