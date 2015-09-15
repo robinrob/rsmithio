@@ -6,7 +6,7 @@ date:       2015-05-24
 ---
 
 I wanted a quick, lightweight way to browse and open articles from RSS feeds from within the terminal. I wrote a short
-[Ruby script](git@github.com:robinrob/rss-opener.git) for quickly opening RSS feed articles in a web browser.
+[Ruby script](https://github.com/robinrob/rss-opener.git) for quickly opening RSS feed articles in a web browser.
 
 ## Screenshot
 
