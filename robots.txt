@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /blog/*
 Sitemap: https://rsmith.io/sitemap.xml
