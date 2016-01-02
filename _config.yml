@@ -1,12 +1,12 @@
 # Site settings
 author: Robin Smith
 subtitle: Freelance full-stack web developer
-title: Robin Smith - Freelance Developer
+title: Robin Smith - Freelance Web Developer
 brand: Robin Smith
 email: robin@rsmith.io
 description: > # this means to ignore newlines until "baseurl:"
-  Experienced freelance software developer designing and building custom web applications and integrations using modern
-  cloud technologies and frameworks.
+  Experienced full-stack web developer building custom web applications and integrations using the best
+  frameworks and cloud technologies.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://rsmith.io   # with the https protocol
 enforce_ssl: rsmith.io   # without any protocol
