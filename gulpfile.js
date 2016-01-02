@@ -106,7 +106,7 @@ gulp.task('browser-sync', function () {
         server: {
             baseDir: '_site'
         },
-        browser: 'safari'
+        browser: 'Google\ Chrome'
     })
 })
 
