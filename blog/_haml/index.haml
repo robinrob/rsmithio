@@ -1,30 +1,40 @@
 \---
 layout: page
 title: Blog
-subtitle: Robin's Blog
+subtitle: Robin Smith's Software Development Blog
+description: Robin Smith&quote;s Software Development Blog
 \---
 
-/ Posts list
-.blog
-  {% for post in paginator.posts %}
-  .post-preview
-    %a{:href => "{{ post.url | prepend: site.baseurl }}"}
-      %h2.post-title {{ post.title }}
-      {% if post.subtitle %}
-      %h3.post-subtitle {{ post.subtitle }}
-      {% endif %}
-    %p.post-meta Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-  {% endfor %}
+.main
+  / Posts list
+  .blog
+    .blurb
+      %p My software development blog covering topics such as software design, automation, productivity tips and useful code snippets.
 
-  / Pager
-  {% if paginator.total_pages > 1 %}
-  %ul.pager
-    {% if paginator.previous_page %}
-    %li.previous
-      %a{:href => "{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"} &larr; Newer Posts
+    {% for post in paginator.posts %}
+    .post-preview
+      %a{:href => "{{ post.url | prepend: site.baseurl }}"}
+        %span Read post {{ post.title }}
+        %h2.post-title {{ post.title }}
+        {% if post.subtitle %}
+        %h3.post-subtitle {{ post.subtitle }}
+        {% endif %}
+      %p.post-meta Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    {% endfor %}
+
+    / Pager
+    {% if paginator.total_pages > 1 %}
+    %ul.pager
+      {% if paginator.previous_page %}
+      %li.previous
+        %a{:href => "{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"}
+          %span View Newer Posts
+          &larr; Newer Posts
+      {% endif %}
+      {% if paginator.next_page %}
+      %li.next
+        %a{:href => "{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"}
+          %span View Older Posts
+          Older Posts &rarr;
+      {% endif %}
     {% endif %}
-    {% if paginator.next_page %}
-    %li.next
-      %a{:href => "{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"} Older Posts &rarr;
-    {% endif %}
-  {% endif %}

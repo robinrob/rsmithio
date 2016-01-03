@@ -3,6 +3,7 @@ layout:     post
 title:      "ConsoleWriter jQuery Plugin"
 subtitle:   "Console-style inline element editing using jQuery"
 date:       2015-07-01
+type:       "Blog Post"
 ---
 
 <h2 class="console-writer" cw-sound="true" cw-animation="true">Edit Me!</h2>

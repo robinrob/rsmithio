@@ -499,6 +499,13 @@ footer {
     margin-top: 30px;
     margin-bottom: 0; }
 
+a span {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px; }
+
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
@@ -660,6 +667,14 @@ hr.small {
   background-color: #0085a1;
   border: 1px solid #0085a1; }
 
+.main .index .blurb p, .main .blog .blurb p {
+  color: black;
+  font-weight: 400;
+  font-size: 20px; }
+
+.main .index .blurb hr.large, .main .blog .blurb hr.large {
+  border-color: gray; }
+
 .main .index h2 {
   color: #0085a1; }
 
@@ -668,12 +683,6 @@ hr.small {
 
 .main .index hr.large {
   border-color: gray; }
-
-.main .index .blurb {
-  color: black;
-  font-weight: 400; }
-  .main .index .blurb hr.large {
-    border-color: gray; }
 
 .main .index .photo-sean {
   background-image: url("../img/sean.jpg"); }
@@ -807,8 +816,8 @@ hr.small {
       box-shadow: none !important; }
     .main .contact .floating-label-form-group label {
       opacity: 0;
-      -webkit-transition: top 0.3s ease,opacity 0.3s ease;
-      transition: top 0.3s ease,opacity 0.3s ease; }
+      -webkit-transition: top 0.3s ease, opacity 0.3s ease;
+      transition: top 0.3s ease, opacity 0.3s ease; }
     .main .contact .floating-label-form-group::not(:first-child) {
       border-left: 1px solid #eeeeee; }
   .main .contact .floating-label-form-group-with-value label {

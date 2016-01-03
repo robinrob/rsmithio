@@ -198,6 +198,7 @@
             }
 
             $me.off('focusin.consolewriter focousout.consolewriter keydown.consolewriter keypress.consolewriter keyup.consolewriter keyinput.consolewriter')
+
             $me.on('focusin', function() {
                 keyPressIfSoundEnabled()
                 showCursor(toggleCursor)

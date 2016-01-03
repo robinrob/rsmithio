@@ -5,7 +5,7 @@
   %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=UTF-8"}
   %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge"}
   %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
-  %meta{:name => "description", :content => "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"}
+  %meta{:name => "description", :content => "{% if page.type %}{{ page.type }}: {{ page.title }} - {{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"}
   %meta{:name => "keywords", :content => "Freelance developer, Edinburgh, mobile, web, AngularJS, PhoneGap, SEO, Heroku, AWS, Google Apps, JavaScript, Force.com, Salesforce"}
   %title {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
 

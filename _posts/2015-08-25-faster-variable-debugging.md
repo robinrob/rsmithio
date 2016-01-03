@@ -3,6 +3,7 @@ layout:     post
 title:      "Faster Variable Debugging"
 subtitle:   "Useful code snippets to help with faster debugging"
 date:       2015-08-25
+type:       "Blog Post"
 ---
 
 Almost inevitably whilst debugging code, regardless of any additional tools that you may have available (e.g.

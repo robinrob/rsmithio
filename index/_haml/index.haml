@@ -8,27 +8,30 @@ permalink: /
   .container.site-heading
     .row
       .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
-        %h1{'cw-text' => "{{ site.author }}", 'cw-leading-cursor' => 'true'}
+        %h1{"cw-text" => "{{ site.author }}", "cw-leading-cursor" => "true"}
     .row
       .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
         .photo#photo
     .row
       .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
-        %h2.subheading{'cw-text' => "{{ site.subtitle }}", 'cw-leading-cursor' => 'true'} &nbsp;
+        %h2.subheading{"cw-text" => "{{ site.subtitle }}", "cw-leading-cursor" => "true"} &nbsp;
 
 / Content
 .main
   .index
-    .container.blurb
-      %p
-        I am an Edinburgh-based software developer with several years' experience building applications to run in the cloud.
-        Experienced in using modern server and front-end web frameworks (Flask, ExpressJS, AngularJS) and a certified
-        Amazon Web Services architect,
-        I can build and deploy business applications with technical logic, running on the best cloud platforms including
-        AWS and Heroku. I also have experience in building fun HTML5 games using the Cocos2D-JS framework.
-        Please see my
-        %a{:href => "https://www.linkedin.com/in/{{ site.linkedin }}", :target => "_blank"}LinkedIn
-        profile for more details.
+    .container
+      .blurb
+        %p
+          I am an Edinburgh-based software developer with several years&quote; experience building applications to run in the cloud.
+          Experienced in using modern server and front-end web frameworks (Flask, ExpressJS, AngularJS) and a certified
+          Amazon Web Services architect,
+          I can build and deploy business applications with technical logic, running on the best cloud platforms including
+          AWS and Heroku. I also have experience in building fun HTML5 games using the Cocos2D-JS framework.
+          Please see my
+          %a{:href => "https://www.linkedin.com/in/{{ site.linkedin }}", :target => "_blank"}
+            %span LinkedIn profile page of {{ site.author }}
+            LinkedIn
+          profile for more details.
 
     .section
       .container.services
@@ -67,13 +70,13 @@ permalink: /
           %strong Some previous projects I have worked on.
         %ul
           %li.cf.project-alumina
-            %h3 Commerial Salesforce <=> Google synchronisation application
+            %h3 Commercial Salesforce &laquo;=&raquo; Google synchronisation application
             %p
               I was a core developer on a native Force.com application to synchronise Email, Calendar and
               Contact information between Google Apps and Salesforce.com platforms. The app made use of
               advanced Force.com techniques such as scheduled and batch Apex, webservices, triggers and visualforce.
               I built a second stand-alone Force.com application acting as a licensing server to perform product verification
-              and registration, offering trial and paid functionality for the business' Force.com products. The app
+              and registration, offering trial and paid functionality for the business&quote; Force.com products. The app
               included an intuitive visual interface to allow administration.
 
           %li.cf.project-salesforce-s3
@@ -95,22 +98,26 @@ permalink: /
         %h2{:id => "endorsements"} Endorsements
         %ul
           %li.endorsement
-            %a{:href => "https://seanw.org", :target => "_blank"}
+            %a{:href => "https://seanw.org", :target => "_blank", :alt => "Photograph of Sean Wilson, Software Developer"}
+              %span Website of Sean Wilson, Software Developer
               .endorsement-photo.photo-sean
             %blockquote
-              "Robin is a passionate software developer and a keen and fast learner. Combined with excellent
-              communication skills and professionalism he is great to work with."
+              Robin is a passionate software developer and a keen and fast learner. Combined with excellent
+              communication skills and professionalism he is great to work with.
             .caption
-              %a{:href => "https://seanw.org", :target => "_blank"} Sean Wilson
-              , Freelance Developer
+              %a{:href => "https://seanw.org", :target => "_blank"}
+                %span Website of Sean Wilson, Software Developer
+                Sean Wilson, Freelance Developer
 
           %li.endorsement
-            %a{:href => "https://uk.linkedin.com/pub/ben-johnson/29/105/552", :target => "_blank"}
+            %a{:href => "https://uk.linkedin.com/pub/ben-johnson/29/105/552", :target => "_blank", :alt => "Photograph of Ben Johnson, Principal Consultant at Ryze Limited"}
+              %span LinkedIn profile page of Ben Johnson, Principal Consultant at Ryze Limited
               .endorsement-photo.photo-ben
             %blockquote
               Robin has an unbreakable comittment to quality. What you see is what you get - a reliable and intelligent
               business partner."
             .caption
-              %a{:href => "https://uk.linkedin.com/pub/ben-johnson/29/105/552", :target => "_blank"} Ben Johnson
-              , Principal Consultant at Ryze Limited
+              %a{:href => "https://uk.linkedin.com/pub/ben-johnson/29/105/552", :target => "_blank"}
+                %span LinkedIn profile page of Ben Johnson, Principal Consultant at Ryze Limited
+                Ben Johnson, Principal Consultant at Ryze Limited
 
