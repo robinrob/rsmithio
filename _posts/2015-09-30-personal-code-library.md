@@ -2,7 +2,7 @@
 layout:     post
 title:      "Maintaining a personal code library"
 subtitle:   "Record and hold on to your precious code snippets"
-date:       2015-09-30
+date:       2015-10-30
 ---
 
 These days rapid Google searches are an invaluable tool for developers who are constantly getting to grips with a
