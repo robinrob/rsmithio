@@ -8,7 +8,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Experienced full-stack web developer building custom web applications and integrations using the best
   frameworks and cloud technologies.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://rsmith.io   # with the https protocol
+url: https://www.rsmith.io   # with the https protocol
 enforce_ssl: rsmith.io   # without any protocol
 github: robinrob
 twitter: rsmith_io
