@@ -12,6 +12,7 @@ url: https://www.rsmith.io   # with the https protocol
 enforce_ssl: rsmith.io   # without any protocol
 github: robinrob
 twitter: rsmith_io
+facebook: robin.smith.50364591
 linkedin: rsmithio
 
 # Build settings
