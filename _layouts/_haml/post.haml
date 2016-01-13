@@ -26,9 +26,9 @@ layout: default
           %ul.pager
             {% if page.previous.url %}
             %li.previous
-              %a{:href => "{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}", "data-placement" => "top", "data-toggle" => "tooltip", :title => "{{page.previous.title}}"} &larr; Previous Post
+              %a{:href => "{{ page.previous.url | prepend: site.baseurl | prepend: site.url | replace: '//', '/' }}", "data-placement" => "top", "data-toggle" => "tooltip", :title => "{{page.previous.title}}"} &larr; Previous Post
             {% endif %}
             {% if page.next.url %}
             %li.next
-              %a{:href => "{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}", "data-placement" => "top", "data-toggle" => "tooltip", :title => "{{page.next.title}}"} Next Post &rarr;
+              %a{:href => "{{ page.next.url | prepend: site.baseurl | prepend: site.url | replace: '//', '/' }}", "data-placement" => "top", "data-toggle" => "tooltip", :title => "{{page.next.title}}"} Next Post &rarr;
             {% endif %}
