@@ -13,7 +13,7 @@ description: Robin Smith&quote;s Software Development Blog
 
     {% for post in paginator.posts %}
     .post-preview
-      %a{:href => "{{ post.url | prepend: site.baseurl | prepend: site.url }}"}
+      %a{:href => "{{ post.url | prepend: site.baseurl }}"}
         %span Read post {{ post.title }}
         %h2.post-title {{ post.title }}
         {% if post.subtitle %}
