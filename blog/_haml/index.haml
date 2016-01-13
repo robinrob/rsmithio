@@ -27,13 +27,13 @@ description: Robin Smith&quote;s Software Development Blog
     %ul.pager
       {% if paginator.previous_page %}
       %li.previous
-        %a{:href => "{{ paginator.previous_page_path | prepend: site.baseurl | prepend: site.url | replace: '//', '/' }}"}
+        %a{:href => "{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"}
           %span View Newer Posts
           &larr; Newer Posts
       {% endif %}
       {% if paginator.next_page %}
       %li.next
-        %a{:href => "{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url | replace: '//', '/' }}"}
+        %a{:href => "{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"}
           %span View Older Posts
           Older Posts &rarr;
       {% endif %}
