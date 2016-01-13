@@ -12,7 +12,7 @@ description: Robin Smith&quote;s Software Development Blog
     </div>
     {% for post in paginator.posts %}
     <div class='post-preview'>
-      <a href='{{ post.url | prepend: site.baseurl }}'>
+      <a href='{{ post.url | prepend: site.baseurl | prepend: site.url }}'>
         <span>Read post {{ post.title }}</span>
         <h2 class='post-title'>{{ post.title }}</h2>
         {% if post.subtitle %}
@@ -27,7 +27,7 @@ description: Robin Smith&quote;s Software Development Blog
     <ul class='pager'>
       {% if paginator.previous_page %}
       <li class='previous'>
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <a href='{{ paginator.previous_page_path | prepend: site.baseurl | prepend: site.url }}'>
           <span>View Newer Posts</span>
           &larr; Newer Posts
         </a>
@@ -35,7 +35,7 @@ description: Robin Smith&quote;s Software Development Blog
       {% endif %}
       {% if paginator.next_page %}
       <li class='next'>
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <a href='{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url }}'>
           <span>View Older Posts</span>
           Older Posts &rarr;
         </a>
