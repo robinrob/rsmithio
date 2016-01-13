@@ -12,26 +12,26 @@
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li
-          %a{:href => "{{ site.baseurl }}/"}
+          %a{:href => "{{ site.baseurl | prepend: site.url }}/"}
             %span Home page of {{ site.author }}&quote;s site
             Home
         %li
-          %a{:href => "{{ site.baseurl }}/#services"}
+          %a{:href => "{{ site.baseurl | prepend: site.url }}/#services"}
             %span View software services that {{ site.author }} offers
             Services
         %li
-          %a{:href => "{{ site.baseurl }}/#projects"}
+          %a{:href => "{{ site.baseurl | prepend: site.url }}/#projects"}
             %span View projects that {{ site.author }} has previous worked on
             Projects
         %li
-          %a{:href => "{{ site.baseurl }}/#endorsements"}
+          %a{:href => "{{ site.baseurl | prepend: site.url }}/#endorsements"}
             %span View {{ site.author }}'s endorsements
             Endorsements
         %li
-          %a{:href => "{{ site.baseurl }}/contact"}
+          %a{:href => "{{ site.baseurl | prepend: site.url }}/contact"}
             %span Use contact form to contact {{ site.author }}
             Contact
         %li
-          %a{:href => "{{ site.baseurl }}/blog"}
+          %a{:href => "{{ site.baseurl | prepend: site.url }}/blog"}
             %span Read {{ site.author }}'s Software development blog
             Blog
