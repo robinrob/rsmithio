@@ -18,9 +18,9 @@ linkedin: rsmithio
 # Build settings
 markdown: redcarpet
 highlighter: pygments
+
 # Allow /index route in place of /index.html etc
 permalink: /blog/:title
-
 paginate_path: "/blog/page/:num"
 paginate: 10
 # Excludes these files/folders from being included into Jekyll _site folder.
