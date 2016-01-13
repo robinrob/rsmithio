@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://rsmith.io/</loc>
-        <lastmod>2016-01-13T18:25:41.000Z</lastmod>
-    </url>
-    <url>
-        <loc>https://rsmith.io/contact/</loc>
-        <lastmod>2016-01-13T18:25:41.000Z</lastmod>
+        <lastmod>2016-01-13T18:27:36.000Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/blog/</loc>
-        <lastmod>2016-01-13T18:25:41.000Z</lastmod>
+        <lastmod>2016-01-13T18:27:36.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://rsmith.io/contact/</loc>
+        <lastmod>2016-01-13T18:27:36.000Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/maintenance/</loc>
-        <lastmod>2016-01-13T18:25:41.000Z</lastmod>
+        <lastmod>2016-01-13T18:27:36.000Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/blog/console-writer-jquery-plugin/</loc>
-        <lastmod>2016-01-13T18:25:41.000Z</lastmod>
-    </url>
-    <url>
-        <loc>https://rsmith.io/blog/faster-variable-debugging/</loc>
-        <lastmod>2016-01-13T18:25:41.000Z</lastmod>
+        <lastmod>2016-01-13T18:27:36.000Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/blog/jekyll-gulp-haml-sass-browsersync/</loc>
-        <lastmod>2016-01-13T18:25:41.000Z</lastmod>
+        <lastmod>2016-01-13T18:27:36.000Z</lastmod>
     </url>
     <url>
-        <loc>https://rsmith.io/blog/learn-regex-or-regret-it/</loc>
-        <lastmod>2016-01-13T18:25:41.000Z</lastmod>
+        <loc>https://rsmith.io/blog/faster-variable-debugging/</loc>
+        <lastmod>2016-01-13T18:27:36.000Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/blog/personal-code-library/</loc>
-        <lastmod>2016-01-13T18:25:41.000Z</lastmod>
+        <lastmod>2016-01-13T18:27:36.000Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/blog/rss-feed-reader/</loc>
-        <lastmod>2016-01-13T18:25:41.000Z</lastmod>
+        <lastmod>2016-01-13T18:27:36.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://rsmith.io/blog/learn-regex-or-regret-it/</loc>
+        <lastmod>2016-01-13T18:27:36.000Z</lastmod>
     </url>
 </urlset>
