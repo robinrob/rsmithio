@@ -50,7 +50,7 @@ $(function () {
         })
     }
 
-    playTitles()
+    //playTitles()
 
     var $photo = $(".site-heading .photo")
     $photo.on("click", function() {
