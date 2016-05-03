@@ -410,6 +410,8 @@ hr.large {
         margin-bottom: 10px; }
       .main .index .endorsement > .caption {
         font-size: 14px; }
+    .main .index .contact h2 {
+      text-align: left; }
   .main .blog {
     display: inline-block;
     text-align: left; }
