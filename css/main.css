@@ -829,81 +829,62 @@ hr.small {
   .main .contact form .row:first-child .floating-label-form-group {
     border-top: 1px solid #eeeeee; }
 
-.main,
 .main .cv {
   width: 1050px;
-  margin-left: -4%;
+  margin-left: -15%;
   font-size: 22px;
   font-family: "Times New Roman";
   text-align: left; }
-  .main .center,
   .main .cv .center {
     text-align: center;
     margin-left: auto;
     margin-right: auto; }
-  .main .invert,
   .main .cv .invert {
     background-color: black;
     color: white; }
-  .main .cv-name,
   .main .cv .cv-name {
     font-size: 50px;
     font-weight: bold; }
-  .main .cv-title,
   .main .cv .cv-title {
     border-radius: 4px; }
-    .main .cv-title h2,
     .main .cv .cv-title h2 {
       font-size: 30px;
       line-height: 35px; }
-  .main .cv-title > *,
   .main .cv .cv-title > * {
     height: 50px;
     width: auto;
     font-weight: bold;
     padding-top: 7px;
     margin-bottom: 20px; }
-  .main .cv-page-header,
   .main .cv .cv-page-header {
     margin-bottom: 0px; }
-  .main .cv-section-name,
   .main .cv .cv-section-name {
     font-weight: bold; }
-  .main .cv-values,
   .main .cv .cv-values {
     margin-bottom: 40px; }
-  .main .cv-values-row,
   .main .cv .cv-values-row {
     font-size: 27px;
     line-height: 28px; }
-  .main .cv-values-em,
   .main .cv .cv-values-em {
     line-height: 20px;
     font-weight: bold;
     font-size: 35px; }
-  .main .cv-details,
   .main .cv .cv-details {
     margin-bottom: 50px; }
-  .main .cv-details-line,
   .main .cv .cv-details-line {
     display: block;
     width: 100px;
     height: 20px; }
-  .main .cv-details-line-label,
   .main .cv .cv-details-line-label {
     font-weight: bold;
     display: inline-block;
     width: 160px; }
-  .main .cv-details-line-value,
   .main .cv .cv-details-line-value {
     display: inline-block; }
-  .main .cv-experience-block,
   .main .cv .cv-experience-block {
     margin-bottom: 30px; }
-  .main .cv-experience-heading,
   .main .cv .cv-experience-heading {
     font-weight: bold; }
-  .main .cv-tech-skills-block,
   .main .cv .cv-tech-skills-block {
     margin-bottom: 25px; }
 
