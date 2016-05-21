@@ -503,6 +503,101 @@ hr.small {
     form .row:first-child .floating-label-form-group {
       border-top: 1px solid $theme-1;
     }
+  },
+  .cv {
+    width: 1050px;
+    margin-left: -4%;
+    font-size: 22px;
+    font-family: "Times New Roman";
+    text-align: left;
+
+    .center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .invert {
+      background-color: black;
+      color: white;
+    }
+
+    .cv-name {
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .cv-title {
+      border-radius: 4px;
+
+      h2 {
+        font-size: 30px;
+        line-height: 35px;
+      }
+    }
+
+    .cv-title > * {
+      height: 50px;
+      width: auto;
+      font-weight: bold;
+      padding-top: 7px;
+      margin-bottom: 20px;
+    }
+
+    .cv-page-header {
+      margin-bottom: 0px;
+    }
+
+    .cv-section-name {
+      font-weight: bold;
+    }
+
+    .cv-values {
+      margin-bottom: 40px;
+    }
+
+    .cv-values-row {
+      font-size: 27px;
+      line-height: 28px;
+    }
+
+    .cv-values-em {
+      line-height: 20px;
+      font-weight: bold;
+      font-size: 35px;
+    }
+
+    .cv-details {
+      margin-bottom: 50px;
+    }
+
+    .cv-details-line {
+      display: block;
+      width: 100px;
+      height: 20px;
+    }
+
+    .cv-details-line-label {
+      font-weight: bold;
+      display: inline-block;
+      width: 160px;
+    }
+
+    .cv-details-line-value {
+      display: inline-block;
+    }
+
+    .cv-experience-block {
+      margin-bottom: 30px;
+    }
+
+    .cv-experience-heading {
+      font-weight: bold;
+    }
+
+    .cv-tech-skills-block {
+      margin-bottom: 25px;
+    }
   }
 }
 
