@@ -235,7 +235,7 @@ hr.small {
   }
 }
 
-.main {
+.main, .empty {
   // Button Styles
   .btn {
     @include sans-serif();
@@ -505,12 +505,14 @@ hr.small {
     }
   }
 
-  .cv {
-    width: 1050px;
-    margin-left: -15%;
+  .cv, .cv-print {
     font-size: 22px;
     font-family: "Times New Roman";
     text-align: left;
+
+    a.print {
+      float: right;
+    }
 
     .center {
       text-align: center;
@@ -599,6 +601,13 @@ hr.small {
     .cv-tech-skills-block {
       margin-bottom: 25px;
     }
+  }
+}
+
+.empty {
+  .cv-print .cv {
+    width: auto;
+    margin-left: 0px;
   }
 }
 
