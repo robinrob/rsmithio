@@ -506,19 +506,7 @@ hr.small {
   }
 
   .cv, .cv-print {
-    font-size: 22px;
     font-family: "Times New Roman";
-    text-align: left;
-
-    a.print {
-      float: right;
-    }
-
-    .center {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
 
     .invert {
       background-color: black;
@@ -601,13 +589,6 @@ hr.small {
     .cv-tech-skills-block {
       margin-bottom: 25px;
     }
-  }
-}
-
-.empty {
-  .cv-print .cv {
-    width: auto;
-    margin-left: 0px;
   }
 }
 

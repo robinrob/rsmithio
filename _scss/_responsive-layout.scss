@@ -243,17 +243,22 @@ hr.large {
 
 .main {
     text-align: center;
+    width: 100%;
 }
 
 .empty {
     text-align: left;
     margin: 0;
     padding: 0;
+
+    .cv-print {
+        width: 670px;
+        font-size: 14px;
+    }
 }
 
 .main, .empty {
     display: inline-block;
-    width: 100%;
 
     h2 {
         font-size: 35px;
@@ -515,12 +520,11 @@ hr.large {
         }
     }
 
-    .cv, .cv-print {
-        width: 1050px;
-    }
-
     .cv {
+        width: 1050px;
         margin-left: -20%;
+        font-size: 22px;
+        text-align: left;
 
         a.print {
             float: right;

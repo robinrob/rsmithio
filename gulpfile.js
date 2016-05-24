@@ -17,11 +17,11 @@ var config = {
         sass: {
             main: '_scss/main.scss',
             src: '_scss/*.scss',
-            dest: 'css/'
+            dest: '_css/'
         },
         css: {
             main: 'styles.css',
-            src: 'css/*.css',
+            src: '_css/*.css',
             dest: buildDir + '/css/'
         },
         js: {
@@ -64,6 +64,7 @@ var plumber = require('gulp-plumber')
 var prefix = require('gulp-autoprefixer')
 var task = require('gulp-task')
 var rename = require('gulp-rename')
+var run = require('gulp-run')
 var runSequence = require('run-sequence')
 var sass = require('gulp-sass')
 var shell = require('shelljs/global')
@@ -79,6 +80,7 @@ var messages = {
 /* This alerts us audibly when a Gulp task errors out and Gulp stops, otherwise we may not notice and continue editing
 files and expecting to see changes. */
 function onError(err) {
+    console.log('err: ' + err)
     shell.exec('say gulp has stopped')
 }
 
@@ -173,12 +175,21 @@ gulp.task('css-minify', function () {
         .pipe(gulp.dest(config.paths.css.dest))
 })
 
+gulp.task('css-copy', function (done) {
+    return gulp.src(config.paths.css.dest + config.paths.css.main)
+        .pipe(gulp.dest('_includes/'))
+})
+
 gulp.task('css-dev', function (done) {
-    runSequence('css-concat', done)
+    runSequence('css-concat', 'css-copy', done)
 })
 
 gulp.task('css', function (done) {
-    runSequence('css-concat', 'css-minify', done)
+    runSequence('css-concat', 'css-minify', 'css-copy', done)
+})
+
+gulp.task('cv-to-pdf', function(done) {
+    run("wkhtmltopdf --page-size A4 --margin-top 5mm --margin-right 5mm --margin-bottom 5mm --margin-left 5mm --encoding UTF-8 --quiet _site/cv/print/index.html _site/cv.pdf").exec(done)
 })
 
 gulp.task('js-concat', function () {
@@ -202,7 +213,7 @@ gulp.task('js', function (done) {
 })
 
 gulp.task('build', function (done) {
-    runSequence('haml-build', 'jekyll', 'html', 'sass', ['css', 'js'], 'reload', done)
+    runSequence('haml-build', 'jekyll', 'html', 'sass', ['css', 'js'], 'cv-to-pdf', 'reload', done)
 })
 
 gulp.task('fast-build', function (done) {
@@ -210,7 +221,7 @@ gulp.task('fast-build', function (done) {
 })
 
 gulp.task('dev-build', function (done) {
-    runSequence('haml-build', 'jekyll', 'sass', ['css-dev', 'js-dev'], 'reload', done)
+    runSequence('haml-build', 'jekyll', 'sass', ['css-dev', 'js-dev'], 'cv-to-pdf', 'reload', done)
 })
 
 gulp.task('fast-dev-build', function (done) {
