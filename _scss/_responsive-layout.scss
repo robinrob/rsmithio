@@ -624,12 +624,20 @@ hr.large {
             margin-bottom: 30px;
         }
 
+        .cv-experience-content {
+            page-break-inside: avoid !important;
+        }
+
         .cv-experience-heading {
             font-weight: bold;
         }
 
         .cv-tech-skills-block {
             margin-bottom: 25px;
+        }
+
+        .cv-about {
+            page-break-inside: avoid !important;
         }
 
         @media print {

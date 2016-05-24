@@ -567,10 +567,14 @@ hr.large {
     .main .cv .cv-experience-block, .main .cv-print .cv-experience-block, .empty .cv .cv-experience-block, .empty .cv-print .cv-experience-block {
       page-break-inside: avoid !important;
       margin-bottom: 30px; }
+    .main .cv .cv-experience-content, .main .cv-print .cv-experience-content, .empty .cv .cv-experience-content, .empty .cv-print .cv-experience-content {
+      page-break-inside: avoid !important; }
     .main .cv .cv-experience-heading, .main .cv-print .cv-experience-heading, .empty .cv .cv-experience-heading, .empty .cv-print .cv-experience-heading {
       font-weight: bold; }
     .main .cv .cv-tech-skills-block, .main .cv-print .cv-tech-skills-block, .empty .cv .cv-tech-skills-block, .empty .cv-print .cv-tech-skills-block {
       margin-bottom: 25px; }
+    .main .cv .cv-about, .main .cv-print .cv-about, .empty .cv .cv-about, .empty .cv-print .cv-about {
+      page-break-inside: avoid !important; }
     @media print {
       .main .cv .cv-employment-history .row, .main .cv-print .cv-employment-history .row, .empty .cv .cv-employment-history .row, .empty .cv-print .cv-employment-history .row {
         page-break-inside: avoid !important; } }
