@@ -17,11 +17,11 @@ var config = {
         sass: {
             main: '_scss/main.scss',
             src: '_scss/*.scss',
-            dest: '_css/'
+            dest: 'css/'
         },
         css: {
             main: 'styles.css',
-            src: '_css/*.css',
+            src: 'css/*.css',
             dest: buildDir + '/css/'
         },
         js: {

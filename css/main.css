@@ -512,11 +512,68 @@ hr.large {
       float: right; }
   .main .cv-print, .empty .cv-print {
     width: 670px;
-    font-size: 14px; }
-    .main .cv-print .cv-title h2, .empty .cv-print .cv-title h2 {
-      font-size: 28px !important; }
-  .main .cv .cv-title h2, .main .cv-print .cv-title h2, .empty .cv .cv-title h2, .empty .cv-print .cv-title h2 {
-    text-align: center; }
+    font-size: 14px;
+    margin-left: 20px; }
+    .main .cv-print h2, .empty .cv-print h2 {
+      font-size: 24px !important; }
+  .main .cv, .main .cv-print, .empty .cv, .empty .cv-print {
+    font-family: "Times New Roman"; }
+    .main .cv h2, .main .cv-print h2, .empty .cv h2, .empty .cv-print h2 {
+      text-align: center; }
+    .main .cv p, .main .cv-print p, .empty .cv p, .empty .cv-print p {
+      margin-bottom: 0; }
+    .main .cv .invert, .main .cv-print .invert, .empty .cv .invert, .empty .cv-print .invert {
+      background-color: black;
+      color: white; }
+    .main .cv .cv-name, .main .cv-print .cv-name, .empty .cv .cv-name, .empty .cv-print .cv-name {
+      font-size: 50px;
+      font-weight: bold; }
+    .main .cv .cv-title, .main .cv-print .cv-title, .empty .cv .cv-title, .empty .cv-print .cv-title {
+      border-radius: 4px; }
+      .main .cv .cv-title h2, .main .cv-print .cv-title h2, .empty .cv .cv-title h2, .empty .cv-print .cv-title h2 {
+        font-size: 30px;
+        line-height: 35px; }
+    .main .cv .cv-title > *, .main .cv-print .cv-title > *, .empty .cv .cv-title > *, .empty .cv-print .cv-title > * {
+      height: 50px;
+      width: auto;
+      font-weight: bold;
+      padding-top: 7px;
+      margin-bottom: 20px; }
+    .main .cv .cv-page-header, .main .cv-print .cv-page-header, .empty .cv .cv-page-header, .empty .cv-print .cv-page-header {
+      margin-bottom: 0px; }
+    .main .cv .cv-section-name, .main .cv-print .cv-section-name, .empty .cv .cv-section-name, .empty .cv-print .cv-section-name {
+      font-weight: bold; }
+    .main .cv .cv-values, .main .cv-print .cv-values, .empty .cv .cv-values, .empty .cv-print .cv-values {
+      margin-bottom: 40px; }
+    .main .cv .cv-values-row, .main .cv-print .cv-values-row, .empty .cv .cv-values-row, .empty .cv-print .cv-values-row {
+      font-size: 27px;
+      line-height: 28px; }
+    .main .cv .cv-values-em, .main .cv-print .cv-values-em, .empty .cv .cv-values-em, .empty .cv-print .cv-values-em {
+      line-height: 20px;
+      font-weight: bold;
+      font-size: 35px; }
+    .main .cv .cv-details, .main .cv-print .cv-details, .empty .cv .cv-details, .empty .cv-print .cv-details {
+      margin-bottom: 50px; }
+    .main .cv .cv-details-line, .main .cv-print .cv-details-line, .empty .cv .cv-details-line, .empty .cv-print .cv-details-line {
+      display: block;
+      width: 100px;
+      height: 20px; }
+    .main .cv .cv-details-line-label, .main .cv-print .cv-details-line-label, .empty .cv .cv-details-line-label, .empty .cv-print .cv-details-line-label {
+      font-weight: bold;
+      display: inline-block;
+      width: 160px; }
+    .main .cv .cv-details-line-value, .main .cv-print .cv-details-line-value, .empty .cv .cv-details-line-value, .empty .cv-print .cv-details-line-value {
+      display: inline-block; }
+    .main .cv .cv-experience-block, .main .cv-print .cv-experience-block, .empty .cv .cv-experience-block, .empty .cv-print .cv-experience-block {
+      page-break-inside: avoid !important;
+      margin-bottom: 30px; }
+    .main .cv .cv-experience-heading, .main .cv-print .cv-experience-heading, .empty .cv .cv-experience-heading, .empty .cv-print .cv-experience-heading {
+      font-weight: bold; }
+    .main .cv .cv-tech-skills-block, .main .cv-print .cv-tech-skills-block, .empty .cv .cv-tech-skills-block, .empty .cv-print .cv-tech-skills-block {
+      margin-bottom: 25px; }
+    @media print {
+      .main .cv .cv-employment-history .row, .main .cv-print .cv-employment-history .row, .empty .cv .cv-employment-history .row, .empty .cv-print .cv-employment-history .row {
+        page-break-inside: avoid !important; } }
 
 footer {
   font-size: 20px;
@@ -863,57 +920,6 @@ hr.small {
     color: #0085a1; }
   .main .contact form .row:first-child .floating-label-form-group, .empty .contact form .row:first-child .floating-label-form-group {
     border-top: 1px solid #eeeeee; }
-
-.main .cv, .main .cv-print, .empty .cv, .empty .cv-print {
-  font-family: "Times New Roman"; }
-  .main .cv .invert, .main .cv-print .invert, .empty .cv .invert, .empty .cv-print .invert {
-    background-color: black;
-    color: white; }
-  .main .cv .cv-name, .main .cv-print .cv-name, .empty .cv .cv-name, .empty .cv-print .cv-name {
-    font-size: 50px;
-    font-weight: bold; }
-  .main .cv .cv-title, .main .cv-print .cv-title, .empty .cv .cv-title, .empty .cv-print .cv-title {
-    border-radius: 4px; }
-    .main .cv .cv-title h2, .main .cv-print .cv-title h2, .empty .cv .cv-title h2, .empty .cv-print .cv-title h2 {
-      font-size: 30px;
-      line-height: 35px; }
-  .main .cv .cv-title > *, .main .cv-print .cv-title > *, .empty .cv .cv-title > *, .empty .cv-print .cv-title > * {
-    height: 50px;
-    width: auto;
-    font-weight: bold;
-    padding-top: 7px;
-    margin-bottom: 20px; }
-  .main .cv .cv-page-header, .main .cv-print .cv-page-header, .empty .cv .cv-page-header, .empty .cv-print .cv-page-header {
-    margin-bottom: 0px; }
-  .main .cv .cv-section-name, .main .cv-print .cv-section-name, .empty .cv .cv-section-name, .empty .cv-print .cv-section-name {
-    font-weight: bold; }
-  .main .cv .cv-values, .main .cv-print .cv-values, .empty .cv .cv-values, .empty .cv-print .cv-values {
-    margin-bottom: 40px; }
-  .main .cv .cv-values-row, .main .cv-print .cv-values-row, .empty .cv .cv-values-row, .empty .cv-print .cv-values-row {
-    font-size: 27px;
-    line-height: 28px; }
-  .main .cv .cv-values-em, .main .cv-print .cv-values-em, .empty .cv .cv-values-em, .empty .cv-print .cv-values-em {
-    line-height: 20px;
-    font-weight: bold;
-    font-size: 35px; }
-  .main .cv .cv-details, .main .cv-print .cv-details, .empty .cv .cv-details, .empty .cv-print .cv-details {
-    margin-bottom: 50px; }
-  .main .cv .cv-details-line, .main .cv-print .cv-details-line, .empty .cv .cv-details-line, .empty .cv-print .cv-details-line {
-    display: block;
-    width: 100px;
-    height: 20px; }
-  .main .cv .cv-details-line-label, .main .cv-print .cv-details-line-label, .empty .cv .cv-details-line-label, .empty .cv-print .cv-details-line-label {
-    font-weight: bold;
-    display: inline-block;
-    width: 160px; }
-  .main .cv .cv-details-line-value, .main .cv-print .cv-details-line-value, .empty .cv .cv-details-line-value, .empty .cv-print .cv-details-line-value {
-    display: inline-block; }
-  .main .cv .cv-experience-block, .main .cv-print .cv-experience-block, .empty .cv .cv-experience-block, .empty .cv-print .cv-experience-block {
-    margin-bottom: 30px; }
-  .main .cv .cv-experience-heading, .main .cv-print .cv-experience-heading, .empty .cv .cv-experience-heading, .empty .cv-print .cv-experience-heading {
-    font-weight: bold; }
-  .main .cv .cv-tech-skills-block, .main .cv-print .cv-tech-skills-block, .empty .cv .cv-tech-skills-block, .empty .cv-print .cv-tech-skills-block {
-    margin-bottom: 25px; }
 
 footer {
   background-color: white !important;
