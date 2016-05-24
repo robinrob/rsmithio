@@ -772,6 +772,9 @@ hr.small {
 .main .index hr.large, .empty .index hr.large {
   border-color: gray; }
 
+.main .index .photo-steve, .empty .index .photo-steve {
+  background-image: url("../img/steve.jpg"); }
+
 .main .index .photo-sean, .empty .index .photo-sean {
   background-image: url("../img/sean.jpg"); }
 
