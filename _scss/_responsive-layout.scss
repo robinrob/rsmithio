@@ -250,11 +250,6 @@ hr.large {
     text-align: left;
     margin: 0;
     padding: 0;
-
-    .cv-print {
-        width: 670px;
-        font-size: 14px;
-    }
 }
 
 .main, .empty {
@@ -528,6 +523,21 @@ hr.large {
 
         a.print {
             float: right;
+        }
+    }
+
+    .cv-print {
+        width: 670px;
+        font-size: 14px;
+
+        h2 {
+            font-size: 28px;
+        }
+    }
+
+    .cv, .cv-print {
+        h2 {
+            text-align: center;
         }
     }
 }

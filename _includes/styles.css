@@ -340,9 +340,6 @@ hr.large {
   text-align: left;
   margin: 0;
   padding: 0; }
-  .empty .cv-print {
-    width: 670px;
-    font-size: 14px; }
 
 .main, .empty {
   display: inline-block; }
@@ -513,6 +510,13 @@ hr.large {
     text-align: left; }
     .main .cv a.print, .empty .cv a.print {
       float: right; }
+  .main .cv-print, .empty .cv-print {
+    width: 670px;
+    font-size: 14px; }
+    .main .cv-print h2, .empty .cv-print h2 {
+      font-size: 28px; }
+  .main .cv h2, .main .cv-print h2, .empty .cv h2, .empty .cv-print h2 {
+    text-align: center; }
 
 footer {
   font-size: 20px;
