@@ -189,7 +189,7 @@ gulp.task('css', function (done) {
 })
 
 gulp.task('cv-to-pdf', function(done) {
-    run("wkhtmltopdf --page-size A4 --margin-top 5mm --margin-right 5mm --margin-bottom 5mm --margin-left 5mm --encoding UTF-8 --quiet _site/cv/print/index.html _site/cv.pdf").exec(done)
+    run("wkhtmltopdf --page-size A4 --margin-top 5mm --margin-right 5mm --margin-bottom 5mm --margin-left 5mm --encoding UTF-8 --quiet _site/cv/print/index.html _site/robin_smiths_cv.pdf").exec(done)
 })
 
 gulp.task('js-concat', function () {
