@@ -258,7 +258,7 @@ gulp.task('submit-sitemap', function (done) {
 })
 
 gulp.task('save', function (done) {
-    var msg = argv.msg || ''
+    var msg = argv.msg || 'Quick-deploy'
     return require('child_process', done).exec('rake base:save[' + msg + ']', {
         stdio: 'inherit'
     }, done)
