@@ -168,19 +168,19 @@ hr.small {
       box-shadow 0.2s ease-out;
     }
 
-    h1:focus,
-    h1:hover {
-      border: 1px solid $header-bg-col2;
-      box-shadow: 1px 1px 10px 0px $header-bg-col1,
-      -1px -1px 10px 0px $header-bg-col1;
-    }
-
-    h2:focus,
-    h2:hover {
-      border: 1px solid $header-bg-col1;
-      box-shadow: 1px 1px 10px 0px $header-bg-col2,
-      -1px -1px 10px 0px $header-bg-col2;
-    }
+    //h1:focus,
+    //h1:hover {
+    //  border: 1px solid $header-bg-col2;
+    //  box-shadow: 1px 1px 10px 0px $header-bg-col1,
+    //  -1px -1px 10px 0px $header-bg-col1;
+    //}
+    //
+    //h2:focus,
+    //h2:hover {
+    //  border: 1px solid $header-bg-col1;
+    //  box-shadow: 1px 1px 10px 0px $header-bg-col2,
+    //  -1px -1px 10px 0px $header-bg-col2;
+    //}
 
     .email {
       a {
