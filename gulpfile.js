@@ -44,7 +44,7 @@ config.paths.watch = [
 
     'orbiter/**/*'
 ]
-//config = require('./_secret-config.js')(config)
+config = require('./_secret-config.js')(config)
 
 var argv = require('yargs').argv
 var browserSync = require('browser-sync')
