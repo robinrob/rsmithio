@@ -5,3 +5,4 @@ _site
 _secret-config.js
 en
 __MACOSX
+node_modules
