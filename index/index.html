@@ -37,8 +37,9 @@ permalink: /
           With a very strong technical background, I have worked on large enterprise applications with complex business logic.
           I also have some experience with native
           <strong>iOS</strong>
-          development and cross-platform mobile development using Cocos2D.
-          I am an active member of the Edinburgh tech community, and have given talks at
+          development and cross-platform mobile development using the
+          <strong>Cocos2D</strong>
+          framework. I am an active member of the Edinburgh tech community, and have given talks at
           <a href='https://uk.linkedin.com/in/{{ site.linkedin }}'>
             <span>Link to TechMeetup site.</span>
             TechMeetup
@@ -89,29 +90,23 @@ permalink: /
           </li>
           <li>
             <h3>
-              Database Design
-            </h3>
-            <p></p>
-          </li>
-          <li>
-            <h3>
-              Consultation on code architecture and improvements
+              Test suites and Continuous Integration
             </h3>
             <p>
-              Code design is a crucial aspect of software development and I have experience with designing my own applications
-              and tools from scratch. I have consulted on and performed refactorings of existing code in order
-              to help projects scale, with good results.
+              I strongly believe in the importance and the economy of good automated testing to ensure robustness of an application,
+              especially the parts with complex logic. I am very experienced with implementing automated back-end and front-end test suites
+              and with integrating these into a continuous integration tool, such as Bamboo and CircleCI.
             </p>
           </li>
           <li>
             <h3>
-              Test suites and Continuous Integration
+              Code Design
             </h3>
             <p>
-              I am experienced with implementing automated back-end and front-end test suites,
-              taking care to test areas involving complex logic more thoroughly. Examples: unit testing in Python, Ruby
-              and Java, and front-end test suites using Karma and Protractor with AngularJS. I can also set up
-              continuous integration for your applications.
+              Code design is a crucial aspect of software development and one which I care strongly about. In a previous project,
+              I have designed a scalable server-side architecture which was taken up with enthusiasm by the rest of the team.
+              Over time, it allowed the application to easily scale as the project grew. When starting a major new piece of functionality
+              or project from scratch, I always take the time to find a pragmatic solution before coding starts.
             </p>
           </li>
         </ul>
@@ -124,11 +119,23 @@ permalink: /
           <strong>Some previous projects I have worked on.</strong>
         </p>
         <ul>
+          <li class='cf project-network-rail'>
+            <h3>Network Rail Business Information Tool</h3>
+            <p>
+              I spent two years helping to develop an internal business web application for Network Rail, built using AngularJS, Flask
+              and MySQL.
+              The application was for internal use to allow cost/benefit analysis, reporting and data management.
+              I built a front-end report-building wizard combined with a server-side report generation engine capable of taking
+              the user input and producing large PDF reports. The report generation engine was designed in a modular way to make adding
+              new modules very easy. I also worked on financial algorithms and built numerous intuitive interfaces and wizards to
+              allow manipulation of data by the user.
+            </p>
+          </li>
           <li class='cf project-alumina'>
             <h3>Commercial Salesforce/Google synchronisation application</h3>
             <p>
               I was a core developer on a Force.com application to synchronise Email, Calendar and
-              Contact information between Google Apps and Salesforce.com platforms. The application made use of
+              Contact information between Google Apps and Salesforce platforms. The application made use of
               techniques such as scheduled and batch Apex, triggers and web services.
               I architected and built a second stand-alone Force.com application acting as a licensing server, to perform product verification
               and registration, offering trial and paid functionality for the business' Force.com products.
@@ -137,7 +144,7 @@ permalink: /
           <li class='cf project-salesforce-s3'>
             <h3>Salesforce-AWS Email Backup and Archiving System</h3>
             <p>
-              I designed and implemented an archiving and retrieval system for Salesforce Email Messages, using
+              I designed and built an external email archiving and retrieval system for manaing Salesforce emails, using
               Python and running on Amazon EC2. Business-critical Salesforce data was stored and synced onto Amazon Web Services S3,
               reducing data storage costs.
               The system was successfully deployed for two separate customers. Automated testing helped ensure a high
