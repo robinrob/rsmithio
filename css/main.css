@@ -537,7 +537,8 @@ hr.large {
       width: auto;
       font-weight: bold;
       padding-top: 7px;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-family: "Times New Roman"; }
     .main .cv .cv-page-header, .main .cv-print .cv-page-header, .empty .cv .cv-page-header, .empty .cv-print .cv-page-header {
       margin-bottom: 0px; }
     .main .cv .cv-section-name, .main .cv-print .cv-section-name, .empty .cv .cv-section-name, .empty .cv-print .cv-section-name {

@@ -6,7 +6,7 @@ brand: Robin Smith
 year: 2016
 email: robin@rsmith.io
 cv: robin_smiths_cv.pdf
-phone: (+44) 7481 919 740
+phone: +44 7481 919 740
 address: 4 Belford Mews, Edinburgh, EH4 3BT
 description: > # this means to ignore newlines until "baseurl:"
   Experienced full-stack web developer building custom web applications and integrations using the best
