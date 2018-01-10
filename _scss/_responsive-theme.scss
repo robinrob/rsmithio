@@ -194,7 +194,7 @@ hr.small {
 
     .photo {
       @include background-cover();
-      background-image: url("../img/me2.png");
+      background-image: url("../img/me_castle2.png");
       background-position: center;
       border: 2px groove $nav-color;
       border-radius: $image-height / 2;
