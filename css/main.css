@@ -696,6 +696,9 @@ hr.small {
   .intro-header .page-heading .subheading {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 500; }
+  .intro-header .site-heading #console_writer_link,
+  .intro-header .page-heading #console_writer_link {
+    font-size: 0.6em; }
   .intro-header .site-heading h1,
   .intro-header .site-heading h2 {
     outline: none;

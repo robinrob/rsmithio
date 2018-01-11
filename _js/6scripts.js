@@ -28,15 +28,28 @@ $(function () {
         })
     })
 
+    function addConsoleWriterLinkToSubHeading() {
+        var $subHeading = $("#site_subheading")
+        var $link = $('<a id="console_writer_link" href="https://github.com/robinrob/console-writer">Console Writer</a>')
+        $link.hide()
+        $subHeading.append($link)
+        $link.fadeIn(600)
+    }
+
     function playTitles() {
         $siteTitle.consoleWriter({
             animation: true,
             writeDelay: 120,
+            text: "You've found",
             callback: function() {
                 $siteSubtitle.consoleWriter({
                     animation: true,
                     initialDelay: 200,
-                    writeDelay: 70
+                    writeDelay: 70,
+                    text: 'an easter egg!',
+                    callback: function() {
+                        addConsoleWriterLinkToSubHeading()
+                    }
                 })
             }
         })

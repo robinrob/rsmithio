@@ -157,6 +157,10 @@ hr.small {
       @include sans-serif();
       font-weight: 500;
     }
+
+    #console_writer_link {
+      font-size: 0.6em;
+    }
   }
 
   .site-heading {

@@ -1,5 +1,5 @@
-(function ($) {
-    $.fn.consoleWriter = function (options) {
+(function($) {
+    $.fn.consoleWriter = function(options) {
         var defaults = {
             text: "",
             audioDir: "/sounds",
@@ -9,9 +9,10 @@
             cursorFadeDuration: 500,
             initialDelay: 150,
             writeDelay: 150,
-            cursorCSS: { 'margin-right': '0.05em', opacity: 0 },
+            cursorCSS: {'margin-right': '0.05em', opacity: 0},
             leadingCursor: false,
-            leadingCursorCSS: { opacity: 0, 'margin-left': '0.05em' },
+            leadingCursorCSS: {opacity: 0, 'margin-left': '0.05em'},
+            runOnLoad: true,
             callback: function() {}
         }
         options = options || {}
@@ -58,6 +59,8 @@
                 }
                 else if (toBoolString(options[index])) {
                     return toBoolean(options[index])
+                } else if (options[index]) {
+                    return options[index]
                 }
             }
         }
@@ -71,7 +74,7 @@
         function keyPress() {
             var $audio = $('<audio></audio>')
             $audio.attr('src', keySound())
-            $audio.on('ended', function () {
+            $audio.on('ended', function() {
                 $audio.remove()
             })
             $audio.trigger('play')
@@ -151,7 +154,7 @@
             return $cursor
         }
 
-        return this.each(function () {
+        return this.each(function() {
             var me = this
             var $me = $(me)
 
@@ -172,6 +175,10 @@
             me.params.animationSound = decideParam([me.params.sound, options.animationSound, $me.attr('cw-animation-sound'), me.params.sound, defaults.animationSound])
             // If not specified, check the 'sound' parameter then fallback to default
             me.params.typingSound = decideParam([options.typingSound, $me.attr('cw-typing-sound'), me.params.sound, defaults.typingSound])
+
+            me.params.initialDelay = decideParam([options.initialDelay, $me.attr('cw-initial-delay'), me.params.initialDelay, defaults.initialDelay])
+            //me.params.writeDelay = decideParam([options.writeDelay, $me.attr('cw-write-delay'), me.params.writeDelay, defaults.writeDelay])
+
             me.params.leadingCursor = decideParam([options.leadingCursor, $me.attr('cw-leading-cursor'), defaults.leadingCursor])
 
             me.$cursor = createCursor(params.cursorCSS)
@@ -186,19 +193,18 @@
             /* Typewriter animation */
             if (me.params.animation) {
                 showCursor()
-                setTimeout(function () {
+                setTimeout(function() {
                     writeText(me.params.text, me.$cursor, me.params.animationSound, function() {
                         fadeOutCursor()
                         params.callback()
                     })
-                }, params.initialDelay)
+                }, me.params.initialDelay)
             }
             else {
                 insertText(me.params.text, me.$cursor, params.callback())
             }
 
             $me.off('focusin.consolewriter focousout.consolewriter keydown.consolewriter keypress.consolewriter keyup.consolewriter keyinput.consolewriter')
-
             $me.on('focusin', function() {
                 keyPressIfSoundEnabled()
                 showCursor(toggleCursor)
@@ -242,8 +248,8 @@
                     if (char == ' ') {
                         char = '&nbsp'
                     }
-                    keyPressIfSoundEnabled()
                     writeChar(char, me.$cursor)
+                    keyPressIfSoundEnabled()
                 }
             });
 
@@ -301,7 +307,7 @@
         })
     }
 
-    $('.console-writer').consoleWriter({
-        writeDelay: 120
+    $('.console-writer[cw-run-on-load!=false]').consoleWriter({
+        writeDelay: 100
     })
 })(jQuery)
