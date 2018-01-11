@@ -30,11 +30,13 @@ $(function () {
 
     function addConsoleWriterLinkToSubHeading() {
         var $subHeading = $("#site_subheading")
-        var $link = $('<a id="console_writer_link" href="https://github.com/robinrob/console-writer">Console Writer</a>')
+        var $link = $('<a id="console_writer_link" href="https://github.com/robinrob/console-writer" target="_blank">Console Writer</a>')
         $link.hide()
         $subHeading.append($link)
         $link.fadeIn(600)
     }
+
+    //addConsoleWriterLinkToSubHeading()
 
     function playTitles() {
         $siteTitle.consoleWriter({
