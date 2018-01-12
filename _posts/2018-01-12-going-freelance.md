@@ -102,11 +102,6 @@ you can choose your working hours, you will naturally want to work when it most 
 become lazy, even without realising it. Even when you see yourself as a non-lazy person! If you find yourself getting up later than you'd like,
 and doing less hours, or working during hours in which you're less productive, or working at the weekends, it's important to notice and self-correct these things.
 You can come out of it with much clearer goals about what you actually want to achieve, and more therefore motivation and discipline towards achieving those goals.
-
-The importance of cleanly dividing your work and leisure time I found to be fundamental. My personal choice is actually to work from 8am-4pm,
-as these are the hours when I am most productive. It also keeps me in sync with the schedules of friends, with obvious benefits.
-As much as we sometimes malign it, the working week is actually designed pretty effectively!
-
 * **Loneliness.** This can take some time to have its effect, but the effect of rarely interacting with people in person during
 your working day can be quite
 profound. It can lead to a massive loss in productivity in all areas of your life,
@@ -114,7 +109,7 @@ and you may not even notice it for a while either. You need to recognise it and 
 where you are working on-site, or a combination of that and working from home. Or working in coffee shops for some of the day.
 The great thing is you have the freedom to do something really novel.
 * **You get sick of your home.** As well as sapping your motivation for work, this can even put you off doing hobbies that you would
-usually do at home. The solutions are similar to the ones for lonliness above.
+usually do at home. The solutions are similar to the ones for loneliness above.
 * **No company benefits.** Such as holidays. Not having paid holiday means that whenever you are going on holiday, the true 'cost' of the holiday
 now includes the time you spent on holiday multiplied by your rate! When deciding your day rate, you need to take into account all
 of the monetary benefits you may be missing out on by going independent. And if you are making enough, then this will not be a worry.
@@ -124,6 +119,10 @@ so for a good developer making a consistent effort to build contacts and exposur
 work load. You can always fill your gaps with work on personal projects. Get to be thinking like an entrepreneur.
 
 ## Conclusion
+The importance of cleanly dividing your work and leisure time I found to be fundamental. My personal choice is actually to work from 8am-4pm,
+as these are the hours when I am most productive. It also keeps me in sync with the schedules of friends, with obvious benefits.
+As much as we sometimes malign it, the working week is actually pretty-effectively designed!
+
 To achieve my aim of making a living by freelancing has been very gratifying. The challenge and process of doing
 your own marketing and network-building I find to be great fun. There are ways in which I could have being doing these much better,
 and I've recently learned a lot about this subject. I will be writing about it soon.
