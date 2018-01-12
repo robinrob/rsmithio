@@ -579,3 +579,7 @@ pre ::selection, code ::selection {
   color: darken(white, 5%);
   background: lighten($select-bg-color, 20%);
 }
+
+em {
+  font-style: italic;
+}
