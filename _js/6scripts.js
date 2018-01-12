@@ -36,19 +36,22 @@ $(function () {
         $link.fadeIn(600)
     }
 
-    //addConsoleWriterLinkToSubHeading()
+    function removeConsoleWriterLinkFromSubHeading() {
+        $("#console_writer_link").remove()
+    }
 
-    function playTitles() {
+    function playTitles(title, subtitle) {
+        removeConsoleWriterLinkFromSubHeading()
         $siteTitle.consoleWriter({
             animation: true,
             writeDelay: 120,
-            text: "You've found",
+            text: title,
             callback: function() {
                 $siteSubtitle.consoleWriter({
                     animation: true,
                     initialDelay: 200,
                     writeDelay: 70,
-                    text: 'an easter egg!',
+                    text: subtitle,
                     callback: function() {
                         addConsoleWriterLinkToSubHeading()
                     }
@@ -65,8 +68,6 @@ $(function () {
         })
     }
 
-    //playTitles()
-
     var $photo = $(".site-heading .photo")
     $photo.on("click", function() {
         // Although this happens in the jquery code - it only happens when the plugin runs for each element.
@@ -78,6 +79,10 @@ $(function () {
             clearTimeout(i);
         }
 
-        playTitles()
+        if ($siteTitle.text().indexOf('Robin') != -1) {
+            playTitles("You've found", "an easter egg!")
+        } else {
+            playTitles($siteTitle.attr("cw-saved-text"), $siteSubtitle.attr("cw-saved-text"))
+        }
     })
 })
