@@ -92,9 +92,6 @@ and go and do it. Parcels? You are always in, so these are never a problem eithe
 by using that to motivate yourself to socialise more in ways that you may not have otherwise. When you're around people in an office all day, you may not want to go
 and be around even more people in the evening. But when working from home, you really relish it. So start some sociable hobbies that
 you may not otherwise have done. I joined a choir, and it's one of the best decisions i've made yet.
-* **Romanticism.** It's a romantic thing to be able to say that you work from home, and an increasing trend, suggesting
-that in the near future working methods may be significantly different. Companies are certainly emphasising the individual
-more these days.
 
 ## Possible downsides to working from home
 * **Responsibility.** With the increase in flexibility with your time, comes a great responsibility to manage it well and be efficient. When

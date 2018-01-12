@@ -2,54 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://rsmith.io/</loc>
-        <lastmod>2018-01-12T21:54:02.235Z</lastmod>
+        <lastmod>2018-01-12T21:54:59.120Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/blog/</loc>
-        <lastmod>2018-01-12T21:54:02.245Z</lastmod>
+        <lastmod>2018-01-12T21:54:59.130Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/contact/</loc>
-        <lastmod>2018-01-12T21:54:02.240Z</lastmod>
+        <lastmod>2018-01-12T21:54:59.125Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/cv/</loc>
-        <lastmod>2018-01-12T21:54:02.251Z</lastmod>
+        <lastmod>2018-01-12T21:54:59.136Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/maintenance/</loc>
-        <lastmod>2018-01-12T21:54:02.252Z</lastmod>
-    </url>
-    <url>
-        <loc>https://rsmith.io/blog/faster-variable-debugging/</loc>
-        <lastmod>2018-01-12T21:54:02.264Z</lastmod>
+        <lastmod>2018-01-12T21:54:59.145Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/blog/console-writer-jquery-plugin/</loc>
-        <lastmod>2018-01-12T21:54:02.259Z</lastmod>
+        <lastmod>2018-01-12T21:54:59.158Z</lastmod>
+    </url>
+    <url>
+        <loc>https://rsmith.io/blog/faster-variable-debugging/</loc>
+        <lastmod>2018-01-12T21:54:59.163Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/blog/going-freelance/</loc>
-        <lastmod>2018-01-12T21:54:02.268Z</lastmod>
-    </url>
-    <url>
-        <loc>https://rsmith.io/blog/jekyll-gulp-haml-sass-browsersync/</loc>
-        <lastmod>2018-01-12T21:54:02.279Z</lastmod>
+        <lastmod>2018-01-12T21:54:59.169Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/blog/learn-regex-or-regret-it/</loc>
-        <lastmod>2018-01-12T21:54:02.283Z</lastmod>
+        <lastmod>2018-01-12T21:54:59.172Z</lastmod>
     </url>
     <url>
-        <loc>https://rsmith.io/blog/personal-code-library/</loc>
-        <lastmod>2018-01-12T21:54:02.288Z</lastmod>
+        <loc>https://rsmith.io/blog/jekyll-gulp-haml-sass-browsersync/</loc>
+        <lastmod>2018-01-12T21:54:59.166Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/blog/rss-feed-reader/</loc>
-        <lastmod>2018-01-12T21:54:02.299Z</lastmod>
+        <lastmod>2018-01-12T21:54:59.187Z</lastmod>
+    </url>
+    <url>
+        <loc>https://rsmith.io/blog/personal-code-library/</loc>
+        <lastmod>2018-01-12T21:54:59.177Z</lastmod>
     </url>
     <url>
         <loc>https://rsmith.io/cv/print/</loc>
-        <lastmod>2018-01-12T21:54:02.302Z</lastmod>
+        <lastmod>2018-01-12T21:54:59.190Z</lastmod>
     </url>
 </urlset>
