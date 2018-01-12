@@ -23,7 +23,7 @@ entirely their own applications.
 
 A few years later, a colleague and good friend admitted that he was even making a small monthly income from the Android Market, for a couple
 of apps he had made in-between finishing his PhD and starting his first job. This excited me, whilst at the same time making
-myself field somewhat underachieving! However my priority at the time was to keep building software development and
+myself feel somewhat underachieving! However my priority at the time was to keep building software development and
 cloud technology experience, so I filed these ideas away in the back of my mind.
 
 A few years later, I found myself thinking about freelancing more and more, and eventually decided to set myself a firm target. I
