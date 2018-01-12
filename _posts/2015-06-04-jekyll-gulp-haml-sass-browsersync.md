@@ -12,19 +12,19 @@ Since I was using Gulp to manage the build process, I needed a Gulp task to hand
 
 <h2 class="section-heading">HAML Processing</h2>
 HAML files reside inside a `_haml` folder which sits at the location of the resultant HTML files. For example:
-<pre><code class="bash">project-root
-        index
-                _haml
-                        index.haml
-                index.html
-        _includes
-                _haml
-                        footer.haml
-                        head.haml
-                        nav.haml
-                footer.html
-                head.html
-                nav.html
+<pre><code class="bash">project-root/
+    index/
+        _haml/
+                index.haml
+        index.html
+    _includes/
+        _haml/
+            footer.haml
+            head.haml
+            nav.haml
+        footer.html
+        head.html
+        nav.html
 </code></pre>
 
 <p>The HAML build task is actually fairly slow compared to the CSS or Javascript processing tasks. It can take up to 10 seconds to process all of the HAML in the project. This is unacceptable when rebuilding on-the-fly while making changes.</p>
