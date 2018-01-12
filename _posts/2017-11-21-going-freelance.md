@@ -8,6 +8,10 @@ published:  true
 ---
 
 ## Background
+I recently gave a talk [talk](https://youtu.be/bdfuv9c3WLM?t=2589) on going freelance at a [TechMeetup](http://techmeetup.co.uk/) event in Edinburgh.
+The process of preparing for the talk really got me thinking about my experiences, and I will summarise some of the
+things I spoke about here.
+
 Shortly after I began my first full-time job as a web developer, I began hearing about freelancers through general conversation.
 The comments associated with them were usually something about their high pay relative to equivalent full-time employed
 workers. Sometimes a colleague would mention that
