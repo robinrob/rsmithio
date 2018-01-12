@@ -8,7 +8,7 @@ published:  true
 ---
 
 ## Background
-I recently gave a talk [talk](https://youtu.be/bdfuv9c3WLM?t=2589) on going freelance at a [TechMeetup](http://techmeetup.co.uk/) event in Edinburgh.
+I recently gave a [talk](https://youtu.be/bdfuv9c3WLM?t=2589) on going freelance at a [TechMeetup](http://techmeetup.co.uk/) event in Edinburgh.
 The process of preparing for the talk really got me thinking about my experiences, and I will summarise some of the
 things I spoke about here.
 
