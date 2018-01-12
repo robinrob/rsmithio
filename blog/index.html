@@ -1,14 +1,12 @@
 ---
 layout: page
 title: Blog
-subtitle: Robin's Software Development Blog
-description: Robin's Software Development Blog
+toptitle: Robin Smith's Software Blog
+subtitle: My software development blog covering topics such as software design, automation, productivity tips and useful code snippets.
+description: My software development blog covering topics such as software design, automation, productivity tips and useful code snippets.
 ---
 <!-- Posts list -->
 <div class='blog'>
-  <div class='blurb'>
-    <p>My software development blog covering topics such as software design, automation, productivity tips and useful code snippets.</p>
-  </div>
   {% for post in paginator.posts %}
   <div class='post-preview'>
     <a href='{{ post.url | prepend: site.baseurl }}'>
