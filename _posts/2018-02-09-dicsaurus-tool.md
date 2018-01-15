@@ -21,5 +21,3 @@ Output: <img src="blah"/>
 
 Thesaurus mode: `./dicsaurus.py -t blue`
 Output: <img src="blah"/>
-
-
