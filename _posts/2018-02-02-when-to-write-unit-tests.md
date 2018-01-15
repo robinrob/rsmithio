@@ -38,8 +38,7 @@ on-going maintenance time. Automating testing is a natural programmer's instinct
 * **They increase reliability**. Automated tests are *automated*, so they always do their job properly.
 * **They help you to understand the code**. Whenever I need to remind myself what a particular piece of code does, or am
 learning it for the first time, I always find reading the tests to be extremely helpful.
-* **They make refactoring much much easier**. I can't imagine having to refactor complex code that doesn't have tests, as
-I've never done it nor had to.
+* **They make refactoring much much easier**. Refactoring complex code that doesn't have tests is a *nightmare*.
 * **Writing tests helps your code design**. Besides the benefits of *having* unit tests I *writing* them to be extremely
 useful in helping me design the actual code, and the process of making them pass to also be very rewarding. It's
 something you have to experience to understand.
