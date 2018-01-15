@@ -36,7 +36,7 @@ of this brutally-menial work amounts to a huge time-saving.
 to save me a lot of overall development time upfront, [never mind](https://english.stackexchange.com/questions/12752/what-is-the-difference-between-nevermind-and-never-mind)
 on-going maintenance time. Automating testing is a natural programmer's instinct.
 * **They increase reliability**. Automated tests are *automated*, so they always do their job properly.
-* **They help you to understand the code**. Whenever I need to remind myself what a particular piece of code does, or are
+* **They help you to understand the code**. Whenever I need to remind myself what a particular piece of code does, or am
 learning it for the first time, I always find reading the tests to be extremely helpful.
 * **They make refactoring much much easier**. I can't imagine having to refactor complex code that doesn't have tests, as
 I've never done it nor had to.
