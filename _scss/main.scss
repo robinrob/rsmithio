@@ -56,7 +56,7 @@ $article-font-size: 20px;
 $code-font: Consolas, Monaco, 'Andale Mono', monospace;
 $code-font-size: 16px;
 $inline-code-font-size: 18px;
-$inline-code-font-color: darken($theme-3, 5%);
+$inline-code-font-color: lighten($theme-3, 10%);
 
 $spacing-unit:     40px;
 // Width of the content area
