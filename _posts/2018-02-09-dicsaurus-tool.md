@@ -2,7 +2,7 @@
 layout:     post
 title:      Dicsaurus
 subtitle:   A command-line dictionary & thesaurus tool
-date:       2018-02-19
+date:       2018-01-02
 type:       Blog Post
 published:  true
 ---
@@ -20,7 +20,7 @@ Dictionary mode: `./dicsaurus.py -t blue`
 
 Output:
 
-```
+```plaintext
 Results from Oxford University Press:
 
 Definition(s) for 'blue'

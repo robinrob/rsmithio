@@ -2,9 +2,9 @@
 layout:     post
 title:      When to write unit tests
 subtitle:   Choosing when to write unit tests is not always a simple question
-date:       2018-02-02
+date:       2018-01-02
 type:       Blog Post
-published:  false
+published:  true
 ---
 
 
