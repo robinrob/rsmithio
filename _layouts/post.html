@@ -3,43 +3,43 @@ layout: default
 ---
 <!-- Post header -->
 <header class='intro-header'>
-  <div class='container post-heading'>
-    <div class='row'>
-      <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
-        <h1>{{ page.title }}</h1>
-        {% if page.subtitle %}
-        <h2 class='subheading'>{{ page.subtitle }}</h2>
-        {% endif %}
-      </div>
-    </div>
-  </div>
+<div class='container post-heading'>
+<div class='row'>
+<div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+<h1>{{ page.title }}</h1>
+{% if page.subtitle %}
+<h2 class='subheading'>{{ page.subtitle }}</h2>
+{% endif %}
+</div>
+</div>
+</div>
 </header>
 <!-- Content -->
 <div class='container'>
-  <div class='row'>
-    <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
-      <div class='main'>
-        <div class='blog'>
-          <article>
-            {{ content }}
-            <hr>
-            <span class='post-meta'>Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
-          </article>
-          <hr>
-          <ul class='pager'>
-            {% if page.previous.url %}
-            <li class='previous'>
-              <a data-placement='top' data-toggle='tooltip' href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" title='{{page.previous.title}}'>&larr; Previous Post</a>
-            </li>
-            {% endif %}
-            {% if page.next.url %}
-            <li class='next'>
-              <a data-placement='top' data-toggle='tooltip' href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" title='{{page.next.title}}'>Next Post &rarr;</a>
-            </li>
-            {% endif %}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class='row'>
+<div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+<div class='main'>
+<div class='blog'>
+<article>
+{{ content }}
+<hr>
+<span class='post-meta'>Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+</article>
+<hr>
+<ul class='pager'>
+{% if page.previous.url %}
+<li class='previous'>
+<a data-placement='top' data-toggle='tooltip' href='{{ page.previous.url | prepend: site.baseurl }}' title='{{page.previous.title}}'>&larr; Previous Post</a>
+</li>
+{% endif %}
+{% if page.next.url %}
+<li class='next'>
+<a data-placement='top' data-toggle='tooltip' href='{{ page.next.url | prepend: site.baseurl }}' title='{{page.next.title}}'>Next Post &rarr;</a>
+</li>
+{% endif %}
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>

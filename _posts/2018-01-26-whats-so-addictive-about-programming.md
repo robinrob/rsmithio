@@ -2,7 +2,7 @@
 layout:     post
 title:      What's so addictive about programming?
 subtitle:   Thoughts from a self-confessed obsessive
-date:       2018-01-19
+date:       2018-01-26
 type:       Blog Post
 published:  false
 ---
