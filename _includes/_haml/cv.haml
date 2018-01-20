@@ -21,34 +21,66 @@
     .col-xs-10
       .cv-experience-block
         .cv-experience-heading
-          Freelance Web Developer - KaptioTravel (May 2017 &#x2013; November 2017)
-        .cv-experience-content
-          For KaptioTravel, I quickly got up to speed on a new business domain and multiple codebases, and was able to immediately contribute
-          to server-side pricing logic, whilst greatly improving the robustness of the existing code with extra unit tests.
-          I did work across all codebases on the frontend and server-side, using technologies including Python,
-          Pyramid, PostgresSQL, Typescript, Heroku and Salesforce.
+          Freelance Web Developer - Kaptio Travel (May 2017 &#x2013; November 2017)
+        .cv-experience-content#
+          For Kaptio Travel, I implemented itinerary pricing functionality in two backend pricing APIs. The API codebases
+          used Python, Pyramid and PostgreSQL, running in Heroku.
+
+          I quickly got up to speed on a new business domain, and was able to
+          immediately contribute. I identified areas that needed better automated testing and helped to greatly increase
+          the robustness of the code.
+
+          I also worked on a travel booking and administration platform implemented in Salesforce. This involved work on business
+          logic and front-end interface improvements, using Apex and Typescript.
+
+          I made improvements to a data transform app, written in Typescript and running in Heroku. This sat between the front-end
+          Salesforce application and the pricing APIs.
   .row
     .col-xs-offset-2.col-xs-10
       .cv-experience-block
         .cv-experience-heading
           Freelance Web Developer - Insight Software (March 2015 &#x2013; May 2017)
         .cv-experience-content
-          As part of a very small team, I worked on a large enterprise application for Network Rail, using AngularJS and Flask frameworks and running in AWS.
-          I contributed significantly to all parts of the application - frontend, server-side, database and also with helping to setup continuous integration in CircleCI.
-          I provided valuable input on architectural decisions with the codebase, to ensure the application was able to scale as it grew. Automated testing was a critical
-          tool in helping to keep the application robust as complex functionality was added. Frontend work involved UIs for graphing with interactive controls,
-          data import and export, data configuration wizards, data management, report-building and generation interfaces. Server-side work included cost/benefit
-          analysis algorithms, report generation, CRUD operations for complex data models. I devised logical database schemas and managed complex data migrations.
-  .row
+          As part of a team of three, I worked on a large enterprise application for Network Rail, using AngularJS and Flask and running in AWS.
+
+          I contributed significantly to all parts of the application - frontend, server-side, database and also with helping to set up continuous integration in CircleCI.
+
+          Frontend work involved:
+          * UIs for graphing with interactive controls
+          * Data import and export into different formats
+          * Data configuration wizards
+          * Report-building and generation interfaces
+
+          Server-side work included:
+          * cost/benefit analysis algorithms
+          * Latex report generation
+          * CRUD operations for complex data models.
+
+          I implemented logical database schemas to model the business domain in a way that allowed us to perform the
+          required analysis. I successfully managed several complex data migrations, requiring a lot of pre-planning
+          and testing.
+
+          I provided valuable input on architectural decisions with the codebase, to ensure the application was able to scale as it grew.
+
+          Through code reviews and by example, I helped to encourage a culture of writing good tests, which significantly
+          helped to increase reliability.
+
+          I used the AWS Cloudformation service to increase automation of deployments and to enable spinning up of UAT
+          environments.
+
+
     .col-xs-offset-2.col-xs-10
       .cv-experience-block
         .cv-experience-heading
           DevOps Engineer, Cloudreach Canada Inc. &#x2013; Vancouver (March 2014 &#x2013; March 2015)
         .cv-experience-content
           I relocated to Vancouver as a lead engineer to help start up a new Network Operations Centre for Cloudreach in North
-          America. I helped build team of AWS-certified DevOps Engineers capable of handling critical failures in
-          &#x2013; and restoring service to &#x2013; customer web application stacks. I continued my previous work and
-          trained new team members in DevOps and software development
+          America.
+
+          I helped build team of AWS-certified DevOps Engineers capable of handling critical failures in
+          &#x2013; and restoring service to &#x2013; customer web application stacks
+
+          I interviewed and trained new team members in DevOps and software development
           best practices. A highly-functioning team was established and was recognised by the business for performing
           to a high standard as well as upholding its core values.
   .row
@@ -58,9 +90,13 @@
           DevOps Engineer, Cloudreach Ltd. &#x2013; Edinburgh (June 2013 &#x2013; March 2014)
         .cv-experience-content
           I did DevOps and software development work for a range of customer and internal
-          production web applications and stacks. I wrote business-critical code on the Force.com platform for
+          production web applications and stacks.
+
+          I wrote business-critical code on the Force.com platform for
           internal processes, email management and improvement of internal business analysis.
+
           I gave customer consultation and implemented software solutions within customer Salesforce environments.
+
           I designed and developed an internal email archiving system using python, to archive support case
           emails from Salesforce into Amazon S3. The archiving tool was also deployed in customer production environments.
           I wrote custom data export and backup tools for the Heroku and Salesforce platforms.
@@ -74,14 +110,16 @@
           As the first developer in the new Edinburgh office, I worked web applications using the Django and
           Play frameworks, and the Salesforce Force.com platform. Projects used test suites with continuous integration
           running on a Bamboo server.
+
           I became a core developer on the company's first sellable product: Alumina Connect &#x2013; a substantial
-          application which ran in Force.com and synchronised user data between
-          Salesforce and Google Apps. I designed and
+          application which ran in Force.com and synchronised user data between Salesforce and Google Apps. I designed and
           developed a separate licensing application which ran on the Force.com platform and was used
-          to license installations of Alumina Connect in customer environments. I wrote and
-          maintained a custom continuous integration tool using shell scripts and Ant to automate deployment of
+          to license installations of Alumina Connect in customer environments.
+
+          I wrote and maintained a custom continuous integration tool using shell scripts and Ant to automate deployment of
           code from source repositories to Force.com. The tool was used by the team throughout development
           of Alumina Connect, and later by other parts of the business on separate customer projects.
+
 .cv-tech-skills
   .row
     .col-xs-2
@@ -109,7 +147,7 @@
             .cv-experience-heading Frameworks & Tools:
             .cv-experience-content
               %ul
-                %li AngularJS, Flask, Pyramid, Django, Jekyll, Ruby on Rails, Play, iOS, Cocos2D
+                %li AngularJS, Flask, Pyramid, Django, Jekyll, Ruby on Rails, iOS
                 %li Git, Gulp, Vagrant, Github, Bitbucket
                 %li Bamboo, CircleCI
                 %li JIRA
