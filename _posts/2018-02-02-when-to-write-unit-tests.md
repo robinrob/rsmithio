@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      When to write unit tests
+title:      When should you write unit tests?
 subtitle:   Choosing when to write unit tests is not always a simple question
 date:       2018-01-02
 type:       Blog Post
@@ -9,45 +9,43 @@ published:  true
 
 
 ## Test-driven development?
-We've all heard of TDD (Test-Driven-Development), with the idea behind TDD being to write your unit tests before you
-write the code which implements the functionality that you are testing.
+We've all heard of [TDD](https://en.wikipedia.org/wiki/Test-driven_development) (Test-Driven-Development), with the idea
+behind TDD being to write your unit tests before your production code.
 
-As with all programming ideas, you will find
-people with a whole range of opinions about it. These kind of debates usually have limited value, because there is no one
-solution, the debate goes round in
-circles and at some point
-you have to make a decision on what you're doing to do in a given scenario.
+As with all software development practices, you'll find
+people with a whole range of opinions about the pros and cons of different approaches. These kind of debates usually
+have limited value, because there is no one solution,. The debate can go round and round in circles and at some point
+you have to make a decision on what you're doing to do in a given scenario. I will describe the main principles I follow
+in deciding when to write tests.
 
-## The value of automated tests
-Regarding unit tests, the value of having
+## The value of writing tests
+Side-stepping the potential virtues of TDD, the value of having
 good automated tests *at all* far outstrips potential differences between writing them *before* or *after*.
-It's very hard to argue against the use of a good set of automated tests. Just to recap, some
-of the benefits are:
+It's difficult to argue against the use of a good set of automated tests. Some of the benefits are:
 
-* **They save you time**. Imagine if after every time you made a change to your code, you had to manually execute many
-commands or manually load the app to check every thing still works correctly.
+* **Tests save you time**. Imagine if after every time you made a change to your code, you had to manually execute many
+commands or manually load the app to check every thing still works correctly. This would be ridiculous.
 
-    This would be ridiculous. With automated tests, you can
-make many incremental changes without worrying about all that. You'll still want to do some manual tests at the end, but
-knowing core logic is still working as you develop allows you to get on with changes quicker. Cutting out even a small percentage
-of this brutally-menial work amounts to a huge time-saving.
-
+    With automated tests, you can make many incremental changes and quickly validate them to ensure that you are not
+    breaking fundamental functionality. You'll still want to do some manual tests at the end, but
+    knowing core logic is still working as you develop allows you to get on with changes quicker. Cutting out even a small percentage
+    of this brutally-menial work amounts to a huge time-saving. Automating things is a natural programmer's instinct.
+    
     For complex code, I find writing an automated test suite relatively early on
-to save me a lot of overall development time upfront, [never mind](https://english.stackexchange.com/questions/12752/what-is-the-difference-between-nevermind-and-never-mind)
-on-going maintenance time. Automating testing is a natural programmer's instinct.
-* **They increase reliability**. Automated tests are *automated*, so they always do their job properly.
-* **They help you to understand the code**. Whenever I need to remind myself what a particular piece of code does, or am
+    to save me a lot of overall development time upfront, [never mind](https://english.stackexchange.com/questions/12752/what-is-the-difference-between-nevermind-and-never-mind)
+    on-going maintenance time.
+* **Tests increase reliability**. Automated tests are *automated*, so they always do their job properly.
+* **Tests help you to understand the code**. Whenever I need to remind myself what a particular piece of code does, or am
 learning it for the first time, I always find reading the tests to be extremely helpful.
-* **They make refactoring much much easier**. Refactoring complex code that doesn't have tests is a *nightmare*.
-* **Writing tests helps your code design**. Besides the benefits of *having* unit tests I *writing* them to be extremely
-useful in helping me design the actual code, and the process of making them pass to also be very rewarding. It's
-something you have to experience to understand.
+* **Tests make refactoring much easier**. Refactoring complex code that doesn't have tests is a *nightmare*.
+* **Writing tests helps your code design**. Besides the benefits of having unit tests I find the process of writing
+them to be extremely useful in helping me design the actual code, and the process of making them pass to also be very rewarding.
 
 ## When *not* to write tests before code
 I've found there is one obvious situation where you don't want to write the unit tests before you write the code:
 before the architecture of the code you're writing is fully defined.
 
-Unit tests add inertia to change, and this
+Automated tests add inertia to change, and this
 is part of their value when used wisely, as it makes it harder for yourself or other developers to break things down
 the line. Therefore if you've written a lot of tests and *then* change the design of the code being tested, you're going
 to experience a lot of pain. Experiencing this can give you added motivation to design the code upfront properly next time
