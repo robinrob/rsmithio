@@ -516,6 +516,22 @@ hr.small {
       border-top: 1px solid $theme-1;
     }
   }
+
+  .cv {
+    ul {
+      list-style-type: disc !important;
+      list-style-position: inside;
+      margin-left: 1em;
+    }
+
+    ol {
+      list-style-type: decimal !important;
+    }
+
+    p:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
 }
 
 footer {

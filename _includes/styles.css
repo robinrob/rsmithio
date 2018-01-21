@@ -7306,6 +7306,8 @@ hr.large {
     margin-left: -20%;
     font-size: 22px;
     text-align: left; }
+    .main .cv p, .empty .cv p {
+      font-size: 22px; }
     .main .cv a.print, .empty .cv a.print {
       float: right; }
   .main .cv-print, .empty .cv-print {
@@ -7719,6 +7721,17 @@ hr.small {
     color: #0085a1; }
   .main .contact form .row:first-child .floating-label-form-group, .empty .contact form .row:first-child .floating-label-form-group {
     border-top: 1px solid #eeeeee; }
+
+.main .cv ul, .empty .cv ul {
+  list-style-type: disc !important;
+  list-style-position: inside;
+  margin-left: 1em; }
+
+.main .cv ol, .empty .cv ol {
+  list-style-type: decimal !important; }
+
+.main .cv p:not(:first-child), .empty .cv p:not(:first-child) {
+  margin-top: 1em; }
 
 footer {
   background-color: white !important;
