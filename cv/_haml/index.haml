@@ -8,8 +8,9 @@ description: Robin Smith's CV
 
 
 .cv-options
-  %a.print{:class => "btn btn-primary btn-sm", :href => "{{ site.baseurl }}/cv/print"} Print
-  %a.print{:class => "btn btn-primary btn-sm", :href => "{{ site.baseurl }}/{{ site.cv }}", :target => "blank"} Download as PDF
+  .row
+    %a.print{:class => "btn btn-primary btn-sm", :href => "{{ site.baseurl }}/cv/print"} Print
+    %a.print{:class => "btn btn-primary btn-sm", :href => "{{ site.baseurl }}/{{ site.cv }}", :target => "blank"} Download as PDF
 
 .cv
   {% include cv.html %}
