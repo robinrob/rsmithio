@@ -507,6 +507,8 @@ hr.large {
     margin-left: -20%;
     text-align: right;
     margin-bottom: 40px; }
+    .main .cv-options .buttons, .empty .cv-options .buttons {
+      text-align: right; }
   .main .cv, .empty .cv {
     width: 1050px;
     margin-left: -20%;

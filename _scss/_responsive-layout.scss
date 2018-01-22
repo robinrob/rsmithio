@@ -523,8 +523,11 @@ hr.large {
       width: $cv-width;
       margin-left: $cv-margin-left;
       text-align: right;
-
       margin-bottom: 40px;
+
+      .buttons {
+        text-align: right;
+      }
     }
 
     .cv {
