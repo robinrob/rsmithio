@@ -9,14 +9,14 @@ published:  true
 
 
 I've created a small tool named [Dicsaurus](https://github.com/robinrob/dicsaurus), out of a need to quickly look up
- words and synonyms for words, and out of a desire to make it as painless as possible. It currently works in two
- modes: dictionary and thesaurus. In programmer style I also
-  wanted to be able to customise the output. Previously I was using the command-line `dict` tool in OS X, and for
-  thesaurus just opening thesaurus.com in a browser, with the search term encoded into a URL parameter.
+ words and synonyms for words, and out of a desire to make it as painless as possible.
 
-Dicsaurus is just a simple python script that makes HTTP callouts to [Oxford Dictionaries API](https://developer.oxforddictionaries.com/).
+Previously I was using the command-line `dict` tool in OS X, and for thesaurus just a ZSH function opening [thesaurus.com](http://www.thesaurus.com/)
+ in a browser, with the search term encoded into a URL parameter.
 
-The [readme](https://github.com/robinrob/dicsaurus/blob/master/README.md) explains how to set it up.
+Dicsaurus is a simple python script that makes HTTP callouts to [Oxford Dictionaries API](https://developer.oxforddictionaries.com/).
+It currently works in two modes: dictionary and thesaurus. The [readme](https://github.com/robinrob/dicsaurus/blob/master/README.md)
+explains how to set it up, including registering a developer account at [developer.oxforddictionaries.com](https://developer.oxforddictionaries.com).
 
 ## Example usage in dictionary mode
 The word 'blue' turns out to be a good test word for both dictionary and thesaurus modes.
