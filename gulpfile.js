@@ -28,7 +28,8 @@ var config = {
             main: 'scripts.js',
             src: ['_js/*.js'],
             dest: '_site/js/'
-        }
+        },
+        cv: 'robin_smiths_cv.pdf'
     },
     siteUrl: "https://rsmith.io",
     sitemapUrl: "https://rsmith.io/sitemap.xml"
@@ -189,7 +190,8 @@ gulp.task('css', function (done) {
 })
 
 gulp.task('cv-to-pdf', function(done) {
-    run("wkhtmltopdf --page-size A4 --margin-top 5mm --margin-right 5mm --margin-bottom 5mm --margin-left 5mm --encoding UTF-8 --quiet _site/cv/print/index.html _site/robin_smiths_cv.pdf").exec(done)
+    //run("wkhtmltopdf --page-size A4 --margin-top 5mm --margin-right 5mm --margin-bottom 5mm --margin-left 5mm --encoding UTF-8 --quiet _site/cv/print/index.html _site/robin_smiths_cv.pdf").exec(done)
+    return gulp.src(config.paths.cv).pipe(gulp.dest('_site/'))
 })
 
 gulp.task('js-concat', function () {
