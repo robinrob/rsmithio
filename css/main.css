@@ -518,6 +518,9 @@ hr.large {
       float: right; }
     .main .cv p, .empty .cv p {
       font-size: 22px; }
+    .main .cv .invert, .empty .cv .invert {
+      background-color: black;
+      color: white; }
   .main .cv-print, .empty .cv-print {
     width: 670px;
     font-size: 14px;
@@ -536,9 +539,6 @@ hr.large {
         margin-top: 1em; }
     .main .cv ul:not(.no-bullets), .main .cv-print ul:not(.no-bullets), .empty .cv ul:not(.no-bullets), .empty .cv-print ul:not(.no-bullets) {
       margin-left: 1em; }
-    .main .cv .invert, .main .cv-print .invert, .empty .cv .invert, .empty .cv-print .invert {
-      background-color: black;
-      color: white; }
     .main .cv .cv-name, .main .cv-print .cv-name, .empty .cv .cv-name, .empty .cv-print .cv-name {
       font-size: 50px;
       font-weight: bold; }

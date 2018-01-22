@@ -544,6 +544,11 @@ hr.large {
         p {
           font-size: $cv-font-size;
         }
+
+        .invert {
+          background-color: black;
+          color: white;
+        }
     }
 
     .cv-print {
@@ -578,11 +583,6 @@ hr.large {
 
         ul:not(.no-bullets) {
           margin-left: 1em;
-        }
-
-        .invert {
-            background-color: black;
-            color: white;
         }
 
         .cv-name {
