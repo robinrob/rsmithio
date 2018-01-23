@@ -561,7 +561,7 @@ hr.large {
     .main .cv .cv-values, .main .cv-print .cv-values, .empty .cv .cv-values, .empty .cv-print .cv-values {
       margin-bottom: 40px; }
     .main .cv .cv-details, .main .cv-print .cv-details, .empty .cv .cv-details, .empty .cv-print .cv-details {
-      margin-bottom: 50px; }
+      margin-bottom: 40px; }
     .main .cv .cv-details-line, .main .cv-print .cv-details-line, .empty .cv .cv-details-line, .empty .cv-print .cv-details-line {
       display: block;
       width: 100px;
