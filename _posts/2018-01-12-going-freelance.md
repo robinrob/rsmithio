@@ -58,7 +58,7 @@ money from personal projects. So it's to do with independence. These are the ben
 * **Pay**. You get more pay per hour, and as long as you can minimise the gaps between jobs, this results in higher overall
 income.
 
-## Downsides of freelancing
+## Potential Downsides of freelancing
 * **Lower job security.** This is an obvious one, but it will have different importance to different people, depending on their
 current circumstances. So you have to weight it based on personal considerations too.
 * **Responsibility** This can be scary to some, especially when it comes to tax. However if your income situation is complex,
@@ -74,6 +74,13 @@ current circumstances. So you have to weight it based on personal considerations
  to start working on personal projects whilst doing your full-time job, with the aim to monetise your products. This seems
  to be like it could be a wonderful combination, giving you a stable platform to indulge in your creative urges. On the
  other hand, freelancing can potentially allow you to do this *and* free up even more time to do so.
+ * **No company benefits.** Such as holidays. Not having paid holiday means that whenever you are going on holiday, the true 'cost' of the holiday
+now includes the time you spent on holiday multiplied by your rate! When deciding your day rate, you need to take into account all
+of the monetary benefits you may be missing out on by going independent. And if you are making enough, then this will not be a worry.
+* **Unpredictable work load** This is one of those risk factors you must factor in when deciding your day rate, and you have to
+judge the risk of each project or job individually. Fortunately in software development at the moment, the demand is fairly high,
+so for a good developer making a consistent effort to build contacts and exposure, it is definitely possible to maintain a consistently-high
+work load. You can always fill your gaps with work on personal projects. Get to be thinking like an entrepreneur.
 
 ## Benefits to working from home
 * **The ability to work in your own environment.** We can be more efficient when we can have our surroundings exactly
@@ -91,10 +98,10 @@ and go and do it. Parcels? You are always in, so these are never a problem eithe
 * **Added motivation to socialise.** Working from home can feel isolating at times, but you can turn it into a positive thing
 by using that to motivate yourself to socialise more in ways that you may not have otherwise. When you're around people in an office all day, you may not want to go
 and be around even more people in the evening. But when working from home, you really relish it. So start some sociable hobbies that
-you may not otherwise have done. I joined a choir, and it's one of the best decisions i've made yet.
+you may not otherwise have done.
 
 ## Possible downsides to working from home
-* **Responsibility.** With the increase in flexibility with your time, comes a great responsibility to manage it well and be efficient. When
+* **Time-management discipline.** With the increase in flexibility with your time, comes a great responsibility to manage it well and be efficient. When
 you can choose your working hours, you will naturally want to work when it most suits you. But it can also be tempting to
 become lazy, even without realising it. Even when you see yourself as a non-lazy person! If you find yourself getting up later than you'd like,
 and doing less hours, or working during hours in which you're less productive, or working at the weekends, it's important to notice and self-correct these things.
@@ -107,13 +114,7 @@ where you are working on-site, or a combination of that and working from home. O
 The great thing is you have the freedom to do something really novel.
 * **You get sick of your home.** As well as sapping your motivation for work, this can even put you off doing hobbies that you would
 usually do at home. The solutions are similar to the ones for loneliness above.
-* **No company benefits.** Such as holidays. Not having paid holiday means that whenever you are going on holiday, the true 'cost' of the holiday
-now includes the time you spent on holiday multiplied by your rate! When deciding your day rate, you need to take into account all
-of the monetary benefits you may be missing out on by going independent. And if you are making enough, then this will not be a worry.
-* **Unpredictable work load** This is one of those risk factors you must factor in when deciding your date rate, and you have to
-judge the risk of each project or job individually. Fortunately in software development at the moment, the demand is fairly high,
-so for a good developer making a consistent effort to build contacts and exposure, it is definitely possible to maintain a consistently-high
-work load. You can always fill your gaps with work on personal projects. Get to be thinking like an entrepreneur.
+
 
 ## Conclusion
 The importance of cleanly dividing your work and leisure time I found to be fundamental. My personal choice is actually to work from 8am-4pm,
