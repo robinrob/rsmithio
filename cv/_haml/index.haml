@@ -11,7 +11,7 @@ description: Robin Smith's CV
   .row.buttons
     .col-xs-12
       %a.print{:class => "btn btn-primary btn-sm", :href => "{{ site.baseurl }}/cv/print"} Print
-      %a.print{:class => "btn btn-primary btn-sm", :href => "{{ site.baseurl }}/{{ site.cv }}", :target => "blank"} Download as PDF
+      %a.print{:class => "btn btn-primary btn-sm", :href => "{{ site.baseurl }}/{{ site.cv }}", :download => "{{site.cv}}"} Download as PDF
 
 .cv
   {% include cv.html %}
