@@ -55,8 +55,10 @@ var concat = require('gulp-concat')
 var cp = require('child_process')
 var ghPages = require('gulp-gh-pages')
 var gulp = require('gulp')
+var gutil = require('gulp-util');
 var haml = require('gulp-ruby-haml')
 var imagemin = require('gulp-imagemin');
+var jshint = require('gulp-jshint');
 var minifyCSS = require('gulp-minify-css')
 var minifyHTML = require('gulp-minify-html')
 var ngmin = require('gulp-ngmin')
@@ -78,12 +80,30 @@ var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build',
 }
 
-/* This alerts us audibly when a Gulp task errors out and Gulp stops, otherwise we may not notice and continue editing
-files and expecting to see changes. */
-function onError(err) {
-    console.log('err: ' + err)
-    shell.exec('say gulp has stopped')
+var ERROR_LEVELS = ['error', 'warning'];
+
+// Return true if the given level is equal to or more severe than
+// the configured fatality error level.
+// If the fatalLevel is 'off', then this will always return false.
+// Defaults the fatalLevel to 'error'.
+function isFatal(level) {
+    return ERROR_LEVELS.indexOf(level) <= ERROR_LEVELS.indexOf('error');
 }
+
+// Handle an error based on its severity level.
+// Log all levels, and exit the process for fatal levels.
+function handleError(level, error) {
+    gutil.log(error.message);
+    if (isFatal(level)) {
+        //process.exit(0);
+    }
+}
+
+// Convenience handler for error-level errors.
+function onError(error) { handleError.call(this, 'error', error);}
+// Convenience handler for warning-level errors.
+function onWarning(error) { handleError.call(this, 'warning', error);}
+
 
 gulp.task('imagemin', function() {
     return gulp.src(config.paths.img, {

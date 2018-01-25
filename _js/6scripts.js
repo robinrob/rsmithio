@@ -2,6 +2,7 @@ $(function () {
     var $document = $('html')
     var $siteTitle = $(".site-heading h1")
     var $siteSubtitle = $(".site-heading h2")
+    var numClicks = 0
 
     $(".bstooltip").each(function(index, element) {
         var $el = $(element)
@@ -42,6 +43,8 @@ $(function () {
 
     function playTitles(title, subtitle) {
         removeConsoleWriterLinkFromSubHeading()
+        $siteSubtitle.attr('cw-saved-text', $siteSubtitle.text())
+        $siteSubtitle.text('')
         $siteTitle.consoleWriter({
             animation: true,
             writeDelay: 120,
@@ -70,6 +73,7 @@ $(function () {
 
     var $photo = $(".site-heading .photo")
     $photo.on("click", function() {
+        numClicks++
         // Although this happens in the jquery code - it only happens when the plugin runs for each element.
         // We want all elements cleared before start.
         $siteTitle.children(".cw-char").remove()
@@ -79,10 +83,11 @@ $(function () {
             clearTimeout(i);
         }
 
-        if ($siteTitle.text().indexOf('Robin') != -1) {
+        //if ($siteTitle.text().indexOf('Robin') != -1) {
+        if (numClicks >= 3) {
             playTitles("You've found", "an easter egg!")
         } else {
-            playTitles($siteTitle.attr("cw-saved-text"), $siteSubtitle.attr("cw-saved-text"))
+            //playTitles($siteTitle.attr("cw-saved-text"), $siteSubtitle.attr("cw-saved-text"))
         }
     })
 })
