@@ -541,7 +541,9 @@ hr.large {
   .main .cv, .empty .cv {
     font-size: 22px;
     text-align: left;
-    zoom: 25%; }
+    visibility: hidden;
+    height: 0;
+    overflow: hidden; }
     .main .cv a.print, .empty .cv a.print {
       float: right; }
     .main .cv p, .empty .cv p {
@@ -549,6 +551,10 @@ hr.large {
     .main .cv .invert, .empty .cv .invert {
       background-color: black;
       color: white; }
+    @media only screen and (min-width: 1050px) {
+      .main .cv, .empty .cv {
+        visibility: visible;
+        height: 100%; } }
   .main .cv-print, .empty .cv-print {
     width: 100%; }
   .main .cv-options, .main .cv, .empty .cv-options, .empty .cv {
@@ -556,8 +562,7 @@ hr.large {
     @media only screen and (min-width: 1170px) {
       .main .cv-options, .main .cv, .empty .cv-options, .empty .cv {
         width: 1050px;
-        margin-left: -20%;
-        zoom: 100%; } }
+        margin-left: -20%; } }
   .main .cv-print, .empty .cv-print {
     width: 670px;
     font-size: 14px;

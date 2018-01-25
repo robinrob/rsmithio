@@ -567,7 +567,6 @@ hr.large {
     $cv-screen-width: 1050px;
     $cv-screen-margin-left: -20%;
     $cv-mobile-width: 100%;
-    $cv-mobile-zoom: 25%;
 
     .cv-options {
       text-align: right;
@@ -582,7 +581,9 @@ hr.large {
         $cv-font-size: 22px;
         font-size: $cv-font-size;
         text-align: left;
-        zoom: 25%; // mobile-zoom
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
 
         a.print {
             float: right;
@@ -596,6 +597,11 @@ hr.large {
           background-color: black;
           color: white;
         }
+
+        @media only screen and (min-width: $cv-screen-width) {
+          visibility: visible;
+          height: 100%;
+        }
     }
 
     .cv-print {
@@ -608,7 +614,6 @@ hr.large {
       @media only screen and (min-width: 1170px) {
         width: $cv-screen-width;
         margin-left: $cv-screen-margin-left;
-        zoom: 100%;
       }
     }
 
