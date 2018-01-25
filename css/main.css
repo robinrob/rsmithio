@@ -324,7 +324,7 @@ hr.large {
     height: 25em; }
     .intro-header .blog-index-heading h1 {
       font-size: 60px;
-      margin-bottom: 1em; }
+      margin-bottom: 0.5em; }
     .intro-header .blog-index-heading .subheading {
       line-height: 1.1;
       display: block;
@@ -333,7 +333,8 @@ hr.large {
       .intro-header .blog-index-heading {
         height: 28em; }
         .intro-header .blog-index-heading h1 {
-          font-size: 55px; }
+          font-size: 55px;
+          margin-bottom: 1em; }
         .intro-header .blog-index-heading .subheading {
           font-size: 30px; } }
   .intro-header .post-heading {
