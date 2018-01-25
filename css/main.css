@@ -306,6 +306,9 @@ hr.large {
       .intro-header .page-heading {
         padding-top: 150px;
         height: 450px; } }
+  .intro-header .blog-index-heading {
+    visibility: visible;
+    color: #eeeeee; }
   .intro-header .post-heading {
     padding-bottom: 50px;
     text-align: left;

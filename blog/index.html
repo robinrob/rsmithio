@@ -1,10 +1,29 @@
 ---
-layout: page
+layout: default
 title: Blog
 toptitle: Robin Smith - Blog
 subtitle: Covering topics such as software design, automation, ideas on productivity and useful code snippets.
 description: My software development blog covering things such as software design, automation, productivity tips and useful code snippets.
 ---
+<header class='intro-header'>
+<div class='container blog-index-heading'>
+<div class='row'>
+<div class='col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1'>
+<h1>Blog</h1>
+</div>
+</div>
+<div class='row'>
+<div class='col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1'>
+<h2 class='subheading'>Covering topics such as software design, automation, ideas on productivity and useful code snippets.</h2>
+</div>
+</div>
+</div>
+</header>
+<!-- Content -->
+<div class='container'>
+<div class='row'>
+<div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+<div class='main'>
 <!-- Posts list -->
 <div class='blog'>
 {% for post in paginator.posts %}
@@ -40,4 +59,8 @@ Older Posts &rarr;
 {% endif %}
 </ul>
 {% endif %}
+</div>
+</div>
+</div>
+</div>
 </div>

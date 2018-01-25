@@ -205,6 +205,45 @@ hr.large {
         }
     }
 
+    .blog-index-heading {
+        visibility: visible;
+//        padding-bottom: 50px;
+//        text-align: center;
+//        padding-top: 70px;
+        color: $theme-1;
+//
+//        h1 {
+//          font-size: 45px !important;
+//          margin-bottom: 1em;
+//        }
+//
+//        .subheading,
+//        .meta {
+//          line-height: 1.1;
+//          display: block;
+//        }
+//
+//        .subheading {
+//          font-size: 24px;
+//          margin: 10px 0 30px;
+//        }
+//
+//        .meta {
+//          font-size: 20px;
+//        }
+//
+//        @media only screen and (min-width: 768px) {
+//            height: 450px;
+//            padding-top: 150px;
+//            h1 {
+//              font-size: 55px;
+//            }
+//            .subheading {
+//              font-size: 30px;
+//            }
+//        }
+    }
+
     .post-heading {
         padding-bottom: 50px;
         text-align: left;
