@@ -482,7 +482,7 @@ hr.large {
       margin: 0;
       display: block; }
     .main .blog .pager, .empty .blog .pager {
-      margin: 20px 0 0; }
+      margin: 20px 0 60px; }
       .main .blog .pager li > a,
       .main .blog .pager li > span, .empty .blog .pager li > a,
       .empty .blog .pager li > span {
