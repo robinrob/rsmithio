@@ -5,7 +5,7 @@ var config = {
     paths: {
         build: buildDir + '/**',
         img: ['img/**/*'],
-        markdown: ['_posts/*.md'],
+        markdown: ['_posts/*.md', '_drafts/*.md'],
         haml: {
             src: ['**/_haml/*.haml']
         },

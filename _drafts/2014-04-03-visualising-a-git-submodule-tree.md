@@ -4,7 +4,7 @@ title:      Visualising a Git submodule tree
 subtitle:   A method for organising personal repositories
 date:       2014-04-03
 type:       "Blog Post"
-published:  false
+published:  true
 ---
 
 All of my source code lives in a tree of Git submodules, extending downwards from my 'master' source repository, which is simply named `robin`. This giant tree of code includes everything i have ever written - both practice code and project code.
