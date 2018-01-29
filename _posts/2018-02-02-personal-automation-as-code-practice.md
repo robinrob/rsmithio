@@ -2,9 +2,9 @@
 layout:     post
 title:      Personal automation as code practice
 subtitle:   Why automating everything can be good for you
-date:       2018-01-20
+date:       2018-01-29
 type:       Blog Post
-published:  false
+published:  true
 ---
 
 Perhaps once natural tendency of programmers is to want to automate too many things, especially when it comes to their
