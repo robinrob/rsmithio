@@ -58,7 +58,6 @@ var gulp = require('gulp')
 var gutil = require('gulp-util');
 var haml = require('gulp-ruby-haml')
 var imagemin = require('gulp-imagemin');
-var jshint = require('gulp-jshint');
 var minifyCSS = require('gulp-minify-css')
 var minifyHTML = require('gulp-minify-html')
 var ngmin = require('gulp-ngmin')
