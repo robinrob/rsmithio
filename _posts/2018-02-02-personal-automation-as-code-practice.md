@@ -7,7 +7,7 @@ type:       Blog Post
 published:  true
 ---
 
-Perhaps once natural tendency of programmers is to want to automate too many things, especially when it comes to their
+Perhaps one natural tendency of programmers is to want to automate too many things, especially when it comes to their
 personal stuff. I say 'programmers', because this will surely apply to at least both software developers and DevOps engineers,
 as two disciplines for which people use programming languages and into which I think people often fall as a result programming for a hobby.
 
