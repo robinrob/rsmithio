@@ -12,8 +12,8 @@ personal stuff. I say 'programmers', because this will surely apply to at least 
 as two disciplines for which people use programming languages and into which I think people often fall as a result programming
 as a hobby.
 
-Whilst trying to get something done in your own time, it can be tempting to think '**what if I automated
-this?**'. It may feel like a procrastination tool, and maybe it leads you down a rabbit hole of stolen time with no
+Whilst trying to get something done in your own time, it can be tempting to think '*what if I automated
+this?*'. It may feel like a procrastination tool, and maybe it leads you down a rabbit hole of stolen time with no
 useful result. Or you automate a task and only ever do it once, finding that perfect, one-use-only regex - there's that
 old adage about programmers.
 
