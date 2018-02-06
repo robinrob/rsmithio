@@ -2,17 +2,18 @@
 layout:     post
 title:      Personal automation as code practice
 subtitle:   Why automating everything can be good for you
-date:       2018-01-20
+date:       2018-01-29
 type:       Blog Post
-published:  false
+published:  true
 ---
 
-Perhaps once natural tendency of programmers is to want to automate too many things, especially when it comes to their
+Perhaps one natural tendency of programmers is to want to automate too many things, especially when it comes to their
 personal stuff. I say 'programmers', because this will surely apply to at least both software developers and DevOps engineers,
-as two disciplines for which people use programming languages and into which I think people often fall as a result programming for a hobby.
+as two disciplines for which people use programming languages and into which I think people often fall as a result programming
+as a hobby.
 
-Whilst trying to get something done, and in your own time, it can be tempting to think 'what if I automated
-this?'. It may feel like a procrastination tool, and maybe it leads you down a rabbit hole of stolen time with no
+Whilst trying to get something done in your own time, it can be tempting to think '*what if I automated
+this?*'. It may feel like a procrastination tool, and maybe it leads you down a rabbit hole of stolen time with no
 useful result. Or you automate a task and only ever do it once, finding that perfect, one-use-only regex - there's that
 old adage about programmers.
 
