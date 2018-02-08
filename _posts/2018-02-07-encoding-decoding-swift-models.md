@@ -18,9 +18,13 @@ displaying guitar chord variations) I found
  variations of guitar chords. But I still wanted the database functionality for querying the records quickly.
 
  I've since decided that I don't need the database layer after all, as I am only dealing with ~several hundred records.
-  After more thought I realised that the potential costs of having an extra persistence layer are not worth any
-  advantage that might be gained over holding all of that data in memory, compared to simply loading the data in from
-  the JSON on each app load. This also makes serialisation and de-serialisation a bit easier, as I can take full
+  After more thought I realised that the costs of having an extra persistence layer (e.g. handling app
+   updates on users' devices) in my case are not worth any potential
+  advantages that might be gained over holding all of that data in memory, compared to simply loading the data in from
+  the JSON on each app load.
+
+  Storing the pre-calculated data as static JSON effectively keeps the app stateless in that aspect.
+  This also makes serialisation and de-serialisation a bit easier, as I can take full
   advantage of Swift 4's built-in Encoding/Decoding API.
 
   Nevertheless it was still a fairly interesting process to get things working, so I'll give some code examples
