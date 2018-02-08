@@ -11,6 +11,18 @@ pre, code{
     padding: 0;
 }
 
+pre.plaintext {
+  padding-left: 20px;
+}
+
+code.small-code {
+//  font-size: 0.9em !important;
+}
+
+code.plaintext {
+  padding-left: 0px !important;
+}
+
 hr.small {
     max-width: 100px;
     margin: 15px auto;
