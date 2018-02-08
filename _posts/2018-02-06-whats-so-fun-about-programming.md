@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      What's so addictive about programming?
+title:      What's so fun about programming?
 subtitle:   Thoughts on what makes us code
 date:       2018-02-06
 type:       Blog Post
