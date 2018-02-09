@@ -8,7 +8,7 @@ published:  true
 ---
 
 I wouldn't be the first to discuss this question but it's something I've often thought about, and having made great
-great efforts in the past to cross over from a different field into software development, often asked myself. I'm worried
+efforts in the past to cross over from a different field into software development, often asked myself. I'm worried
 that I'm about to come off as a bit of a [pseud](https://en.wikipedia.org/wiki/List_of_regular_mini-sections_in_Private_Eye#Pseuds_Corner) though.
 
 I'm going to be biased, but it seems to me that programmers are on average relatively highly-motivated, and
@@ -49,11 +49,11 @@ and significant. All the while learning valuable lessons for use in your actual 
 However, no matter how much you can enjoy programming as a hobby, you always have to come back down to Earth and get into
 the technical details of computer science and technology, in order to do it well. So to be a
 programmer you must also have some sort of engineering mindset to want to delve into the details and enjoy that process.
-Of the creative and technical dispositions, I'd say it's most valuable to start off with the first. The creative urge
+Of the creative and technical dispositions, I'd say it's most valuable to start off with the first. The creative inspiration
 can then be the motivating force required to get you over the barrier and learn all of the technical details that you
 need.
 
-The above factors are why when I started to learn programming, then play around with it, I felt a strong need to keep
+The above factors are why when I started to learn programming, then play around with it, I felt a strong urge to keep
 doing it. Perhaps it explains some of the reasons why so many people seem to cross over *into* programming from other
 fields. At every [TechMeetup](techmeetup.co.uk) event I go to I speak to at least one person
 who is a student of [CodeClan](https://codeclan.com), and it's great to be involved in a field where that happens
