@@ -7,6 +7,7 @@ year: 2018
 email: robin@rsmith.io
 phone: +44 7481 919 740
 cv: robin_smiths_cv.pdf
+years_experience: 6
 description: > # this means to ignore newlines until "baseurl:"
   Experienced full-stack web developer building custom web applications and integrations using the best
   frameworks and cloud technologies.
