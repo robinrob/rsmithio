@@ -2,23 +2,27 @@
 layout:     post
 title:      Deciding What To Learn Next
 subtitle:   Or Not?
-date:       2018-02-11
+date:       2018-02-16
 type:       Blog Post
 published:  false
 ---
 
 
 The web and mobile software development industry appears to change very quickly, with new languages (and versions of
-languages) and frameworks appearing all the time. There are also countless formal named methodologies for how to go
-about software development. New features are appearing in languages all the time, through specific updates to existing
+languages) and frameworks appearing all the time.
+
+There are also countless formal named methodologies for how to go
+about software development.
+
+New features are appearing in languages all the time, through specific updates to existing
 languages - for example: Lambdas and first-class functions in Java 8, generators in ECMAScript 6) - to more general
 trends like the increasing inclusion of functional programming concepts in modern languages, particularly in new
 languages like Swift where there is the opportunity to start completely afresh. (Of course it's not that
 functional programming ideas are new! But there is some constant of ~30 years added to the uptake time of
 all new technological ideas).
 
-To a curious-minded developer, languages are fun to learn almost for their own sake, particularly new languages. Each
-language has its own character and subtly leads you into doing things in particular, sometimes new, ways. Sometimes these
+To a curious-minded developer, languages and even frameworks are fun to learn almost for their own sake, particularly new ones.
+Each language for example has its own character and subtly leads you into doing things in particular, sometimes new, ways. Sometimes these
 new methods solve problems that you've often come across whilst using other languages, so there is excitement at the
 prospect of future benefit from these new features. There is an emotional response to the creative aspects of the
 language, to things as simple as its appearance or empathy for particular decisions its designers have made.
@@ -65,7 +69,9 @@ to technology meet-ups.
 It can feel as though a lot of emphasis gets placed on the virtues of having experience with a given new web framework, as
 it suddenly becomes popular. And of course over time, these new ways of doing things are healthy as a way of gradually
 optimising ways of working, keeping up with the changing demands of web software as the infrastructure becomes more
-powerful over time. But I do think it's important to keep the focus on the fundamentals - the fundamental skills
+powerful over time.
+
+But I do think it's important to keep the focus on the fundamentals - the fundamental skills
 of being able to choose the right tool or language to use, to write software that is structured nicely, and to make
 useable applications. I think these are the real differentiators between developers, are the most valuable to aspire to and take the most time to learn
 in the first place.
