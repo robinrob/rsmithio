@@ -71,9 +71,7 @@ current circumstances. So you have to weight it based on personal considerations
  everybody needs variety, in both environment and day-to-day tasks. Breaks from strenuous thinking always promote
  creativity. Can you tell that I'm an incessant optimist?
  * **Maybe you could just sell your own products instead?** If independence is what you are after, then a possibility is
- to start working on personal projects whilst doing your full-time job, with the aim to monetise your products. This seems
- to be like it could be a wonderful combination, giving you a stable platform to indulge in your creative urges. On the
- other hand, freelancing can potentially allow you to do this *and* free up even more time to do so.
+ to start working on personal projects whilst doing your full-time job, with the aim to monetise your products.
  * **No company benefits.** Such as holidays. Not having paid holiday means that whenever you are going on holiday, the true 'cost' of the holiday
 now includes the time you spent on holiday multiplied by your rate! When deciding your day rate, you need to take into account all
 of the monetary benefits you may be missing out on by going independent. And if you are making enough, then this will not be a worry.
