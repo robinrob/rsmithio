@@ -7,7 +7,7 @@ type:       Blog Post
 published:  true
 ---
 
-Tee-ell-duh-ruh: view my code examples as a [single file](https://github.com/robinrob/swift-4-model-coding/blob/master/swift-4-model-coding/CodableTest.swift).
+Tee-ell-dee-argh: view my code examples as a [single file](https://github.com/robinrob/swift-4-model-coding/blob/master/swift-4-model-coding/CodableTest.swift).
 Running the [project](https://github.com/robinrob/swift-4-model-coding) in xcode runs the examples and displays some
 output for each.
 
