@@ -128,9 +128,7 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-  font-size: 0.9em !important;
+pre, code {
   border: 1px solid #e8e8e8;
   border-radius: 3px;
   background-color: #eef; }
@@ -919,12 +917,12 @@ hr.small {
     list-style-type: decimal !important; }
   .main .blog article code, .empty .blog article code {
     color: #00afd4;
-    font-size: 18px;
+    font-size: 15px;
     font-family: Consolas, Monaco, "Andale Mono", monospace; }
   .main .blog article pre, .empty .blog article pre {
     border-radius: 5px; }
     .main .blog article pre code, .empty .blog article pre code {
-      font-size: 16px;
+      font-size: 13px;
       font-family: Consolas, Monaco, "Andale Mono", monospace; }
 
 .main .blog .pager li > a,
