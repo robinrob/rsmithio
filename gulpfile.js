@@ -15,8 +15,8 @@ var config = {
             dest: './'
         },
         sass: {
-            main: '_scss/main.scss',
-            src: '_scss/*.scss',
+            main: '_sass/main.sass',
+            src: '_sass/*.sass',
             dest: 'css/'
         },
         css: {
@@ -171,7 +171,7 @@ gulp.task('html', function () {
 })
 
 /**
- * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
+ * Compile files from _sass into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
     return gulp.src(config.paths.sass.main)
