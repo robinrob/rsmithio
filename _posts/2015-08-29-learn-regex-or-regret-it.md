@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      "Learn Regex or Regret It"
-subtitle:   "My view on the fun of learning how to use Regular Expressions"
+title:      Learn Regex or Regret It
+subtitle:   My view on the fun of learning how to use Regular Expressions
 date:       2015-08-29
-type:       "Blog Post"
+type:       Blog Post
 ---
 
 Do you like challenging logic puzzles? Games that give you a set of root principles then offer up increasingly hard

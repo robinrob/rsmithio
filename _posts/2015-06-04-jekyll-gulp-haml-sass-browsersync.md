@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      "Jekyll Gulp HAML SASS BrowserSync"
-subtitle:   "My custom flavour of Jekyll site template."
+title:      Jekyll Gulp HAML SASS BrowserSync
+subtitle:   My custom flavour of Jekyll site template.
 date:       2015-06-04
-type:       "Blog Post"
+type:       Blog Post
 ---
 
 Whilst using Github's Jekyll framework to build a static website, I noticed a lack of built-in HAML support. I am a big fan of using HAML to produce HTML. Apart from this lack of support for HAML, I enjoy using Jekyll.

@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      "RSS Reader Script"
-subtitle:   "Short Ruby script to open RSS links using terminal interface"
+title:      RSS Reader Script
+subtitle:   Short Ruby script to open RSS links using terminal interface
 date:       2015-05-24
-type:       "Blog Post"
+type:       Blog Post
 ---
 
 I wanted a quick, lightweight way to browse and open articles from RSS feeds from within the terminal. I wrote a short

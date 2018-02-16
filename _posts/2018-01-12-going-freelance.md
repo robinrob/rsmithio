@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      "Going Freelance"
-subtitle:   "Experiences from making the switch to freelancing"
+title:      Going Freelance
+subtitle:   Experiences from making the switch to freelancing
 date:       2018-01-12
-type:       "Blog Post"
+type:       Blog Post
 published:  true
 ---
 
