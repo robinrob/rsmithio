@@ -4,10 +4,6 @@
 /*****************************************************************/
 /* Colors (themed) */
 /*****************************************************************/
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -169,9 +165,9 @@ pre > code {
   clear: both; }
 
 .cf {
-  *zoom: 1;
-  /* for IE6 and IE7 */ }
+  *zoom: 1; }
 
+/* for IE6 and IE7 */
 .center {
   text-align: center;
   margin-left: auto;
@@ -527,7 +523,7 @@ hr.large {
         line-height: 1.764705882em;
         vertical-align: middle;
         vertical-align: baseline; }
-      .main .contact .floating-label-form-group::not(:first-child), .empty .contact .floating-label-form-group::not(:first-child) {
+      .main .contact .floating-label-form-group:not(:first-child), .empty .contact .floating-label-form-group:not(:first-child) {
         padding-left: 14px; }
       .main .contact .floating-label-form-group .help-block, .empty .contact .floating-label-form-group .help-block {
         padding: 0;
@@ -1020,7 +1016,6 @@ nav ::selection {
   text-shadow: none;
   background: rgba(0, 133, 161, 0.2); }
 
-header ::-moz-selection
 nav ::-moz-selection {
   color: #eeeeee;
   text-shadow: none;
