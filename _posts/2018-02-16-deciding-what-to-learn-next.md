@@ -70,10 +70,10 @@ powerful over time.
 
 But I do think it's important to keep the focus on the fundamentals - the fundamental skills
 of being able to choose the right tool or language to use, to write software that is structured nicely, and to make
-useable applications. I think these are the real differentiators between developers, are the most valuable to aspire to and take the most time to learn
+usable applications. I think these are the real differentiators between developers, are the most valuable to aspire to and take the most time to learn
 in the first place. A word of warning: this approach does tend to make you most-suited to hipster startup environments.
 
 Therefore for me the natural conclusion is to spend good time at every level of the 'knowledge stack', on an on-going basis
-(always stay humble and open to new ideas and knowledge), but to prioritise towards the fundamentals, and a great way
-to do all of that is just to keep making things. Start with a creative idea, work towards it and you will keep learning
-what you need to.
+(always stay humble and open to new ideas and knowledge), but to prioritise towards the fundamentals. A great way
+to encourage all of that is to keep making things, incorporating the new things that you learn, making each codebase
+a bit better than the last.
