@@ -27,14 +27,14 @@ thought about a lot; here are the main ones that come to mind:
 * **Automated tests save you time**. Manual testing is extremely time-consuming, and when you don't have automated tests,
 it's difficult to make any kind of incremental changes to your code and be confident that it still works. If you are
 doing lots of manual testing as you go, this will waste lots of precious time. If you make a lot of code changes and *then*
-everything all at once, things might be too broken to recover quickly.
+manually test everything all at once, things might be too broken to recover quickly.
 
 With automated tests, you can make many incremental changes and quickly validate them to ensure that you are not
 breaking fundamental functionality. You'll still want to do manual tests at the end of course, but
 knowing core logic is still working as you develop allows you to get on with changes quicker. Cutting out even a small percentage
 of the brutally-menial work of manual testing amounts to a huge time-saving.
 
-Particularly for complex code, I find writing an automated test suite up-front to save me a lot of *overall* development time,
+Particularly for complex code, I find writing an automated test suite up-front to save me a lot of *initial* development time,
 before I begin counting on-going maintenance time. By the time the automated tests are passing and it comes
 to manual testing, it often turns out that things are *just working*. This is a great thing to experience.
 
