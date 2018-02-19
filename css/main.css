@@ -86,9 +86,6 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
-  margin-left: 40px; }
-
 li > ul,
 li > ol {
   margin-bottom: 0; }
@@ -729,12 +726,16 @@ hr.large {
     font-family: 'Lora', 'Times New Roman', serif; }
     .main article p, .empty article p {
       font-size: 20px; }
-    .main article ol li, .main article ul li, .empty article ol li, .empty article ul li {
-      font-size: 20px; }
     .main article ul, .empty article ul {
-      list-style-type: circle !important; }
+      list-style-type: disc; }
     .main article ol, .empty article ol {
       list-style-type: decimal !important; }
+    .main article ol li, .main article ul li, .empty article ol li, .empty article ul li {
+      margin-left: 20px;
+      font-size: 20px;
+      list-style-position: inside; }
+      .main article ol li ul li, .main article ul li ul li, .empty article ol li ul li, .empty article ul li ul li {
+        margin-left: 40px; }
     .main article code, .empty article code {
       color: #00afd4;
       font-size: 15px;

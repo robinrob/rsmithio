@@ -704,26 +704,26 @@ hr.large
     p
       font-size: $article-font-size
 
-
-    ol, ul
-      li
-        font-size: $article-font-size
-
-
-
     ul
-      list-style-type: circle !important
-
+      list-style-type: disc
 
     ol
       list-style-type: decimal !important
 
+    ol, ul
+      li
+        margin-left: 20px
+        font-size: $article-font-size
+        list-style-position: inside
+
+        ul
+          li
+            margin-left: 40px
 
     code
       color: $inline-code-font-color
       font-size: $inline-code-font-size
       font-family: $code-font
-
 
     pre
       border-radius: 5px
