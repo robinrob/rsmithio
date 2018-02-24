@@ -13,49 +13,129 @@ to learn, and why I like it.
 This is going to be brief, but it's just meant to be a quick intro to OCaml and a taster of the syntax. For me, it was
 enough to get me curious about the language.
 
+## Functional programming languages
+What is a functional programming language? No single factor goes into deciding whether a programming language is 'functional'.
+Some languages have functional features that are used in combination with [imperative](https://en.wikipedia.org/wiki/Imperative_programming) features (e.g. Python, Javascript).
+Languages have differing amounts of functional features, and some languages are just easier than others to program functionally with,
+and therefore are more often used in that way. I'd consider these things to make a functional programming language:
+
+* It has language features that support programming in a functional style, most importantly: first-class functions, i.e.
+functions that can be used as a basic unit of abstraction, can be passed around like data, and use function scope (i.e. closures).
+* The language makes it easy to program using 'pure' functions - functions that do not cause any side-effects, but take
+ immutable inputs and return immutable outputs.
+* Programming in a functional way is natural in the language. There is less value in having functional language features
+in a language with the intention of making it functional, if there is a large amount of syntax required for this style,
+ or the constructs are somehow awkward, or readability is seriously compromised, as opposed to programming imperatively
+ in that language.
+
+If a language *only* supports programming in a functional way, we can say that it is a 'pure functional' language.
+
+One of the goals of all functional programming languages is to increase predictability and therefore robustness of code.
+In some ways the pattern of thinking required to understand algorithms coded functionally can feel less intuitive
+than considering the imperative equivalents. For example, when counting things in real-life, say a handful of coins,
+we are physically iterating over the collection with our eyes, and maintaining a variable with the count in our heads, which
+is incremented as we count. The functional equivalent doesn't even make sense in that way in the real-world, but is a
+more abstract, mathematical way of thinking about a process.
+
+This is not to say that functional programming should be seen as harder than other methods, because you could imagine
+that given similar levels of practice and habituation, you may become equally proficient at any method of programming.
+The biggest 'barriers' to functional programming may be cultural popularity and understanding of it. For example it is
+easy to imagine the objections of a business to using a 'pure' functional language currently - it would be much harder
+to find employees for one thing. So naturally there's a large inertia to change once a particular system of thought
+becomes culturally dominant.
+
+
 ## What is OCaml
-[OCaml](https://ocaml.org) is a functional programming language with a concise syntax, specifically designed for ease-of-use in real world
+[OCaml](https://ocaml.org) is a [mostly pure](https://ocaml.org/learn/tutorials/functional_programming.html) functional
+programming language with a concise, clean syntax, specifically designed for ease-of-use in real world
 situations.
 
-Uptake of functional programming ideas has definitely been on the rise lately, as evidenced by for example the latest few updates
+Uptake of functional programming ideas can be said to have been on the rise lately, as evidenced by for example the latest few updates
 to both [EcmaScript](http://es6-features.org/#Constants) and [Java](http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html),
-and software development discussions in general in places like Hacker News.
+and software development discussions and articles in general within the community.
 
-### ReasonML
-I think another very significant development in the uptake of functional programming has been the creation of
-[ReasonML](https://reasonml.github.io). Created by Facebook, ReasonML is essentially OCaml that can be compiled into
-JavaScript - JavaScript is increasingly becoming a compilation target for other languages. See this [Quora thread](https://www.quora.com/What-is-ReasonML)
-for more detail.
+The creation of
+[ReasonML](https://reasonml.github.io), may be seen as another significant step towards uptake of functional programming.
+Created by Facebook, ReasonML is essentially ... - JavaScript is increasingly becoming a compilation target for other languages.
 
 ReasonML solves a similar need for precision in Javascript ecosystems that [TypeScript](https://www.typescriptlang.org) goes some way towards solving (by adding a strong
  typing system), but goes further. This [Stackoverflow discussion](https://stackoverflow.com/questions/46147250/reasonml-vs-typescript)
  gives a good comparison of ReasonML and TypeScript.
 
-## Ocaml code examples
-First things first:
 
+## OCaml Basics
+
+### Installation and Utop and semicolons
+All the code examples here are meant to be paste-able into [utop](https://opam.ocaml.org/blog/about-utop/). Utop is
+OCaml's interactive shell. I recommend going through [this](https://github.com/realworldocaml/book/wiki/Installation-Instructions)
+to get OCaml and Utop set up.
+
+All of the code examples feature double-semicolons at the ends of expressions. These are necessary when the expressions
+in this form are pasted into Utop. However in normal programming in OCaml they are not necessary. The full understanding
+of this is not trivial, but you'll have to trust me that it is logical. I've made a few more points about
+them below but I'm planning to write another article to really clear the issue up in a thorough way, as I did find it
+a bit of a struggle to gather all of the necessary information early on.
+
+For each code example, I give code that can be pasted into Utop (it can be run from within a file too), and then the
+output that's displayed in Utop.
+
+
+### Hello World
 <pre><code class="ocaml">Printf.printf "Hello World!\n" ;;</code></pre>
 
 Thankfully in OCaml the Hello World remains self-explanatory as all Hello Worlds should be.
+It's self-explanatory as all Hello Worlds usually are, but you'll notice the presence of not just one semicolon at the end
+but *two*. As a fan of *no* semicolons, this definitely surprised me. More on that later ...
+
+
+### Variables
+In OCaml, all *values* are immutable. We're familiar with this already in another languages - for example in most
+popular languages strings are immutable. This means that appending one string to another actually results in a totally
+new string. But usually things like numbers are not immutable, and this allows them to be used as a 'counter' in loops
+for example. In OCaml, the values of *all* types are treated in this way.
+
+The word 'variable' in most languages actually has dual meaning - it refers both to a value which we hold a reference to,
+and that can vary, *and* it has meaning in the mathematical sense of representing a variable in an equation. In OCaml,
+it is only the mathematical meaning of 'variable' that is implied when we're describing variables.
+
+<pre><code class="ocaml">let age = 30 ;;</code></pre>
+
+Output:
+```plaintext
+val age : int = 30
+```
+
+Can we re-assign a variable to another value?
+
+<pre><code class="ocaml">let age = 30 ;;
+let age = 31 ;;
+</code></pre>
+
+Output:
+```plaintext
+val age : int = 30
+val age : int = 31
+```
+
+This may *look* like mutation, but it's not. The second `let` statement actually defines a new variable that happens
+to have the same name, and from that point on the reference to the previous `age` variable is no longer in scope. To fully
+understanding this it's necessary to understand `let ... in`. The above example is equivalent to:
+
+<pre><code class="ocaml">let age = 30 in let age = 31 ;;
+</code></pre>
+
 
 ### Double-semicolons! ';..;'
-In the above Hello World example you'll notice the presence of *two* semicolons at the end of the expression.
-As a fan of *no* semicolons, this definitely surprised me.
-
 Some key points on semicolons in OCaml:
 
-* The double-semicolon in OCaml is absolutely necessary when typing commands into
-  [utop](https://opam.ocaml.org/blog/about-utop/) (OCaml's interactive shell), as `utop` does not evaluate anything
-  until it finds the double-semicolon.
-* Putting the double semi-colon at the beginnings of lines puts the indentation of code out, which arguably makes the code
-uglier and harder to read.
+* The double-semicolon in OCaml is absolutely necessary when typing commands into `utop`.
+* Putting the double semi-colon at the beginnings of lines puts the indentation of code out.
 * Most of the time, leaving
 out the double-semicolon is actually fine. But, like how JavaScript *mostly* works fine without semicolons, it's not
 actually perfect and when it catches you out it's the last thing you suspect.
 
 I therefore recommend *always* putting the
-double-semicolon on the ends of lines. This also means you can easily paste code snippets into `utop`.
-This [article](https://caml.inria.fr/pub/docs/tutorial-camlp4/tutorial005.html)
+double-semicolon on the ends of lines. This [article](https://caml.inria.fr/pub/docs/tutorial-camlp4/tutorial005.html)
 goes into more detail on this, but that's enough about semicolons! Let's just say that semicolons are probably not ideal
 if you're like me, but not a deal-breaker for the language.
 
@@ -70,7 +150,6 @@ output in `utop`:
 val even : int -> bool = <fun>
 ```
 
-Here OCaml has inferred the type of `even` to be a function that takes an `int` and returns a `bool`.
 
 Calling a function:
 <pre><code class="ocaml">even 4 ;;</code></pre>
@@ -118,7 +197,6 @@ we have explicitly handled all cases. This example illustrates OCaml's use of
 to do [case analysis](http://www2.lib.uchicago.edu/keith/ocaml-class/pattern-matching.html). I think this code example is
 really cool, for the amount that's being expressed in such a small amount of code, and in a clear way.
 
-
 ### Easter egg - literal number formatting
 To take a mental rest - an unexpected feature of OCaml is the ability to add underscores to long number literals
 *to improve readability*:
@@ -142,6 +220,7 @@ val big_num : float = 123456.654321
 
 Arguably not that useful at first sight, but interesting nonetheless and it demonstrates OCaml's commitment to reducing human errors in code, and
 prioritising expressiveness. Not even the Rouge-powered syntax-highlighting in this blog can deal with it.
+
 
 ### Type Inference
 Last one for now, but so far in all of the examples, OCaml has been able to infer the types of things based on their usages.
