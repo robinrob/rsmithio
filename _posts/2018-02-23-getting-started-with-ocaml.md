@@ -36,24 +36,26 @@ First things first:
 
 <pre><code class="ocaml">Printf.printf "Hello World!\n" ;;</code></pre>
 
+Thankfully in OCaml the Hello World remains self-explanatory as all Hello Worlds should be.
+
 ### Double-semicolons! ';..;'
-So, the above code example is self-explanatory as all Hello Worlds should be, but you'll notice the presence of not just one semicolon at the end
-but *two*. As a fan of *no* semicolons, this definitely surprised me. Supposedly you don't need it at all (it was meant to
-be optional), and technically
-it should really go at the *beginnings* of lines. [This discussion](https://discuss.ocaml.org/t/double-semicolon-peculiarity/1261)
-is helpful.
+In the above Hello World example you'll notice the presence of *two* semicolons at the end of the expression.
+As a fan of *no* semicolons, this definitely surprised me.
 
 Some key points on semicolons in OCaml:
 
 * The double-semicolon in OCaml is absolutely necessary when typing commands into
-  [utop](https://opam.ocaml.org/blog/about-utop/) (OCaml's interactive shell).
-* Putting the double semi-colon at the beginnings of lines puts the indentation of code out.
+  [utop](https://opam.ocaml.org/blog/about-utop/) (OCaml's interactive shell), as `utop` does not evaluate anything
+  until it finds the double-semicolon.
+* Putting the double semi-colon at the beginnings of lines puts the indentation of code out, which arguably makes the code
+uglier and harder to read.
 * Most of the time, leaving
 out the double-semicolon is actually fine. But, like how JavaScript *mostly* works fine without semicolons, it's not
 actually perfect and when it catches you out it's the last thing you suspect.
 
 I therefore recommend *always* putting the
-double-semicolon on the ends of lines. This [article](https://caml.inria.fr/pub/docs/tutorial-camlp4/tutorial005.html)
+double-semicolon on the ends of lines. This also means you can easily paste code snippets into `utop`.
+This [article](https://caml.inria.fr/pub/docs/tutorial-camlp4/tutorial005.html)
 goes into more detail on this, but that's enough about semicolons! Let's just say that semicolons are probably not ideal
 if you're like me, but not a deal-breaker for the language.
 
@@ -68,6 +70,7 @@ output in `utop`:
 val even : int -> bool = <fun>
 ```
 
+Here OCaml has inferred the type of `even` to be a function that takes an `int` and returns a `bool`.
 
 Calling a function:
 <pre><code class="ocaml">even 4 ;;</code></pre>
@@ -115,6 +118,8 @@ we have explicitly handled all cases. This example illustrates OCaml's use of
 to do [case analysis](http://www2.lib.uchicago.edu/keith/ocaml-class/pattern-matching.html). I think this code example is
 really cool, for the amount that's being expressed in such a small amount of code, and in a clear way.
 
+
+### Easter egg - literal number formatting
 To take a mental rest - an unexpected feature of OCaml is the ability to add underscores to long number literals
 *to improve readability*:
 
@@ -126,9 +131,41 @@ output in `utop`:
 val x : int = 123456789
 ```
 
-Arguably not that useful, but quite nice and it demonstrates OCaml's commitment to reducing human errors in code, and
-prioritising expressiveness. It's such exotic syntax in fact that the Rouge-powered syntax-highlighting in that example
-is a bit off.
+Also works with floats (also note that the underscores can go wherever you want, not just every 3 digits):
+<pre><code class="ocaml">let big_num = 123_456.65_43_21 ;;</code></pre>
+
+output in `utop`:
+
+```plaintext
+val big_num : float = 123456.654321
+```
+
+Arguably not that useful at first sight, but interesting nonetheless and it demonstrates OCaml's commitment to reducing human errors in code, and
+prioritising expressiveness. Not even the Rouge-powered syntax-highlighting in this blog can deal with it.
+
+### Type Inference
+Last one for now, but so far in all of the examples, OCaml has been able to infer the types of things based on their usages.
+So if you try to re-assign an int to a float, OCaml will shout at you:
+
+<pre><code class="ocaml">let my_int = 123 ;;
+my_int = 123.456 ;;
+</code></pre>
+
+```plaintext
+Error: This expression has type float but an expression was expected of type
+         int
+```
+
+So what happens when OCaml *can't* figure out the type of something from the code? Here is a definition for a function
+which evaluates `test` and returns `x` if the result is `true` and `y` otherwise.
+
+<pre><code class="ocaml">let first_if_true test x y = if test x then x else y ;;</code></pre>
+
+```plaintext
+Error: This expression has type float but an expression was expected of type
+         int
+
+let first_if_true test x y = if test x then x else y ;;
 
 ## OCaml editor support
 What is the tooling support for OCaml like? Whilst I usually use IntellIJ for everything, the support for OCaml is not
