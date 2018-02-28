@@ -35,23 +35,24 @@ What is a functional programming language? No single factor goes into deciding w
 Most languages are 'multi-paradigm' - they support a variety of different [paradigms](https://en.wikipedia.org/wiki/Programming_paradigm).
 It's interesting to compare the paradigms supported by some well-known languages:
 
-**Language**|**Imperative**|**Functional**|**Object-oriented**|**Procedural**|**Reflective**|**Event-driven**|**Structured**|**Generic**|**Concurrent**
-:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
-C|x| | |x| | |x| |
-Coq| |x| | | | | | |
-C#|x|x|x|x|x|x|x|x|x
-C++|x|x|x|x| | | |x|
-F#|x|x|x| |x| | | |x
-Go|x| | |x| | |x| |x
-Haskell| |x| | | | | | |
-Java|x| |x|x|x| |x|x|x
-Javascript|x|x|x|x| |x| | |
-OCaml|x|x|x| | | | | |
-PHP|x|x|x|x|x| | | |
-Python|x|x|x|x|x| | | |
-Ruby|x|x|x| |x| | | |
-Swift|x|x|x| | | | | |
-Typescript|x|x|x| | | |x|x|
+<table class="programming-languages">
+    <tr><th>Language</th><th>Imperative</th><th>Functional</th><th>Object-oriented</th><th>Procedural</th><th>Reflective</th><th>Event-driven</th><th>Structured</th><th>Generic</th><th>Concurrent</th></tr>
+    <tr><td>C</td><td><span class="fa fa-check"></span></td><td></td><td></td><td><span class="fa fa-check"></span></td><td></td><td></td><td><span class="fa fa-check"></span></td><td></td><td></td></tr>
+    <tr><td>Coq</td><td></td><td><span class="fa fa-check"></span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>C#</td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td></tr>
+    <tr><td>C++</td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td></td><td></td><td></td><td><span class="fa fa-check"></span></td><td></td></tr>
+    <tr><td>F#</td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td></td><td><span class="fa fa-check"></span></td><td></td><td></td><td></td><td><span class="fa fa-check"></span></td></tr>
+    <tr><td>Go</td><td><span class="fa fa-check"></span></td><td></td><td></td><td><span class="fa fa-check"></span></td><td></td><td></td><td><span class="fa fa-check"></span></td><td></td><td><span class="fa fa-check"></span></td></tr>
+    <tr><td>Haskell</td><td></td><td><span class="fa fa-check"></span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Java</td><td><span class="fa fa-check"></span></td><td></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td></tr>
+    <tr><td>Javascript</td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td></td><td><span class="fa fa-check"></span></td><td></td><td></td><td></td></tr>
+    <tr class="ocaml"><td>OCaml</td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>PHP</td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Python</td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Ruby</td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td></td><td><span class="fa fa-check"></span></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Swift</td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Typescript</td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td></td><td></td><td></td><td><span class="fa fa-check"></span></td><td><span class="fa fa-check"></span></td><td></td></tr>
+</table>
 
 Languages have differing amounts of functional features, and some languages are just easier than others to program functionally with,
 and therefore are more often used in that way. I'd consider these things to make a functional programming language:
@@ -290,6 +291,7 @@ Error: This expression has type float but an expression was expected of type
          int
 
 let first_if_true test x y = if test x then x else y ;;
+```
 
 ## OCaml editor support
 What is the tooling support for OCaml like? Whilst I usually use IntellIJ for everything, the support for OCaml is not

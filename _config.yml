@@ -20,6 +20,8 @@ facebook: robin.smith.50364591
 linkedin: rsmithio
 
 # Build settings
+redcarpet:
+  extensions: ["tables"]
 markdown: redcarpet
 highlighter: rouge
 
@@ -32,3 +34,4 @@ paginate: 5
 # Note that you can also name files with a leading underscore to exclude them e.g.: _README.md
 exclude: [node_modules, gulpfile.js, README.md, package.json, Gemfile, Gemfile.lock]
 post_dirs: false
+

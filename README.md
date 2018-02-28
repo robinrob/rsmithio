@@ -27,4 +27,4 @@ PHP|x|x|x|x|x| | | |
 Python|x|x|x|x|x| | | |
 Ruby|x|x|x| |x| | | |
 Swift|x|x|x| | | | | |
-Typescript|x|x|x| | | |x|x| 
+Typescript|x|x|x| | | |x|x|

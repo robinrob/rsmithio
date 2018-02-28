@@ -7783,6 +7783,27 @@ pre ::selection, code ::selection {
 em {
   font-style: italic; }
 
+table.programming-languages {
+  border-collapse: separate;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black; }
+  table.programming-languages tr {
+    border-left: 2px solid black !important;
+    border-right: 2px solid black; }
+  table.programming-languages tr.ocaml {
+    font-weight: bold;
+    background-color: #eeeeee; }
+  table.programming-languages th, table.programming-languages td {
+    border-top: 2px solid black !important;
+    border-right: 2px solid black !important; }
+  table.programming-languages th {
+    font-weight: bold; }
+  table.programming-languages td {
+    text-align: center; }
+    table.programming-languages td span {
+      font-size: 1.2em;
+      color: green; }
+
 /*
 
 Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
