@@ -7,7 +7,7 @@ type:       Blog Post
 published:  true
 ---
 
-After much persuasion from a friend (who has a PhD in this stuff) over several years, I've started learning [OCaml](http://ocaml.org). I
+After much persuasion from a friend (who has a PhD in this stuff) over several years, I've started learning [OCaml](https://ocaml.org/learn/description.html). I
 recommend reading the [wikipedia article](https://en.wikipedia.org/wiki/OCaml) on OCaml for a good background on it.
 I'm only going to draw outlines in this article - covering the aspects of OCaml that convinced me to try learning
 it, as well as show some basic code examples of the sorts of things that also attracted me to the language.
@@ -19,20 +19,39 @@ At the end I will summarise my experiences of learning OCaml so far, some pros a
 are for the future.
 
 ## Functional programming
-The first thing that drew me towards learning OCaml is its very strong orientation towards [functional programming](https://en.wikipedia.org/wiki/Functional_programming). I've been noticing and taking advantage of functional programming techniques more and more over time. For me so far, this has essentially been: composing
-expressions out of pure functions to program in a more declerative style - thus helping to reduce mutibility, increase predictability and improve testability of code. There is more to functional programming than that, but that has been one of my main takeaways in terms of what I actually use in my code, so far.
+The first thing that drew me towards learning OCaml is its very strong orientation towards [functional programming](https://en.wikipedia.org/wiki/Functional_programming).
+I've been noticing and taking advantage of functional programming techniques more and more over time.
+For me so far, this has essentially been: composing expressions out of pure functions to program in a more declerative
+style - thus helping to reduce mutibility, increase predictability and improve testability of code.
+There is more to functional programming than that, but that has been one of my main takeaways in terms of what I actually use in my code, so far.
 
 Functional programming does not replace other programming paradigms like [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming)
-programming. Just as with programming languages, one technique or aspect of functional programming me be most-suited to certain scenarios, whereas object-oriented or some other style is better in another scenario. An application can use a happy combination of different techniques to achieve its goals
+programming. Just as with programming languages, one technique or aspect of functional programming me be most-suited to certain scenarios,
+whereas object-oriented or some other style is better in another scenario. An application can use a happy combination of different techniques to achieve its goals
 in an elegant and reliable way.
 
 ## Functional programming languages
 What is a functional programming language? No single factor goes into deciding whether a programming language is 'functional'.
 Most languages are 'multi-paradigm' - they support a variety of different [paradigms](https://en.wikipedia.org/wiki/Programming_paradigm).
-It's interesting to compare which languages support which paradigms:
+It's interesting to compare the paradigms supported by some well-known languages:
 
-
-
+**Language**|**Imperative**|**Functional**|**Object-oriented**|**Procedural**|**Reflective**|**Event-driven**|**Structured**|**Generic**|**Concurrent**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+C|x| | |x| | |x| |
+Coq| |x| | | | | | |
+C#|x|x|x|x|x|x|x|x|x
+C++|x|x|x|x| | | |x|
+F#|x|x|x| |x| | | |x
+Go|x| | |x| | |x| |x
+Haskell| |x| | | | | | |
+Java|x| |x|x|x| |x|x|x
+Javascript|x|x|x|x| |x| | |
+OCaml|x|x|x| | | | | |
+PHP|x|x|x|x|x| | | |
+Python|x|x|x|x|x| | | |
+Ruby|x|x|x| |x| | | |
+Swift|x|x|x| | | | | |
+Typescript|x|x|x| | | |x|x|
 
 Languages have differing amounts of functional features, and some languages are just easier than others to program functionally with,
 and therefore are more often used in that way. I'd consider these things to make a functional programming language:
