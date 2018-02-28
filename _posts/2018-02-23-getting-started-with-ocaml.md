@@ -137,25 +137,33 @@ val age : int = 31
 
 This may *look* like mutation, but it's not. The second `let` statement actually defines a new variable that happens
 to have the same name, and from that point on the reference to the previous `age` variable is no longer in scope. To fully
-understanding this it's necessary to understand `let ... in`. The above example is equivalent to:
+understand this it's necessary to understand `let ... in`. The above example is actually equivalent to:
 
-<pre><code class="ocaml">let age = 30 in let age = 31 ;;
+<pre><code class="ocaml">let age = 30 in (
+    Printf.printf "age: %d\n" age ;
+    let age = 31 in (
+        Printf.printf "age: %d\n" age ;
+    )
+)
 </code></pre>
+
+This makes it clearer what is actually happening. When the `in ...` is not specified in a `let` statement, the scope
+of the variable is just everything following the `let` within that scope. TODO: read ocaml coding conventions
 
 
 ### Double-semicolons! ';..;'
-Some key points on semicolons in OCaml:
+Some key points on double-semicolons in OCaml:
 
-* The double-semicolon in OCaml is absolutely necessary when typing commands into `utop`.
-* Putting the double semi-colon at the beginnings of lines puts the indentation of code out.
-* Most of the time, leaving
-out the double-semicolon is actually fine. But, like how JavaScript *mostly* works fine without semicolons, it's not
-actually perfect and when it catches you out it's the last thing you suspect.
+* Double-semicolons separate statements at the *top level* of an OCaml program. That is, the highest scope of the program,
+where the first expression is written (e.g. the definition of the main function). In a normal program, there is only *one*
+highest-level of scope, therefore we virtually never need to use a double-semicolon in OCaml programs.
+* The double-semicolon in OCaml is absolutely necessary when typing commands into `utop`, because (hence the name),
+subsequent typed-in expressions are being evaluated side-by-side at the top-level.
+* Anything typed into Utop will also work in an OCaml program, but not vice-versa, because of the points above.
 
-I therefore recommend *always* putting the
-double-semicolon on the ends of lines. This [article](https://caml.inria.fr/pub/docs/tutorial-camlp4/tutorial005.html)
-goes into more detail on this, but that's enough about semicolons! Let's just say that semicolons are probably not ideal
-if you're like me, but not a deal-breaker for the language.
+The full understanding of how OCaml programs are structured so as to avoid the necessity of double-semicolons is more
+detailed, but for now this should be enough. These reasons are why the examples here which can be conveniently pasted
+into Utop have alternative standard forms which avoid the double-semicolons.
 
 
 ### Functions
