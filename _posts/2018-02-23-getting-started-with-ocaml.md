@@ -2,20 +2,38 @@
 layout:     post
 title:      Getting started with OCaml
 subtitle:   Learning a fully-functional language
-date:       2018-02-12
+date:       2018-02-28
 type:       Blog Post
 published:  true
 ---
 
-I've started learning OCaml, so I'm sharing reasons why I think OCaml is a great language for experienced developers
-to learn, and why I like it.
+After much persuasion from a friend (who has a PhD in this stuff) over several years, I've started learning [OCaml](http://ocaml.org). I
+recommend reading the [wikipedia article](https://en.wikipedia.org/wiki/OCaml) on OCaml for a good background on it.
+I'm only going to draw outlines in this article - covering the aspects of OCaml that convinced me to try learning
+it, as well as show some basic code examples of the sorts of things that also attracted me to the language.
 
-This is going to be brief, but it's just meant to be a quick intro to OCaml and a taster of the syntax. For me, it was
-enough to get me curious about the language.
+I'll clarify some things which confused me whilst learning OCaml, and caused some initial pain, so hopefully that is lessened for others
+in the future.
+
+At the end I will summarise my experiences of learning OCaml so far, some pros and cons and what my plans with OCaml
+are for the future.
+
+## Functional programming
+The first thing that drew me towards learning OCaml is its very strong orientation towards [functional programming](https://en.wikipedia.org/wiki/Functional_programming). I've been noticing and taking advantage of functional programming techniques more and more over time. For me so far, this has essentially been: composing
+expressions out of pure functions to program in a more declerative style - thus helping to reduce mutibility, increase predictability and improve testability of code. There is more to functional programming than that, but that has been one of my main takeaways in terms of what I actually use in my code, so far.
+
+Functional programming does not replace other programming paradigms like [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming)
+programming. Just as with programming languages, one technique or aspect of functional programming me be most-suited to certain scenarios, whereas object-oriented or some other style is better in another scenario. An application can use a happy combination of different techniques to achieve its goals
+in an elegant and reliable way.
 
 ## Functional programming languages
 What is a functional programming language? No single factor goes into deciding whether a programming language is 'functional'.
-Some languages have functional features that are used in combination with [imperative](https://en.wikipedia.org/wiki/Imperative_programming) features (e.g. Python, Javascript).
+Most languages are 'multi-paradigm' - they support a variety of different [paradigms](https://en.wikipedia.org/wiki/Programming_paradigm).
+It's interesting to compare which languages support which paradigms:
+
+
+
+
 Languages have differing amounts of functional features, and some languages are just easier than others to program functionally with,
 and therefore are more often used in that way. I'd consider these things to make a functional programming language:
 
