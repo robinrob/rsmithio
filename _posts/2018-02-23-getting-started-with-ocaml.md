@@ -7,23 +7,24 @@ type:       Blog Post
 published:  true
 ---
 
-After much persuasion from a friend (who has a PhD in this stuff) over several years, I've started learning [OCaml](https://ocaml.org/learn/description.html). I
+After much persuasion from a friend (who has a PhD in this stuff) over the last few years, I've started learning [OCaml](https://ocaml.org/learn/description.html). I
 recommend reading the [wikipedia article](https://en.wikipedia.org/wiki/OCaml) on OCaml for a good background on it.
 I'm only going to draw outlines in this article - covering the aspects of OCaml that convinced me to try learning
 it, as well as show some basic code examples of the sorts of things that also attracted me to the language.
 
-I'll clarify some things which confused me whilst learning OCaml, and caused some initial pain, so hopefully that is lessened for others
+I'll try to clarify some things which confused me when just starting to learn OCaml, and caused some initial pain, so hopefully that is lessened for others
 in the future.
 
-At the end I will summarise my experiences of learning OCaml so far, some pros and cons and what my plans with OCaml
-are for the future.
+At the end I will summarise my experiences of learning OCaml so far, where OCaml fits in in the real world, and where I plan to go from here.
 
 ## Functional programming
 The first thing that drew me towards learning OCaml is its very strong orientation towards [functional programming](https://en.wikipedia.org/wiki/Functional_programming).
-I've been noticing and taking advantage of functional programming techniques more and more over time.
-For me so far, this has essentially been: composing expressions out of pure functions to program in a more declerative
-style - thus helping to reduce mutibility, increase predictability and improve testability of code.
-There is more to functional programming than that, but that has been one of my main takeaways in terms of what I actually use in my code, so far.
+I've been thinking about and taking advantage of functional programming techniques more and more over time.
+
+For me so far, this has essentially been: composing certain sections of code using calls to pure functions, to program in a more declerative
+style - thus helping to reduce mutibility, increase predictability and improve testability of my code. For example: using a map function instead of a for
+loop, or a reduce function when needing to sum something over a collection. There is much more to functional programming than that of course,
+and OCaml really puts it all at your fingertips.
 
 Functional programming does not replace other programming paradigms like [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming)
 programming. Just as with programming languages, one technique or aspect of functional programming me be most-suited to certain scenarios,
@@ -265,7 +266,7 @@ val big_num : float = 123456.654321
 ```
 
 Arguably not that useful at first sight, but interesting nonetheless and it demonstrates OCaml's commitment to reducing human errors in code, and
-prioritising expressiveness. Not even the Rouge-powered syntax-highlighting in this blog can deal with it.
+prioritising expressiveness. I noticed that the syntax-highlighting library used in this blog couldn't deal with such eccentric syntax.
 
 
 ### Type Inference
