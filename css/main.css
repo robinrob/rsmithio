@@ -282,10 +282,8 @@ hr.large {
   @media only screen and (min-width: 1170px) {
     .navbar-custom {
       /* Force Hardware Acceleration in WebKit */
-      -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
       transition: background-color 0.3s;
-      -webkit-backface-visibility: hidden;
       backface-visibility: hidden; }
       .navbar-custom.is-fixed {
         /* when the user scrolls down, we hide the header right above the viewport */ }

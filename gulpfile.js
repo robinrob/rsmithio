@@ -4,24 +4,28 @@ var buildDir = '_site'
 var config = {
     paths: {
         build: buildDir + '/**',
-        img: ['img/**/*'],
-        markdown: ['_posts/*.md', '_drafts/*.md'],
+        img: {
+            src: ['img/**/*']
+        },
+        markdown: {
+            src: ['_posts/*.md', '_drafts/*.md'],
+        },
         haml: {
             src: ['**/_haml/*.haml']
         },
         html: {
-            src: ['**/*.html'],
+            src: ['**/*.html', '!_site/**/*'],
             build: [buildDir + '/**/*.html'],
             dest: './'
         },
         sass: {
             main: '_sass/main.sass',
-            src: '_sass/*.sass',
+            src: ['_sass/*.sass'],
             dest: 'css/'
         },
         css: {
             main: 'styles.css',
-            src: 'css/*.css',
+            src: ['css/*.css'],
             dest: buildDir + '/css/'
         },
         js: {
@@ -35,15 +39,13 @@ var config = {
     sitemapUrl: "https://rsmith.io/sitemap.xml"
 }
 config.paths.watch = [
-    '_config.yml',
-    '_posts/*.md',
-    config.paths.img,
-    config.paths.markdown,
-    config.paths.html.src,
-    config.paths.sass.src,
-    config.paths.js.src,
-
-    'orbiter/**/*'
+    ...['_config.yml'],
+    ...config.paths.img.src,
+    ...config.paths.markdown.src,
+    ...config.paths.html.src,
+    ...config.paths.sass.src,
+    ...config.paths.js.src,
+    ...['orbiter/**/*']
 ]
 config = require('./_secret-config.js')(config)
 
@@ -67,7 +69,6 @@ var prefix = require('gulp-autoprefixer')
 var task = require('gulp-task')
 var rename = require('gulp-rename')
 var run = require('gulp-run')
-var runSequence = require('run-sequence')
 var sass = require('gulp-sass')
 var shell = require('shelljs/global')
 var sitemap = require('gulp-sitemap')
@@ -116,11 +117,12 @@ gulp.task('imagemin', function() {
 
 gulp.task('jekyll', function (done) {
     browserSync.notify(messages.jekyllBuild)
-    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'}).on('close', done)
+    return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'}).on('close', done)
 })
 
-gulp.task('reload', function () {
+gulp.task('reload', function (done) {
     browserSync.reload()
+    done()
 })
 
 gulp.task('browser-sync', function () {
@@ -142,8 +144,8 @@ function hamlBuild() {
     )
 }
 
-gulp.task('haml-watch', function () {
-    gulp.src(config.paths.haml.src, {read: false})
+gulp.task('haml-watch', function (done) {
+    return gulp.src(config.paths.haml.src, {read: false})
         .pipe(plumber({
             onError: onError
         }))
@@ -200,13 +202,9 @@ gulp.task('css-copy', function (done) {
         .pipe(gulp.dest('_includes/'))
 })
 
-gulp.task('css-dev', function (done) {
-    runSequence('css-concat', 'css-copy', done)
-})
+gulp.task('css-dev', gulp.series('css-concat', 'css-copy'))
 
-gulp.task('css', function (done) {
-    runSequence('css-concat', 'css-minify', 'css-copy', done)
-})
+gulp.task('css', gulp.series('css-concat', 'css-minify', 'css-copy'))
 
 gulp.task('cv-to-pdf', function(done) {
     //run("wkhtmltopdf --page-size A4 --margin-top 5mm --margin-right 5mm --margin-bottom 5mm --margin-left 5mm --encoding UTF-8 --quiet _site/cv/print/index.html _site/robin_smiths_cv.pdf").exec(done)
@@ -225,29 +223,17 @@ gulp.task('js-minify', function () {
         .pipe(gulp.dest(config.paths.js.dest))
 })
 
-gulp.task('js-dev', function (done) {
-    runSequence('js-concat', done)
-})
+gulp.task('js-dev', gulp.series('js-concat'))
 
-gulp.task('js', function (done) {
-    runSequence('js-concat', 'js-minify', done)
-})
+gulp.task('js', gulp.series('js-concat', 'js-minify'))
 
-gulp.task('build', function (done) {
-    runSequence('haml-build', 'jekyll', 'html', 'sass', ['css', 'js'], 'cv-to-pdf', 'reload', done)
-})
+gulp.task('build', gulp.series('haml-build', 'jekyll', 'html', 'sass', gulp.parallel('css', 'js'), 'cv-to-pdf', 'reload'))
 
-gulp.task('fast-build', function (done) {
-    runSequence('jekyll', 'html', 'sass', ['css', 'js'], 'reload', done)
-})
+gulp.task('fast-build', gulp.series('jekyll', 'html', 'sass', gulp.parallel('css', 'js'), 'reload'))
 
-gulp.task('dev-build', function (done) {
-    runSequence('haml-build', 'jekyll', 'sass', ['css-dev', 'js-dev'], 'cv-to-pdf', 'reload', done)
-})
+gulp.task('dev-build', gulp.series('haml-build', 'jekyll', 'sass', gulp.parallel('css-dev', 'js-dev'), 'cv-to-pdf', 'reload'))
 
-gulp.task('fast-dev-build', function (done) {
-    runSequence('jekyll', 'sass', ['css-dev', 'js-dev'], 'reload', done)
-})
+gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js-dev'), 'reload'))
 
 gulp.task('upload', function () {
     return gulp.src(config.paths.build)
@@ -285,22 +271,16 @@ gulp.task('save', function (done) {
     }, done)
 })
 
-gulp.task('deploy', function (done) {
-    return runSequence('build', 'sitemap', 'submit-sitemap', 'save', 'upload', 'purge-online-cache', done)
+gulp.task('deploy', gulp.series('build', 'sitemap', 'submit-sitemap', 'save', 'upload', 'purge-online-cache'))
+
+gulp.task('watch', gulp.series('haml-watch'), function () {
+    return watch(config.paths.watch, gulp.series('fast-build'))
 })
 
-gulp.task('watch', ['haml-watch'], function () {
-    gulp.watch(config.paths.watch, ['fast-build'])
+gulp.task('dev-watch', function () {
+    return watch(config.paths.watch, gulp.series('fast-dev-build'))
 })
 
-gulp.task('dev-watch', ['haml-watch'], function () {
-    gulp.watch(config.paths.watch, ['fast-dev-build'])
-})
+gulp.task('full', gulp.series('build', 'watch', 'browser-sync'))
 
-gulp.task('full', function (done) {
-    runSequence('build', 'watch', 'browser-sync', done)
-})
-
-gulp.task('default', function (done) {
-    runSequence('dev-build', 'dev-watch', 'browser-sync', done)
-})
+gulp.task('default', gulp.series('dev-build', gulp.parallel('haml-watch', 'dev-watch', 'browser-sync')))
