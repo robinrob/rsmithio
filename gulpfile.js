@@ -244,7 +244,7 @@ gulp.task('upload', function () {
 
 // Purges website cache so updates are shown
 gulp.task('purge-online-cache', function () {
-    cloudflare(config.cloudflare)
+    return cloudflare(config.cloudflare)
 })
 
 gulp.task('sitemap', function () {
@@ -271,7 +271,9 @@ gulp.task('save', function (done) {
     }, done)
 })
 
-gulp.task('deploy', gulp.series('build', 'sitemap', 'submit-sitemap', 'save', 'upload', 'purge-online-cache'))
+gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap', 'save', 'upload', 'purge-online-cache'))
+
+gulp.task('deploy', gulp.series('build', 'fast-deploy'))
 
 gulp.task('watch', gulp.series('haml-watch'), function () {
     return watch(config.paths.watch, gulp.series('fast-build'))
