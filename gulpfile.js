@@ -248,7 +248,7 @@ gulp.task('purge-online-cache', function () {
 })
 
 gulp.task('sitemap', function () {
-    gulp.src(config.paths.html.build)
+    return gulp.src(config.paths.html.build)
         .pipe(sitemap({
             siteUrl: config.siteUrl
         })) // Returns sitemap.xml
@@ -256,7 +256,7 @@ gulp.task('sitemap', function () {
 })
 
 gulp.task('submit-sitemap', function (done) {
-    submitSitemap.submitSitemap(config.sitemapUrl, function (err) {
+    return submitSitemap.submitSitemap(config.sitemapUrl, function (err) {
         if (err) {
             console.warn(err)
         }
