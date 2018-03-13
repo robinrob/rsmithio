@@ -989,9 +989,12 @@ table.programming-languages {
   table.programming-languages tr {
     border-left: 2px solid gray !important;
     border-right: 2px solid gray; }
+    table.programming-languages tr:hover {
+      background-color: #d4f8ff;
+      font-weight: bold; }
   table.programming-languages tr.ocaml {
-    font-weight: bold;
-    background-color: #eeeeee; }
+    background-color: #d4f8ff;
+    font-weight: bold; }
   table.programming-languages th, table.programming-languages td {
     border-top: 2px solid gray !important;
     border-right: 2px solid gray !important; }

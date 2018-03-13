@@ -100,7 +100,8 @@ For each code example, I give code that can be pasted into Utop, then the output
 ### Hello World
 <pre><code class="ocaml">Printf.printf "Hello World!\n" ;;</code></pre>
 
-Thankfully in OCaml the Hello World remains self-explanatory.
+Thankfully in OCaml the Hello World remains self-explanatory. This example shows us the use of the built-in `Printf` module to print output, and also the simple syntax for passing arguments into functions - we don't
+need parentheses around the arguments.
 
 ### Variables
 In OCaml, all *values* are immutable. We're familiar with this already in another languages - for example in most popular languages strings are immutable. This means that appending one string to another actually results in a totally new string. But usually things like numbers are not immutable, and this allows them to be used as a 'counter' in loops for example. In OCaml, the values of *all* types are treated in this way.
