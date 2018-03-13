@@ -243,8 +243,9 @@ gulp.task('upload', function () {
 })
 
 // Purges website cache so updates are shown
-gulp.task('purge-online-cache', function () {
-    return cloudflare(config.cloudflare)
+gulp.task('purge-online-cache', function (done) {
+    cloudflare(config.cloudflare)
+    done()
 })
 
 gulp.task('sitemap', function () {
