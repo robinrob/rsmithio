@@ -8,7 +8,7 @@ published:  true
 ---
 
 Tee-ell-dee-argh: view my code examples as a [single file](https://github.com/robinrob/swift-4-model-coding/blob/master/swift-4-model-coding/CodableTest.swift).
-Running the [project](https://github.com/robinrob/swift-4-model-coding) in xcode runs the examples and displays some
+Running the [project](https://github.com/robinrob/swift-4-model-coding) in Xcode runs the examples and displays some
 output for each.
 
 Whilst working on [GuitarChords](https://github.com/robinrob/guitar-chords) (a personal iOS project of mine for
