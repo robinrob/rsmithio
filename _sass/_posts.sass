@@ -1,18 +1,25 @@
 $border-color: $theme-2
-
+$table-highlight-color: lighten($theme-3, 60%)
 
 table.programming-languages
   border-collapse: separate
+  //background-color: red
   border-bottom: 2px solid $border-color
   border-left: 2px solid $border-color
+
+  @mixin table-highlight()
+    background-color: $table-highlight-color
+    font-weight: bold
 
   tr
     border-left: 2px solid $border-color !important
     border-right: 2px solid $border-color
 
+    &:hover
+      @include table-highlight()
+
   tr.ocaml
-    font-weight: bold
-    background-color: $theme-1
+    @include table-highlight()
 
   th, td
     border-top: 2px solid $border-color !important
