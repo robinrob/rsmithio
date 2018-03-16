@@ -11,7 +11,9 @@ var config = {
             src: ['_posts/*.md', '_drafts/*.md'],
         },
         haml: {
-            src: ['**/_haml/*.haml']
+            // src: ['index/*.haml', '_layouts/*.haml', '_includes/*.haml', 'blog/*.haml', 'contact/*.haml', 'cv/*.haml', 'blog/*.haml', 'maintenance/*.haml', 'orbiter/*.haml', '!_node_modules/**/*', '!_site/**/*']
+            src: ['**/*/*.haml', '!node_modules/**/*', '!_site/**/*']
+            
         },
         html: {
             src: ['**/*.html', '!_site/**/*'],
@@ -69,7 +71,6 @@ var path = require('path')
 var plumber = require('gulp-plumber')
 var prefix = require('gulp-autoprefixer')
 var task = require('gulp-task')
-var rename = require('gulp-rename')
 var run = require('gulp-run')
 var sass = require('gulp-sass')
 var shell = require('shelljs/global')
@@ -141,10 +142,7 @@ gulp.task('browser-sync', function () {
 /* hamlBuild() contains the shared build logic used by haml-watch and haml-build */
 function hamlBuild() {
     return combiner(
-        haml(),
-        rename(function (path) {
-            path.dirname += '/../'
-        })
+        haml()
     )
 }
 
@@ -164,7 +162,6 @@ gulp.task('haml-build', function () {
             onError: onError
         }))
         .pipe(hamlBuild())
-        .pipe(gulp.dest('./'))
 })
 
 gulp.task('html', function () {
@@ -249,7 +246,7 @@ gulp.task('fast-build', gulp.series('jekyll', 'html', 'sass', gulp.parallel('css
 
 gulp.task('dev-build', gulp.series('haml-build', 'jekyll', 'sass', gulp.parallel('css-dev', 'js-dev'), 'cv-to-pdf', 'reload'))
 
-gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js-dev'), 'reload'))
+gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js'), 'reload'))
 
 gulp.task('upload', function () {
     return gulp.src(config.paths.build)
