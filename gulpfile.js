@@ -31,6 +31,7 @@ var config = {
         js: {
             main: 'scripts.js',
             src: ['_js/*.js'],
+            headerSrc: ['_js_header/*.js'],
             dest: '_site/js/'
         },
         cv: 'robin_smiths_cv.pdf'
@@ -274,7 +275,14 @@ gulp.task('save', function (done) {
 
 gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap', 'save', 'upload', 'purge-online-cache'))
 
-gulp.task('deploy', gulp.series('build', 'fast-deploy'))
+gulp.task('deploy', gulp.series('build', 'fast-deploy'), function(done) {
+    console.log('HERE')
+
+    config.paths.js.src = [...config.paths.js.src, ...config.paths.js.headerSrc]
+    console.log('config.paths.js.src: ' + JSON.stringify(config.paths.js.src, null, '\t'))
+
+    return done
+})
 
 gulp.task('watch', gulp.series('haml-watch'), function () {
     return watch(config.paths.watch, gulp.series('fast-build'))

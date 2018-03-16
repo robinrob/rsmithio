@@ -1,0 +1,25 @@
+\---
+layout: default
+\---
+
+/ Header
+%header.intro-header
+  %div{:class => "{% if page.subtitle %}container page-heading{% else %}container page-heading padded-heading{% endif %}"}
+    .row
+      .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
+        %h1 {{ page.title }}
+    {% if page.subtitle %}
+    .row
+      .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
+        %hr.small
+        %h2.subheading {{ page.subtitle }}
+    {% endif %}
+
+/ Content
+.container
+  .row
+    .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+      .main
+        {{ content }}
+
+%hr
