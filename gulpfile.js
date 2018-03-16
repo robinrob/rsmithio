@@ -30,6 +30,7 @@ var config = {
         },
         js: {
             main: 'scripts.js',
+            headerMain: 'header_scripts.js',
             src: ['_js/*.js'],
             headerSrc: ['_js_header/*.js'],
             dest: '_site/js/'
@@ -94,6 +95,8 @@ function isFatal(level) {
 // Handle an error based on its severity level.
 // Log all levels, and exit the process for fatal levels.
 function handleError(level, error) {
+    console.log('error: ' + JSON.stringify(error.message, null, '\t'))
+
     gutil.log(error.message);
     if (isFatal(level)) {
         //process.exit(0);
@@ -218,15 +221,27 @@ gulp.task('js-concat', function () {
         .pipe(gulp.dest(config.paths.js.dest))
 })
 
+gulp.task('js-concat-header', function () {
+    return gulp.src(config.paths.js.headerSrc)
+        .pipe(concat(config.paths.js.headerMain))
+        .pipe(gulp.dest(config.paths.js.dest))
+})
+
 gulp.task('js-minify', function () {
-    return gulp.src(config.paths.js.dest + '/*.js')
+    return gulp.src(config.paths.js.dest + '/' + config.paths.js.headerMain)
+        .pipe(uglify())
+        .pipe(gulp.dest(config.paths.js.dest))
+})
+
+gulp.task('js-minify-header', function () {
+    return gulp.src(config.paths.js.dest + '/' + config.paths.js.headerMain)
         .pipe(uglify())
         .pipe(gulp.dest(config.paths.js.dest))
 })
 
 gulp.task('js-dev', gulp.series('js-concat'))
 
-gulp.task('js', gulp.series('js-concat', 'js-minify'))
+gulp.task('js', gulp.parallel(gulp.series('js-concat', 'js-minify'), gulp.series('js-concat-header', 'js-minify-header')))
 
 gulp.task('build', gulp.series('haml-build', 'jekyll', 'html', 'sass', gulp.parallel('css', 'js'), 'cv-to-pdf', 'reload'))
 
@@ -275,14 +290,7 @@ gulp.task('save', function (done) {
 
 gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap', 'save', 'upload', 'purge-online-cache'))
 
-gulp.task('deploy', gulp.series('build', 'fast-deploy'), function(done) {
-    console.log('HERE')
-
-    config.paths.js.src = [...config.paths.js.src, ...config.paths.js.headerSrc]
-    console.log('config.paths.js.src: ' + JSON.stringify(config.paths.js.src, null, '\t'))
-
-    return done
-})
+gulp.task('deploy', gulp.series('build', 'fast-deploy'))
 
 gulp.task('watch', gulp.series('haml-watch'), function () {
     return watch(config.paths.watch, gulp.series('fast-build'))
