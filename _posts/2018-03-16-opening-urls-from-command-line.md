@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      Opening web URLs from the command-line
-subtitle:   A ZSH function for quickly opening URLs
+title:      "Opening web URLs from the command-line"
+subtitle:   "A ZSH function for quickly opening URLs"
 date:       2018-03-16
-type:       Blog Post
+type:       "Blog Post"
 published:  true
 ---
 
