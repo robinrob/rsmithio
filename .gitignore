@@ -7,3 +7,4 @@ _secret-config.js
 en
 __MACOSX
 node_modules
+*.log
