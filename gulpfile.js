@@ -139,20 +139,13 @@ gulp.task('browser-sync', function () {
     })
 })
 
-/* hamlBuild() contains the shared build logic used by haml-watch and haml-build */
-function hamlBuild() {
-    return combiner(
-        haml()
-    )
-}
-
 gulp.task('haml-watch', function (done) {
     return gulp.src(config.paths.haml.src, {read: false})
         .pipe(plumber({
             onError: onError
         }))
         .pipe(watch(config.paths.haml.src))
-        .pipe(hamlBuild())
+        .pipe(haml())
         .pipe(gulp.dest('./'))
 })
 
@@ -161,7 +154,7 @@ gulp.task('haml-build', function () {
         .pipe(plumber({
             onError: onError
         }))
-        .pipe(hamlBuild())
+        .pipe(haml())
 })
 
 gulp.task('html', function () {
