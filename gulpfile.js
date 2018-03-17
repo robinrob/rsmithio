@@ -233,14 +233,6 @@ gulp.task('js-dev', gulp.series('js-concat'))
 
 gulp.task('js', gulp.parallel(gulp.series('js-concat', 'js-minify'), gulp.series('js-concat-header', 'js-minify-header')))
 
-gulp.task('build', gulp.series('haml-build', 'jekyll', 'html', 'sass', gulp.parallel('css', 'js'), 'cv-to-pdf', 'reload'))
-
-gulp.task('fast-build', gulp.series('jekyll', 'html', 'sass', gulp.parallel('css', 'js'), 'reload'))
-
-gulp.task('dev-build', gulp.series('haml-build', 'jekyll', 'sass', gulp.parallel('css-dev', 'js-dev'), 'cv-to-pdf', 'reload'))
-
-gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js'), 'reload'))
-
 gulp.task('upload', function () {
     return gulp.src(config.paths.build)
         .pipe(ghPages({
@@ -278,10 +270,6 @@ gulp.task('save', function (done) {
     }, done)
 })
 
-gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap', 'save', 'upload', 'purge-online-cache'))
-
-gulp.task('deploy', gulp.series('build', 'fast-deploy'))
-
 gulp.task('watch', gulp.series('haml-watch'), function () {
     return watch(config.paths.watch, gulp.series('fast-build'))
 })
@@ -290,6 +278,21 @@ gulp.task('dev-watch', function () {
     return watch(config.paths.watch, gulp.series('fast-dev-build'))
 })
 
+// Build
+gulp.task('build', gulp.series('haml-build', 'jekyll', 'html', 'sass', gulp.parallel('css', 'js'), 'cv-to-pdf', 'reload'))
+
+gulp.task('fast-build', gulp.series('jekyll', 'html', 'sass', gulp.parallel('css', 'js'), 'reload'))
+
+gulp.task('dev-build', gulp.series('haml-build', 'jekyll', 'sass', gulp.parallel('css-dev', 'js-dev'), 'cv-to-pdf', 'reload'))
+
+gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js'), 'reload'))
+
+// Deploy
+gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap', 'save', 'upload', 'purge-online-cache'))
+
+gulp.task('deploy', gulp.series('build', 'fast-deploy'))
+
+// Build/watch
 gulp.task('full', gulp.series('build', 'watch', 'browser-sync'))
 
 gulp.task('default', gulp.series('dev-build', gulp.parallel('haml-watch', 'dev-watch', 'browser-sync')))
