@@ -11,7 +11,6 @@ var config = {
             src: ['_posts/*.md', '_drafts/*.md'],
         },
         haml: {
-            // src: ['index/*.haml', '_layouts/*.haml', '_includes/*.haml', 'blog/*.haml', 'contact/*.haml', 'cv/*.haml', 'blog/*.haml', 'maintenance/*.haml', 'orbiter/*.haml', '!_node_modules/**/*', '!_site/**/*']
             src: ['**/*/*.haml', '!node_modules/**/*', '!_site/**/*']
             
         },
