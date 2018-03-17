@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     blog_post
 title:      Getting started with OCaml
 subtitle:   Learning a functional programming language
 date:       2018-03-13
