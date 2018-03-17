@@ -1,5 +1,18 @@
 / Head
 %head
+  %script{:src => "{{ site.baseurl }}/js/scripts.js"}
+
+  :javascript
+    let production_hostname = 'rsmith.io'
+    //let production_hostname = 'localhost'
+    if (window.location.hostname === production_hostname) {
+      console.log("Production GA will load");
+      $.getScript(
+        '{{ site.baseurl }}/js/header_scripts.js',
+        function() { console.log("Production GA loaded!") }
+      )
+    }
+
   %meta{:charset => "utf-8"}
   %meta{:name => "content-type", :content => "utf-8"}
   %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=UTF-8"}

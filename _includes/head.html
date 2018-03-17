@@ -1,5 +1,17 @@
 <!-- Head -->
 <head>
+<script src='{{ site.baseurl }}/js/scripts.js'></script>
+<script>
+  let production_hostname = 'rsmith.io'
+  //let production_hostname = 'localhost'
+  if (window.location.hostname === production_hostname) {
+    console.log("Production GA will load");
+    $.getScript(
+      '{{ site.baseurl }}/js/header_scripts.js',
+      function() { console.log("Production GA loaded!") }
+    )
+  }
+</script>
 <meta charset='utf-8'>
 <meta content='utf-8' name='content-type'>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
