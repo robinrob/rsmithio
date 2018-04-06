@@ -20,7 +20,7 @@
   %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
   %meta{:name => "description", :content => "{% if page.type %}{{ page.type }}: {{ page.title }} - {{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"}
   %meta{:name => "keywords", :content => "Freelance developer, Edinburgh, mobile, web, AngularJS, PhoneGap, SEO, Heroku, AWS, Google Apps, JavaScript, Force.com, Salesforce"}
-  %title {% if page.toptitle %}{{ page.toptitle }}{% else if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  %title {% if page.toptitle %}{{ page.toptitle }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
 
   / Fonts
   %link{:rel => 'stylesheet', :type => 'text/css', :href => 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'}

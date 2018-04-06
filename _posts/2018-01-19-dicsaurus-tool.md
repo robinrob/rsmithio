@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Dicsaurus
+title:      Dicsaurus Dictionary & Thesaurus
 subtitle:   A Command-Line Dictionary & Thesaurus Tool
 date:       2018-01-19
 type:       Blog Post
