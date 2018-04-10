@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     blog_post
 title:      Jekyll Gulp HAML SASS BrowserSync
 subtitle:   My custom flavour of Jekyll site template.
 date:       2015-06-04

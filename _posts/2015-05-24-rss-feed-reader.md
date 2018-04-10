@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     blog_post
 title:      RSS Reader Script
 subtitle:   Short Ruby script to open RSS links using terminal interface
 date:       2015-05-24

@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     blog_post
 title:      Learn Regex or Regret It
 subtitle:   My view on the fun of learning how to use Regular Expressions
 date:       2015-08-29

@@ -1,10 +1,11 @@
 ---
-layout:     blog_post
-title:      Getting started with OCaml
-subtitle:   Learning a functional programming language
-date:       2018-03-13
-type:       Blog Post
-published:  true
+layout:         blog_post
+title:          Getting started with OCaml
+subtitle:       Learning a functional programming language
+description:    Blog Post:
+date:           2018-03-13
+type:           Blog Post
+published:      true
 ---
 
 After much persuasion from a friend over the last few years, I've started learning [OCaml](https://ocaml.org/learn/description.html). So far I am

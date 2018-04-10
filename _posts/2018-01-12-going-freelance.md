@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     blog_post
 title:      Going Freelance
 subtitle:   Experiences from making the switch to freelancing
 date:       2018-01-12

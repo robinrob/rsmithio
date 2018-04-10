@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     blog_post
 title:      What's so Fun About Programming?
 subtitle:   Thoughts on what makes us code
 date:       2018-02-06

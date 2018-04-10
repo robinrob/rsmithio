@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     blog_post
 title:      Maintaining a personal code library
 subtitle:   Record and hold on to your precious code snippets
 date:       2015-10-30

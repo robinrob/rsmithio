@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     blog_post
 title:      Personal Automation as Code Practice
 subtitle:   Why automating everything can be good for you
 date:       2018-01-29
