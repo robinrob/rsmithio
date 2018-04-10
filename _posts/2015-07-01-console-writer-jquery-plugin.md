@@ -1,5 +1,5 @@
 ---
-layout:         post
+layout:         blog_post
 title:          ConsoleWriter jQuery Plugin
 subtitle:       Console-style inline element editing using jQuery
 description:    "Blog Post: ConsoleWriter jQuery Plugin - A jQuery plugin for adding a typewriter effect to HTML elements and interactively editing element text"
