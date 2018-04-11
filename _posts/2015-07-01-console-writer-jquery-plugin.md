@@ -2,9 +2,9 @@
 layout:         blog_post
 title:          ConsoleWriter jQuery Plugin
 subtitle:       Console-style inline element editing using jQuery
-description:    "Blog Post: ConsoleWriter jQuery Plugin - A jQuery plugin for adding a typewriter effect to HTML elements and interactively editing element text"
+description:    "A jQuery plugin for adding a typewriter effect to HTML elements and interactively editing element text"
 date:           2015-07-01
-type:           Blog Post
+type:           blog_post
 ---
 
 <h2 class="console-writer" cw-sound="true" cw-animation="true">Edit Me!</h2>

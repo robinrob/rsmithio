@@ -18,9 +18,9 @@
   %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=UTF-8"}
   %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge"}
   %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
-  %meta{:name => "description", :content => "{% if page.description %}{{ page.description }}{% elsif page.type %}{{ page.type }}: {{ page.title }} - {{ page.subtitle }}{% else %}{{ site.description }}{% endif %}."}
+  %meta{:name => "description", :content => "Robin Smith - {% if page.type %}Blog Post: {{ page.title }} - {% if page.description %}{{ page.description }}{% else %}{{ page.subtitle }}.{% endif %}{% elsif page.description %}{{ page.description }}.{% else %} {{ site.description }}.{% endif %}"}
   %meta{:name => "keywords", :content => "Freelance developer, Edinburgh, mobile, web, AngularJS, PhoneGap, SEO, Heroku, AWS, Google Apps, JavaScript, Force.com, Salesforce"}
-  %title {% if page.toptitle %}{{ page.toptitle }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  %title Robin Smith - {% if page.toptitle %}{{ page.toptitle }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
 
   / Fonts
   %link{:rel => 'stylesheet', :type => 'text/css', :href => 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'}

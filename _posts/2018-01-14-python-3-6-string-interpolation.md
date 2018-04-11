@@ -3,7 +3,7 @@ layout:     blog_post
 title:      Python 3.6 String Interpolation
 subtitle:   Python 3.6 introduces a new Ruby-style string interpolation
 date:       2018-01-14
-type:       Blog Post
+type:       blog_post
 published:  true
 ---
 

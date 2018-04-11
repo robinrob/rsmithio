@@ -2,9 +2,9 @@
 layout:         blog_post
 title:          Getting started with OCaml
 subtitle:       Learning a functional programming language
-description:    Blog Post:
+description:    "A quick intro showing how to get started with OCaml and some of its core features."
 date:           2018-03-13
-type:           Blog Post
+type:           blog_post
 published:      true
 ---
 

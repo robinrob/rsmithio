@@ -2,8 +2,9 @@
 layout:     blog_post
 title:      Going Freelance
 subtitle:   Experiences from making the switch to freelancing
+description: "Some discussion of my experiences of making the switch from full-time employment to become a freelance web developer, including some pros and cons of working from home"
 date:       2018-01-12
-type:       Blog Post
+type:       blog_post
 published:  true
 ---
 

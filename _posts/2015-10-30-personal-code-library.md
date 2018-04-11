@@ -1,9 +1,10 @@
 ---
-layout:     blog_post
-title:      Maintaining a personal code library
-subtitle:   Record and hold on to your precious code snippets
-date:       2015-10-30
-type:       Blog Post
+layout:         blog_post
+title:          Maintaining a personal code library
+subtitle:       Record and hold on to your precious code snippets
+description:    "Discussion of why I think it&#39;ss important to retain all of your code as a software developer, and the method that I use to organise mine"
+date:           2015-10-30
+type:           blog_post
 ---
 
 These days rapid Google searches are an invaluable tool for developers who are constantly getting to grips with a

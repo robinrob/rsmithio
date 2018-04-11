@@ -2,8 +2,9 @@
 layout:     blog_post
 title:      What's so Fun About Programming?
 subtitle:   Thoughts on what makes us code
+description: "Discussion about the aspects of programming that I personally find rewarding and which motivate me to continue"
 date:       2018-02-06
-type:       Blog Post
+type:       blog_post
 published:  true
 ---
 

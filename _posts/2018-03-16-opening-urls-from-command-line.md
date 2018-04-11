@@ -2,8 +2,9 @@
 layout:     blog_post
 title:      Opening web URLs from the command-line
 subtitle:   A ZSH function for quickly opening URLs
+description: "A custom piece of automation I use for opening web URLs in a web browser directly from the ZSH command-line"
 date:       2018-03-16
-type:       Blog Post
+type:       blog_post
 published:  true
 ---
 
