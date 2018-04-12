@@ -206,7 +206,7 @@ final class PersonModel: NSManagedObject, Encodable, Decodable {
 
 <pre><code class="swift small-code">func getBackgroundContextForTesting(
     forModelType modelType: AnyClass
-) -> NSManagedObjectContext {
+) -&gt; NSManagedObjectContext {
     let managedObjectModel = NSManagedObjectModel.mergedModel(
         from: [Bundle(for: modelType)]
     )!
@@ -276,8 +276,7 @@ output:
     } catch {
         print("decoding error: \(error)")
     }
-}
-</pre></code>
+}</code></pre>
 
 output:
 

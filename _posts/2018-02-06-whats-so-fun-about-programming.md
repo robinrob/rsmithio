@@ -1,6 +1,6 @@
 ---
 layout:     blog_post
-title:      What's so Fun About Programming?
+title:      "What&#39;s so Fun About Programming?"
 subtitle:   Thoughts on what makes us code
 description: "Discussion about the aspects of programming that I personally find rewarding and which motivate me to continue"
 date:       2018-02-06
@@ -56,6 +56,6 @@ need.
 
 The above factors are why when I started to learn programming, then play around with it, I felt a strong urge to keep
 doing it. Perhaps it explains some of the reasons why so many people seem to cross over *into* programming from other
-fields. At every [TechMeetup](techmeetup.co.uk) event I go to I speak to at least one person
+fields. At every [TechMeetup](http://techmeetup.co.uk) event I go to I speak to at least one person
 who is a student of [CodeClan](https://codeclan.com), and it's great to be involved in a field where that happens
  and which is so welcoming to people joining.

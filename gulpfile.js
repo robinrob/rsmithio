@@ -217,7 +217,7 @@ gulp.task('js-concat-header', function () {
 })
 
 gulp.task('js-minify', function () {
-    return gulp.src(config.paths.js.dest + '/' + config.paths.js.headerMain)
+    return gulp.src(config.paths.js.dest + '/' + config.paths.js.main)
         .pipe(uglify())
         .pipe(gulp.dest(config.paths.js.dest))
 })

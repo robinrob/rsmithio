@@ -13,7 +13,7 @@ Peter Stephenson's [*A User's Guide to the Z-Shell*](http://zsh.sourceforge.net/
 
 Having never studied the features of any shell environment in detail, I learned about many interesting and useful features of the Z-Shell, some specific to Z-Shell and some not.
 
-I [mentioned before](blog/personal-automation-as-code-practice) that through learning about ZSH and a desire for automation I have used it extensively to automate lots of things, and really use the command-line as a multi-purpose tool in general life for digital tasks as well as in work.
+I [mentioned before](/blog/personal-automation-as-code-practice) that through learning about ZSH and a desire for automation I have used it extensively to automate lots of things, and really use the command-line as a multi-purpose tool in general life for digital tasks as well as in work.
 
 Because I was resorting to the command-line so habitually for everything, I'd sometimes find myself pasting web URLs onto the command-line in the hope of opening them up in a web browser! Of course I'd get the "command not found" message and feel silly. But one day I thought it would be a cool challenge to see if I could find a way to reliably open up URLs like this, whilst not messing up ordinary command-line functionality.
 

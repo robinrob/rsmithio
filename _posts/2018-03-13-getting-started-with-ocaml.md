@@ -149,7 +149,7 @@ Defining a function (that checks whether a given integer is even or odd):
 output in `utop`:
 
 ```plaintext
-val even : int -> bool = <fun>
+val even : int -&gt; bool = <fun>
 ```
 
 
@@ -175,8 +175,8 @@ Let's try a more complicated function. Compare these two example definitions of 
 
 <pre><code class="ocaml">let rec sum list =
     match list with
-    | [] -> 0
-    | first :: rest -> first + sum rest
+    | [] -&gt; 0
+    | first :: rest -&gt; first + sum rest
 ;;
 </code></pre>
 
@@ -237,7 +237,7 @@ What is the tooling support for OCaml like? It's actually pretty good. For an ed
 
 The vscode-reasonml plugin gives some cute-looking camel icons to the `.ml` files:
 
-<img src="/img/vscode_ocaml.png"></img>
+<img src="/img/vscode_ocaml.png" alt="Screenshot of Visual Studio Code OCaml plugin" />
 
 I was pleased to see that [Rouge](https://github.com/jneen/rouge), the syntax-highlighting plugin used in this blog, supports OCaml syntax, hence the nicely-looking code snippets in this post.
 
