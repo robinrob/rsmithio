@@ -43,7 +43,7 @@ description: My software development blog covering things such as software desig
 <ul class='pager'>
 {% if paginator.previous_page %}
 <li class='previous'>
-<a href='{{ paginator.previous_page_path | prepend: site.baseurl }}'>
+<a href='{{ paginator.previous_page_path | prepend: site.baseurl }}/'>
 <span>View Newer Posts</span>
 &larr; Newer Posts
 </a>
@@ -51,7 +51,7 @@ description: My software development blog covering things such as software desig
 {% endif %}
 {% if paginator.next_page %}
 <li class='next'>
-<a href='{{ paginator.next_page_path | prepend: site.baseurl }}'>
+<a href='{{ paginator.next_page_path | prepend: site.baseurl }}/'>
 <span>View Older Posts</span>
 Older Posts &rarr;
 </a>

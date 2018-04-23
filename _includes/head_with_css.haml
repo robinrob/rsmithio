@@ -10,11 +10,11 @@
   %title {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
 
   / Fonts
-  %link{:rel => 'stylesheet', :type => 'text/css', :href => 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'}
+  %link{:rel => 'stylesheet', :type => 'text/css', :href => 'https://maxcdn.acdn.com/font-awesome/4.3.0/css/font-awesome.min.css'}
   %link{:rel => 'stylesheet', :type => 'text/css', :href => 'https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'}
   %link{:rel => 'stylesheet', :type => 'text/css', :href => 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'}
 
   / CSS
-  %style {% include styles.css %}
+  %link{:rel => "stylesheet", :href => "{{ site.baseurl }}/css/styles.css"}
   %link{:rel => "icon", :href => "{{ site.baseurl }}/img/favicon.gif", :type => "image/gif"}
   %link{:rel => "canonical", :href => "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}/"}
