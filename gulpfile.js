@@ -269,7 +269,7 @@ gulp.task('save', function (done) {
     }, done)
 })
 
-gulp.task('watch', gulp.series('haml-watch'), function () {
+gulp.task('watch', function () {
     return watch(config.paths.watch, gulp.series('fast-build'))
 })
 
@@ -292,6 +292,6 @@ gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap', 'save', 'uploa
 gulp.task('deploy', gulp.series('build', 'fast-deploy'))
 
 // Build/watch
-gulp.task('full', gulp.series('build', 'watch', 'browser-sync'))
+gulp.task('full', gulp.series('build', gulp.parallel('haml-watch', 'watch', 'browser-sync')))
 
 gulp.task('default', gulp.series('dev-build', gulp.parallel('haml-watch', 'dev-watch', 'browser-sync')))
