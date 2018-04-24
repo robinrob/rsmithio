@@ -36,8 +36,7 @@ var config = {
             headerSrc: ['_js_header/*.js'],
             dest: '_site/js/'
         },
-        cv: 'robin_smiths_cv.pdf',
-        headersFile: "_headers"
+        cv: 'robin_smiths_cv.pdf'
     },
     siteUrl: "https://rsmith.io",
     sitemapUrl: "https://rsmith.io/sitemap.xml",
@@ -263,11 +262,6 @@ gulp.task('submit-sitemap', function (done) {
     })
 })
 
-gulp.task('headers', function () {
-    return gulp.src(config.paths.headersFile)
-        .pipe(gulp.dest(buildDir))
-})
-
 gulp.task('save', function (done) {
     var msg = argv.msg || 'Quick-deploy'
     return require('child_process', done).exec('rake base:save[' + msg + ']', {
@@ -293,7 +287,7 @@ gulp.task('dev-build', gulp.series('haml-build', 'jekyll', 'sass', gulp.parallel
 gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js'), 'reload'))
 
 // Deploy
-gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap', 'headers', 'save', 'upload'))
+gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap', 'save', 'upload'))
 
 gulp.task('deploy', gulp.series('build', 'fast-deploy'))
 
