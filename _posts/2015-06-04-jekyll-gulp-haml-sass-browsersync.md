@@ -7,9 +7,13 @@ date:       2015-06-04
 type:       blog_post
 ---
 
-Whilst using Github's Jekyll framework to build a static website, I noticed a lack of built-in HAML support. I am a big fan of using HAML to produce HTML. Apart from this lack of support for HAML, I enjoy using Jekyll.
+Whilst using Github's Jekyll framework to build a static website, I noticed a lack of built-in (HAML)[http://haml.info/] support.
 
-Since I was using Gulp to manage the build process, I needed a Gulp task to handle the HAML preprocessing. I initially tried using the <a href="https://www.npmjs.com/package/gulp-haml"><span>Gulp-Haml NPM package</span>gulp-haml</a> module in my HAML task, but it produced incorrect results a few times. I came across the node module <a href="https://github.com/moneypenny/gulp-ruby-haml"><span>Gulp-Ruby-Haml NPM package</span>gulp-ruby-haml</a>, which is a wrapper on the Ruby gem <a href="https://rubygems.org/gems/haml"><span>HAML ruby package</span>haml</a>, and which gives accurate results.
+I am a big fan of using HAML to produce HTML. Whilst I think we should be careful about adding yet more tools into the build chain, for personal projects at least it can be fun to play around with them with. HAML is used within the Ruby on Rails community, as it is supported by Ruby on Rails along with ERB as alternate HTML templating languages. I even write my (CV)[{{ site.url }}/cv/] in HAML.
+
+Apart from this lack of built-in support for HAML, I really enjoy using Jekyll, so I persisted with integrating a HAML build step into my Jekyll build.
+
+Since I was using Gulp to manage the build process, I needed a Gulp task to handle the conversion from HAML to HTML. I initially tried using the <a href="https://www.npmjs.com/package/gulp-haml"><span>Gulp-Haml NPM package</span>gulp-haml</a> module in my HAML task, but it produced incorrect results a few times. I then came across the node module <a href="https://github.com/moneypenny/gulp-ruby-haml"><span>Gulp-Ruby-Haml NPM package</span>gulp-ruby-haml</a>, which is a wrapper on the Ruby gem <a href="https://rubygems.org/gems/haml"><span>HAML ruby package</span>haml</a>, and which gives accurate results.
 
 <h2 class="section-heading">HAML Processing</h2>
 HAML files reside inside a `_haml` folder which sits at the location of the resultant HTML files. For example:
@@ -30,7 +34,7 @@ HAML files reside inside a `_haml` folder which sits at the location of the resu
 
 <p>The HAML build task is actually fairly slow compared to the CSS or Javascript processing tasks. It can take up to 10 seconds to process all of the HAML in the project. This is unacceptable when rebuilding on-the-fly while making changes.</p>
 
-To avoid slow build times, I use a separate `haml-watch` task that watches the HAML files for changes, then only processes the files that changed. The stream is then piped into the code for compiling the HAML, which is contained in the function `hamlBuild()`. This stream-piping step makes use of <a href="https://www.npmjs.com/package/stream-combiner2"><span>Stream Combiner 2 NPM package</span>stream-combiner2</a>. Below is the code for both HAML tasks:
+To avoid slow build times, I wrote a separate `haml-watch` task that watches the HAML files for changes, then only processes the files that changed. The stream is then piped into the code for compiling the HAML, which is contained in the function `hamlBuild()`. This stream-piping step makes use of <a href="https://www.npmjs.com/package/stream-combiner2"><span>Stream Combiner 2 NPM package</span>stream-combiner2</a>. Below is the code for both HAML tasks:
 
 <pre><code class="javascript">var haml = require('gulp-ruby-haml')
 var combiner = require('stream-combiner2')
