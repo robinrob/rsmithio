@@ -13,21 +13,4 @@
       )
     }
 
-  %meta{:charset => "utf-8"}
-  %meta{:name => "content-type", :content => "utf-8"}
-  %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=UTF-8"}
-  %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge"}
-  %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
-  {% include head_description.html %}
-  %meta{:name => "keywords", :content => "Freelance developer, Edinburgh, mobile, web, AngularJS, PhoneGap, SEO, Heroku, AWS, Google Apps, JavaScript, Force.com, Salesforce"}
-  %title Robin Smith - {% if page.toptitle %}{{ page.toptitle }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
-
-  / Fonts
-  %link{:rel => 'stylesheet', :type => 'text/css', :href => 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'}
-  %link{:rel => 'stylesheet', :type => 'text/css', :href => 'https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'}
-  %link{:rel => 'stylesheet', :type => 'text/css', :href => 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'}
-
-  / CSS
-  %link{:rel => "stylesheet", :href => "{{ site.baseurl }}/css/styles.css"}
-  %link{:rel => "icon", :href => "{{ site.baseurl }}/img/favicon.gif", :type => "image/gif"}
-  %link{:rel => "canonical", :href => "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}/"}
+  {% include head_without_js.html %}
