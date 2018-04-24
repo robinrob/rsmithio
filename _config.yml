@@ -28,7 +28,7 @@ highlighter: rouge
 permalink: /blog/:title/
 plugins: [jekyll-paginate]
 paginate_path: "/blog/page/:num"
-paginate: 8
+paginate: 10
 # Excludes these files/folders from being included into Jekyll _site folder.
 # Note that you can also name files with a leading underscore to exclude them e.g.: _README.md
 exclude: [node_modules, gulpfile.js, README.md, package.json, Gemfile, Gemfile.lock]
