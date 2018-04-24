@@ -287,7 +287,7 @@ gulp.task('dev-build', gulp.series('haml-build', 'jekyll', 'sass', gulp.parallel
 gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js'), 'reload'))
 
 // Deploy
-gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap', 'save'))
+gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap', 'save', 'upload'))
 
 gulp.task('deploy', gulp.series('build', 'fast-deploy'))
 
