@@ -882,10 +882,6 @@ cloneable-readable@^1.0.0:
     process-nextick-args "^2.0.0"
     readable-stream "^2.3.5"
 
-cloudflare@0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/cloudflare/-/cloudflare-0.0.8.tgz#b4b77316139f74f93d9928f2e95ff031d51abbb9"
-
 co@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/co/-/co-3.1.0.tgz#4ea54ea5a08938153185e15210c68d9092bc1b78"
@@ -1634,7 +1630,7 @@ es6-iterator@~0.1.3:
     es5-ext "~0.10.5"
     es6-symbol "~2.0.1"
 
-es6-promise@^2.3.0, es6-promise@~2.3.0:
+es6-promise@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-2.3.0.tgz#96edb9f2fdb01995822b263dd8aadab6748181bc"
 
@@ -2179,12 +2175,6 @@ gifsicle@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-gift@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/gift/-/gift-0.6.1.tgz#c1698e6b6887164ed978a01095423cff65b8e79f"
-  dependencies:
-    underscore "1.x.x"
-
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
@@ -2472,13 +2462,6 @@ gulp-cli@^2.0.0:
     v8flags "^3.0.1"
     yargs "^7.1.0"
 
-gulp-cloudflare@~0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/gulp-cloudflare/-/gulp-cloudflare-0.1.3.tgz#28835842fb03c375ee2c804503c1d0f14a4ded3c"
-  dependencies:
-    gulp-util "~2.2.0"
-    request "^2.51.0"
-
 gulp-concat@~2.6.0:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/gulp-concat/-/gulp-concat-2.6.1.tgz#633d16c95d88504628ad02665663cee5a4793353"
@@ -2502,17 +2485,6 @@ gulp-foreach@^0.1.0:
   dependencies:
     gulp-util "~2.2.14"
     through2 "~0.6.3"
-
-gulp-gh-pages@~0.5.2:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/gulp-gh-pages/-/gulp-gh-pages-0.5.4.tgz#a6732ca475ab9b5a53253c1c24734c40c21b6546"
-  dependencies:
-    gift "^0.6.1"
-    gulp-util "^3.0.7"
-    readable-stream "^2.0.2"
-    rimraf "^2.4.3"
-    vinyl-fs "^2.2.1"
-    wrap-promise "^1.0.1"
 
 gulp-haml@~0.1.5:
   version "0.1.6"
@@ -5828,7 +5800,7 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@^2.2.6, rimraf@^2.4.3, rimraf@^2.5.1, rimraf@^2.6.1:
+rimraf@2, rimraf@^2.2.6, rimraf@^2.5.1, rimraf@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
   dependencies:
@@ -6806,10 +6778,6 @@ unc-path-regex@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/unc-path-regex/-/unc-path-regex-0.1.2.tgz#e73dd3d7b0d7c5ed86fbac6b0ae7d8c6a69d50fa"
 
-underscore@1.x.x:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
-
 undertaker-registry@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/undertaker-registry/-/undertaker-registry-1.0.1.tgz#5e4bda308e4a8a2ae584f9b9a4359a499825cc50"
@@ -7105,7 +7073,7 @@ vinyl-fs@^1.0.0:
     through2 "^0.6.1"
     vinyl "^0.4.0"
 
-vinyl-fs@^2.2.0, vinyl-fs@^2.2.1:
+vinyl-fs@^2.2.0:
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/vinyl-fs/-/vinyl-fs-2.4.4.tgz#be6ff3270cb55dfd7d3063640de81f25d7532239"
   dependencies:
@@ -7285,12 +7253,6 @@ wrap-fn@^0.1.0:
   resolved "https://registry.yarnpkg.com/wrap-fn/-/wrap-fn-0.1.5.tgz#f21b6e41016ff4a7e31720dbc63a09016bdf9845"
   dependencies:
     co "3.1.0"
-
-wrap-promise@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/wrap-promise/-/wrap-promise-1.0.1.tgz#b019f4236ccbf1fb560921b4b4870b7bda2f5255"
-  dependencies:
-    es6-promise "^2.3.0"
 
 wrappy@1:
   version "1.0.2"
