@@ -43,6 +43,7 @@ var config = {
 }
 config.paths.watch = [
     ...['_config.yml'],
+    ...['admin/config.yml'],
     ...config.paths.img.src,
     ...config.paths.markdown.src,
     ...config.paths.html.src,
