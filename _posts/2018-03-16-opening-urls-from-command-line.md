@@ -1,5 +1,5 @@
 ---
-layout:     blog_post
+layout:     post
 title:      Opening web URLs from the command-line
 subtitle:   A ZSH function for quickly opening URLs
 description: "A custom piece of automation I use for opening web URLs in a web browser directly from the ZSH command-line"
@@ -52,3 +52,4 @@ And the `safari` function:
 I am specifically using Safari for these URLs just because I found I am most of the time wanting to open an article with lots of text to read, and I love using the Reader feature of Safari for that.
 
 It's a simple enough solution but one that works reliably and that I use all the time.
+

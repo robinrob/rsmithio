@@ -1,5 +1,5 @@
 ---
-layout:         blog_post
+layout:         post
 title:          RSS Reader Script
 subtitle:       Short Ruby script to open RSS links using terminal interface
 description:    "I've written a Ruby script to create a command-line interface for browsing articles from an RSS feed"

@@ -1,5 +1,5 @@
 ---
-layout:         blog_post
+layout:         post
 title:          Maintaining a personal code library
 subtitle:       Record and hold on to your precious code snippets
 description:    "Discussion of why I think it&#39;ss important to retain all of your code as a software developer, and the method that I use to organise mine"

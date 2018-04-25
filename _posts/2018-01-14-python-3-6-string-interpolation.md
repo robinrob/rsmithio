@@ -1,5 +1,5 @@
 ---
-layout:     blog_post
+layout:     post
 title:      Python 3.6 String Interpolation
 subtitle:   Python 3.6 introduces a new Ruby-style string interpolation
 date:       2018-01-14

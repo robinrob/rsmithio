@@ -1,5 +1,5 @@
 ---
-layout:     blog_post
+layout:     post
 title:      Encoding & Decoding Swift 4 Models
 subtitle:   "Using Swift 4&#39;s coding API for database model serialisation"
 date:       2018-02-08
