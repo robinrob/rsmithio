@@ -9,7 +9,7 @@ published:  true
 ---
 
 
-In 2015 I started [working freelance]({{ site.url/blog/going-freelance/ }}). In 2016 I stopped using facebook. In 2017, I started disabling every possible application notification on my desktop computer, laptop and phone. Why did I do all of this? Notifications were really getting in the way of work *and* life.
+In 2015 I started [working freelance]({{ site.url }}/blog/going-freelance/). In 2016 I stopped using facebook. In 2017, I started disabling every possible application notification on my desktop computer, laptop and phone. Why did I do all of this? Notifications were really getting in the way of work *and* life.
 
 I am a strong believer in keeping life simple. I also believe in being efficient with your time - time is precious. How many times have you heard that phrase? *"Life is short"*. This famous [Steve Jobs quote](https://www.goodreads.com/quotes/427317-remembering-that-i-ll-be-dead-soon-is-the-most-important) chimes with me a bit. If life is so short, how is it that time sometimes seem to pass so ridiculously slowly? If you sit still and do nothing for 10 minutes, it feels like a really long time. Try it. Multiply that by 6 for each hour, and 24 for each day, and even a week starts to look like an age. And we have 52 of these in a year. Most of us can expect to have at least *10 more years* ahead of us, many of us much more. So in fact, on average, we actually have an *eternity* of time available to us.
 
