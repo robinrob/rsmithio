@@ -1,5 +1,5 @@
 ---
-layout:     blog
+layout:     blog_post
 title:      Jekyll Gulp HAML SASS BrowserSync
 subtitle:   My custom flavour of Jekyll site template.
 description: "Starter code for a static website using Jekyll, Gulp, HAML, SASS and BrowserSync"

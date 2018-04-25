@@ -1,5 +1,5 @@
 ---
-layout:         blog
+layout:         blog_post
 title:          Getting started with OCaml
 subtitle:       Learning a functional programming language
 description:    "A quick intro showing how to get started with OCaml and some of its core features."

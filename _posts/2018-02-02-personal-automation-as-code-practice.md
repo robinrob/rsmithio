@@ -1,5 +1,5 @@
 ---
-layout:     blog
+layout:     blog_post
 title:      Personal Automation as Code Practice
 subtitle:   Why automating everything can be good for you
 description: "Some discussion about the pros and fun of automating common computing tasks in your free time"

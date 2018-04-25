@@ -1,5 +1,5 @@
 ---
-layout:     blog
+layout:     blog_post
 title:      Dicsaurus Dictionary & Thesaurus
 subtitle:   A Command-Line Dictionary & Thesaurus Tool
 description: "Starter code for implementing a Command-Line Dictionary & Thesaurus Tool"
