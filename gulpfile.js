@@ -233,13 +233,6 @@ gulp.task('js-dev', gulp.series('js-concat'))
 
 gulp.task('js', gulp.parallel(gulp.series('js-concat', 'js-minify'), gulp.series('js-concat-header', 'js-minify-header')))
 
-gulp.task('upload', function () {
-    return gulp.src(config.paths.build)
-        .pipe(ghPages({
-            branch: 'master'
-        }))
-})
-
 // Purges website cache so updates are shown
 gulp.task('purge-online-cache', function (done) {
     cloudflare(config.cloudflare)
@@ -288,7 +281,7 @@ gulp.task('dev-build', gulp.series('haml-build', 'jekyll', 'sass', gulp.parallel
 gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js'), 'reload'))
 
 // Deploy
-gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap', 'save', 'upload'))
+gulp.task('fast-deploy', gulp.series('sitemap', 'submit-sitemap'))
 
 gulp.task('deploy', gulp.series('build', 'fast-deploy'))
 
