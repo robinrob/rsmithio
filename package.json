@@ -10,7 +10,6 @@
     "gulp-callback": "0.0.3",
     "gulp-changed": "~1.2.1",
     "gulp-concat": "~2.6.0",
-    "gulp-gh-pages": "~0.5.2",
     "gulp-haml": "~0.1.5",
     "gulp-imagemin": "~2.3.0",
     "gulp-jekyll": "0.0.0",

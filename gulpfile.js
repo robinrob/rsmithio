@@ -55,11 +55,9 @@ config = require('./_secret-config.js')(config)
 
 var argv = require('yargs').argv
 var browserSync = require('browser-sync')
-var cloudflare = require('gulp-cloudflare')
 var combiner = require('stream-combiner2')
 var concat = require('gulp-concat')
 var cp = require('child_process')
-var ghPages = require('gulp-gh-pages')
 var gulp = require('gulp')
 var gutil = require('gulp-util');
 var haml = require('gulp-ruby-haml')
@@ -232,12 +230,6 @@ gulp.task('js-minify-header', function () {
 gulp.task('js-dev', gulp.series('js-concat'))
 
 gulp.task('js', gulp.parallel(gulp.series('js-concat', 'js-minify'), gulp.series('js-concat-header', 'js-minify-header')))
-
-// Purges website cache so updates are shown
-gulp.task('purge-online-cache', function (done) {
-    cloudflare(config.cloudflare)
-    done()
-})
 
 gulp.task('sitemap', function () {
     return gulp.src(config.paths.html.build)
