@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: develop # Branch to update (optional; defaults to master)
+  branch: master # Branch to update (optional; defaults to master)
   
 media_folder: "img" 
 collections:
@@ -10,7 +10,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog_post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Sub-title", name: "subtitle", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
