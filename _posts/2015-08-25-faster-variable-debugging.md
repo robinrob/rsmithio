@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     blog
 title:      Faster Variable Debugging
 subtitle:   Useful code snippets to help with faster debugging
 description: "A straightforward technique to add a bit of automation into a common debugging step"

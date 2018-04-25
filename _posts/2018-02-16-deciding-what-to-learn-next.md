@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     blog
 title:      Deciding What to Learn Next as a Programmer
 subtitle:   Or not to?
 description: "A blog post about some considerations to make when deciding what to learn next to improve your knowledge or skills as a programmer"
