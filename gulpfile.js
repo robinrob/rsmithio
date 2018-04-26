@@ -273,7 +273,7 @@ gulp.task('dev-build', gulp.series('haml-build', 'jekyll', 'sass', gulp.parallel
 gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js'), 'reload'))
 
 // Deploy
-gulp.task('deploy', gulp.series('haml-build', 'jekyll', 'jekyll', 'sass', gulp.parallel('css', 'js'), 'cv-to-pdf', 'reload'), 'sitemap', 'submit-sitemap')
+gulp.task('deploy', gulp.series('build', 'sitemap', 'submit-sitemap'))
 
 // Build/watch
 gulp.task('full', gulp.series('build', gulp.parallel('haml-watch', 'watch', 'browser-sync')))
