@@ -1,11 +1,13 @@
 ---
-layout:     blog_post
-title:      Facebook is like 'Ow My Balls' from the film 'Idiocracy'
-subtitle:   App notifications are the modern bane of productivity
-description: "A discussion of the many obstacles to productivity that we face during the day, and what to do about them"
-date:       2018-04-24
-type:       blog_post
-published:  true
+layout: blog_post
+title: Notifications are like 'Ow My Balls' from the film 'Idiocracy'
+subtitle: App notifications are the modern bane of productivity
+description: >-
+  A discussion of the many obstacles to productivity that we face during the
+  day, and what to do about them
+date: 2018-04-24T00:00:00.000Z
+type: blog_post
+published: false
 ---
 
 
