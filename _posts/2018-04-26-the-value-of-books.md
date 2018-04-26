@@ -2,12 +2,10 @@
 layout: blog_post
 title: The Value of Books
 subtitle: Why books still hold great value amongst information media
-description: >-
-  The Value of Books - Why books still hold great value amongst information
-  media
+description: ''
 date: '2018-04-26T13:34:46+01:00'
 type: blog_post
-published: true
+published: false
 ---
 It is amazing how many sources of information we have available to us today, solely because of the internet. Many professions and industries now have rich online communities, but given the expertise of software developers it is probably the case that the online software community is bigger and richer, since there is less barrier to entry to developers getting online. The online \*global\* community of software developers and its strong spirit of knowledge-sharing is one of the most attractive draws to the industry for new people. 
 
