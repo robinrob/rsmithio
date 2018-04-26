@@ -16,8 +16,8 @@ collections:
       - {label: "Layout", name: "layout", widget: "string", default: "blog_post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Sub-title", name: "subtitle", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Description", name: "description", widget: "string", required: false}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Type", name: "type", widget: "string", default: "blog_post"}
-      - {label: "Published", name: "published", widget: "boolean", default: true}
+      - {label: "Published", name: "published", widget: "boolean", default: true, required: false}
       - {label: "Body", name: "body", widget: "markdown"}
