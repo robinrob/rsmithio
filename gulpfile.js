@@ -264,7 +264,7 @@ gulp.task('dev-watch', function () {
 })
 
 // Build
-gulp.task('build', gulp.series('haml-build', 'jekyll', 'html', 'sass', gulp.parallel('css', 'js'), 'cv-to-pdf', 'reload'))
+gulp.task('build', gulp.series('haml-build', 'jekyll', 'sass', gulp.parallel('css', 'js'), 'cv-to-pdf', 'reload'))
 
 gulp.task('fast-build', gulp.series('jekyll', 'html', 'sass', gulp.parallel('css', 'js'), 'reload'))
 
