@@ -10,12 +10,8 @@ var config = {
         markdown: {
             src: ['_posts/*.md', '_drafts/*.md'],
         },
-        haml: {
-            src: ['**/*/*.haml', '!node_modules/**/*', '!_site/**/*']
-            
-        },
         html: {
-            src: ['**/*.html', '!_site/**/*'],
+            src: ['**/*/*.html', '!_site/**/*'],
             build: [buildDir + '/**/*.html'],
             dest: './'
         },
@@ -60,7 +56,6 @@ var concat = require('gulp-concat')
 var cp = require('child_process')
 var gulp = require('gulp')
 var gutil = require('gulp-util');
-var haml = require('gulp-ruby-haml')
 var imagemin = require('gulp-imagemin');
 var minifyCSS = require('gulp-minify-css')
 var minifyHTML = require('gulp-minify-html')
@@ -135,24 +130,6 @@ gulp.task('browser-sync', function () {
         },
         browser: 'Google\ Chrome'
     })
-})
-
-gulp.task('haml-watch', function (done) {
-    return gulp.src(config.paths.haml.src, {read: false})
-        .pipe(plumber({
-            onError: onError
-        }))
-        .pipe(watch(config.paths.haml.src))
-        .pipe(haml())
-        .pipe(gulp.dest('./'))
-})
-
-gulp.task('haml-build', function () {
-    return gulp.src(config.paths.haml.src)
-        .pipe(plumber({
-            onError: onError
-        }))
-        .pipe(haml())
 })
 
 gulp.task('html', function () {
@@ -264,11 +241,11 @@ gulp.task('dev-watch', function () {
 })
 
 // Build
-gulp.task('build', gulp.series('haml-build', 'jekyll', 'sass', gulp.parallel('css', 'js'), 'cv-to-pdf', 'reload'))
+gulp.task('build', gulp.series('jekyll', 'sass', gulp.parallel('css', 'js'), 'cv-to-pdf', 'reload'))
 
 gulp.task('fast-build', gulp.series('jekyll', 'html', 'sass', gulp.parallel('css', 'js'), 'reload'))
 
-gulp.task('dev-build', gulp.series('haml-build', 'jekyll', 'sass', gulp.parallel('css-dev', 'js-dev'), 'cv-to-pdf', 'reload'))
+gulp.task('dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js-dev'), 'cv-to-pdf', 'reload'))
 
 gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js'), 'reload'))
 
@@ -276,6 +253,6 @@ gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev
 gulp.task('deploy', gulp.series('build', 'sitemap', 'submit-sitemap'))
 
 // Build/watch
-gulp.task('full', gulp.series('build', gulp.parallel('haml-watch', 'watch', 'browser-sync')))
+gulp.task('full', gulp.series('build', gulp.parallel('watch', 'browser-sync')))
 
-gulp.task('default', gulp.series('dev-build', gulp.parallel('haml-watch', 'dev-watch', 'browser-sync')))
+gulp.task('default', gulp.series('dev-build', gulp.parallel('dev-watch', 'browser-sync')))
