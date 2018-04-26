@@ -2,7 +2,7 @@
 layout:         blog_post
 title:          RSS Reader Script
 subtitle:       Short Ruby script to open RSS links using terminal interface
-description:    "I've written a Ruby script to create a command-line interface for browsing articles from an RSS feed"
+description:    "I4&#39;ve written a Ruby script to create a command-line interface for browsing articles from an RSS feed"
 date:           2015-05-24
 type:           blog_post
 ---
