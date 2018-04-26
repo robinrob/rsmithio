@@ -57,7 +57,6 @@ var cp = require('child_process')
 var gulp = require('gulp')
 var gutil = require('gulp-util');
 var imagemin = require('gulp-imagemin');
-var minifyCSS = require('gulp-minify-css')
 var minifyHTML = require('gulp-minify-html')
 var ngmin = require('gulp-ngmin')
 var path = require('path')
@@ -69,7 +68,6 @@ var sass = require('gulp-sass')
 var shell = require('shelljs/global')
 var sitemap = require('gulp-sitemap')
 var submitSitemap = require('submit-sitemap')
-var uglify = require('gulp-uglifyjs')
 var watch = require('gulp-watch')
 
 var messages = {
@@ -160,12 +158,6 @@ gulp.task('css-concat', function () {
         .pipe(gulp.dest(config.paths.css.dest))
 })
 
-gulp.task('css-minify', function () {
-    return gulp.src(config.paths.css.dest + '/*.css')
-        .pipe(minifyCSS())
-        .pipe(gulp.dest(config.paths.css.dest))
-})
-
 gulp.task('css-copy', function (done) {
     return gulp.src(config.paths.css.dest + config.paths.css.main)
         .pipe(gulp.dest('_includes/'))
@@ -173,7 +165,7 @@ gulp.task('css-copy', function (done) {
 
 gulp.task('css-dev', gulp.series('css-concat', 'css-copy'))
 
-gulp.task('css', gulp.series('css-concat', 'css-minify', 'css-copy'))
+gulp.task('css', gulp.series('css-concat', 'css-copy'))
 
 gulp.task('cv-to-pdf', function(done) {
     //run("wkhtmltopdf --page-size A4 --margin-top 5mm --margin-right 5mm --margin-bottom 5mm --margin-left 5mm --encoding UTF-8 --quiet _site/cv/print/index.html _site/robin_smiths_cv.pdf").exec(done)
@@ -192,21 +184,9 @@ gulp.task('js-concat-header', function () {
         .pipe(gulp.dest(config.paths.js.dest))
 })
 
-gulp.task('js-minify', function () {
-    return gulp.src(config.paths.js.dest + '/' + config.paths.js.main)
-        .pipe(uglify())
-        .pipe(gulp.dest(config.paths.js.dest))
-})
-
-gulp.task('js-minify-header', function () {
-    return gulp.src(config.paths.js.dest + '/' + config.paths.js.headerMain)
-        .pipe(uglify())
-        .pipe(gulp.dest(config.paths.js.dest))
-})
-
 gulp.task('js-dev', gulp.series('js-concat'))
 
-gulp.task('js', gulp.parallel(gulp.series('js-concat', 'js-minify'), gulp.series('js-concat-header', 'js-minify-header')))
+gulp.task('js', gulp.parallel(gulp.series('js-concat'), gulp.series('js-concat-header')))
 
 gulp.task('sitemap', function () {
     return gulp.src(config.paths.html.build)
