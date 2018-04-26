@@ -15,7 +15,6 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "string", default: "blog_post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Robin", name: "Smith", widget: "string"}
       - {label: "Sub-title", name: "subtitle", widget: "string"}
       - {label: "Description", name: "description", widget: "string", required: false}
       - {label: "Date", name: "date", widget: "datetime"}
