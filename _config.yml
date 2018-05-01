@@ -1,7 +1,7 @@
 # Site settings
 author: Robin Smith
-subtitle: Full-stack web developer
-title: Full-stack Web Developer
+subtitle: Freelance full-stack web developer
+title: Freelance Full-stack Web Developer
 brand: Robin Smith
 year: 2018
 email: robin@rsmith.io
@@ -9,8 +9,7 @@ phone: +44 7481 919 740
 cv: robin_smiths_cv.pdf
 years_experience: 7
 description: > # this means to ignore newlines until "baseurl:"
-  Experienced full-stack web developer building custom web applications and integrations using the best
-  frameworks and cloud technologies
+  Experienced freelance full-stack web developer building custom web applications and integrations using the best web frameworks and cloud technologies
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://rsmith.io   # with the https protocol
 github: robinrob
