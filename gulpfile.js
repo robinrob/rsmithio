@@ -230,7 +230,7 @@ gulp.task('dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'j
 gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js'), 'reload'))
 
 // Deploy
-gulp.task('deploy', gulp.series('build', 'save', 'sitemap', 'submit-sitemap'))
+gulp.task('deploy', gulp.series('build', 'save'))
 
 gulp.task('netlify_deploy', gulp.series('build', 'sitemap', 'submit-sitemap'))
 
