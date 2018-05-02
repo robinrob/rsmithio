@@ -232,6 +232,8 @@ gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev
 // Deploy
 gulp.task('deploy', gulp.series('build', 'save', 'sitemap', 'submit-sitemap'))
 
+gulp.task('netlify_deploy', gulp.series('build', 'sitemap', 'submit-sitemap'))
+
 // Build/watch
 gulp.task('full', gulp.series('build', gulp.parallel('watch', 'browser-sync')))
 
