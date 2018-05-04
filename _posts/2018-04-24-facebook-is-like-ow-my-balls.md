@@ -17,9 +17,9 @@ There can be many obstacles to productivity during the day. Some common examples
 * Distraction
 * Brain clutter
 
-## Reading your phone in bed
-Lack of sleep is a whole different and complex issue. I'd argue that the rest in comparison are relatively easy to solve.
+Lack of sleep is a large complex issue. I'd argue that the rest in comparison are relatively easy to solve.
 
+## Reading your phone in bed
 Putting your phone in a totally different room before you go to bed is a good habit to have. To a curious mind, a smart phone is an infinite portal to the world of people and information. It can be easy to feel bored or lonely whilst in bed, and I'd suggest that's why it's apparently a very common of people to spend too long in bed using them, before going to sleep and after waking up. I know I've definitely had a moment of realisation that I was losing large chunks of my life through doing this!
 
 Once I'd started re-locating the phone, I adapted very quickly and now I don't even think about the idea of using it in bed. It will be different for different people, but practising discipline and good habits is a great core skill to have.
