@@ -4,7 +4,7 @@
 <meta content='IE=edge' http-equiv='X-UA-Compatible'>
 <meta content='width=device-width, initial-scale=1' name='viewport'>
 <meta content='Robin Smith - {% if page.type %}Blog Post: {{ page.title }} - {% if page.description %}{{ page.description }}{% else %}{{ page.subtitle }}.{% endif %}{% elsif page.description %}{{ page.description }}.{% else %} {{ site.description }}.{% endif %}{% if paginator %} - Page {{ paginator.page }}{% endif %}' name='description'>
-<meta content='Freelance developer, Edinburgh, mobile, web, AngularJS, PhoneGap, SEO, Heroku, AWS, Google Apps, JavaScript, Force.com, Salesforce' name='keywords'>
+<meta content='{{ site.keywords }}' name='keywords'>
 <title>Robin Smith - {% if page.toptitle %}{{ page.toptitle }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% if paginator %} - Page {{ paginator.page }}{% endif %}</title>
 <!-- Fonts -->
 <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
