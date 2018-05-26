@@ -227,7 +227,7 @@ Error: This expression has type float but an expression was expected of type
          int
 ```
 
-This doesn't seem surprising when demonstrated by running commands in Utop, but OCaml does this type analysis at *compile time*, as demonstrated by uncommenting my code example [here]({{ site.url }}/blog/getting-started-with-ocaml).
+This doesn't seem surprising when demonstrated by running commands in Utop, but OCaml does this type analysis at *compile time*, as demonstrated by un-commenting my code example [here]({{ site.url }}/blog/getting-started-with-ocaml).
 
 Type inference feels almost magical at first, but once you realise that all of the information required to infer types is right there in the program, and appreciate the extra work being done by the compiler, it makes total sense. Other languages that make use of type inference are Typescript and Swift.
 
