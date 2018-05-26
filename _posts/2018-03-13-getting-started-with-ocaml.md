@@ -90,7 +90,7 @@ OCaml is strongly-typed, but without all of the syntactical overhead we are used
 ## Basic Code Examples
 
 ### Installation, Utop and semicolons ';..;'
-All the code examples here are meant to be paste-able into [utop](https://opam.ocaml.org/blog/about-utop/). Utop is OCaml's interactive shell. I can recommend going through [these steps](https://github.com/realworldocaml/book/wiki/Installation-Instructions)
+All the code examples here are meant to be paste-able into [Utop](https://opam.ocaml.org/blog/about-utop/). Utop is OCaml's interactive shell. I can recommend going through [these steps](https://github.com/realworldocaml/book/wiki/Installation-Instructions)
 to get OCaml and Utop set up.
 
 The code examples feature double-semicolons at the ends of expressions. These are necessary when the expressions in are pasted directly into Utop. However in normal programming in OCaml they are not necessary. The full understanding of this distinction is not trivial at first. I'm planning to write another post to really clear the issue up in a thorough way, as I did find it a bit of a struggle to gather all of the necessary information early on.
@@ -246,7 +246,7 @@ It's always re-assuring to know that a language or framework is not so niche as 
 ## Are companies using OCaml?
 Your pragmatic side should also be interested in the direct value of learning OCaml to your career.
 
-This is a really nice [presentation](https://www.youtube.com/watch?v=v1CmGbOGb2I) on OCaml by an employee of Jane Street, which includes a discussion of the practicalities of using OCaml in the real world. Entrance into the OCaml community is not recommended without some familiarity of Jane Street - they are a quantitative trading firm who have made exentensive use of OCaml. They have been a big contributor to OCaml - they wrote the [Core](https://github.com/janestreet/core) library, which is effectively Lodash for Ocaml! 
+This is a really nice [presentation](https://www.youtube.com/watch?v=v1CmGbOGb2I) on OCaml by an employee of Jane Street, which includes a discussion of the practicalities of using OCaml in the real world. Entrance into the OCaml community is not recommended without some familiarity of Jane Street - they are a quantitative trading firm who have made extensive use of OCaml. They have been a big contributor to OCaml - they wrote the [Core](https://github.com/janestreet/core) library, which is effectively Lodash for OCaml! 
 
 It's easy to see why OCaml would be desirable in automated trading - where speed and accuracy of code are critical. Here is a list of [companies](https://ocaml.org/learn/companies.html) using OCaml - there's a few entries for financial companies. In general, the domains of companies using OCaml tend to be more technical than average, but the list shows a good amount of diversity.
 
