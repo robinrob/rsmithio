@@ -21,7 +21,7 @@ The codebase is written in an object-oriented style. Having recently been [learn
 
 It turns out that having the ability to know the *form* of an object's state at any given moment is really useful. For example, at any point in the code where I had hold of a `TetrisPiece` object, I knew that it would always have its `layout`, `position` and `elements` properties initialised. Therefore this pattern reduces null checks. `OCaml` doesn't even have a null value, so eliminates that class of potential bug entirely. I think coding without depending on null is a good practice.
 
-It would have been 
+
 
 * `console_interface` (`ConsoleInterface`)
 * `element` (`Element`)
