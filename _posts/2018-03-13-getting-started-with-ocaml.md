@@ -95,7 +95,7 @@ to get OCaml and Utop set up.
 
 The code examples feature double-semicolons at the ends of expressions. These are necessary when the expressions in are pasted directly into Utop. However in normal programming in OCaml they are not necessary. The full understanding of this distinction is not trivial at first. I'm planning to write another post to really clear the issue up in a thorough way, as I did find it a bit of a struggle to gather all of the necessary information early on.
 
-For each code example, I give code that can be pasted into Utop, then the output that's displayed in Utop. Because I prefer to write code examples in actual files when I am learning a language, so that I can save them for later, I've also put all of the [code examples in a file](https://github.com/robinrob/ocaml-code-examples/blob/master/ocaml_post_examples.ml) that can be executed with the OCaml interpeter. This file demonstrates how double-semicolons are totally unnecessary in an OCaml program.
+For each code example, I give code that can be pasted into Utop, then the output that's displayed in Utop. Because I prefer to write code examples in actual files when I am learning a language, so that I can save them for later, I've also put all of the [code examples in a file](https://github.com/robinrob/ocaml-code-examples/blob/master/ocaml_post_examples.ml) that can be executed with the OCaml interpreter. This file demonstrates how double-semicolons are totally unnecessary in an OCaml program.
 
 
 ### Hello World
