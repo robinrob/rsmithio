@@ -11,7 +11,7 @@ published:      true
 After much persuasion from a friend over the last few years, I've started learning [OCaml](https://ocaml.org/learn/description.html). So far I am
 really enjoying it and it has been a valuable experience and process of learning. For a good quick background on OCaml, I recommend reading its [wikipedia article](https://en.wikipedia.org/wiki/OCaml).
 
-Writing this has turned out to be fairly time-consuming, since it is diffult to write about something
+Writing this has turned out to be fairly time-consuming, since it is difficult to write about something
 which is still relatively new to myself whilst aiming for accuracy, so I will be fairly brief on the different aspects that I will touch on. The overall goal is to present all the aspects of OCaml that motivated me to really get into and continue learning it.
 
 I will show some basic code examples of the sorts of things that attracted me to the language.
@@ -25,8 +25,8 @@ At the end I will summarise my experiences of learning OCaml so far, where OCaml
 The first thing that drew me towards learning OCaml is its very strong orientation towards [functional programming](https://en.wikipedia.org/wiki/Functional_programming).
 I've been thinking about and taking advantage of functional programming techniques more and more over time.
 
-For me so far, this has essentially been: composing certain sections of code using calls to pure functions, thus to program in a more declerative
-style, helping to reduce mutibility, increase predictability and improve testability of my code. For example: using a map function instead of a for
+For me so far, this has essentially been: composing certain sections of code using calls to pure functions, thus to program in a more declarative
+style, helping to reduce mutability, increase predictability and improve testability of my code. For example: using a map function instead of a for
 loop, or a reduce function when needing to sum something over a collection.
 
 Whilst doing front-end development, the [Lodash](https://lodash.com) library has allowed me to write some really expressive, concise logic for reading, computing from and manipulating data structures. Continuing on like this, I have written my own functions in this way where possible or appropriate. There is more to functional programming than this, and OCaml really puts it at your fingertips.
