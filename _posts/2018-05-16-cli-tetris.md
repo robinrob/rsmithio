@@ -14,7 +14,7 @@ Here is a screenshot of a game in-progress:
 
 It's not quite a full Tetris implementation - for example completed rows are not destroyed.
 
-Small personal projects like this can be great for learning and trying out ideas, and very satisfying to get something concrete made quickly, especially something a bit . I planned most of the code design up-front - it evolved only a bit - as I encountered a couple of cases I hadn't considered upfront.
+Small personal projects like this can be great for learning and trying out ideas, and very satisfying to get something concrete made quickly, especially something that's just for fun. I planned most of the code design up-front - it evolved only a bit - as I encountered a couple of cases I hadn't considered upfront.
 
 ## The code
 The codebase is written in an object-oriented style. Having recently been [learning OCaml]({{ site.url }}/getting-started-with-ocaml/) and thinking about functional programming styles, I decided that I didn't want any mutable state where I could avoid it. To achieve this in *principle*, I've made functions on objects that would otherwise mutate them return new versions of themselves with the updated state.
