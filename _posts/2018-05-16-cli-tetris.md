@@ -21,24 +21,31 @@ The codebase is written in an object-oriented style. Having recently been [learn
 
 It turns out that having the ability to know the *form* of an object's state at any given moment is really useful. For example, at any point in the code where I had hold of a `TetrisPiece` object, I knew that it would always have its `layout`, `position` and `elements` properties initialised. Therefore this pattern reduces null checks. `OCaml` doesn't even have a null value, so eliminates that class of potential bug entirely. I think coding without depending on null is a good practice.
 
-It would have been 
+Here are the modules and their associated classes:
 
-* `console_interface` (`ConsoleInterface`)
-* `element` (`Element`)
-* `element_type` (Element Type)
-* errors (ElementConflictException, ElementOutOfBoundsException, InvalidMoveException, GameOverException)
-* grid_square (GridSquare)
-* immutable (Immutable)
-* layout (Layout)
-* layouts (Layouts)
-* matrix_layout (MatrixLayout)
-* movement_type (MovementType)
-* position (Position)
-* tetris (Tetris)
-* tetris_grid (TetrisGrid)
-* tetris_piece (TetrisPiece)
-* tetris_piece_factory (TetrisPieceFactory)
+* `console_interface.py` (`ConsoleInterface` - this contains the logic for interacting with the user to get input and rendering the game to the console.)
+* `element.py` (`Element`)
+* `element_type.py` (`Element Type`)
+* `errors.py` (`ElementConflictException`, `ElementOutOfBoundsException`, `InvalidMoveException.py`, `GameOverException.py`)
+* `grid_square.py` (`GridSquare`)
+* `immutable` (`Immutable`)
+* `layout.py` (`Layout`)
+* `layouts.py` (`Layouts`)
+* `movement_type.py` (`MovementType`)
+* `position.py` (`Position`)
+* `tetris.py` (`Tetris`)
+* `tetris_grid.py` (`TetrisGrid`)
+* `tetris_piece.py` (`TetrisPiece`)
+* `tetris_piece_factory.py` (`TetrisPieceFactory`)
 
-The real important workhorse logic for the game is contained within `Tetris`, `TetrisGrid`, `TetrisPiece` and `Position` - and I started off with unit tests for these classes.
+Test files:
+* `test_grid_square.py`
+* `test_immutable.py`
+* `test_position.py`
+* `test_tetris_grid.py`
+* `test_tetris_piece.py`
+
+
+The real important workhorse logic for the game is contained within `Tetris`, `TetrisGrid`, `TetrisPiece` and `Position` - and I started off with unit tests for these claes.
 
 I've tried to minimise mutable state of objects - I am coming to appreciate immutable objects more and more. I wish there was an inbuilt way to create immutable objects in Python.
