@@ -12,9 +12,16 @@ Here is a screenshot of a game in-progress:
 
 <img src="/img/cli_tetris.png"></img>
 
-These sorts of projects can be great for learning, and very satisfying to get something concrete made quickly. I planned most of the code design up-front - it evolved only a little bit - as I encountered a couple of problems I hadn't considered upfront.
+It's not a full tetris implementation - for example completed rows are not destroyed.
 
-The codebase is organised using an object-oriented style. Here is a list of the Python modules and associated classes:
+These sorts of projects can be great for learning and trying out ideas, and very satisfying to get something concrete made quickly. I planned most of the code design up-front - it evolved only a bit - as I encountered a couple of cases I hadn't considered upfront.
+
+## The code
+The codebase is written in an object-oriented style. Having recently been [learning OCaml]({{ site.url }}/getting-started-with-ocaml/) and thinking about functional programming styles, I decided that I didn't want any mutable state where I could avoid it. To achieve this in *principle*, I've made functions on objects that would otherwise mutate them return new versions of themselves with the updated state.
+
+It turns out that having the ability to know the *form* of an object's state at any given moment is really useful. For example, at any point in the code where I had hold of a `TetrisPiece` object, I knew that it would always have its `layout`, `position` and `elements` properties initialised. Therefore this pattern reduces null checks. `OCaml` doesn't even have a null value, so eliminates that class of potential bug entirely. I think coding without depending on null is a good practice.
+
+It would have been 
 
 * `console_interface` (`ConsoleInterface`)
 * `element` (`Element`)
