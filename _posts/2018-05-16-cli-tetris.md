@@ -4,11 +4,11 @@ title: CLI Tetris
 subtitle: Command-line Tetris game implemented in Python
 date: '2018-05-16T19:11:53+01:00'
 type: blog_post
-published: false
+published: true
 ---
-As a one-day project, I've created an implementation of Tetris in Python 3 - [cli-tetris](https://github.com/robinrob/cli-tetris/tree/master) - that can be played from the command-line.
+As a one-day project, I've created an implementation of Tetris in Python 3 ([cli-tetris](https://github.com/robinrob/cli-tetris/tree/master)) that can be played from the command-line.
 
-Here is a screenshot:
+Here is a screenshot of a game in-progress:
 
 <img src="/img/cli_tetris.png"></img>
 
@@ -18,7 +18,7 @@ The codebase is organised using an object-oriented style. Here is a list of the 
 
 * `console_interface` (`ConsoleInterface`)
 * `element` (`Element`)
-* element_type (Element Type)
+* `element_type` (Element Type)
 * errors (ElementConflictException, ElementOutOfBoundsException, InvalidMoveException, GameOverException)
 * grid_square (GridSquare)
 * immutable (Immutable)
