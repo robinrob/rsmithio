@@ -17,25 +17,30 @@ It's not quite a full Tetris implementation - for example completed rows are not
 Small personal projects like this can be great for learning and trying out ideas, and very satisfying to get something concrete made quickly, especially something that's just for fun. I planned most of the code design up-front - it evolved only a bit - as I encountered a couple of cases I hadn't considered upfront.
 
 ## The code
-The codebase is written in an object-oriented style. Having recently been [learning OCaml]({{ site.url }}/getting-started-with-ocaml/) and thinking about functional programming styles, I decided that I didn't want any mutable state where I could avoid it. To achieve this in *principle*, I've made functions on objects that would otherwise mutate them return new versions of themselves with the updated state.
+Here are the source classes used:
 
-It turns out that having the ability to know the *form* of an object's state at any given moment is really useful. For example, at any point in the code where I had hold of a `TetrisPiece` object, I knew that it would always have its `layout`, `position` and `elements` properties initialised. Therefore this pattern reduces null checks. `OCaml` doesn't even have a null value, so eliminates that class of potential bug entirely. I think coding without depending on null is a good practice.
-
-Here are the main source classes used:
-* [ConsoleInterface](https://github.com/robinrob/cli-tetris/blob/master/src/console_interface.py)
-* [Element](https://github.com/robinrob/cli-tetris/blob/master/src/element.py)
-* [ElementType](https://github.com/robinrob/cli-tetris/blob/master/src/element_type.py)
-* [Errors](https://github.com/robinrob/cli-tetris/blob/master/src/errors.py)
-* [GridSquare](https://github.com/robinrob/cli-tetris/blob/master/src/grid_square.py)
-* [Immutable](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
-* [Layout](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
-* [Layouts](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
-* [MovementType](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
+### Main game objects
 * [Position](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
-* [Tetris](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
-* [TetrisGrid](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
+* [Layout](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
+* [Element](https://github.com/robinrob/cli-tetris/blob/master/src/element.py)
 * [TetrisPiece](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
+* [GridSquare](https://github.com/robinrob/cli-tetris/blob/master/src/grid_square.py)
+* [TetrisGrid](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
+* [ConsoleInterface](https://github.com/robinrob/cli-tetris/blob/master/src/console_interface.py)
+* [Tetris](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
+
+### Other classes
+
+* [Errors](https://github.com/robinrob/cli-tetris/blob/master/src/errors.py)
+* [Immutable](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
+* [Layouts](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
+
 * [TetrisPieceFactory](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
+
+
+### Enums
+* [MovementType](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py)
+* [ElementType](https://github.com/robinrob/cli-tetris/blob/master/src/element_type.py)
 
 Test classes:
 * [TestGridSquare](https://github.com/robinrob/cli-tetris/blob/master/tests/test_grid_square.py)
@@ -43,6 +48,11 @@ Test classes:
 * [TestPosition](https://github.com/robinrob/cli-tetris/blob/master/tests/test_grid_square.py)
 * [TestTetrisGrid](https://github.com/robinrob/cli-tetris/blob/master/tests/test_grid_square.py)
 * [TestTetrisPiece](https://github.com/robinrob/cli-tetris/blob/master/tests/test_grid_square.py)
+
+## Code design
+The codebase is written in an object-oriented style. Having recently been [learning OCaml]({{ site.url }}/getting-started-with-ocaml/) and thinking more about functional programming styles, I decided that I didn't want any mutable state where I could avoid it. To achieve this in *principle*, I've made the instance methods like Position.rotate() return a new instance with the updated state. I've applied this pattern to `TetrisPiece`, `Layout` and `Position`. The classes `TetrisGrid` and `GridSquare` do contain mutable state and are persistent across a Tetris game. The
+
+It turns out that having the ability to know the *form* of an object's state at any given moment is really useful. For example, at any point in the code where I had hold of a `TetrisPiece` object, I knew that it would always have its `layout`, `position` and `elements` properties initialised. Therefore this pattern reduces null checks. `OCaml` doesn't even have a null value, so eliminates that class of potential bug entirely. I think coding without depending on null is a good practice.
 
 The real important workhorse logic for the game is contained within `Tetris`, `TetrisGrid`, `TetrisPiece` and `Position` - and I started off with unit tests for these classes.
 
