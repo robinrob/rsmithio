@@ -3,7 +3,7 @@ layout: blog_post
 title: CLI Tetris
 subtitle: Command-line Tetris game implemented in Python
 description: "A Command-line Tetris game implemented in a day in Python, as a fun personal project and challenge"
-date: '2018-05-16T19:11:53+01:00'
+date: 2018-05-25
 type: blog_post
 published: true
 ---
