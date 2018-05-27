@@ -2,9 +2,10 @@
 layout: blog_post
 title: CLI Tetris
 subtitle: Command-line Tetris game implemented in Python
+description: "A Command-line Tetris game implemented in a day in Python, as a fun personal project and challenge"
 date: '2018-05-16T19:11:53+01:00'
 type: blog_post
-published: false
+published: true
 ---
 As a one-day project, I've created an implementation of Tetris in Python 3 ([cli-tetris](https://github.com/robinrob/cli-tetris/tree/master)) that can be played from the command-line. I've since done a bit of tidying and added some nice-to-haves like linting, but 95% of it was done in that first day. The precise design may have some rough edges, but overall I'm pleased with the end result.
 
@@ -12,7 +13,7 @@ I'll describe the thought process that went into the code design and how the imp
 
 Here is a screenshot of a game in-progress:
 
-<img src="/img/cli_tetris.png"></img>
+<img src="/img/cli_tetris.png" alt="In-game screenshot of CLI Tetris" />gg
 
 It's not quite a full Tetris implementation - for example completed rows are not destroyed.
 
@@ -43,6 +44,7 @@ I've [docstring](https://www.python.org/dev/peps/pep-0257/)'ed up all of the cla
 
 ### Test classes:
 I followed test-driven development with the following classes, which contain the meat of the logic in CLI Tetris:
+
 * [TestGridSquare](https://github.com/robinrob/cli-tetris/blob/master/tests/test_grid_square.py)
 * [TestImmutable](https://github.com/robinrob/cli-tetris/blob/master/tests/test_grid_square.py)
 * [TestPosition](https://github.com/robinrob/cli-tetris/blob/master/tests/test_grid_square.py)
@@ -50,7 +52,7 @@ I followed test-driven development with the following classes, which contain the
 * [TestTetrisPiece](https://github.com/robinrob/cli-tetris/blob/master/tests/test_grid_square.py)
 
 ### Code design goals and philosophy
-The codebase is written in an object-oriented style. Having recently been [learning OCaml]({{ site.url }}/getting-started-with-ocaml/) and thinking more about functional programming styles, I decided that I didn't want any mutable state where I could avoid it.
+The codebase is written in an object-oriented style. Having recently been [learning OCaml](/blog/getting-started-with-ocaml/) and thinking more about functional programming styles, I decided that I didn't want any mutable state where I could avoid it.
 
 With the goal of designing the codebase towards immutability (more on this below), I've made the object instance methods like `Position.rotate()` return a new instance with the updated state. I've applied this pattern to `TetrisPiece`, `Layout` and `Position`, which are the other objects that are created and destroyed during the life-cycle of the game. The only class with mutable state is actually `GridSquare`. This makes sense, since the `GridSquare` instances store information about what they are being occupied by, and grid squares represent the underlying substrate of the game. Instances of `Element` are placed into and removed from grid squares.
 
@@ -61,13 +63,13 @@ When I was learning OCaml, I was getting used to programming without null checks
 ### TetrisPiece
 `TetrisPiece` is one of the most interesting classes since it contains some important logic and also demonstrates the use of the `Layout`, `Element` and `Position` classes, which are designed to be generic components of game entities.
 
-#### Position
+### Position
 This is perhaps the most fundamental of all the classes. `Position` simply holds and x, y value pair and has methods for creating new `Position` instances which modified in some way to the original `Position` (e.g. translated, rotated or added to the original `Position`). Several of the other classes depend on this class.
 
-#### Layout
+### Layout
 `Layout` describes the layout of a generic game entity. It is constructed from a list of `Position` instances, where each `Position` describes the location of a point in the `Layout`, each relative to the origin (0, 0) of the `Layout`. The `Layout` is therefore just a list of relative positions. The `Layout` class has methods for performing operations such as rotation and flipping (about its origin).
 
-#### Element
+### Element
 `Element` represents a single element of a larger game entity (e.g. `TetrisPiece`). It is constructed from an `ElementType` enum value and a `Position` instance, where the `Position` is the location of the `Element` relative to the origin of its parent entity.
 
 ### API of TetrisPiece
@@ -80,7 +82,7 @@ When a `TetrisPiece` is translated (e.g. moved downwards), then the relevant met
 This API fulfils the two design goals of being object-oriented, yet providing 'pure', immutable objects to work with. I think object-oriented style is a great choice for game logic, and in this project the 'pureness' of the objects made the code feel simple to write and test.
 
 ## Immutability
-I mentioned above that I was striving for immutability, but that it's not possible in Python at the language level. However some time ago as a fun challenge, I decided to see if I could use the power of [overloading]([overloading]) Python's [magic methods](https://www.python-course.eu/python3_magic_methods.php), to see if I could create a class whose properties could be set once on initialisation and be made read-only thereafter. The result was the [Immutable](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py) class used in this project.
+I mentioned above that I was striving for immutability, but that it's not possible in Python at the language level. However some time ago as a fun challenge, I decided to see if I could use the power of [overloading](https://en.wikipedia.org/wiki/Function_overloading) Python's [magic methods](https://www.python-course.eu/python3_magic_methods.php), to see if I could create a class whose properties could be set once on initialisation and be made read-only thereafter. The result was the [Immutable](https://github.com/robinrob/cli-tetris/blob/master/src/immutable.py) class used in this project.
 
 The test class [TestImmutable](https://github.com/robinrob/cli-tetris/blob/master/tests/test_grid_square.py) demonstrates how `Immutable` is used. I'll describe `Immutable` in another post, so won't go into detail here. It works for my purposes in this fairly esoteric project, but I'd probably not trust using it in production.
 
