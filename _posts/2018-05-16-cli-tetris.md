@@ -13,7 +13,7 @@ I'll describe the thought process that went into the code design and how the imp
 
 Here is a screenshot of a game in-progress:
 
-<img src="/img/cli_tetris.png" alt="In-game screenshot of CLI Tetris" />gg
+<img src="/img/cli_tetris.png" alt="In-game screenshot of CLI Tetris" />
 
 It's not quite a full Tetris implementation - for example completed rows are not destroyed.
 
