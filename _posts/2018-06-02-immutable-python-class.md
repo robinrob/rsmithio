@@ -14,4 +14,6 @@ The result is contained in [this gist](https://gist.github.com/robinrob/09477707
 
 Indeed the resulting `Immutable.py` class was pretty fiddly to get right. Essentially it makes a lot of use of `object.__getattribute__` and `object.__setattr__`. These methods are [documented here](https://docs.python.org/3/reference/datamodel.html).
 
+Since the `Immutable` class is storing all object attributes in a dictionary, this probably messes up auto-completion in an IDE on the object's attributes.
+
 I probably wouldn't recommend using `Immutable` in a production project, but might be useful/fun to use in a personal project, as I do sometimes.
