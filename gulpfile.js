@@ -126,7 +126,7 @@ gulp.task('browser-sync', function () {
         server: {
             baseDir: '_site'
         },
-        browser: 'Google\ Chrome'
+        browser: 'Google\ Chrome\ Canary'
     })
 })
 
