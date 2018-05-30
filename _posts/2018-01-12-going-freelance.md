@@ -53,7 +53,7 @@ least it is a great experience-building experience.
 ## Benefits of freelancing (or contracting)
 There's a subtle distinction between 'freelancing' and 'contracting'. But I use 'freelancing' loosely - for me it means the freedom to take on contract jobs,
 whilst also being responsible for your own learning and keeping up with the technology, and the potential for making
-money from personal projects. So it's to do with independence. These are the benefits i've experienced so far:
+money from personal projects. So it's to do with independence. These are the benefits I've experienced so far:
 
 * **Independence.** The feeling of personal independence is extremely rewarding.
 * **Pay**. You get more pay per hour, and as long as you can minimise the gaps between jobs, this results in higher overall
