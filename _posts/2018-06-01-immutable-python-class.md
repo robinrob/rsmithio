@@ -3,7 +3,7 @@ layout: blog_post
 title: Immutable Python Class
 subtitle: An implementation of an Immutable Python class
 description: "A somewhat esoteric implementation of a Python class overloads Python magic methods and creates immutable instances."
-date: 2018-06-02
+date: 2018-06-01
 type: blog_post
 published: true
 ---
