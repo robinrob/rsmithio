@@ -488,6 +488,10 @@ hr.large {
         .intro-header .post-heading .subheading {
           font-size: 30px; } }
 
+h2#site_subheading {
+  font-size: 30px;
+  font-weight: bold; }
+
 .main {
   text-align: center;
   width: 100%; }
@@ -545,10 +549,14 @@ hr.large {
     .main .index h2, .empty .index h2 {
       color: #0085a1; }
     .main .index h3, .empty .index h3 {
-      color: #404040; }
+      color: #404040;
+      text-align: center; }
+    .main .index h4, .empty .index h4 {
+      text-align: left; }
     .main .index hr.large, .empty .index hr.large {
       border-color: gray; }
     .main .index .blurb p, .empty .index .blurb p {
+      font-style: italic;
       font-size: 18px;
       display: inline-block;
       max-width: 900px;
