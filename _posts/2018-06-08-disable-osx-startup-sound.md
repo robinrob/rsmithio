@@ -3,7 +3,7 @@ layout: blog_post
 title: Finally Disable The OS X Startup Sound
 subtitle: A better solution for disabling the OS X startup sound final version final copy 2 final (this one)
 description: "A solution for disabling the OS X startup sound using a launchd daemon which works on iMac as well as Macbook pro, on OS X El Capitan"
-date: 2018-06-09
+date: 2018-06-08
 type: blog_post
 published: false
 ---

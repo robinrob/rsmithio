@@ -393,6 +393,10 @@ hr.large
       .subheading
         font-size: 30px
 
+h2#site_subheading
+  font-size: 30px
+  font-weight: bold
+
 .main
   text-align: center
   width: 100%
@@ -451,16 +455,6 @@ hr.large
       background-color: $theme-3
       border: 1px solid $theme-3
 
-    .index, .blog
-      .blurb
-        p
-          color: black
-          font-weight: 400
-          font-size: $blurb-font-size
-
-        hr.large
-          border-color: $theme-2
-
   .index
     text-align: center
 
@@ -469,13 +463,19 @@ hr.large
 
     h3
       color: $theme-4
+      text-align: left
+
+    h4
+      text-align: left
 
     hr.large
       border-color: $theme-2
 
     .blurb
       p
-        font-size: 18px
+        font-style: italic
+        // font-weight: 400
+        font-size: 20px
         display: inline-block
         max-width: 900px
         margin-bottom: 40px
@@ -606,6 +606,15 @@ hr.large
 
     h2
       margin-top: 0 !important
+
+    .blurb
+        p
+            color: black
+            font-weight: 400
+            font-size: $blurb-font-size
+
+        hr.large
+            border-color: $theme-2
 
     .post-preview
       a

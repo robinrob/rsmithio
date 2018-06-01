@@ -3,7 +3,7 @@ layout: blog_post
 title: The Value of Books
 subtitle: Why books still hold great value amongst information media
 description: ''
-date: '2018-04-26T13:34:46+01:00'
+date: 2018-06-15
 type: blog_post
 published: false
 ---

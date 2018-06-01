@@ -488,6 +488,10 @@ hr.large {
         .intro-header .post-heading .subheading {
           font-size: 30px; } }
 
+h2#site_subheading {
+  font-size: 30px;
+  font-weight: bold; }
+
 .main {
   text-align: center;
   width: 100%; }
@@ -534,22 +538,20 @@ hr.large {
     color: #eeeeee;
     background-color: #0085a1;
     border: 1px solid #0085a1; }
-  .main .btn-default .index .blurb p, .main .btn-default .blog .blurb p, .empty .btn-default .index .blurb p, .empty .btn-default .blog .blurb p {
-    color: black;
-    font-weight: 400;
-    font-size: 20px; }
-  .main .btn-default .index .blurb hr.large, .main .btn-default .blog .blurb hr.large, .empty .btn-default .index .blurb hr.large, .empty .btn-default .blog .blurb hr.large {
-    border-color: gray; }
   .main .index, .empty .index {
     text-align: center; }
     .main .index h2, .empty .index h2 {
       color: #0085a1; }
     .main .index h3, .empty .index h3 {
-      color: #404040; }
+      color: #404040;
+      text-align: left; }
+    .main .index h4, .empty .index h4 {
+      text-align: left; }
     .main .index hr.large, .empty .index hr.large {
       border-color: gray; }
     .main .index .blurb p, .empty .index .blurb p {
-      font-size: 18px;
+      font-style: italic;
+      font-size: 20px;
       display: inline-block;
       max-width: 900px;
       margin-bottom: 40px; }
@@ -643,6 +645,12 @@ hr.large {
     text-align: left; }
     .main .blog h2, .empty .blog h2 {
       margin-top: 0 !important; }
+    .main .blog .blurb p, .empty .blog .blurb p {
+      color: black;
+      font-weight: 400;
+      font-size: 20px; }
+    .main .blog .blurb hr.large, .empty .blog .blurb hr.large {
+      border-color: gray; }
     .main .blog .post-preview a, .empty .blog .post-preview a {
       color: #404040; }
       .main .blog .post-preview a:hover, .main .blog .post-preview a:focus, .empty .blog .post-preview a:hover, .empty .blog .post-preview a:focus {

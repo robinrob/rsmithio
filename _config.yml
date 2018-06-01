@@ -1,7 +1,7 @@
 # Site settings
 author: Robin Smith
-subtitle: Remote full-stack web developer
-title: Remote Full-stack Web Developer
+subtitle: Full-stack web developer
+title: Full-stack Web Developer
 location: Nottingham, UK
 brand: Robin Smith
 year: 2018
@@ -11,7 +11,7 @@ cv: robin_smiths_cv.pdf
 cv: robin_smiths_cover_letter.pdf
 years_experience: 7
 description: > # this means to ignore newlines until "baseurl:"
-  Experienced remote full-stack web developer building custom web applications and integrations using the best web iameworks and cloud technologies
+  Experienced full-stack web developer specialising in Python and Javascript including React and AngularJS
 keywords: >
   software, developer, engineer, programmer, development, web, remote, remote-first, full-stack, frontend, backend, server, Nottingham, UK, web, Python, Javascript, HTML, CSS, ES6, Blog, ReactJS, React, AngularJS, Angular, Heroku, AWS, Google Apps
 baseurl: "" # the subpath of your site, e.g. /blog
