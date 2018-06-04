@@ -1,16 +1,16 @@
 <!-- Head -->
 <head>
-<script defer='defer' src='{{ site.baseurl }}/js/scripts.js'></script>
-<script>
-  let production_hostname = 'rsmith.io'
-  //let production_hostname = 'localhost'
-  if (window.location.hostname === production_hostname) {
-    console.log("Production GA will load");
-    $.getScript(
+  <script defer='defer' src='{{ site.baseurl }}/js/scripts.js'></script>
+  <script>
+    let production_hostname = 'rsmith.io'
+    //let production_hostname = 'localhost'
+    if (window.location.hostname === production_hostname) {
+      console.log("Production GA will load");
+      $.getScript(
       '{{ site.baseurl }}/js/header_scripts.js',
       function() { console.log("Production GA loaded!") }
-    )
-  }
-</script>
-{% include head_html.html %}
+      )
+    }
+  </script>
+  {% include head_with_styles.html %}
 </head>
