@@ -32,7 +32,14 @@ var config = {
             headerSrc: ['_js_header/*.js'],
             dest: '_site/js/'
         },
-        cv: 'robin_smiths_cv.pdf'
+        cv: {
+          src: '_site/cv/print/index.html',
+          dest: '_site/robin_smiths_cv.pdf'
+        },
+        cover_letter: {
+          src: '_site/cv/cover-letter/print/index.html',
+          dest: '_site/robin_smiths_cover_letter.pdf'
+        }
     },
     siteUrl: "https://rsmith.io",
     sitemapUrl: "https://rsmith.io/sitemap.xml",
@@ -54,6 +61,7 @@ var browserSync = require('browser-sync')
 var combiner = require('stream-combiner2')
 var concat = require('gulp-concat')
 var cp = require('child_process')
+var del = require('del')
 var gulp = require('gulp')
 var gutil = require('gulp-util');
 var imagemin = require('gulp-imagemin');
@@ -167,17 +175,29 @@ gulp.task('css-dev', gulp.series('css-concat', 'css-copy'))
 
 gulp.task('css', gulp.series('css-concat', 'css-copy'))
 
-gulp.task('cv-to-pdf', function(done) {
-    run("wkhtmltopdf --page-size A4 --encoding UTF-8 --quiet _site/cv/print/index.html _site/robin_smiths_cv.pdf").exec(done)
+gulp.task('clean-cv', function() {
+  return del([
+    config.paths.cv.dest,
+    config.paths.cover_letter.dest
+  ])
+})
+
+gulp.task('cover-letter-to-pdf', function(done) {
+    run(`wkhtmltopdf --page-size A4 --encoding UTF-8 --quiet ${config.paths.cover_letter.src} ${config.paths.cover_letter.dest}`).exec(done)
     // return gulp.src(config.paths.cv).pipe(gulp.dest('_site/'))
 })
+
+gulp.task('cv-to-pdf', gulp.series('clean-cv', 'cover-letter-to-pdf', function(done) {
+    run(`wkhtmltopdf --page-size A4 --encoding UTF-8 --quiet ${config.paths.cv.src} ${config.paths.cv.dest}`).exec(done)  
+    // return gulp.src(config.paths.cv).pipe(gulp.dest('_site/'))
+}))
 
 gulp.task('js-concat', function () {
     return gulp.src(config.paths.js.src)
         .pipe(concat(config.paths.js.main))
         .pipe(gulp.dest(config.paths.js.dest))
 })
-
+                                    
 gulp.task('js-concat-header', function () {
     return gulp.src(config.paths.js.headerSrc)
         .pipe(concat(config.paths.js.headerMain))

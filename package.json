@@ -2,7 +2,9 @@
   "name": "robinrob.github.io-dev",
   "description": "mrrobinsmith.com dev",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "del": "^3.0.0"
+  },
   "devDependencies": {
     "browser-sync": "",
     "gulp": "^4.0.0",

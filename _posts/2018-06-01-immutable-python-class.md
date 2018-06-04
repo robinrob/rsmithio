@@ -16,4 +16,4 @@ Indeed the resulting `Immutable.py` class was pretty fiddly to get right. Essent
 
 Since the `Immutable` class is storing all object attributes in a dictionary, this probably messes up auto-completion in an IDE on the object's attributes.
 
-I probably wouldn't recommend using `Immutable` in a production project, but might be useful/fun to use in a personal project, as I do sometimes.
+I probably wouldn't recommend using `Immutable` in a production project, but might be useful/fun to use in a personal project, as I do sometimes, such as in [CLI Tetris](https://github.com/robinrob/cli-tetris).
