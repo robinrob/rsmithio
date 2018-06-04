@@ -241,9 +241,11 @@ gulp.task('dev-watch', function () {
 })
 
 // Build
-gulp.task('build', gulp.series('jekyll', 'sass', gulp.parallel('css', 'js'), 'cv-to-pdf', 'reload'))
+gulp.task('build-code', gulp.series('jekyll', 'html', 'sass', gulp.parallel('css', 'js')))
 
-gulp.task('fast-build', gulp.series('jekyll', 'html', 'sass', gulp.parallel('css', 'js'), 'reload'))
+gulp.task('build', gulp.series('build-code', 'cv-to-pdf', 'reload'))
+
+gulp.task('fast-build', gulp.series('jekyll', 'sass', gulp.parallel('css', 'js'), 'reload'))
 
 gulp.task('dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js-dev'), 'cv-to-pdf', 'reload'))
 
@@ -252,7 +254,7 @@ gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev
 // Deploy
 gulp.task('deploy', gulp.series('build', 'save'))
 
-gulp.task('netlify_deploy', gulp.series('build', 'sitemap', 'submit-sitemap'))
+gulp.task('netlify-deploy', gulp.series('build-code', 'sitemap', 'submit-sitemap'))
 
 // Build/watch
 gulp.task('full', gulp.series('build', gulp.parallel('watch', 'browser-sync')))
