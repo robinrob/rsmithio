@@ -168,8 +168,8 @@ gulp.task('css-dev', gulp.series('css-concat', 'css-copy'))
 gulp.task('css', gulp.series('css-concat', 'css-copy'))
 
 gulp.task('cv-to-pdf', function(done) {
-    //run("wkhtmltopdf --page-size A4 --margin-top 5mm --margin-right 5mm --margin-bottom 5mm --margin-left 5mm --encoding UTF-8 --quiet _site/cv/print/index.html _site/robin_smiths_cv.pdf").exec(done)
-    return gulp.src(config.paths.cv).pipe(gulp.dest('_site/'))
+    run("wkhtmltopdf --page-size A4 --encoding UTF-8 --quiet _site/cv/print/index.html _site/robin_smiths_cv.pdf").exec(done)
+    // return gulp.src(config.paths.cv).pipe(gulp.dest('_site/'))
 })
 
 gulp.task('js-concat', function () {
