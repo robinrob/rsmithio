@@ -9,4 +9,4 @@ __MACOSX
 node_modules
 *.log
 .history
-
+.DS_Store
