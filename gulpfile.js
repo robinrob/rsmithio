@@ -109,6 +109,12 @@ function onError(error) { handleError.call(this, 'error', error);}
 function onWarning(error) { handleError.call(this, 'warning', error);}
 
 
+gulp.task('clean', function() {
+  return del([
+    config.paths.build
+  ])
+})
+
 gulp.task('imagemin', function() {
     return gulp.src(config.paths.img, {
         base: './'
@@ -188,7 +194,7 @@ gulp.task('cover-letter-to-pdf', function(done) {
 })
 
 gulp.task('cv-to-pdf', gulp.series('clean-cv', 'cover-letter-to-pdf', function(done) {
-    run(`wkhtmltopdf --page-size A4 --encoding UTF-8 --quiet ${config.paths.cv.src} ${config.paths.cv.dest}`).exec(done)  
+    run(`wkhtmltopdf --page-size A4 --margin-left 20mm --margin-right 20mm --encoding UTF-8 --quiet ${config.paths.cv.src} ${config.paths.cv.dest}`).exec(done)  
     // return gulp.src(config.paths.cv).pipe(gulp.dest('_site/'))
 }))
 
@@ -249,7 +255,7 @@ gulp.task('fast-build', gulp.series('jekyll', 'sass', gulp.parallel('css', 'js')
 
 gulp.task('dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js-dev'), 'cv-to-pdf', 'reload'))
 
-gulp.task('fast-dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js'), 'reload'))
+gulp.task('fast-dev-build', gulp.series('clean', 'sass', gulp.parallel('css-dev', 'js'), 'jekyll', 'reload'))
 
 // Deploy
 gulp.task('deploy', gulp.series('build', 'save'))

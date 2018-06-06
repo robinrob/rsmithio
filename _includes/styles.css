@@ -7627,8 +7627,6 @@ h2#site_subheading {
       .main .cv, .empty .cv {
         visibility: visible;
         height: 100%; } }
-  .main .cv-print, .empty .cv-print {
-    width: 100%; }
   .main .cv-options, .main .cv, .empty .cv-options, .empty .cv {
     width: 100%; }
     @media only screen and (min-width: 1170px) {
@@ -7636,7 +7634,7 @@ h2#site_subheading {
         width: 1050px;
         margin-left: -20%; } }
   .main .cv-print, .empty .cv-print {
-    width: 670px;
+    size: A4 portrait;
     font-size: 14px;
     margin-left: 20px; }
     .main .cv-print p, .empty .cv-print p {
