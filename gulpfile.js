@@ -255,7 +255,7 @@ gulp.task('fast-build', gulp.series('jekyll', 'sass', gulp.parallel('css', 'js')
 
 gulp.task('dev-build', gulp.series('jekyll', 'sass', gulp.parallel('css-dev', 'js-dev'), 'cv-to-pdf', 'reload'))
 
-gulp.task('fast-dev-build', gulp.series('clean', 'sass', gulp.parallel('css-dev', 'js'), 'jekyll', 'reload'))
+gulp.task('fast-dev-build', gulp.series('clean', 'jekyll', 'sass', gulp.parallel('css-dev', 'js'), 'reload'))
 
 // Deploy
 gulp.task('deploy', gulp.series('build', 'save'))
