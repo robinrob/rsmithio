@@ -16,7 +16,7 @@ These instructions will be Mac-specific but the general technique will definitel
 
 One of the cool things about OS X is that it has a bunch of standard places where all installed applications should store things. One of these locations that you really want to be familiar with is `~/Library/Application Support/`. This is where applications store user-specific things like settings or caches.
 
-VS Code stores its user settings at: `~/Library/Application Support/Code/User/settings.json".
+VS Code stores its user settings at: `~/Library/Application Support/Code/User/settings.json`.
 
 What I like to do is *copy* this file into [my dotfiles Git repository](https://github.com/robinrob/dotfiles-base). I then create a ZSH [install script](https://github.com/robinrob/dotfiles-base/blob/master/zsh/vscode.zsh) in the same repository, which I call from my [master system install script](https://github.com/robinrob/dotfiles-base/tree/master/install.zsh).
 
@@ -31,7 +31,7 @@ MY_SETTINGS_PATH=$DOTFILES_BASE_HOME/config/files/vscode_settings.json
 rm -f $VSCODE_SETTINGS_PATH
 
 # Symlink dotfiles settings file to VS Code settings location
-ln -s $MY_SETTINGS_PATH $VSCODE_SETTINGS_PATH</code></pre
+ln -s $MY_SETTINGS_PATH $VSCODE_SETTINGS_PATH</code></pre>
 
 Maintaining the install scripts means this stuff will get done automatically if you ever have to setup a machine from scratch.
 
@@ -40,7 +40,7 @@ The really nice thing is that whenever you modify the VS Code settings through t
 ## Syncing using Dropbox etc.
 You could instead point the symlink into a Dropbox folder so that changes are automatically synced instantly between all devices. You could even place the Git repository in Dropbox and have the best of both worlds of instant syncing and version-controlling your settings.
 
-I'm happy just using Git for now and avoiding the extra dependency on Dropbox. This works for me because I am regularly updated my dotfiles repository anyway, so I am acting as a sort of human Dropbox.
+I'm happy just using Git for now and avoiding the extra dependency on Dropbox. This works for me because I am regularly updating my dotfiles repository anyway, so I am acting as a sort of human Dropbox.
 
 But in general it's great to have some standard solution like this set up for all configurable applications on your machine, and the symlinking-from-dotfiles-repo technique is quite common amongst developers. I got into this habit myself a few years ago.
 
