@@ -3,7 +3,7 @@ layout: blog_post
 title: Top Podcasts for Geeks
 subtitle: Some stimulating gems of podcasts for nerds & geeks
 description: ''
-date: 2018-08-17
+date: 2018-08-15
 type: blog_post
 published: true
 ---
