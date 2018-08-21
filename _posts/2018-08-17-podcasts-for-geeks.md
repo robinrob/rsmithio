@@ -2,7 +2,7 @@
 layout: blog_post
 title: Top Podcasts for Geeks
 subtitle: Some stimulating gems of podcasts for nerds & geeks
-description: ''
+description: 'List of top-quality podcasts for learning and development; for developers, nerds and geeks alike'
 date: 2018-08-17
 type: blog_post
 published: true
