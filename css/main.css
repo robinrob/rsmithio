@@ -574,6 +574,10 @@ h2#site_subheading {
         text-align: center; }
     .main .index .projects .project-network-rail:before, .empty .index .projects .project-network-rail:before {
       background-image: url("../img/network_rail_logo.png"); }
+    .main .index .projects .project-wheelblazers:before, .empty .index .projects .project-wheelblazers:before {
+      background-image: url("../img/Blazers-logo.png"); }
+    .main .index .projects .project-kaptio-travel:before, .empty .index .projects .project-kaptio-travel:before {
+      background-image: url("../img/kaptio_logo.png"); }
     .main .index .projects .project-alumina:before, .empty .index .projects .project-alumina:before {
       background-image: url("../img/macbook_alumina_small.png"); }
     .main .index .projects .project-heroku-db:before, .empty .index .projects .project-heroku-db:before {
