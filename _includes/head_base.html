@@ -7,3 +7,4 @@
 <meta content='{{ site.keywords }}' name='keywords'>
 <title>Robin Smith - {% if page.toptitle %}{{ page.toptitle }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% if paginator %} - Page {{ paginator.page }}{% endif %}</title>
 <!-- Fonts -->
+<link href='{{ page.url | replace:&#39;index.html&#39;,&#39;&#39; | prepend: site.baseurl | prepend: site.url }}/' rel='canonical'>

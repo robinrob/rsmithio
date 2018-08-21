@@ -15,11 +15,14 @@ As a simple observation, developers as a whole often seem to fall into the categ
 Below is a list of very educational and interesting podcasts that I've stumbled across over the last few months, which constitute an amazing resource for learning and development. I have briefly described each in my own words based upon hours of listening.
 
 ## Podcasts for geeks
-### [Being Freelance](https://www.beingfreelance.com/)
-Frequency: weekly. Down-to-earth, entertaining, humorous interviews with freelancers from all professions, sharing their freelancing tips. Perfect for freelancers or people thinking about freelancing.
-
 ### [Syntax - Tasty Web Development Treats](https://dev.to/syntax/)
 Frequency: twice-weekly. Good chat, spliced with diverse and genuinely useful developer tips, from useful Javascript functions to editor plugins and life tips in general.
+
+### [The Big Web Show](http://5by5.tv/bigwebshow)
+Frequency: variable
+
+### [Being Freelance](https://www.beingfreelance.com/)
+Frequency: weekly. Down-to-earth, entertaining, humorous interviews with freelancers from all professions, sharing their freelancing tips. Perfect for freelancers or people thinking about freelancing.
 
 ### [Killing It - Adventures In Start-ups and Mental Health](https://open.spotify.com/show/449We08a4Ja7A4UuLkRRZD/)
 Frequency: weekly. Slightly concerning title at first glance! Can be a bit heavy at times so listen in moderation, but contains some very important stories from the world of start-ups with lessons that will be relevant to most people in tech.
