@@ -1,8 +1,8 @@
 ---
 layout: blog_post
-title: "App Notifications ';..;'"
+title: "App Notifications"
 subtitle: App notifications are the modern bane of productivity
-description: "A discussion of the many obstacles to productivity that we can face during the day, and what to do about them"
+description: 'A discussion of the many obstacles to productivity that we can face during the day and what to do about them'
 date: '2018-05-04T07:35:00+01:00'
 type: blog_post
 published: true
