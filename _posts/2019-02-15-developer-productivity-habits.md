@@ -3,7 +3,7 @@ layout: blog_post
 title: 5 Developer Productivity Habits
 subtitle: My 5 top habits for increasing daily productivity
 description: 'Developer Productivity Habits - My list of 5 top habits for increasing daily productivity - how to think, learn and do faster'
-date: 2018-08-20
+date: 2019-02-15
 type: blog_post
 published: true
 ---
