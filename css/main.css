@@ -847,7 +847,7 @@ h2#site_subheading {
     .main .cv-print h2, .empty .cv-print h2 {
       font-size: 24px !important; }
   .main .cv, .main .cv-print, .empty .cv, .empty .cv-print {
-    font-family: "Times New Roman"; }
+    font-family: "Times New Roman" !important; }
     .main .cv h2, .main .cv-print h2, .empty .cv h2, .empty .cv-print h2 {
       text-align: center; }
     .main .cv p, .main .cv-print p, .empty .cv p, .empty .cv-print p {
