@@ -194,7 +194,7 @@ gulp.task('cover-letter-to-pdf', function(done) {
 })
 
 gulp.task('cv-to-pdf', gulp.series('clean-cv', 'cover-letter-to-pdf', function(done) {
-    run(`wkhtmltopdf --page-size A4 --margin-left 20mm --margin-right 20mm --encoding UTF-8 --quiet ${config.paths.cv.src} ${config.paths.cv.dest}`).exec(done)  
+    run(`wkhtmltopdf --page-size A4 --margin-left 10mm --margin-right 10mm --encoding UTF-8 --quiet ${config.paths.cv.src} ${config.paths.cv.dest}`).exec(done)  
     // return gulp.src(config.paths.cv).pipe(gulp.dest('_site/'))
 }))
 
