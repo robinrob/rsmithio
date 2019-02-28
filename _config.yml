@@ -1,8 +1,8 @@
 # Site settings
 author: Robin Smith
-subtitle: Full-stack web developer
-title: Full-stack Web Developer
-location: Nottingham, UK
+subtitle: Freelance full-stack web developer
+title: Freelance Full-stack Web Developer
+location: Edinburgh, UK
 brand: Robin Smith
 year: 2019
 email: robin@rsmith.io
@@ -11,9 +11,9 @@ cv: robin_smiths_cv.pdf
 cover_letter: robin_smiths_cover_letter.pdf
 years_experience: 7
 description: > # this means to ignore newlines until "baseurl:"
-  Experienced full-stack web developer specialising in Python and Javascript including React and AngularJS
+  Experienced freelance full-stack web developer specialising in Python and Javascript frameworks: Flask, Pyramid, Angular and React
 keywords: >
-  software, developer, engineer, programmer, development, web, remote, remote-first, full-stack, frontend, backend, server, Nottingham, UK, web, Python, Javascript, HTML, CSS, ES6, Blog, ReactJS, React, AngularJS, Angular, Heroku, AWS, Google Apps
+  freelance, software, developer, engineer, programmer, development, web, remote, full-stack, frontend, backend, server, Edinburgh, UK, web, Python, Javascript, HTML, CSS, ES6, Blog, ReactJS, React, AngularJS, Angular, Heroku, AWS, Google Apps
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://rsmith.io   # with the https protocol
 github: robinrob
