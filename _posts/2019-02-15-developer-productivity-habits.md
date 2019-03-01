@@ -27,9 +27,9 @@ However this may be one of those habits that come with 'societal/cultural inerti
 Interruptions by people, noise, heat, smell, light - these are all important to consider. Having more control over these was a big motivation for me to become a freelancer by giving me more opportunity to work from home. I can say that this helped me significantly.
 
 ## 3. Exercise
-Exercise increases dopamine and oxygen within your brain, and for many people helps them to feel more relaxed but alert. These are the immediate short-term benefits, besides the many longer-term benefits. 
+Exercise increases dopamine and oxygen within your brain, and for many people helps them to feel more relaxed, motivated and alert. These are the immediate short-term benefits, besides the many longer-term benefits. 
 
-The earlier exercise is done in the day, the more time there is remaining in the day to experience its short-term effects. That's why a lot of people enjoy exercising straight away in the morning (me included).
+The earlier exercise is done in the day, the more time there is remaining in the day to experience its short-term benefits. That's why a lot of people enjoy exercising straight away in the morning. This is obvious if you've ever been to a swimming pool at 6 o'clock in the morning!
 
 Not everybody experiences the same level of immediate benefit from exercise, with different people preferring different amounts. We all have natural variations in all of our attributes and this one is no different. The main thing is being aware enough of the state of your body and mind in order to discover what's best for you.
 

@@ -23,7 +23,7 @@ linkedin: rsmithio
 
 # Build settings
 redcarpet:
-  extensions: ["tables"]
+  extensions: ["tables", "footnotes"]
 markdown: redcarpet
 highlighter: rouge
 
