@@ -7,7 +7,7 @@ date:       2015-08-25
 type:       blog_post
 ---
 
-Sometimes (pretty often) when debugging code you just want to quickly print the contents of a variable to the standard output. In full-on dev mode you may have additional debugging tools available, e.g. the web browser dev console when debugging front-end code, or a debug tool built into your IDE for server-side debugging (like IntelliJ IDEs). You should definitely be more sophisicated with your debugging approach when possible.
+Sometimes (pretty often) when debugging code you just want to quickly print the contents of a variable to the standard output. In full-on dev mode you may have additional debugging tools available, e.g. the web browser dev console when debugging front-end code, or a debug tool built into your IDE for server-side debugging (like IntelliJ IDEs). You should definitely be more sophisticated with your debugging approach when possible.
 
 However sometimes you are just writing some quick Bash or ZSH code, or you're not using a full-on IDE because you just wanted to quickly open a lightweight editor. In these cases you might find yourself typing too many print statements in whatever language you are using, the typing of which all adds up in time lost.
 

@@ -1,7 +1,7 @@
 ---
 layout: blog_post
-title: 5 Developer Productivity Habits
-subtitle: My 5 top habits for increasing daily productivity
+title: 4 Developer Productivity Habits
+subtitle: My 4 most useful habits for increasing daily productivity
 description: 'Developer Productivity Habits - My list of 5 top habits for increasing daily productivity - how to think, learn and do faster'
 date: 2019-02-15
 type: blog_post
@@ -13,7 +13,7 @@ Every now and again it's great to take stock and question how you do things. Thi
 It's also a great habit to observe the habits of people whom you look up to. Your core motivation for doing any difficult task must always be personal. How you *execute* that task however, is always up for revision in my opinion.
 
 ## 1. Disable any device notifications that you can
-I [discussed this before](https://rsmith.io/blog/why-app-notifications-are-bad/) in detail. Begin with turning off *all* notifications on every device! Then enable only the ones whose abscence are actually causing a negative effect on your life.
+I [discussed this before](https://rsmith.io/blog/why-app-notifications-are-bad/) in detail. Begin with turning off *all* notifications on every device! Then enable only the ones whose absence are actually causing a negative effect on your life.
 
 ## 2. Minimise other sources of distraction
 ### Phone calls
@@ -36,5 +36,5 @@ Not everybody experiences the same level of immediate benefit from exercise, wit
 ## 4. [Kanbanflow](https://kanbanflow.com/)
 A great introduction and tutorial to Kanbanflow comes from [John Somnez&#39;s video](https://www.youtube.com/watch?v=W9k0OhJkjQ0). Kanbanflow is an extremely easy-to-use task board, complete with keyboard shortcuts, built-in-timer and many customisation options even within the free plan.
 
- Kanbanflow also keeps track of the number of complete 'sessions' you manage to complete. These 'sessions' are otherwise known as [Pomodoros](https://francescocirillo.com/pages/pomodoro-technique) (Italian for tomato in case it bugs you). Breaking things down like this is extremely helpful to many.
+ Kanbanflow also keeps track of the number of complete 'sessions' you manage to complete. These 'sessions' are otherwise known as [pomodoros](https://francescocirillo.com/pages/pomodoro-technique) (Italian for tomato in case it bugs you). Breaking things down like this is extremely helpful to many.
 

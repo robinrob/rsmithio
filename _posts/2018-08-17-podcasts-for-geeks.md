@@ -8,7 +8,7 @@ type: blog_post
 published: true
 ---
 
-[Podcasts](https://en.wikipedia.org/wiki/Podcast) were an amazing invention - they allow you to keep your brain stimulated and learning whilst doing mindless or repetetive things, like cleaning, walking or driving. Or if your brain is a little more active than normal and craves constant stimulation, podcasts will be gold. You may even hate boring things less and relax more, safe in the knowledge that you are still actually doing something productive.
+[Podcasts](https://en.wikipedia.org/wiki/Podcast) were an amazing invention - they allow you to keep your brain stimulated and learning whilst doing mindless or repetitive things, like cleaning, walking or driving. Or if your brain is a little more active than normal and craves constant stimulation, podcasts will be gold. You may even hate boring things less and relax more, safe in the knowledge that you are still actually doing something productive.
 
 I've really got into podcasts in the last few months; I'm [not sure](https://www.youtube.com/watch?v=sVyRkl5qNb8) how I survived before, and I've learned a lot of useful bits of advice that I've been able to incorporate into how I approach things.
 
@@ -16,7 +16,7 @@ Below is a list of the best podcasts I've stumbled across, in order of decreasin
 
 ## Podcasts for geeks
 ### [Syntax - Tasty Web Development Treats](https://dev.to/syntax/)
-Frequency: twice-weekly. Good humourous chat, spliced with diverse and genuinely useful developer tips, from useful Javascript functions to editor plugins and life tips in general.
+Frequency: twice-weekly. Good humorous chat, spliced with diverse and genuinely useful developer tips, from useful Javascript functions to editor plugins and life tips in general.
 
 ### [The Big Web Show](http://5by5.tv/bigwebshow/)
 1-2 weekly. The Big Web Show seems to come in seasons, where frequency varies a bit within each. However the show is great, episodes are ~1hr and the show has a big archive of previous episodes so overall is one of the best developer podcast resources.
@@ -43,7 +43,7 @@ Frequency: every weekday. 5-10 min episodes exploring a given tech news topic.
 Frequency: weekly. If your brain runs a little faster than normal or even to the point of ADHD,   this podcast will become your bible and I believe is useful for anybody serious about making the most out of their day!
 
 ### [This Week In Science](https://www.twis.org/)
-Frequency: weekly. This would have made my favorite podcast solely for its incredibly catchy and original intro, but the episodes are also top-quality, humourous, consistent at once a week and has long episodes (1.5-2 hours).
+Frequency: weekly. This would have made my favourite podcast solely for its incredibly catchy and original intro, but the episodes are also top-quality, humorous, consistent at once a week and has long episodes (1.5-2 hours).
 
 ### [Planetary Radio: Space Exploration, Astronomy and Science](http://www.planetary.org/multimedia/planetary-radio/)
 Frequency: weekly. This is also one of the most well-delivered podcasts I listen to, so it makes this list. Also at 823 episodes it has to be an inexhaustible resource.

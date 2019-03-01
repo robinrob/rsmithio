@@ -218,7 +218,7 @@ Arguably not that useful at first sight, but interesting nonetheless and it demo
 I used to be under the impression that static typing necessarily came along with a lot of extra syntax, but OCaml's use of type inference along with its minimalist syntax combine to allow you to write terse code even whilst gaining the benefits of static type checking, plus more.
 
 So far in all of the examples, OCaml has been able to infer the types of things based on their usages.
-So for example if you try to pass an Int value to something expecting a Float, OCaml will shout at you:
+So for example if you try to pass an `int` value to something expecting a `float`, OCaml will shout at you:
 
 <pre><code class="ocaml">Printf.printf "%f" 4 ;;</code></pre>
 

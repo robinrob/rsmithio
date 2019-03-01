@@ -32,6 +32,6 @@ The project can be installed through Bower using the following command:
 <pre><code class="bash">bower install console-writer</code></pre>
 
 The heading above this paragraph displays the default method of usage which requires
-just adding the `console-writer` class to the element. Reload the page again to see the typewriter effect. The `readme`
+just adding the `console-writer` class to the element. Reload the page again to see the typewriter effect. The `README`
 file included in the repo describes the options and how to set them. There is also a `demo.html` file which shows
 example usages.

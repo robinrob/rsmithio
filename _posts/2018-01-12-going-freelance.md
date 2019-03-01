@@ -65,7 +65,7 @@ current circumstances. So you have to weight it based on personal considerations
 * **Responsibility** This can be scary to some, especially when it comes to tax. However if your income situation is complex,
  you probably want an accountant anyway. If your only source of income is from freelancing jobs, then I find it to actually
  be relatively simple (in the UK), despite the seemingly-complex rules. I know this is a controversial opinion!
- * **Team integration** You may be seen as more of an ‘outsider’ when working in a team of full-time employed people, resulting
+ * **Team integration** You may be seen as more of an 'outsider' when working in a team of full-time employed people, resulting
  in weaker team relationships. Just try to be super easy to work with and helpful at all times.
  * **More time spent on admin, marketing etc. instead of actual job** As a result of the higher personal responsibility,
  a significant amount of your time will be spent not indulging in your passion for coding. However I always say that

@@ -22,4 +22,4 @@ Display top 10 news items from Hacker News RSS feed:
 ### Screenshot
 <img src="/img/rss-opener.png" alt="RSS Reader Usage Screenshot">
 
-Further details on the script's usage are given in the README file in the project.
+Further details on the script's usage are given in the readme file in the project.

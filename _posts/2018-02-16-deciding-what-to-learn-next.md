@@ -26,7 +26,7 @@ prospect of future benefit from the new features or from the approach. There is 
 language, to things as simple as its appearance or empathy for particular decisions its designers have made.
 
 When a language update or new language makes a big deal about a computer science concept that you're not familiar with, it can serve
-as a nice introduction and an extra mxotivator to go and learn about it, or to refresh your knowledge about it.
+as a nice introduction and an extra motivator to go and learn about it, or to refresh your knowledge about it.
 
 As you climb up the stack and the new things become higher and higher-level, or the multiplicities of new things becomes
 greater, it becomes more and more necessary to be pragmatic about what you spend your time on. The hierarchy of knowledge

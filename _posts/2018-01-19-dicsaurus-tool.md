@@ -81,7 +81,7 @@ Synonym(s) for 'blue'
 
    blue (Adjective)
 
-      Snynoym(s):
+      Synonym(s):
          sky-blue
          azure
          cobalt
@@ -108,7 +108,7 @@ Synonym(s) for 'blue'
       Example(s):
          she had bright blue eyes
 
-      Snynoym(s):
+      Synonym(s):
          depressed
          down
          sad
@@ -137,7 +137,7 @@ Synonym(s) for 'blue'
       Example(s):
          Dad had died that year and Mum was feeling a bit blue
 
-      Snynoym(s):
+      Synonyms(s):
          indecent
          dirty
          rude
