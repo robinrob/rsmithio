@@ -8,7 +8,7 @@ type: blog_post
 published: true
 ---
 
-If you're a developer with multiple devices, you may have experienced the infuriating situation of opening your editor or IDE on a different device - maybe you've taken your library to the laptop - and realising that all your optimised settings are non-existent, because you've never set them on that computer or you've not exported/imported the configuration from your main device somehow.
+If you're a developer with multiple devices, you may have experienced the infuriating situation of opening your editor or IDE on a different device - maybe you've taken your laptop to the library - and realising that all your optimised settings are non-existent, because you've never set them on that computer or you've not exported/imported the configuration from your main device somehow.
 
 I have two Macs and I've experienced the above scenario too many times, so I now like to get on top of this straight away with new IDEs - the latest one I've been getting up to speed to since switching from IntelliJ Idea is Visual Studio Code (or VS Code amongst normal people).
 
