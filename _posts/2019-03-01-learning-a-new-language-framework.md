@@ -3,7 +3,7 @@ layout: blog_post
 title: Learning a new language or framework
 subtitle: Some good habits when learning something new
 description: 'Learning a new skill, framework or language — Some good habits when learning something new'
-date: 2019-02-29
+date: 2019-03-01
 type: blog_post
 published: true
 ---
