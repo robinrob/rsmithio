@@ -13,7 +13,7 @@ is simply a matter of finding the correct syntax.
 
 Very very often I find the answer is much more valuable to me when shown in a way in which it is best understood by
 myself. And there are certain things that when you are switching between languages on varying timescales, you find
-yourself repeatedly needing to look up. They can often be unique to your particular style of coding - for example
+yourself repeatedly needing to look up. They can often be unique to your particular style of coding — for example
 it may be that you want to remind yourself of a particular pattern for implementing a decorator method in Python, or of
 implementing a Class and inheritance structure in Javascript. The questions and answers are not always trivial.
 

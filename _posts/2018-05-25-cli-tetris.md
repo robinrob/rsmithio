@@ -15,9 +15,9 @@ Here is a screenshot of a game in-progress:
 
 <img src="/img/cli_tetris.png" alt="In-game screenshot of CLI Tetris" />
 
-It's not quite a full Tetris implementation - for example completed rows are not destroyed.
+It's not quite a full Tetris implementation — for example completed rows are not destroyed.
 
-Small personal projects like this can be great for learning and trying out ideas, and very satisfying to get something concrete made quickly, especially something that's just for fun. I planned most of the code design up-front - it evolved only a bit - as I encountered a couple of cases I hadn't considered upfront.
+Small personal projects like this can be great for learning and trying out ideas, and very satisfying to get something concrete made quickly, especially something that's just for fun. I planned most of the code design up-front — it evolved only a bit — as I encountered a couple of cases I hadn't considered upfront.
 
 ## The code
 I've [docstring](https://www.python.org/dev/peps/pep-0257/)'ed up all of the classes, so they are mostly self-documenting. Here are the classes, which can be viewed in Github:

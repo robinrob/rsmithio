@@ -64,15 +64,15 @@ the line. Therefore if you've written a lot of tests and *then* change the desig
 to experience a lot of pain, and the pain will damage your creative process.
 
 There will still be some situations where the design will need to evolve at least a little as you start to
-actually implement it - it's hard to foresee everything at the start of writing a new codebase, especially if you are
-working in a new language or framework for example - in these cases it can be good to be sparing about the tests that
+actually implement it — it's hard to foresee everything at the start of writing a new codebase, especially if you are
+working in a new language or framework for example — in these cases it can be good to be sparing about the tests that
 you write first, then fill them in later.
 
 ## When to write tests before code
 
 ### When the overall architecture is well-defined
 TDD works best in codebases where the overall architecture is already settled and robust, and you are
-just expanding the application horizontally - adding new features, and testing new algorithms. Everything is predictable on a
+just expanding the application horizontally — adding new features, and testing new algorithms. Everything is predictable on a
 large scale, and the only unknown is the correctness of the new code you are adding. So for example, you may be adding a new function
 to an existing service, adding a new service, or adding a new data model and associated DAO class.
 

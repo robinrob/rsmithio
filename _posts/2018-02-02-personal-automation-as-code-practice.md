@@ -15,7 +15,7 @@ as a hobby.
 
 Whilst trying to get something done in your own time, it can be tempting to think '*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       what if I automated
 this?*'. It may feel like a procrastination tool, and maybe it leads you down a rabbit hole of stolen time with no
-useful result. Or you automate a task and only ever do it once, finding that perfect, one-use-only regex - there's that
+useful result. Or you automate a task and only ever do it once, finding that perfect, one-use-only regex — there's that
 old adage about programmers.
 
 I definitely have this tendency, and of course I make use of it in work environments too, but in a work situation I have to be
@@ -38,7 +38,7 @@ it in ZSH. It's not that ZSH or shell languages in general are particularly fun 
 but novelty is a stimulating thing and as a programmer you may as well have a better knowledge of shell languages.
 
 Sometimes a task really *was* too hard or annoying to code in ZSH so a few tools written in Python or Ruby have been added.
-In this way I also challenged myself to learn Ruby - and, what is now one of the most valuable tools in my toolbox - regex. Yet
+In this way I also challenged myself to learn Ruby — and, what is now one of the most valuable tools in my toolbox — regex. Yet
 another excuse to [learn regex!]({{ site.url }}/blog/learn-regex-or-regret-it/)
 
 Overall, as with the personal side-project, I think this kind of habit of developers is a great thing, and really

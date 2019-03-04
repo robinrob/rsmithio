@@ -2,7 +2,7 @@
 layout: blog_post
 title: 4 Developer Productivity Habits
 subtitle: My 4 most useful habits for increasing daily productivity
-description: 'Developer Productivity Habits - My list of 5 top habits for increasing daily productivity - how to think, learn and do faster'
+description: 'Developer Productivity Habits — My list of 5 top habits for increasing daily productivity — how to think, learn and do faster'
 date: 2019-02-15
 type: blog_post
 published: true
@@ -24,7 +24,7 @@ Scheduling calls can also work to increase their usefulness since the time feels
 However this may be one of those habits that come with 'societal/cultural inertia': the unconscious assumption that you necessarily remain connected and available in this way might give you a feeling of unease or irresponsibility, even in any actual negative consequences are not obvious. I think it's likely that for most people these kinds of fears are exaggerated in the mind.
 
 ### Physical distractions
-Interruptions by people, noise, heat, smell, light - these are all important to consider. Having more control over these was a big motivation for me to become a freelancer by giving me more opportunity to work from home. I can say that this helped me significantly.
+Interruptions by people, noise, heat, smell, light — these are all important to consider. Having more control over these was a big motivation for me to become a freelancer by giving me more opportunity to work from home. I can say that this helped me significantly.
 
 ## 3. Exercise
 Exercise increases dopamine and oxygen within your brain, and for many people helps them to feel more relaxed, motivated and alert. These are the immediate short-term benefits, besides the many longer-term benefits. 

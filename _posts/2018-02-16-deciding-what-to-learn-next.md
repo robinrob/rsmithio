@@ -14,7 +14,7 @@ languages) and frameworks appearing all the time. There are also countless named
 about software development.
 
 New features are appearing in languages all the time, through specific updates to existing
-languages - for example: Lambdas and first-class functions in Java 8, generators in ECMAScript 6) - to more general
+languages — for example: Lambdas and first-class functions in Java 8, generators in ECMAScript 6) — to more general
 trends like the increasing inclusion of functional programming concepts in modern languages, particularly in new
 languages like Swift where there is the opportunity to start completely afresh. (Of course it's not that
 functional programming ideas are new!).
@@ -69,7 +69,7 @@ it suddenly becomes popular. And of course over time, these new ways of doing th
 optimising ways of working, keeping up with the changing demands of web software as the infrastructure becomes more
 powerful over time.
 
-But I do think it's important to keep the focus on the fundamentals - the fundamental skills
+But I do think it's important to keep the focus on the fundamentals — the fundamental skills
 of being able to choose the right tool or language to use, to write software that is structured nicely, and to make
 usable applications. I think these are the real differentiators between developers, are the most valuable to aspire to and take the most time to learn
 in the first place. A word of warning: this approach does tend to make you most-suited to hipster startup environments.

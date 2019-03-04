@@ -51,7 +51,7 @@ freelancing is the sort of thing I definitely recommend trying for someone who i
 least it is a great experience-building experience.
 
 ## Benefits of freelancing (or contracting)
-There's a subtle distinction between 'freelancing' and 'contracting'. But I use 'freelancing' loosely - for me it means the freedom to take on contract jobs,
+There's a subtle distinction between 'freelancing' and 'contracting'. But I use 'freelancing' loosely — for me it means the freedom to take on contract jobs,
 whilst also being responsible for your own learning and keeping up with the technology, and the potential for making
 money from personal projects. So it's to do with independence. These are the benefits I've experienced so far:
 
@@ -91,7 +91,7 @@ you have the leisure to spend that on whatever you want. If you like to enjoy ho
 All the good developers have some personal project they'd like to spend more time on.
 * **Flexibility.** If you are the sort of person
 who naturally tends towards the most efficient ways of doing things, this can increase your efficiency a lot. Working from home
-leads to being able to precisely setting your own schedule - when to start work, when to have lunch, for how long, and when to finish.
+leads to being able to precisely setting your own schedule — when to start work, when to have lunch, for how long, and when to finish.
 If you need to pop out to do some errand during the day, you can just find a convenient time
 and go and do it. Parcels? You are always in, so these are never a problem either. I find this benefit to be priceless.
 * **Added motivation to socialise.** Working from home can feel isolating at times, but you can turn it into a positive thing
@@ -126,6 +126,6 @@ and I've recently learned a lot about this subject. I will be writing about it s
 
 Going into the future, I am completely open-minded about whether I continue freelancing or go back into a
 full-time employed position. I can clearly see the advantages of either. At the moment, I am actually swaying towards
-the latter. I am neither an evangelist nor detractor for freelancing - everybody can gain something out of it, and
+the latter. I am neither an evangelist nor detractor for freelancing — everybody can gain something out of it, and
 it will be different things to different people. People also change, but the one thing that you should aim to keep constant
 is your enthusiasm for your craft, and for people.

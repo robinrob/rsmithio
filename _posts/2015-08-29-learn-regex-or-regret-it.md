@@ -19,8 +19,8 @@ much better. The task of solving regex problems is a <em>perfect</em> candidate 
 If you only reach this stage in your appreciation of regular expressions then you may already find great value in them. But they
 are also among one of the few truly powerful tools available to programmers that transcend programming language, framework
 or project that you are working on. If you find Javascript to be a language worth learning because of its popularity
-and relevance - a mere programming language, or AngularJS a framework worth learning because it's popular at the
-moment - then you should logically view a tool like regular expressions as being of great importance and relevance in your profession.
+and relevance — a mere programming language, or AngularJS a framework worth learning because it's popular at the
+moment — then you should logically view a tool like regular expressions as being of great importance and relevance in your profession.
 Regular expressions have been around for decades and have changed little in their basic philosophy and syntax.
 
 More important than any of the above great reasons for learning how to use regular expressions, the fact remains that they

@@ -9,7 +9,7 @@ published:  true
 ---
 
 
-Peter Stephenson's [*A User's Guide to the Z-Shell*](http://zsh.sourceforge.net/Guide/zshguide.html) is a great way to learn about the Z-Shell in detail. I went through most of it a few years ago, interested to see what I would find through this exploratory method of learning - as opposed to looking something up specifically to achieve a certain task.
+Peter Stephenson's [*A User's Guide to the Z-Shell*](http://zsh.sourceforge.net/Guide/zshguide.html) is a great way to learn about the Z-Shell in detail. I went through most of it a few years ago, interested to see what I would find through this exploratory method of learning — as opposed to looking something up specifically to achieve a certain task.
 
 Having never studied the features of any shell environment in detail, I learned about many interesting and useful features of the Z-Shell, some specific to Z-Shell and some not.
 

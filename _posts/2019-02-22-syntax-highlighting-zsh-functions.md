@@ -2,7 +2,7 @@
 layout: blog_post
 title: Syntax Highlighting when editing extension-less ZSH Function Files
 subtitle: 
-description: 'ZSH Code Editors - This is my list of the best text editors/environments for ZSH. ZSH-compatible editors or plugins '
+description: 'ZSH Code Editors — This is my list of the best text editors/environments for ZSH. ZSH-compatible editors or plugins '
 date: 2019-02-22
 type: blog_post
 published: true
@@ -12,9 +12,9 @@ I am often writing or editing ZSH functions which I store in [my dotfiles repo](
 
 [This section](http://zsh.sourceforge.net/Guide/zshguide03.html#l49) of the ZSH user guide describes how functions can be loaded from such function files, where the name of the file matches the name of the function to be loaded.
 
-An annoyance arises when editing or creating these extension-less function files because the language may not be detected by the text editor or IDE - as they usually rely on the file extension to determine the language - and thus to set the syntax highlighting or autocompletion.
+An annoyance arises when editing or creating these extension-less function files because the language may not be detected by the text editor or IDE — as they usually rely on the file extension to determine the language — and thus to set the syntax highlighting or autocompletion.
 
-It can be frustratingly difficult to get an editor or IDE to simply associate extension-less files with a particular language - which is the desired behaviour for me since the only extension-less files I am usually editing are ZSH functions. In the worst case I can just manually change the file type detected in the editor for any rare cases where this isn't true.
+It can be frustratingly difficult to get an editor or IDE to simply associate extension-less files with a particular language — which is the desired behaviour for me since the only extension-less files I am usually editing are ZSH functions. In the worst case I can just manually change the file type detected in the editor for any rare cases where this isn't true.
 
 For many people they really want to default to ZSH or Shell Script syntax for extension-less files, usually for the same or very similar reason!
 

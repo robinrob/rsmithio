@@ -7,9 +7,9 @@ date:       2015-06-04
 type:       blog_post
 ---
 
-Whilst using Github's Jekyll framework to build a static website, I noticed a lack of built-in (HAML)[http://haml.info/] support.
+Whilst using Github's Jekyll framework to build a static website, I noticed a lack of built-in [HAML](http://haml.info/) support.
 
-I am a big fan of using HAML to produce HTML. Whilst I think we should be careful about adding yet more tools into the build chain, for personal projects at least it can be fun to play around with them with. HAML is used within the Ruby on Rails community, as it is supported by Ruby on Rails along with ERB as alternate HTML template engines. I even write my (CV)[{{ site.url }}/cv/] in HAML.
+I am a big fan of using HAML to produce HTML. Whilst I think we should be careful about adding yet more tools into the build chain, for personal projects at least it can be fun to play around with them with. HAML is used within the Ruby on Rails community, as it is supported by Ruby on Rails along with ERB as alternate HTML template engines. I even write my [CV]({{ site.url }}/cv/) in HAML.
 
 Apart from this lack of built-in support for HAML, I really enjoy using Jekyll, so I persisted with integrating a HAML build step into my Jekyll build.
 

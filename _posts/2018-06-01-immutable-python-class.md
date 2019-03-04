@@ -8,7 +8,7 @@ type: blog_post
 published: true
 ---
 
-As a fun experiment one day I decided to try and see if I could implement a Python class whose attributes, once set, were immutable. Knowing that Python [magic methods](https://rszalski.github.io/magicmethods/) - specifically `__getattribute__` and `__setattr____` - can be overloaded, I thought it should be possible.
+As a fun experiment one day I decided to try and see if I could implement a Python class whose attributes, once set, were immutable. Knowing that Python [magic methods](https://rszalski.github.io/magicmethods/) — specifically `__getattribute__` and `__setattr____` — can be overloaded, I thought it should be possible.
 
 The result is contained in [this gist](https://gist.github.com/robinrob/0947770700cfe09707917fd677af07ba). I made life a little bit easier by starting with the test class so that I could build up the functionality gradually and see that I was making progress, because I suspected it would be fiddly.
 

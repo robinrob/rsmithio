@@ -38,7 +38,7 @@ in an elegant and reliable way.
 
 ## Functional programming languages
 What is a functional programming language? No single factor goes into deciding whether a programming language is 'functional'.
-Most languages are 'multi-paradigm' - they support a variety of different [paradigms](https://en.wikipedia.org/wiki/Programming_paradigm).
+Most languages are 'multi-paradigm' — they support a variety of different [paradigms](https://en.wikipedia.org/wiki/Programming_paradigm).
 It's interesting to compare the paradigms supported by some well-known languages:
 
 <table class="programming-languages">
@@ -75,7 +75,7 @@ One of the goals of all functional programming languages is to increase predicta
 The more abstract methods of thinking required when doing functional programming can make it seem harder than say object-oriented programming. However in principle you could perhaps imagine
 that given similar levels of practice and habituation, you may become equally proficient at any method of programming.
 
-The biggest 'barriers' to functional programming may be as much cultural popularity and general understanding of it. For example it is easy to imagine the objections of a business to using a language like OCaml currently - it would be immediately much harder to find employees for one thing. So naturally there's a large inertia to change once particular systems of thought or tools become established. These changes must come gradually, and we are seeing lots of signs of functional programming becoming more and more established, which to me is exciting.
+The biggest 'barriers' to functional programming may be as much cultural popularity and general understanding of it. For example it is easy to imagine the objections of a business to using a language like OCaml currently — it would be immediately much harder to find employees for one thing. So naturally there's a large inertia to change once particular systems of thought or tools become established. These changes must come gradually, and we are seeing lots of signs of functional programming becoming more and more established, which to me is exciting.
 
 A big motivating reason for functional programming uptake increasing is the need for making use of parallelisation through cloud computing. Parallelisation of processes requires the elimination of state from core processing logic, pushing it to the boundaries of an application. This is one of the goals of [MapReduce](https://en.wikipedia.org/wiki/MapReduce), a programming model important in the realm of [big data](https://en.wikipedia.org/wiki/Big_data).
 
@@ -101,13 +101,13 @@ For each code example, I give code that can be pasted into Utop, then the output
 ### Hello World
 <pre><code class="ocaml">Printf.printf "Hello World!\n" ;;</code></pre>
 
-Thankfully in OCaml the Hello World remains self-explanatory. This example shows us the use of the built-in `Printf` module to print output, and also the simple syntax for passing arguments into functions - we don't
+Thankfully in OCaml the Hello World remains self-explanatory. This example shows us the use of the built-in `Printf` module to print output, and also the simple syntax for passing arguments into functions — we don't
 need parentheses around the arguments.
 
 ### Variables
-In OCaml, all *values* are immutable. We're familiar with this already in another languages - for example in most popular languages strings are immutable. This means that appending one string to another actually results in a totally new string. But usually things like numbers are not immutable, and this allows them to be used as a 'counter' in loops for example. In OCaml, the values of *all* types are treated in this way.
+In OCaml, all *values* are immutable. We're familiar with this already in another languages — for example in most popular languages strings are immutable. This means that appending one string to another actually results in a totally new string. But usually things like numbers are not immutable, and this allows them to be used as a 'counter' in loops for example. In OCaml, the values of *all* types are treated in this way.
 
-The word 'variable' in most languages actually has dual meaning - it refers both to a value which we hold a reference to, and that can vary, *and* it has meaning in the mathematical sense of representing a variable in an equation. In OCaml, it is only the mathematical meaning of 'variable' that is implied when we're using the word.
+The word 'variable' in most languages actually has dual meaning — it refers both to a value which we hold a reference to, and that can vary, *and* it has meaning in the mathematical sense of representing a variable in an equation. In OCaml, it is only the mathematical meaning of 'variable' that is implied when we're using the word.
 
 <pre><code class="ocaml">let age = 30 ;;</code></pre>
 
@@ -191,8 +191,8 @@ Since null values [do not even exist](https://ocaml.org/learn/tutorials/null_poi
 [pattern matching](https://en.wikipedia.org/wiki/Pattern_matching)
 to do [case analysis](http://www2.lib.uchicago.edu/keith/ocaml-class/pattern-matching.html). I think this code example is really cool, for the amount that's being expressed in such a small amount of code, and in a clear way. And for the realisation that OCaml effectively designs out a lot of potential program bugs.
 
-### Easter egg - literal number formatting
-To take a mental rest - an unexpected feature of OCaml is the ability to add underscores to long number literals to improve readability:
+### Easter egg — literal number formatting
+To take a mental rest — an unexpected feature of OCaml is the ability to add underscores to long number literals to improve readability:
 
 <pre><code class="ocaml">let big_num = 123_456_789 ;;</code></pre>
 
@@ -246,8 +246,8 @@ It's always re-assuring to know that a language or framework is not so niche as 
 ## Are companies using OCaml?
 Your pragmatic side should also be interested in the direct value of learning OCaml to your career.
 
-This is a really nice [presentation](https://www.youtube.com/watch?v=v1CmGbOGb2I) on OCaml by an employee of Jane Street, which includes a discussion of the practicalities of using OCaml in the real world. Entrance into the OCaml community is not recommended without some familiarity of Jane Street - they are a quantitative trading firm who have made extensive use of OCaml. They have been a big contributor to OCaml - they wrote the [Core](https://github.com/janestreet/core) library, which is effectively Lodash for OCaml! 
+This is a really nice [presentation](https://www.youtube.com/watch?v=v1CmGbOGb2I) on OCaml by an employee of Jane Street, which includes a discussion of the practicalities of using OCaml in the real world. Entrance into the OCaml community is not recommended without some familiarity of Jane Street — they are a quantitative trading firm who have made extensive use of OCaml. They have been a big contributor to OCaml — they wrote the [Core](https://github.com/janestreet/core) library, which is effectively Lodash for OCaml! 
 
-It's easy to see why OCaml would be desirable in automated trading - where speed and accuracy of code are critical. Here is a list of [companies](https://ocaml.org/learn/companies.html) using OCaml - there's a few entries for financial companies. In general, the domains of companies using OCaml tend to be more technical than average, but the list shows a good amount of diversity.
+It's easy to see why OCaml would be desirable in automated trading — where speed and accuracy of code are critical. Here is a list of [companies](https://ocaml.org/learn/companies.html) using OCaml — there's a few entries for financial companies. In general, the domains of companies using OCaml tend to be more technical than average, but the list shows a good amount of diversity.
 
 Then you only have to look to [Reason](https://reasonml.github.io), a language which effectively brings OCaml to Javascript, to be further convinced that OCaml is something worth learning.

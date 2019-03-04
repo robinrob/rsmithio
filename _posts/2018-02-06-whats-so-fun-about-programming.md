@@ -29,17 +29,17 @@ your personal touch to something in a tangible way is perhaps correspondingly mo
 that myself, and over time I've been picking up more and more creative hobbies.
 
 The difference between programming and something like architecture is that the programmers can not only design but actually build the end product themselves.
-A single programmer can complete the entire life cycle of the product from idea to release - and this is extremely
-compelling indeed. It gives you feelings of independence and great power at your fingertips - the power to be productive and
+A single programmer can complete the entire life cycle of the product from idea to release — and this is extremely
+compelling indeed. It gives you feelings of independence and great power at your fingertips — the power to be productive and
 expressive at the same time.
 
-Not only is programming artistic but it's artistic in a very abstract, platonic sense - similar to music, in the
+Not only is programming artistic but it's artistic in a very abstract, platonic sense — similar to music, in the
 sense that everything that defines each bit of work is pure information, as opposed to the physical placement of particles
 of matter, as for example painting would be. It can be reworked endlessly with no loss of fidelity of the result. The
 result is effectively timeless. So long as you're using Git and cloud I guess ...
 
-This aspect of abstractness brings about another very important feature of programming - since you're working in the digital world with no
-cost to materials, and in environments that you can access from anywhere and take anywhere with you - you are completely
+This aspect of abstractness brings about another very important feature of programming — since you're working in the digital world with no
+cost to materials, and in environments that you can access from anywhere and take anywhere with you — you are completely
 free to program wherever and whatever you want in your own time, and therefore the personal project becomes possible.
 
 With personal projects, programmers don't need any external validation before starting them.
